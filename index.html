@@ -2463,16 +2463,49 @@ a { color: inherit; text-decoration: none; }
     width: 100%;
     height: 88vh;
     min-height: 560px;
-    background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80') center/cover no-repeat;
+    background: #0a0a0a;
     display: flex;
     align-items: center;
     overflow: hidden;
   }
+  /* 배경 슬라이드쇼 */
+  .home-hero-slides { position: absolute; inset: 0; z-index: 0; }
+  .home-hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1.4s ease-in-out;
+  }
+  .home-hero-slide.active { opacity: 1; }
   .home-hero::after {
     content: '';
     position: absolute;
     inset: 0;
+    z-index: 1;
     background: linear-gradient(120deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.25) 100%);
+  }
+  /* 하단 진행 바 (건국대 에너지사업단 스타일: 남은 시간 표시) */
+  .home-hero-progress {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    z-index: 3;
+    display: flex;
+    gap: 4px;
+  }
+  .home-hero-seg {
+    flex: 1;
+    height: 4px;
+    background: rgba(255,255,255,0.25);
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .home-hero-seg-fill {
+    height: 100%;
+    width: 0%;
+    background: #fff;
   }
   .home-hero-inner {
     position: relative;
@@ -2651,6 +2684,10 @@ a { color: inherit; text-decoration: none; }
 
 <!-- HERO -->
 <div class="home-hero">
+  <div class="home-hero-slides">
+    <div class="home-hero-slide active" style="background-image:url('Photos/배경화면_!.png')"></div>
+    <div class="home-hero-slide" style="background-image:url('Photos/배경화면_2.png')"></div>
+  </div>
   <div class="home-hero-inner">
     <div class="home-hero-tag">Building Energy &amp; Environment Laboratory · Konkuk University</div>
     <h1>Designing a sustainable future through building energy research</h1>
@@ -2661,6 +2698,10 @@ a { color: inherit; text-decoration: none; }
     </div>
   </div>
   <div class="home-scroll-cue">Scroll ↓</div>
+  <div class="home-hero-progress">
+    <div class="home-hero-seg"><div class="home-hero-seg-fill"></div></div>
+    <div class="home-hero-seg"><div class="home-hero-seg-fill"></div></div>
+  </div>
 </div>
 
 <!-- ABOUT -->
@@ -2818,6 +2859,42 @@ a { color: inherit; text-decoration: none; }
       });
     }, { threshold: 0.12 });
     document.querySelectorAll('#page-intro .home-reveal').forEach(function (el) { io.observe(el); });
+
+    // 3) 메인 배경 슬라이드쇼 (순차 전환 + 하단 진행 바)
+    (function () {
+      var hero = document.querySelector('#page-intro .home-hero');
+      if (!hero) return;
+      var slides = hero.querySelectorAll('.home-hero-slide');
+      var fills = hero.querySelectorAll('.home-hero-seg-fill');
+      var segs = hero.querySelectorAll('.home-hero-seg');
+      var n = slides.length;
+      if (n < 2) return;
+      var DUR = 6000;     // 슬라이드 표시 시간(ms)
+      var cur = 0, timer;
+
+      function show(i) {
+        cur = (i + n) % n;
+        slides.forEach(function (s, k) { s.classList.toggle('active', k === cur); });
+        // 진행 바: 현재 슬라이드만 0% → 100%로 채워 남은 시간 표시
+        fills.forEach(function (f) {
+          f.style.transition = 'none';
+          f.style.width = '0%';
+        });
+        void hero.offsetWidth; // reflow로 애니메이션 리셋
+        var f = fills[cur];
+        f.style.transition = 'width ' + DUR + 'ms linear';
+        f.style.width = '100%';
+      }
+      function next() { show(cur + 1); }
+      function start() { clearInterval(timer); timer = setInterval(next, DUR); }
+
+      segs.forEach(function (seg, k) {
+        seg.addEventListener('click', function () { show(k); start(); });
+      });
+
+      show(0);
+      start();
+    })();
   });
 </script>
 
