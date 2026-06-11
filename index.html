@@ -932,6 +932,134 @@ a { color: inherit; text-decoration: none; }
   .bn-featured { grid-template-columns: 1fr; }
   .bn-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== Research group full-screen hero (.rhero) — shared by Building Systems / Data & Analysis / Building & Urban Modeling ===== */
+.rhero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  margin-top: -60px; /* sticky nav(60px) 아래로 끌어올려 히어로가 nav 뒤를 채우도록 */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #0a0a0a;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.rhero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(115deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.58) 45%, rgba(0,0,0,0.32) 100%);
+}
+.rhero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
+}
+.rhero-breadcrumb {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 26px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.rhero-breadcrumb a { color: rgba(255,255,255,0.6); transition: color 0.15s; }
+.rhero-breadcrumb a:hover { color: #fff; }
+.rhero-eyebrow {
+  font-size: 19px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+  max-width: 660px;
+}
+.rhero-hash {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.42);
+  letter-spacing: 0.02em;
+  margin-bottom: 22px;
+}
+.rhero h1 {
+  font-size: clamp(36px, 6.5vw, 104px);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 1.0;
+  color: #fff;
+  margin-bottom: 22px;
+  white-space: nowrap;
+}
+.rhero-sub {
+  font-size: 19px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.74);
+  letter-spacing: -0.01em;
+  margin-bottom: 28px;
+}
+.rhero-overview {
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.62);
+  line-height: 1.85;
+  max-width: 760px;
+  word-break: keep-all;
+}
+.rhero-scroll {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: rgba(255,255,255,0.55);
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: rheroFade 0.6s ease 0.95s forwards, rheroBob 2.4s ease-in-out 1.7s infinite;
+}
+
+/* 히어로 순차 등장 */
+.rhero-anim { opacity: 0; animation: rheroUp 0.7s cubic-bezier(0.2,0.7,0.2,1) both; }
+@keyframes rheroUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes rheroFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes rheroBob { 0%,100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 8px); } }
+
+/* 히어로 아래 섹션 스크롤 페이드인 */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+/* nav: Research 그룹 히어로 위에선 투명(흰 글씨), 히어로를 지나면 기본(흰 배경) */
+.top-bar { transition: background 0.3s ease, border-color 0.3s ease; }
+.top-bar.rhero-transparent {
+  background: transparent;
+  border-color: transparent;
+}
+.top-bar.rhero-transparent .nav-right a { color: rgba(255,255,255,0.82); }
+.top-bar.rhero-transparent .nav-right a:hover { color: #fff; }
+.top-bar.rhero-transparent img { filter: brightness(0) invert(1); }
+
+@media (max-width: 700px) {
+  .rhero h1 { white-space: normal; font-size: 40px; }
+  .rhero-eyebrow { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rhero-anim, .reveal, .rhero-scroll {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .rhero-scroll { transform: translateX(-50%) !important; }
+}
 </style>
 </head>
 <body>
@@ -954,19 +1082,19 @@ a { color: inherit; text-decoration: none; }
 <!-- MAIN PAGE -->
 <div id="page-main" class="page-view">
 
-<div style="width:100%;height:320px;background:url('Photos/research/systems-wide.png') center/cover no-repeat;position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 100%);"></div>
-  <div style="position:absolute;bottom:48px;left:0;right:0;max-width:1200px;margin:0 auto;padding:0 40px;">
-    <div style="font-size:28px;font-weight:700;color:#fff;letter-spacing:-0.03em;line-height:1.3;">We research building energy systems<br>to design a sustainable future<br><span style="color:rgba(255,255,255,0.5);font-weight:400;"># building_system</span></div>
+<div class="rhero" style="background-image:url('Photos/research/systems-wide.png')">
+  <div class="rhero-inner">
+    <div class="rhero-breadcrumb rhero-anim" style="animation-delay:0.05s">
+      <a href="#" onclick="showPage('research-topics');return false;">Research</a> <span>›</span> <span>Building Systems</span>
+    </div>
+    <div class="rhero-eyebrow rhero-anim" style="animation-delay:0.18s">We research building energy systems to design a sustainable future</div>
+    <div class="rhero-hash rhero-anim" style="animation-delay:0.27s"># building_system</div>
+    <h1 class="rhero-anim" style="animation-delay:0.37s">Building Systems</h1>
+    <div class="rhero-sub rhero-anim" style="animation-delay:0.49s">건물 내 기계 및 설비의 설계, 시뮬레이션, 최적화</div>
+    <p class="rhero-overview rhero-anim" style="animation-delay:0.61s">Building Systems 그룹은 건물 단위 설비 시스템의 에너지 성능을 분석하고 최적화하여, 효율적이고 지속 가능한 건물 구현을 목표로 합니다. TRNSYS, EnergyPlus 등 동적 시뮬레이션을 통한 실질적인 에너지 절감 방안을 연구합니다.</p>
   </div>
+  <div class="rhero-scroll">Scroll ↓</div>
 </div>
-<section class="hero" style="padding-top:48px;">
-  <div class="breadcrumb">
-    <a href="#" onclick="showPage('research-topics');return false;">Research</a> <span>›</span> <span>Building Systems</span>
-  </div>
-  <h1>Building Systems</h1>
-  <div class="subtitle">건물 내 기계 및 설비의 설계, 시뮬레이션, 최적화</div>
-</section>
 
 <div class="section" style="margin-bottom:-20px;">
   <div class="pill-row">
@@ -975,13 +1103,6 @@ a { color: inherit; text-decoration: none; }
     <div class="pill" onclick="showPage('urban-modeling')">Building & Urban Modeling</div>
   </div>
 </div>
-
-<section class="overview">
-  <h2>Overview</h2>
-  <p>Building Systems 그룹은 건물 단위 설비 시스템의 에너지 성능을 분석하고 최적화하여,
-    효율적이고 지속 가능한 건물 구현을 목표로 합니다. TRNSYS, EnergyPlus 등 동적 시뮬레이션을
-    통한 실질적인 에너지 절감 방안을 연구합니다.</p>
-</section>
 
 <div class="section">
   <div class="section-divider"></div>
@@ -2174,19 +2295,19 @@ a { color: inherit; text-decoration: none; }
 <!-- DATA & ANALYSIS PAGE -->
 <div id="page-data-analysis" class="page-view">
 
-<div style="width:100%;height:320px;background:url('Photos/research/data-wide.png') center/cover no-repeat;position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 100%);"></div>
-  <div style="position:absolute;bottom:48px;left:0;right:0;max-width:1200px;margin:0 auto;padding:0 40px;">
-    <div style="font-size:28px;font-weight:700;color:#fff;letter-spacing:-0.03em;line-height:1.3;">We analyze building energy data<br>with AI-driven approaches<br><span style="color:rgba(255,255,255,0.5);font-weight:400;"># data_analysis</span></div>
+<div class="rhero" style="background-image:url('Photos/research/data-wide.png')">
+  <div class="rhero-inner">
+    <div class="rhero-breadcrumb rhero-anim" style="animation-delay:0.05s">
+      <a href="#" onclick="showPage('research-topics');return false;">Research</a> <span>›</span> <span>Data & Analysis</span>
+    </div>
+    <div class="rhero-eyebrow rhero-anim" style="animation-delay:0.18s">We analyze building energy data with AI-driven approaches</div>
+    <div class="rhero-hash rhero-anim" style="animation-delay:0.27s"># data_analysis</div>
+    <h1 class="rhero-anim" style="animation-delay:0.37s">Data &amp; Analysis</h1>
+    <div class="rhero-sub rhero-anim" style="animation-delay:0.49s">건물 에너지 데이터의 수집, 분석, AI 기반 예측 및 최적화</div>
+    <p class="rhero-overview rhero-anim" style="animation-delay:0.61s">Data &amp; Analysis 그룹은 건물 에너지 분야의 다양한 데이터를 분석하여, 에너지 소비 구조를 이해하고 효율 개선 방안을 찾습니다. 통계 모델과 머신러닝을 통해 에너지 진단·벤치마킹, 도시 에너지 수요 예측·최적화, 재실·실내환경 분석을 연구합니다.</p>
   </div>
+  <div class="rhero-scroll">Scroll ↓</div>
 </div>
-<section class="hero" style="padding-top:48px;">
-  <div class="breadcrumb">
-    <a href="#" onclick="showPage('research-topics');return false;">Research</a> <span>›</span> <span>Data & Analysis</span>
-  </div>
-  <h1>Data & Analysis</h1>
-  <div class="subtitle">건물 에너지 데이터의 수집, 분석, AI 기반 예측 및 최적화</div>
-</section>
 
 <div class="section" style="margin-bottom:-20px;">
   <div class="pill-row">
@@ -2195,13 +2316,6 @@ a { color: inherit; text-decoration: none; }
     <div class="pill" onclick="showPage('urban-modeling')">Building & Urban Modeling</div>
   </div>
 </div>
-
-<section class="overview">
-  <h2>Overview</h2>
-  <p>Data & Analysis 그룹은 건물 에너지 분야의 다양한 데이터를 분석하여, 에너지 소비 구조를
-    이해하고 효율 개선 방안을 찾습니다. 통계 모델과 머신러닝을 통해 에너지 진단·벤치마킹,
-    도시 에너지 수요 예측·최적화, 재실·실내환경 분석을 연구합니다.</p>
-</section>
 
 <div class="section">
   <div class="section-divider"></div>
@@ -2345,19 +2459,19 @@ a { color: inherit; text-decoration: none; }
 <!-- BUILDING & URBAN MODELING PAGE -->
 <div id="page-urban-modeling" class="page-view">
 
-<div style="width:100%;height:320px;background:url('Photos/research/urban-wide.png') center/cover no-repeat;position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 100%);"></div>
-  <div style="position:absolute;bottom:48px;left:0;right:0;max-width:1200px;margin:0 auto;padding:0 40px;">
-    <div style="font-size:28px;font-weight:700;color:#fff;letter-spacing:-0.03em;line-height:1.3;">We model buildings and cities<br>for sustainable urban energy planning<br><span style="color:rgba(255,255,255,0.5);font-weight:400;"># urban_modeling</span></div>
+<div class="rhero" style="background-image:url('Photos/research/urban-wide.png')">
+  <div class="rhero-inner">
+    <div class="rhero-breadcrumb rhero-anim" style="animation-delay:0.05s">
+      <a href="#" onclick="showPage('research-topics');return false;">Research</a> <span>›</span> <span>Building &amp; Urban Modeling</span>
+    </div>
+    <div class="rhero-eyebrow rhero-anim" style="animation-delay:0.18s">We model buildings and cities for sustainable urban energy planning</div>
+    <div class="rhero-hash rhero-anim" style="animation-delay:0.27s"># urban_modeling</div>
+    <h1 class="rhero-anim" style="animation-delay:0.37s">Building &amp; Urban Modeling</h1>
+    <div class="rhero-sub rhero-anim" style="animation-delay:0.49s">건물 및 도시 스케일의 에너지 모델링, 디지털 트윈, GIS 기반 분석</div>
+    <p class="rhero-overview rhero-anim" style="animation-delay:0.61s">Building &amp; Urban Modeling 그룹은 건축 부문 탄소중립 달성을 위해, 건물부터 도시 단위까지의 에너지 사용량을 분석할 수 있는 건물 에너지 환경을 모델링합니다. EnergyPlus를 엔진으로 건물 에너지 시뮬레이션(BEM)과 도시 건물 에너지 시뮬레이션(UBEM)을 개발하고, 이를 통해 에너지 절감 방안 도출과 정책 의사결정을 지원하고자 합니다.</p>
   </div>
+  <div class="rhero-scroll">Scroll ↓</div>
 </div>
-<section class="hero" style="padding-top:48px;">
-  <div class="breadcrumb">
-    <a href="#" onclick="showPage('research-topics');return false;">Research</a> <span>›</span> <span>Building & Urban Modeling</span>
-  </div>
-  <h1>Building & Urban Modeling</h1>
-  <div class="subtitle">건물 및 도시 스케일의 에너지 모델링, 디지털 트윈, GIS 기반 분석</div>
-</section>
 
 <div class="section" style="margin-bottom:-20px;">
   <div class="pill-row">
@@ -2366,14 +2480,6 @@ a { color: inherit; text-decoration: none; }
     <div class="pill active">Building & Urban Modeling</div>
   </div>
 </div>
-
-<section class="overview">
-  <h2>Overview</h2>
-  <p>Building & Urban Modeling 그룹은 건축 부문 탄소중립 달성을 위해, 건물부터 도시 단위까지의
-    에너지 사용량을 분석할 수 있는 건물 에너지 환경을 모델링합니다. EnergyPlus를 엔진으로
-    건물 에너지 시뮬레이션(BEM)과 도시 건물 에너지 시뮬레이션(UBEM)을 개발하고, 이를 통해
-    에너지 절감 방안 도출과 정책 의사결정을 지원하고자 합니다.</p>
-</section>
 
 <div class="section">
   <div class="section-divider"></div>
@@ -4000,8 +4106,15 @@ function showPage(id, opts) {
     } else {
       window.scrollTo({top:0, behavior:'instant'});
     }
+
+    // Research 그룹 페이지: 히어로 아래 섹션에 reveal 부여 + observer 등록 (전환 후에도 동작)
+    if(RESEARCH_PAGES[id]){
+      el.querySelectorAll(':scope > .section').forEach(function(s){ s.classList.add('reveal'); });
+    }
+    observeReveals(el);
   }
   currentPage = id;
+  updateNav();
   history.pushState(null,'','#'+id);
 }
 
@@ -4018,6 +4131,37 @@ function switchRP(btn, panelId) {
   container.querySelectorAll('.rp-panel').forEach(function(p){p.classList.remove('active');});
   document.getElementById(panelId).classList.add('active');
 }
+
+// ===== Research 그룹 히어로: nav 투명 전환 + 스크롤 reveal (한 번만 등록) =====
+var RESEARCH_PAGES = { 'main': 1, 'data-analysis': 1, 'urban-modeling': 1 };
+
+var revealIO = new IntersectionObserver(function (entries) {
+  entries.forEach(function (en) {
+    if (en.isIntersecting) { en.target.classList.add('in'); revealIO.unobserve(en.target); }
+  });
+}, { threshold: 0.12 });
+
+function observeReveals(scope) {
+  (scope || document).querySelectorAll('.reveal:not(.in)').forEach(function (el) { revealIO.observe(el); });
+}
+
+// 현재 페이지가 세 Research 그룹 중 하나이고 스크롤이 히어로 높이 안일 때만 nav 투명
+function updateNav() {
+  var bar = document.querySelector('.top-bar');
+  if (!bar) return;
+  var transparent = false;
+  if (RESEARCH_PAGES[currentPage]) {
+    var page = document.getElementById('page-' + currentPage);
+    var hero = page ? page.querySelector('.rhero') : null;
+    var h = hero ? hero.offsetHeight : window.innerHeight;
+    if (window.scrollY < h - 70) transparent = true;
+  }
+  bar.classList.toggle('rhero-transparent', transparent);
+}
+window.addEventListener('scroll', updateNav, { passive: true });
+window.addEventListener('resize', updateNav);
+updateNav();
+
 window.addEventListener('popstate',function(){
   var h=location.hash.replace('#','');
   if(h)showPage(h, {isBack:true}); else showPage('intro', {isBack:true});
