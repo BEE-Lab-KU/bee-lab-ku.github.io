@@ -412,6 +412,7 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: -0.02em;
 }
 .detail-content h3:first-child { margin-top: 0; }
+.research-fig { width: 100%; border-radius: 12px; border: 1px solid var(--border); margin: 4px 0 24px; display: block; }
 .sidebar-label {
   font-size: 12px;
   font-weight: 700;
@@ -1564,35 +1565,7 @@ html { scroll-behavior: smooth; }
 </div>
 
 <!-- DETAIL: Elevator -->
-<div id="page-research-elevator" class="page-view">
-  <div class="detail-page fade-in">
-    <div class="back-link" onclick="goBack('main')">← Building Systems</div>
-    <div class="detail-grid">
-      <div>
-        <h1 style="font-size:32px;">엘리베이터 샤프트 냉각 시스템을 통한 연돌효과 저감 연구</h1>
-        <div class="detail-meta"><span class="status-dot"></span><span class="status-text">진행 중 · 2025–</span></div>
-        <div class="detail-content">
-          <h3>연구배경</h3>
-          <p>연돌효과는 고층 건물에서 재실자에게 다양한 문제를 유발합니다. 다양한 연돌효과 저감 방안들이 제시되었으며, 재실자의 건물 사용성을 향상시키는 것과 함께 에너지 측면에서의 효율 향상도 고려해야 합니다.</p>
-          <h3>연구목표</h3>
-          <p>주로 고층 건물에서 발생하는 연돌효과의 영향을 줄이고, 재실자의 건물 사용성을 향상시킵니다.</p>
-          <h3>Keywords</h3>
-          <p>Stack Effect · EnergyPlus · Stratification · Shaft Cooling System · Energy Simulation</p>
-        </div>
-      </div>
-      <div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Researcher</div>
-          <div class="sidebar-person" onclick="showPage('member-junghyun')"><img src="Photos/members/junghyun-sm.png" alt=""/><div><div class="name">조정현</div><div class="role">Master's Student</div></div></div>
-        </div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Tools</div>
-          <div class="sidebar-tags"><span class="sidebar-tag">EnergyPlus</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<div id="page-research-elevator" class="page-view"></div>
 
 <!-- DETAIL: ZEB Economy -->
 <div id="page-research-zeb-economy" class="page-view">
@@ -1657,10 +1630,10 @@ html { scroll-behavior: smooth; }
     <div class="profile-top">
       <img class="profile-avatar" src="Photos/members/junghyun.png" alt=""/>
       <div class="profile-info"><h1>조정현</h1><div class="role-line">Master's Student · Building Systems Group</div>
-      <div class="bio">고층 건물의 에너지 성능 분석과 설비 시스템 최적화를 연구하고 있습니다.</div></div>
+      <div class="bio">고층 건물에서 발생하는 기류 특성인 연돌효과에 대해 연구하고 있습니다. 여러가지 연돌효과 저감 방안과 저감 방안이 건물의 에너지 및 재실자 측면에 미치는 영향에 대한 분석에 집중하고 있습니다.</div></div>
     </div>
     <div class="profile-research-list"><h3>Research</h3>
-      <div class="profile-research-item" onclick="showPage('research-elevator')"><h4>엘리베이터 샤프트 냉각 시스템을 통한 연돌효과 저감 연구</h4><p>#stack_effect #EnergyPlus #shaft_cooling_system #energy_simulation</p></div>
+      <div class="profile-research-item" onclick="showPage('research-elevator')"><h4>엘리베이터 샤프트 내 균일 냉각을 위한 급배기 위치 최적화</h4><p>#stack_effect #elevator_shaft_cooling #supply_exhaust #stratification</p></div>
     </div>
     <div class="profile-research-list" style="margin-top:48px;"><h3>Publications</h3>
       <div class="pub-row"><div class="pub-year">2025</div><div><div class="pub-title">조정현, 임현우. 연돌효과 저감을 위한 엘리베이터 샤프트 냉각 시스템 적용 시 샤프트 온도 분포에 따른 영향 분석.</div><div class="pub-journal">2025년도 대한설비공학회 동계학술발표대회</div></div><div><span class="pub-badge conf">CONF</span></div></div>
@@ -2133,11 +2106,11 @@ html { scroll-behavior: smooth; }
     <div class="profile-top">
       <img class="profile-avatar" src="Photos/members/jiyoung.jpg" alt=""/>
       <div class="profile-info"><h1>김지영</h1><div class="role-line">Undergraduate Researcher · Data & Analysis Group</div>
-        <div class="bio">건물 에너지 데이터 전처리 및 시각화 연구에 참여하고 있으며, 데이터 사이언스 분야에 관심이 있습니다.</div></div>
+        <div class="bio">재실자 감지 시스템 기반의 고정밀 재실 스케줄 도출 및 에너지 최적화 방안을 연구하고 있습니다. 실내 재실 패턴 분석과 연계한 건물 동적 제어 및 효율적인 에너지 수요 관리 시스템 구축에 집중하고 있습니다.</div></div>
     </div>
     <div class="profile-research-list"><h3>Research</h3>
-      <div class="profile-research-item" onclick="showPage('research-da-thermal-seat')"><h4>열적 특성 기반의 개인 맞춤형 좌석 선택 시스템</h4><p>#PMV #virtual_sensing #thermal_comfort #personalized</p></div>
-      <div class="profile-research-item" onclick="showPage('research-da-preprocessing')"><h4>재실자 감지 시스템을 통한 재실 스케줄 분석 및 에너지 저감 방안</h4><p>#occupancy_detection #data_preprocessing #visualization</p></div>
+      <div class="profile-research-item" onclick="showPage('research-da-preprocessing')"><h4>로지스틱 맵 이미지 암호화 기법을 적용한 딥러닝 기반 재실자 감지 시스템 제안</h4><p>#occupancy_detection #logistic_map #encryption #CNN #YOLO</p></div>
+      <div class="profile-research-item" onclick="showPage('research-da-thermal-seat')"><h4>열적 특성 기반의 개인 맞춤형 좌석 선택 시스템 제안</h4><p>#PMV #virtual_sensing #thermal_comfort #personalized</p></div>
     </div>
     <div class="profile-research-list" style="margin-top:48px;"><h3>Publications</h3>
       <div class="pub-row"><div class="pub-year">2026</div><div><div class="pub-title">김지영, 임현우. 로지스틱 맵 이미지 암호화 기법을 적용한 딥러닝 기반 재실자 감지 시스템 제안.</div><div class="pub-journal">2026년도 대한건축학회 춘계학술발표대회</div><span style="margin-left:8px;font-size:11px;font-weight:600;color:#D4A017;">🏆 우수논문발표상</span></div><div><span class="pub-badge conf">CONF</span></div></div>
@@ -2146,137 +2119,13 @@ html { scroll-behavior: smooth; }
 </div>
 
 <!-- DA RESEARCH DETAIL: Thermal Comfort & Personalized Seat Reservation -->
-<div id="page-research-da-thermal-seat" class="page-view">
-  <div class="detail-page fade-in">
-    <div class="back-link" onclick="goBack('data-analysis')">← Data & Analysis</div>
-    <div class="detail-grid">
-      <div>
-        <h1 style="font-size:32px;">열적 특성 기반의 개인 맞춤형 좌석 선택 시스템</h1>
-        <div class="detail-meta"><span class="status-dot" style="background:#999999;"></span><span class="status-text">진행 완료 · 2025</span></div>
-        <div class="detail-content">
-          <h3>연구배경</h3>
-          <p>현재 대부분의 좌석 배치 시스템은 좌석 간 온열환경의 차이를 반영하지 못해 개인의 열적 쾌적성을 고려하지 못하는 한계가 존재합니다. 이를 개선하기 위해 대표적인 열적 쾌적성 지표인 PMV가 활용되고 있으나, 기존 PMV는 대사율 지표인 MET를 표준화하여 사용함으로써 개인별 열적 특성 차이를 충분히 반영하지 못하고 있습니다.</p>
-          <h3>연구목표</h3>
-          <p>개인별 MET를 산정하여 PMV를 개인화하고, 이를 기반으로 맞춤형 좌석 선택 시스템을 제안합니다. Virtual Sensing 기술을 활용하여 개인의 열적 특성을 예측하고, 실시간으로 최적 좌석을 추천하는 시스템 개발을 목표로 합니다.</p>
-          <h3>Keywords</h3>
-          <p>Predicted Mean Vote · Virtual Sensing · Metabolic Rate · Thermal Comfort · Personalized Seat Reservation</p>
-        </div>
-      </div>
-      <div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Researchers</div>
-          <div class="sidebar-person" onclick="showPage('member-jiyoung')"><img src="Photos/members/jiyoung-sm.png" alt=""/><div><div class="name">김지영</div><div class="role">Undergraduate Researcher</div></div></div>
-          <div class="sidebar-person" onclick="showPage('member-hyunsu')"><img src="Photos/members/hyunsu-sm.png" alt=""/><div><div class="name">이현수</div><div class="role">Undergraduate Researcher</div></div></div>
-        </div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Tools</div>
-          <div class="sidebar-tags"><span class="sidebar-tag">Python</span><span class="sidebar-tag">Virtual Sensing</span></div>
-        </div>
-      </div>
-    </div>
-    <div style="margin-top:64px;border-top:1px solid var(--border);padding-top:48px;">
-      <h3>관련 논문</h3>
-      <div style="padding:16px;border:1px solid var(--border);border-radius:8px;margin:8px 0;">
-        <div style="font-size:14px;font-weight:600;">열적 특성 기반의 개인 맞춤형 좌석 선택 시스템 제안</div>
-        <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">이현수, 김지영, & 임현우 · 2025</div>
-        <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">한국태양에너지학회 학술대회논문집, pp. 72-72</div>
-      </div>
-    </div>
-  </div>
-</div>
+<div id="page-research-da-thermal-seat" class="page-view"></div>
 
 <!-- DA RESEARCH DETAIL: Data Preprocessing & Occupancy Detection -->
-<div id="page-research-da-preprocessing" class="page-view">
-  <div class="detail-page fade-in">
-    <div class="back-link" onclick="goBack('data-analysis')">← Data & Analysis</div>
-    <div class="detail-grid">
-      <div>
-        <h1 style="font-size:32px;">재실자 감지 시스템을 통한 재실 스케줄 분석 및 에너지 저감 방안</h1>
-        <div class="detail-meta"><span class="status-dot"></span><span class="status-text">진행 중 · 2026–</span></div>
-        <div class="detail-content">
-          <h3>연구배경</h3>
-          <p>대부분의 건물 에너지 관리 시스템은 실제 거주자의 재실 패턴을 고려하지 않고, 미리 설정된 고정 스케줄에 따라 냉난방 및 조명 설비를 운영하고 있습니다. 이를 해결하기 위해 비전 기반 재실자 감지 기술이 주목받고 있지만, 프라이버시와 원거리 탐지 성능, 비정형 자세 인식 성능을 동시에 개선하는 접근이 필요합니다. 따라서 고도화된 재실자 감지 시스템을 제안하고 스케줄 분석을 통해 건물의 에너지 저감 방안을 제시하고자 합니다.</p>
-          <h3>연구목표</h3>
-          <p>재실자의 프라이버시를 보호하고 고도화된 재실자 감지 시스템으로 건물의 에너지 저감 효과를 분석합니다.</p>
-          <h3>Keywords</h3>
-          <p>Occupancy detection · Logistic Map · Encryption · CNN · YOLO</p>
-        </div>
-      </div>
-      <div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Researcher</div>
-          <div class="sidebar-person" onclick="showPage('member-jiyoung')"><img src="Photos/members/jiyoung-sm.png" alt=""/><div><div class="name">김지영</div><div class="role">Undergraduate Researcher</div></div></div>
-        </div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Tools</div>
-          <div class="sidebar-tags"><span class="sidebar-tag">Python</span><span class="sidebar-tag">CNN</span><span class="sidebar-tag">YOLO</span></div>
-        </div>
-      </div>
-    </div>
-    <div style="margin-top:64px;border-top:1px solid var(--border);padding-top:48px;">
-      <h3>관련 논문</h3>
-      <div style="padding:16px;border:1px solid var(--border);border-radius:8px;margin:8px 0;">
-        <div style="font-size:14px;font-weight:600;">로지스틱 맵 이미지 암호화 기법을 적용한 딥러닝 기반 재실자 감지 시스템 제안</div>
-        <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">김지영, 임현우 · 2026</div>
-        <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">2026년도 대한건축학회 춘계학술발표대회</div>
-      </div>
-    </div>
-  </div>
-</div>
+<div id="page-research-da-preprocessing" class="page-view"></div>
 
 <!-- UM RESEARCH DETAIL: GIS -->
-<div id="page-research-um-ubem" class="page-view">
-  <div class="detail-page fade-in">
-    <div class="back-link" onclick="goBack('urban-modeling')">← Building & Urban Modeling</div>
-    <div class="detail-grid">
-      <div>
-        <h1 style="font-size:32px;">도시 건물 에너지 모델(UBEM) 기반의 도시 단위 에너지 사용량 해석</h1>
-        <div class="detail-meta"><span class="status-dot"></span><span class="status-text">진행 중 · 2024–</span></div>
-        <div class="detail-content">
-          <h3>연구배경</h3>
-          <p>도시로의 에너지 집중 현상에 따라 지속가능한 도시를 설계하는 것이 중요해지고 있습니다. 이를 위해 도시 에너지 생태계를 이해할 수 있어야 하며, 도시 내의 건물 요소와 에너지 사용량의 상호작용을 재현하고 분석하여 도시 단위에서 건물의 에너지 생태계를 분석하는 것이 필수입니다.</p>
-          <h3>연구목표</h3>
-          <p>도시 단위 에너지 소비량 해석을 위해 대리모델 기반의 연산 효율화와 불확실성 정량화, 자동 보정 프로세스를 구축하여, 고정밀 UBEM 모델을 구축하고 건물 요소와 에너지 사용량 간의 상관관계를 규명합니다.</p>
-          <h3>Keywords</h3>
-          <p>Urban Building Energy Model (UBEM) · Surrogate Model · Uncertainty Quantification · Auto-Calibration · Energy Consumption</p>
-        </div>
-      </div>
-      <div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Researcher</div>
-          <div class="sidebar-person" onclick="showPage('member-jungyun')"><img src="Photos/members/jungyun-sm.png" alt=""/><div><div class="name">황정윤</div><div class="role">Ph.D. Candidate</div></div></div>
-        </div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Tools</div>
-          <div class="sidebar-tags"><span class="sidebar-tag">Rhino</span><span class="sidebar-tag">Grasshopper</span><span class="sidebar-tag">Ladybug</span><span class="sidebar-tag">URBANopt</span><span class="sidebar-tag">EnergyPlus</span><span class="sidebar-tag">Python</span><span class="sidebar-tag">R</span><span class="sidebar-tag">QGIS</span></div>
-        </div>
-      </div>
-    </div>
-    <div style="margin-top:64px;border-top:1px solid var(--border);padding-top:48px;">
-      <h3>관련 논문</h3>
-      <div style="padding:16px;border:1px solid var(--border);border-radius:8px;margin:8px 0;margin-bottom:16px;">
-        <div style="font-size:14px;font-weight:600;">Analysis of energy consumption impacts using public data-based building shape index: a case study of office buildings in Seoul</div>
-        <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">Jeongyun Hwang, Kyungjae Lee, Doyeon Lee, Deuk-Woo Kim, Hyunwoo Lim · 2025</div>
-        <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">Journal of Building Engineering · DOI: 10.1016/j.jobe.2025.114643</div>
-      </div>
-      <div style="padding:16px;border:1px solid var(--border);border-radius:8px;margin:8px 0;margin-bottom:16px;">
-        <div style="font-size:14px;font-weight:600;">Reducing uncertainty of building shape information in urban building energy modeling using Bayesian calibration</div>
-        <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">Jeongyun Hwang, Hyunwoo Lim, Jongyeon Lim · 2024</div>
-        <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">Sustainable Cities and Society · DOI: 10.1016/j.scs.2024.105895</div>
-      </div>
-      <div style="padding:16px;border:1px solid var(--border);border-radius:8px;margin:8px 0;margin-bottom:16px;">
-        <div style="font-size:14px;font-weight:600;">Design and Feasibility Study of a Real-Time Controlled Kinetic Facade System for Natural Lighting and Ventilation</div>
-        <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">Jeongyun Hwang, Dohun Lim, Gaeun Kim, Hyunwoo Lim · 2024</div>
-        <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">Journal of the Korean Solar Energy Society · DOI: 10.7836/kses.2024.44.1.001</div>
-      </div>
-      <div style="padding:16px;border:1px solid var(--border);border-radius:8px;margin:8px 0;">
-        <div style="font-size:14px;font-weight:600;">Developing building shape indexes at the city-scale for understanding building energy consumption</div>
-        <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">Jeongyun Hwang, Sangmin Lee, Jisoo Lim, Hyunwoo Lim · 2025</div>
-        <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">Building Simulation 2025: 19th Conference of IBPSA · DOI: 10.26868/25222708.2025.1603</div>
-      </div>
-    </div>
-  </div>
-</div>
+<div id="page-research-um-ubem" class="page-view"></div>
 
 <!-- UM RESEARCH DETAIL: Load Sharing DBEM -->
 <div id="page-research-um-dbem" class="page-view">
@@ -2316,10 +2165,10 @@ html { scroll-behavior: smooth; }
     <div class="profile-top">
       <img class="profile-avatar" src="Photos/members/jungyun.jpg" alt=""/>
       <div class="profile-info"><h1>황정윤</h1><div class="role-line">Ph.D. Candidate · Building & Urban Modeling Group</div>
-        <div class="bio">도시 건물 에너지 모델(UBEM) 기반의 도시 단위 에너지 사용량 해석 연구를 수행하고 있으며, 대리모델 기반 연산 효율화와 불확실성 정량화에 관심이 있습니다.</div></div>
+        <div class="bio">도시 단위 건물 에너지 해석을 위한 건물 특성 기반 지표와 에너지 모델을 개발하고 있습니다. 형상 특성을 반영한 형상 지표를 제작하고, 베이지안 추론과 강화학습 보정으로 모델의 불확실성을 고려하여 정확도를 높이는 방법을 탐구합니다.</div></div>
     </div>
     <div class="profile-research-list"><h3>Research</h3>
-      <div class="profile-research-item" onclick="showPage('research-um-ubem')"><h4>도시 건물 에너지 모델(UBEM) 기반의 도시 단위 에너지 사용량 해석</h4><p>#UBEM #surrogate_model #uncertainty_quantification #auto_calibration</p></div>
+      <div class="profile-research-item" onclick="showPage('research-um-ubem')"><h4>도시 단위 건물 에너지 해석을 위한 건물 특성 지표 및 도시 건물 에너지 모델(UBEM) 개발</h4><p>#UBEM #bayesian_calibration #uncertainty_quantification #reinforcement_learning #building_feature_index</p></div>
     </div>
     <div class="profile-research-list" style="margin-top:48px;"><h3>Publications</h3>
       <div class="pub-row"><div class="pub-year">2025</div><div><div class="pub-title">Hwang, J., Lee, K., Lee, D., Kim, D. W., & Lim, H. Analysis of energy consumption impacts using public data-based building shape index: a case study of office buildings in Seoul.</div><div class="pub-journal">Journal of Building Engineering</div></div><div><span class="pub-badge sci">SCIE</span></div></div>
@@ -2370,7 +2219,7 @@ html { scroll-behavior: smooth; }
     <div class="profile-top">
       <img class="profile-avatar" src="Photos/members/hyunsu.jpeg" alt=""/>
       <div class="profile-info"><h1>이현수</h1><div class="role-line">Undergraduate Researcher · Building & Urban Modeling Group</div>
-        <div class="bio">도시 건물 데이터 수집 및 GIS 기반 시각화 연구에 참여하고 있으며, 공간 데이터 분석에 관심이 있습니다.</div></div>
+        <div class="bio">도시 건물 에너지 모델(UBEM) 기반의 도시 단위 에너지 사용량 예측 연구를 수행하고 있으며, 대리모델 기반 연산 효율화와 웹 기반 도시 에너지 플랫폼 구현에 관심이 있습니다.</div></div>
     </div>
     <div class="profile-research-list"><h3>Research</h3>
       <div class="profile-research-item" onclick="showPage('research-da-thermal-seat')"><h4>열적 특성 기반의 개인 맞춤형 좌석 선택 시스템 (공동연구)</h4><p>#PMV #thermal_comfort #personalized_seat</p></div>
@@ -4455,6 +4304,63 @@ document.addEventListener('keydown', function(e) {
 });
 
 loadBlogNews();
+
+// ===== 개인연구: research-content/research.json 으로 상세 페이지 자동 생성 =====
+function rEsc(t) { return String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+function buildResearchPage(r) {
+  var fig = r.figure ? '<img class="research-fig" src="' + rEsc(r.figure) + '" alt="' + rEsc(r.title) + '" loading="lazy" onerror="this.style.display=\'none\'">' : '';
+  var researchers = (r.researchers || []).map(function (p) {
+    return '<div class="sidebar-person" onclick="showPage(\'member-' + rEsc(p.slug) + '\')"><img src="' + rEsc(p.avatar) + '" alt=""/><div><div class="name">' + rEsc(p.name) + '</div><div class="role">' + rEsc(p.role) + '</div></div></div>';
+  }).join('');
+  var rLabel = (r.researchers && r.researchers.length > 1) ? 'Researchers' : 'Researcher';
+  var tools = (r.tools || []).map(function (t) { return '<span class="sidebar-tag">' + rEsc(t) + '</span>'; }).join('');
+  var kw = (r.keywords || []).map(rEsc).join(' · ');
+  var dot = r.completed ? '<span class="status-dot" style="background:#999999;"></span>' : '<span class="status-dot"></span>';
+  var papers = '';
+  if (r.papers && r.papers.length) {
+    papers = '<div style="margin-top:64px;border-top:1px solid var(--border);padding-top:48px;"><h3>관련 논문</h3>' +
+      r.papers.map(function (p) {
+        return '<div style="padding:16px;border:1px solid var(--border);border-radius:8px;margin:8px 0;">' +
+          '<div style="font-size:14px;font-weight:600;">' + rEsc(p.title) + '</div>' +
+          '<div style="font-size:12px;color:var(--text-muted);margin-top:4px;">' + rEsc(p.authors) + '</div>' +
+          (p.venue ? '<div style="font-size:12px;color:var(--text-muted);margin-top:2px;">' + rEsc(p.venue) + '</div>' : '') +
+          '</div>';
+      }).join('') + '</div>';
+  }
+  return '<div class="detail-page fade-in">' +
+    '<div class="back-link" onclick="goBack(\'' + rEsc(r.back) + '\')">← ' + rEsc(r.group) + '</div>' +
+    '<div class="detail-grid"><div>' +
+      '<h1 style="font-size:32px;">' + rEsc(r.title) + '</h1>' +
+      '<div class="detail-meta">' + dot + '<span class="status-text">' + rEsc(r.status) + '</span></div>' +
+      fig +
+      '<div class="detail-content">' +
+        '<h3>연구배경</h3><p>' + rEsc(r.background) + '</p>' +
+        '<h3>연구목표</h3><p>' + rEsc(r.goal) + '</p>' +
+        '<h3>Keywords</h3><p>' + kw + '</p>' +
+      '</div>' +
+    '</div><div>' +
+      '<div class="sidebar-block"><div class="sidebar-label">' + rLabel + '</div>' + researchers + '</div>' +
+      (tools ? '<div class="sidebar-block"><div class="sidebar-label">Tools</div><div class="sidebar-tags">' + tools + '</div></div>' : '') +
+    '</div></div>' +
+    papers +
+  '</div>';
+}
+function loadResearch() {
+  fetch('research-content/research.json')
+    .then(function (r) { return r.json(); })
+    .then(function (list) {
+      list.forEach(function (r) {
+        var el = document.getElementById('page-' + r.id);
+        if (!el) { el = document.createElement('div'); el.id = 'page-' + r.id; el.className = 'page-view'; document.body.appendChild(el); }
+        el.innerHTML = buildResearchPage(r);
+      });
+      // 딥링크 보정: 현재 해시가 방금 만든 연구 페이지면 다시 표시
+      var h = location.hash.replace('#', '');
+      if (h && document.getElementById('page-' + h)) { showPage(h); }
+    })
+    .catch(function (e) { console.error('research load error:', e); });
+}
+loadResearch();
 
 // ===== 프로젝트 상세 갤러리: Photos/projects/<key>-1.jpg, -2.jpg … 자동 탐색 (연속 번호) =====
 function openProjImg(src) {

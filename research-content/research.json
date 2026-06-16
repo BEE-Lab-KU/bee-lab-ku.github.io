@@ -1,0 +1,96 @@
+[
+  {
+    "id": "research-elevator",
+    "title": "엘리베이터 샤프트 내 균일 냉각을 위한 급배기 위치 최적화",
+    "group": "Building Systems",
+    "back": "main",
+    "status": "진행 중 · 2025–",
+    "researchers": [
+      { "slug": "junghyun", "name": "조정현", "role": "Master's Student", "avatar": "Photos/members/junghyun-sm.png" }
+    ],
+    "background": "건물의 고층화가 진행됨에 따라 고층 건물에서 발생하는 기류 특성인 연돌효과로 인한 문제점 해소가 필요합니다. 연돌효과는 건물을 사용하는 재실자에게 불편함을 야기하며 건물의 에너지 측면에도 영향을 미칩니다. 이러한 문제점을 해소하기 위해 연돌효과 저감 방안들 중 엘리베이터 샤프트 냉각 시스템에 대해 연구를 수행하였습니다. 이때 샤프트 냉각 시스템의 성능을 극대화하기 위해서는 샤프트 내부를 균일하게 냉각해야 합니다. 따라서 샤프트 온도를 냉각시키는 것과 동시에, 샤프트 내부를 균일하게 냉각할 수 있는 최적의 급기와 배기 위치에 대해 검토가 필요합니다.",
+    "goal": "연돌효과 저감 방안인 엘리베이터 샤프트 냉각 시스템의 최적 급배기 설계를 통해 시스템의 성능을 향상시킵니다.",
+    "keywords": ["Stack effect", "High-rise building", "Elevator shaft cooling system", "Supply/Exhaust location", "Stratification"],
+    "tools": ["EnergyPlus", "CONTAM"],
+    "figure": "Photos/research-figs/elevator.png",
+    "papers": []
+  },
+  {
+    "id": "research-da-preprocessing",
+    "title": "로지스틱 맵 이미지 암호화 기법을 적용한 딥러닝 기반 재실자 감지 시스템 제안",
+    "group": "Data & Analysis",
+    "back": "data-analysis",
+    "status": "진행 중 · 2026–",
+    "researchers": [
+      { "slug": "jiyoung", "name": "김지영", "role": "Undergraduate Researcher", "avatar": "Photos/members/jiyoung-sm.png" }
+    ],
+    "background": "대부분의 건물 에너지 관리 시스템은 실제 거주자의 재실 패턴을 고려하지 않고, 미리 설정된 고정 스케줄에 따라 냉난방 및 조명 설비를 운영하고 있습니다. 이를 해결하기 위해 비전 기반 재실자 감지 기술이 주목받고 있지만, 프라이버시와 원거리 탐지 성능, 비정형 자세 인식 성능을 동시에 개선하는 접근이 필요합니다. 따라서 고도화된 재실자 감지 시스템을 제안하고 스케줄 분석을 통해 건물의 에너지 저감 방안을 제시하고자 합니다.",
+    "goal": "재실자의 프라이버시를 보호하고 고도화된 재실자 감지 시스템으로 건물의 에너지 저감 효과를 분석합니다.",
+    "keywords": ["Occupancy detection", "Logistic Map", "Encryption", "CNN", "YOLO"],
+    "tools": ["Python", "CNN", "YOLO"],
+    "figure": "Photos/research-figs/occupancy.png",
+    "papers": [
+      {
+        "title": "로지스틱 맵 이미지 암호화 기법을 적용한 딥러닝 기반 재실자 감지 시스템 제안",
+        "authors": "김지영, 임현우 · 2026",
+        "venue": "2026년도 대한건축학회 춘계학술발표대회"
+      }
+    ]
+  },
+  {
+    "id": "research-da-thermal-seat",
+    "title": "열적 특성 기반의 개인 맞춤형 좌석 선택 시스템 제안",
+    "group": "Data & Analysis",
+    "back": "data-analysis",
+    "status": "진행 완료 · 2025",
+    "completed": true,
+    "researchers": [
+      { "slug": "jiyoung", "name": "김지영", "role": "Undergraduate Researcher", "avatar": "Photos/members/jiyoung-sm.png" },
+      { "slug": "hyunsu", "name": "이현수", "role": "Undergraduate Researcher", "avatar": "Photos/members/hyunsu-sm.png" }
+    ],
+    "background": "현재 대부분의 좌석 배치 시스템은 좌석 간 온열환경의 차이를 반영하지 못해 개인의 열적 쾌적성을 고려하지 못하는 한계가 존재합니다. 이를 개선하기 위해 대표적인 열적 쾌적성 지표인 PMV가 활용되고 있으나, 기존 PMV는 대사율 지표인 MET를 표준화하여 사용함으로써 개인별 열적 특성 차이를 충분히 반영하지 못하고 있습니다.",
+    "goal": "개인별 MET를 산정하여 PMV를 개인화하고, 이를 기반으로 맞춤형 좌석 선택 시스템을 제안합니다. Virtual Sensing 기술을 활용하여 개인의 열적 특성을 예측하고, 실시간으로 최적 좌석을 추천하는 시스템 개발을 목표로 합니다.",
+    "keywords": ["Predicted Mean Vote", "Virtual Sensing", "Metabolic Rate", "Thermal Comfort", "Personalized Seat Reservation"],
+    "tools": ["Python", "Virtual Sensing"],
+    "figure": "Photos/research-figs/thermal-seat.png",
+    "papers": [
+      {
+        "title": "열적 특성 기반의 개인 맞춤형 좌석 선택 시스템 제안",
+        "authors": "이현수, 김지영, & 임현우 · 2025",
+        "venue": "한국태양에너지학회 학술대회논문집, pp. 72-72"
+      }
+    ]
+  },
+  {
+    "id": "research-um-ubem",
+    "title": "도시 단위 건물 에너지 해석을 위한 건물 특성 지표 및 도시 건물 에너지 모델(UBEM) 개발",
+    "group": "Building & Urban Modeling",
+    "back": "urban-modeling",
+    "status": "진행 중 · 2024–",
+    "researchers": [
+      { "slug": "jungyun", "name": "황정윤", "role": "Ph.D. Candidate", "avatar": "Photos/members/jungyun-sm.png" }
+    ],
+    "background": "도시화로 에너지 수요가 도시에 집중되면서 전력망을 비롯한 에너지 시스템의 부담이 가중되고 있습니다. 지속가능한 도시를 설계하기 위해서는 이러한 도시 에너지 생태계를 이해하는 것이 선행되어야 합니다. 도시 건물 에너지 모델(UBEM)은 도시 단위 건물 에너지 분석에 널리 활용되고 있으나, 계산 비용이 크고 실제 도시가 가진 불확실성을 충분히 반영하지 못한다는 한계가 있습니다. 따라서 건물 특성(형상, 부하, 패턴)을 기반으로 한 초기 분석과 불확실성을 고려한 모델 보정을 통해 정밀 분석으로 이어지는 방법론이 필요합니다.",
+    "goal": "건물 특성 지표 기반의 초기 분석부터 불확실성 보정을 통한 정밀 분석으로 정확한 도시 건물 에너지 모델(UBEM)을 구축하는 것을 목표로 합니다.",
+    "keywords": ["Urban Building Energy Modeling (UBEM)", "Bayesian Calibration", "Uncertainty Quantification", "Reinforcement Learning", "Building Feature Index"],
+    "tools": ["EnergyPlus", "Grasshopper", "QGIS", "Python"],
+    "figure": null,
+    "papers": [
+      {
+        "title": "Analysis of energy consumption impacts using public data-based building shape index: a case study of office buildings in Seoul",
+        "authors": "Jeongyun Hwang, Kyungjae Lee, Doyeon Lee, Deuk-Woo Kim, Hyunwoo Lim · 2025",
+        "venue": "Journal of Building Engineering · DOI: 10.1016/j.jobe.2025.114643"
+      },
+      {
+        "title": "Reducing uncertainty of building shape information in urban building energy modeling using Bayesian calibration",
+        "authors": "Jeongyun Hwang, Hyunwoo Lim, Jongyeon Lim · 2024",
+        "venue": "Sustainable Cities and Society · DOI: 10.1016/j.scs.2024.105895"
+      },
+      {
+        "title": "Developing building shape indexes at the city-scale for understanding building energy consumption",
+        "authors": "Jeongyun Hwang, Sangmin Lee, Jisoo Lim, Hyunwoo Lim · 2025",
+        "venue": "Building Simulation 2025: 19th Conference of IBPSA · DOI: 10.26868/25222708.2025.1603"
+      }
+    ]
+  }
+]
