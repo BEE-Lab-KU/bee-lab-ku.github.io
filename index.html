@@ -1289,6 +1289,17 @@ html { scroll-behavior: smooth; }
           <span class="label">한지웅</span>
         </div>
       </div>
+      <div class="project-card" onclick="showPage('research-cascade-hp')">
+        <span class="card-arrow">→</span>
+        <div class="project-meta"><span class="badge individual">개인 연구</span><span class="status-dot"></span><span class="status-text">진행 중</span></div>
+        <h4>건물 내 동시 냉방·급탕 수요의 열적 결합을 통한 캐스케이드 히트펌프 시스템</h4>
+        <p>냉방에서 버려지는 열을 급탕 열원으로 재사용하는 캐스케이드 통합 히트펌프 시스템을 제안하고 Modelica로 연간 에너지 절감 효과 검증</p>
+        <div class="tag-row"><span class="tag">Cascade Heat Pump</span><span class="tag">IWHP</span><span class="tag">Modelica</span></div>
+        <div class="people-row">
+          <img src="Photos/members/jiung.png" alt="한지웅"/>
+          <span class="label">한지웅</span>
+        </div>
+      </div>
       <div class="project-card completed" onclick="showPage('research-sample-size')">
         <span class="card-arrow">→</span>
         <div class="project-meta"><span class="badge individual">개인 연구</span><span class="status-dot" style="background:#999999;"></span><span class="status-text">진행 완료</span></div>
@@ -1370,66 +1381,10 @@ html { scroll-behavior: smooth; }
 
 <!-- DETAIL: AI Agent -->
 <!-- DETAIL: WHR Data Center -->
-<div id="page-research-whr-dc" class="page-view">
-  <div class="detail-page fade-in">
-    <div class="back-link" onclick="goBack('main')">← Building Systems</div>
-    <div class="detail-grid">
-      <div>
-        <h1 style="font-size:32px;">데이터센터 폐열 회수 및 방류 수온 복원을 위한 수열원 히트펌프 시스템</h1>
-        <div class="detail-meta"><span class="status-dot"></span><span class="status-text">진행 중 · 2025–</span></div>
-        <div class="detail-content">
-          <h3>연구배경</h3>
-          <p>생성형 인공지능의 급격한 확산에 따라 데이터센터 수요가 폭발적으로 증가하고 있습니다. 데이터센터는 운영 과정에서 대량의 폐열을 지속적으로 발생시키며, 이를 효과적으로 활용하기 위한 연구가 활발히 진행되고 있습니다. 그러나 기존의 수열원 기반 폐열 활용 연구는 폐열 활용시 수온 상승의 환경적 영향을 충분히 고려하지 못했습니다. 따라서 폐열을 사용하는 경우의 에너지 활용 성능을 높이는 동시에, 방류수의 수온 변화까지 종합적으로 검토하는 접근이 필요합니다.</p>
-          <h3>연구목표</h3>
-          <p>수열원을 통해 폐열을 회수할 때 시스템으로 방류 수온을 제어하고, 폐열 활용에 따른 에너지 성능을 향상시킵니다.</p>
-          <h3>Keywords</h3>
-          <p>Data Center · Water to Water Heat Pump · Waste Heat Recovery</p>
-        </div>
-      </div>
-      <div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Researcher</div>
-          <div class="sidebar-person" onclick="showPage('member-jiung')"><img src="Photos/members/jiung-sm.png" alt=""/><div><div class="name">한지웅</div><div class="role">Master's Student</div></div></div>
-        </div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Tools</div>
-          <div class="sidebar-tags"><span class="sidebar-tag">TRNSYS</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<div id="page-research-whr-dc" class="page-view"></div>
 
 <!-- DETAIL: CAD Space Recognition -->
-<div id="page-research-ai" class="page-view">
-  <div class="detail-page fade-in">
-    <div class="back-link" onclick="goBack('main')">← Building Systems</div>
-    <div class="detail-grid">
-      <div>
-        <h1 style="font-size:32px;">벡터 데이터 기반 CAD 공간 자동 인식 엔진 및 LLM 기반 자연어 질의응답 시스템 개발</h1>
-        <div class="detail-meta"><span class="status-dot"></span><span class="status-text">진행 중 · 2025–</span></div>
-        <div class="detail-content">
-          <h3>연구배경</h3>
-          <p>CAD 도면은 건물과 관련된 정보를 포함하고 있으며, AI Agent 구축을 위한 필수적인 정보를 포함하고 있습니다. 하지만, CAD의 데이터 추출은 수작업에 의존하고 있다는 한계가 있습니다.</p>
-          <h3>연구목표</h3>
-          <p>건축 CAD 도면의 공간 정보를 AI가 활용할 수 있도록 구조화된 데이터로 자동 변환하는 파이프라인을 개발합니다.</p>
-          <h3>Keywords</h3>
-          <p>AI · LLM · CAD</p>
-        </div>
-      </div>
-      <div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Researcher</div>
-          <div class="sidebar-person" onclick="showPage('member-jiung')"><img src="Photos/members/jiung-sm.png" alt=""/><div><div class="name">한지웅</div><div class="role">Master's Student</div></div></div>
-        </div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Tools</div>
-          <div class="sidebar-tags"><span class="sidebar-tag">Python</span><span class="sidebar-tag">CAD</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<div id="page-research-ai" class="page-view"></div>
 
 <!-- DETAIL: CHPWH -->
 <div id="page-research-chpwh" class="page-view">
@@ -1662,11 +1617,12 @@ html { scroll-behavior: smooth; }
     <div class="profile-top">
       <img class="profile-avatar" src="Photos/members/jiung.png" alt=""/>
       <div class="profile-info"><h1>한지웅</h1><div class="role-line">Master's Student · Building Systems Group</div>
-      <div class="bio">건물 에너지 온톨로지와 AI를 결합한 건축 데이터 자동 분석 시스템을 연구하고 있습니다. IFC/BOT/BRICK Schema 기반 지식 그래프와 LLM Agent를 활용한 자연어 질의응답 파이프라인 구축에 집중하고 있습니다.</div></div>
+      <div class="bio">데이터센터 폐열 회수 및 건물 내 히트펌프 시스템을 연구하고 있습니다. 또한 건물 자동 제어를 위한 AI Agent 파이프라인 구축에 집중하고 있습니다.</div></div>
     </div>
     <div class="profile-research-list"><h3>Research</h3>
-      <div class="profile-research-item" onclick="showPage('research-whr-dc')"><h4>수열원 히트펌프 기반 데이터센터 폐열의 급탕 활용과 방류온도 제어</h4><p>#data_center #WWHP #waste_heat_recovery</p></div>
-      <div class="profile-research-item" onclick="showPage('research-ai')"><h4>벡터 데이터 기반 CAD 공간 자동 인식 엔진 및 LLM 기반 자연어 질의응답 시스템 개발</h4><p>#AI #LLM #CAD</p></div>
+      <div class="profile-research-item" onclick="showPage('research-whr-dc')"><h4>데이터센터 폐열을 활용한 급탕 및 수열원 온도 유지 방안</h4><p>#data_center #WWHP #waste_heat_recovery</p></div>
+      <div class="profile-research-item" onclick="showPage('research-ai')"><h4>이미지·벡터 하이브리드 기반 CAD 도면 공간 자동 인식 엔진 및 LLM 기반 자연어 질의응답 시스템 개발</h4><p>#AI_agent #LLM #CAD #ontology</p></div>
+      <div class="profile-research-item" onclick="showPage('research-cascade-hp')"><h4>건물 내 동시 냉방·급탕 수요의 열적 결합을 통한 캐스케이드 히트펌프 시스템</h4><p>#cascade_heat_pump #IWHP #Modelica #5GDHC</p></div>
     </div>
     <div class="profile-research-list" style="margin-top:48px;"><h3>Publications</h3>
       <div class="pub-row"><div class="pub-year">2025</div><div><div class="pub-title">한지웅, 임현우. 한강수열원 히트펌프 기반 데이터센터 폐열 활용 급탕과 방류 수온 회복 시스템.</div><div class="pub-journal">2025년도 한국태양에너지학회 추계학술발표대회</div></div><div><span class="pub-badge conf">CONF</span></div></div>

@@ -47,7 +47,8 @@ Photos/research-figs/
 - 그림 경로(`figure`)가 404면 자동으로 숨겨집니다.
 
 ## 현재 이관된 연구(파일럿)
-`research-elevator`(조정현) · `research-da-preprocessing`(김지영) · `research-da-thermal-seat`(김지영·이현수) · `research-um-ubem`(황정윤).
+`research-elevator`(조정현) · `research-da-preprocessing`·`research-da-thermal-seat`(김지영·이현수) · `research-um-ubem`(황정윤) ·
+`research-whr-dc`·`research-ai`·`research-cascade-hp`(한지웅, 3개).
 나머지 기존 개인연구는 아직 `index.html`에 하드코딩돼 있으며, 양식이 들어오는 대로 이 방식으로 점진 이관합니다.
 
 > Word → JSON 변환은 관리자가 수행합니다. 멤버는 양식만 작성하면 됩니다.

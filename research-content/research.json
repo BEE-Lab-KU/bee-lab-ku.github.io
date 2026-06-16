@@ -92,5 +92,55 @@
         "venue": "Building Simulation 2025: 19th Conference of IBPSA · DOI: 10.26868/25222708.2025.1603"
       }
     ]
+  },
+  {
+    "id": "research-whr-dc",
+    "title": "데이터센터 폐열을 활용한 급탕 및 수열원 온도 유지 방안",
+    "group": "Building Systems",
+    "back": "main",
+    "status": "진행 중 · 2025–",
+    "researchers": [
+      { "slug": "jiung", "name": "한지웅", "role": "Master's Student", "avatar": "Photos/members/jiung-sm.png" }
+    ],
+    "background": "생성형 인공지능의 급격한 확산에 따라 데이터센터 수요가 폭발적으로 증가하고 있습니다. 데이터센터는 운영 과정에서 대량의 폐열을 지속적으로 발생시키며, 이를 효과적으로 활용하기 위한 연구가 활발히 진행되고 있습니다. 그러나 기존의 수열원 기반 폐열 활용 연구는 폐열 방류로 인한 수온 상승의 환경적 영향을 충분히 고려하지 못했습니다. 따라서 폐열의 에너지 활용 성능을 높이는 동시에, 방류수의 수온 변화까지 종합적으로 검토하는 접근이 필요합니다.",
+    "goal": "수열원을 통해 폐열을 회수할 때 시스템으로 방류 수온을 제어하고, 폐열 활용에 따른 에너지 성능을 향상시킵니다.",
+    "keywords": ["Data Center", "Water to Water Heat Pump", "Waste Heat Recovery"],
+    "tools": ["TRNSYS", "Python"],
+    "figure": "Photos/research-figs/whr-dc.png",
+    "papers": [
+      { "title": "한강수열원 히트펌프 기반 데이터센터 폐열 활용 급탕과 방류 수온 회복 시스템", "authors": "한지웅, 임현우 · 2025", "venue": "2025년도 한국태양에너지학회 추계학술발표대회" }
+    ]
+  },
+  {
+    "id": "research-ai",
+    "title": "이미지·벡터 하이브리드 기반 CAD 도면 공간 자동 인식 엔진 및 LLM 기반 자연어 질의응답 시스템 개발",
+    "group": "Building Systems",
+    "back": "main",
+    "status": "진행 중 · 2025–",
+    "researchers": [
+      { "slug": "jiung", "name": "한지웅", "role": "Master's Student", "avatar": "Photos/members/jiung-sm.png" }
+    ],
+    "background": "도시 건축물의 에너지 소비는 전체 에너지 소비의 약 40%를 차지하며, 이를 절감하기 위한 AI Agent 기반 건물 에너지 관리 연구가 활발히 진행되고 있습니다. AI Agent가 건물을 자율적으로 운영·제어하려면 대상 건물의 공간 구성(층별 실 배치, 면적, 용도 등)과 설비 간의 관계를 구조적으로 파악해야 합니다. 그러나 CAD 도면에서 공간 데이터를 자동으로 추출하는 기술은 아직 확립되지 않아 대부분 수작업에 의존하며, 도시 단위로 대상 건축물이 급증할 경우 규모적으로 한계가 있습니다. 또한 기존의 이미지 기반 딥러닝은 좌표·치수 정보가 소실되고, 벡터 기반 접근은 벽체 선분의 단절이나 레이어 명칭 불일치에 취약하며, 도면 내 텍스트 주석과 해당 공간을 의미적으로 연결하는 연구도 부족한 실정입니다.",
+    "goal": "도시 단위 AI Agent 구축을 위한 기반 연구로서, 이미지·벡터 하이브리드 기반 CAD 도면 공간 자동 인식 엔진과 LLM 기반 자연어 질의응답 시스템을 개발합니다. 이미지 딥러닝으로 닫힌 공간을 1차 탐지한 뒤 벡터 벽체를 추적·보정하여 공간을 인식하고, YOLO-obb와 VLM으로 주석을 공간과 매칭해 구조화된 메타데이터로 변환한 후 Brick Schema·BOT 온톨로지로 매핑합니다. 이를 기반으로 사용자가 자연어로 건물의 공간·설비 정보를 질의·응답할 수 있는 시스템을 구축합니다.",
+    "keywords": ["Architectural Drawings", "AI Agent", "Building Agent", "LLM", "Ontology"],
+    "tools": ["Python", "LLM"],
+    "figure": "Photos/research-figs/cad-llm.png",
+    "papers": []
+  },
+  {
+    "id": "research-cascade-hp",
+    "title": "건물 내 동시 냉방·급탕 수요의 열적 결합을 통한 캐스케이드 히트펌프 시스템",
+    "group": "Building Systems",
+    "back": "main",
+    "status": "진행 중 · 2025–",
+    "researchers": [
+      { "slug": "jiung", "name": "한지웅", "role": "Master's Student", "avatar": "Photos/members/jiung-sm.png" }
+    ],
+    "background": "건물에서 사용하는 에너지의 상당 부분은 냉방과 급탕에 쓰입니다. 냉방은 실내의 열을 외부로 버리는 과정이고 급탕은 물을 데우기 위해 열을 필요로 하므로, 같은 건물 안에서 버려지는 열과 필요한 열이 동시에 존재합니다. 그러나 대부분의 건물에서는 냉방과 급탕 설비가 따로 운영되어 냉방 과정의 폐열이 그대로 버려지고, 급탕은 이를 활용하지 못한 채 처음부터 다시 에너지를 들여 물을 데웁니다. 냉방 폐열을 급탕의 열원으로 재사용하면 상당한 에너지를 절감할 수 있으나, 냉방에 알맞은 낮은 온도와 급탕에 필요한 높은 온도의 차이가 커 단일 장비로 한 번에 끌어올리면 효율이 떨어집니다. 따라서 열을 두 단계에 걸쳐 차례로 승온하는 캐스케이드(cascade) 방식이 필요합니다.",
+    "goal": "냉방에서 버려지는 열을 급탕의 열원으로 재사용하는 캐스케이드 통합 히트펌프 시스템을 제안하고, Modelica 시뮬레이션으로 연간 운전을 재현하여 에너지 절감 효과를 검증합니다. 냉방·급탕 분리 운영, 단순 통합, 캐스케이드 방식을 동일한 조건에서 비교하여 열 재사용에 따른 절감 효과만을 분리하고, 절감이 발생하는 원리와 냉방·급탕 수요의 중첩 정도·축열 탱크 용량 등 절감 효과를 극대화하는 조건을 규명하는 것을 목표로 합니다.",
+    "keywords": ["Cascade Heat Pump", "Integrated Heat Pump (IWHP)", "Modelica", "5GDHC"],
+    "tools": ["Modelica"],
+    "figure": null,
+    "papers": []
   }
 ]
