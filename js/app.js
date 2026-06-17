@@ -647,7 +647,7 @@ document.addEventListener('keydown', function (e) {
       pubs = '<div class="profile-research-list" style="margin-top:48px;"><h3>Publications</h3>'+p.publications.map(pubRow).join('')+'</div>';
     }
     return '<div class="profile-page fade-in">'
-      + '<div class="back-link" onclick="goBack(\'members-all\')">← Members</div>'
+      + '<div class="back-link" onclick="goBack(\'members-all\')">← People</div>'
       + top + research + pubs
       + '</div>';
   }
