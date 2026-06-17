@@ -496,7 +496,7 @@
     },
     "jungyun": {
       "name": "황정윤",
-      "roleLine": "Ph.D. Candidate · Urban Building Energy Modeling (UBEM) Group",
+      "roleLine": "Ph.D. Candidate · UBEM Group",
       "avatar": "Photos/members/jungyun.jpg",
       "bio": "도시 단위 건물 에너지 해석을 위한 건물 특성 기반 지표와 에너지 모델을 개발하고 있습니다. 형상 특성을 반영한 형상 지표를 제작하고, 베이지안 추론과 강화학습 보정으로 모델의 불확실성을 고려하여 정확도를 높이는 방법을 탐구합니다.",
       "research": [
@@ -616,7 +616,7 @@
     },
     "jisu": {
       "name": "임지수",
-      "roleLine": "Master's Student · Urban Building Energy Modeling (UBEM) Group",
+      "roleLine": "Master's Student · UBEM Group",
       "avatar": "Photos/members/jisu.jpg",
       "bio": "AI 객체 인식과 3D 비전 기술을 활용한 건물 에너지 데이터 자동 구축 및 District Building Energy Modeling 연구를 수행하고 있습니다.",
       "research": [
@@ -662,7 +662,7 @@
     },
     "hyunsu": {
       "name": "이현수",
-      "roleLine": "Undergraduate Researcher · Urban Building Energy Modeling (UBEM) Group",
+      "roleLine": "Undergraduate Researcher · UBEM Group",
       "avatar": "Photos/members/hyunsu.jpeg",
       "bio": "도시 건물 에너지 모델(UBEM) 기반의 도시 단위 에너지 사용량 예측 연구를 수행하고 있으며, 대리모델 기반 연산 효율화와 웹 기반 도시 에너지 플랫폼 구현에 관심이 있습니다.",
       "research": [
