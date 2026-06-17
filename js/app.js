@@ -564,3 +564,106 @@ document.addEventListener('keydown', function (e) {
     })
     .catch(function(err){ console.error('publications load failed', err); });
 })();
+
+// ===== Members: members.json 으로 리스팅 + 프로필 페이지 자동 생성 =====
+(function () {
+  function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+  // --- 공통: 프로필/논문 행 ---
+  function badgeHtml(b){ if(!b) return ''; var cls=(b==='SCIE')?'sci':'conf'; return '<span class="pub-badge '+cls+'">'+esc(b)+'</span>'; }
+  function awardHtml(a){ if(!a) return ''; return '<span style="margin-left:8px;font-size:11px;font-weight:600;color:#D4A017;">'+esc(a)+'</span>'; }
+  function pubRow(e){
+    return '<div class="pub-row"><div class="pub-year">'+esc(e.year)+'</div>'
+      + '<div><div class="pub-title">'+esc(e.title)+'</div>'
+      + '<div class="pub-journal">'+esc(e.venue)+'</div>'+awardHtml(e.award)+'</div>'
+      + '<div>'+badgeHtml(e.badge)+'</div></div>';
+  }
+
+  // --- 카드 (researchers / alumni) ---
+  function card(m){
+    return '<div class="member-card" onclick="showPage(\'member-'+m.slug+'\')">'
+      + '<img class="member-avatar" src="'+esc(m.avatar)+'" alt="'+esc(m.name)+'"/>'
+      + '<div class="name">'+esc(m.name)+'</div><div class="role">'+esc(m.role)+'</div>'
+      + '<div class="arrow-hint">View Profile →</div></div>';
+  }
+
+  // --- 교수 패널 ---
+  function renderProfessor(p){
+    var links = (p.links||[]).map(function(l){
+      return '<a href="'+esc(l.url)+'" target="_blank" style="font-size:13px;padding:6px 14px;border:1px solid var(--border);border-radius:100px;color:var(--text-mid);text-decoration:none;">'+esc(l.label)+'</a>';
+    }).join('');
+    var header = '<div style="display:flex;gap:48px;align-items:flex-start;padding:40px;border:1px solid var(--border);border-radius:12px;margin-bottom:40px;">'
+      + '<img src="'+esc(p.avatar)+'" alt="'+esc(p.nameKr)+'" style="width:180px;height:220px;object-fit:cover;border-radius:12px;flex-shrink:0;background:#E0E0E0;">'
+      + '<div>'
+      + '<div style="font-size:14px;font-weight:600;color:var(--text-muted);margin-bottom:8px;">Professor:</div>'
+      + '<div style="font-size:32px;font-weight:900;letter-spacing:-0.03em;margin-bottom:4px;">'+esc(p.name)+'</div>'
+      + '<div style="font-size:15px;color:var(--text-muted);margin-bottom:8px;">'+esc(p.title)+'</div>'
+      + '<div style="font-size:15px;color:var(--text-mid);margin-bottom:20px;">'+esc(p.affiliation)+'</div>'
+      + '<div style="display:flex;gap:12px;flex-wrap:wrap;">'+links+'</div>'
+      + '</div></div>';
+    var secs = (p.sections||[]).map(function(s, i){
+      var last = (i === p.sections.length - 1);
+      var mb = last ? 'margin-bottom:20px;' : 'margin-bottom:40px;';
+      var lines = (s.lines||[]).map(function(x){ return '<div>'+x+'</div>'; }).join('');
+      return '<div style="'+mb+'">'
+        + '<div style="font-size:20px;font-weight:800;letter-spacing:-0.02em;margin-bottom:16px;">'+esc(s.title)+'</div>'
+        + '<div style="font-size:14px;color:var(--text-mid);line-height:2.2;">'+lines+'</div>'
+        + '</div>';
+    }).join('');
+    return header + secs;
+  }
+
+  // --- 연구원 패널 (그룹별) ---
+  function renderResearchers(groups){
+    return (groups||[]).map(function(g){
+      var cards = (g.members||[]).map(card).join('');
+      return '<div style="font-size:20px;font-weight:700;margin-bottom:8px;color:var(--text-muted);">'+esc(g.group)+'</div>'
+        + '<div class="members-grid" style="margin-bottom:40px;">'+cards+'</div>';
+    }).join('');
+  }
+
+  // --- 졸업생 패널 ---
+  function renderAlumni(list){
+    return '<div class="members-grid">'+(list||[]).map(card).join('')+'</div>';
+  }
+
+  // --- 개인 프로필 페이지 ---
+  function renderProfile(slug, p){
+    var bioStyle = p.bioStyle ? ' style="'+p.bioStyle+'"' : '';
+    var top = '<div class="profile-top">'
+      + '<img class="profile-avatar" src="'+esc(p.avatar)+'" alt=""/>'
+      + '<div class="profile-info"><h1>'+esc(p.name)+'</h1><div class="role-line">'+esc(p.roleLine)+'</div>'
+      + '<div class="bio"'+bioStyle+'>'+(p.bio||'')+'</div></div>'
+      + '</div>';
+    var research = '';
+    if(p.research && p.research.length){
+      var items = p.research.map(function(r){
+        return '<div class="profile-research-item" onclick="showPage(\''+r.page+'\')"><h4>'+esc(r.title)+'</h4><p>'+esc(r.tags)+'</p></div>';
+      }).join('');
+      research = '<div class="profile-research-list"><h3>Research</h3>'+items+'</div>';
+    }
+    var pubs = '';
+    if(p.publications && p.publications.length){
+      pubs = '<div class="profile-research-list" style="margin-top:48px;"><h3>Publications</h3>'+p.publications.map(pubRow).join('')+'</div>';
+    }
+    return '<div class="profile-page fade-in">'
+      + '<div class="back-link" onclick="goBack(\'members-all\')">← Members</div>'
+      + top + research + pubs
+      + '</div>';
+  }
+
+  function set(id, html){ var el = document.getElementById(id); if(el) el.innerHTML = html; }
+
+  fetch('members.json')
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      set('mem-professor', renderProfessor(data.professor || {}));
+      set('mem-researchers', renderResearchers(data.researchers || []));
+      set('mem-alumni', renderAlumni(data.alumni || []));
+      var profs = data.profiles || {};
+      Object.keys(profs).forEach(function(slug){
+        set('page-member-'+slug, renderProfile(slug, profs[slug]));
+      });
+    })
+    .catch(function(err){ console.error('members load failed', err); });
+})();
