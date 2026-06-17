@@ -8,6 +8,7 @@
         .then(function (data) {
           var box = document.getElementById(targetId);
           if (!box) return;
+          data = bnSortByDate(data);
           if (typeof bnData !== 'undefined') { bnData[type] = data; }
           box.innerHTML = data.slice(0, 4).map(function (item, i) {
             return buildCard(item, i, type);
@@ -215,14 +216,28 @@ function sendContactEmail(e) {
 // ====== BLOG & NEWS DYNAMIC LOADER ======
 var bnData = { Blog: [], News: [] };
 
+// 날짜(date) 내림차순 정렬: 최신이 위로. 안정 정렬이라 같은(또는 없는) 날짜는 기존 배열 순서 유지.
+function bnSortByDate(items) {
+  return (items || [])
+    .map(function (it, i) { return { it: it, i: i }; })
+    .sort(function (a, b) {
+      var da = a.it.date || '', db = b.it.date || '';
+      if (da === db) return a.i - b.i;   // 동일/빈 날짜 → 원래 순서 유지
+      if (!da) return 1;                  // 날짜 없는 항목은 뒤로
+      if (!db) return -1;
+      return da < db ? 1 : -1;            // ISO 날짜 문자열 내림차순
+    })
+    .map(function (x) { return x.it; });
+}
+
 function loadBlogNews() {
   fetch('News_Blog_JPG/beelab_content/blog.json')
     .then(function(r) { return r.json(); })
-    .then(function(data) { bnData.Blog = data; renderBNPage('blog', data, 'Blog'); })
+    .then(function(data) { data = bnSortByDate(data); bnData.Blog = data; renderBNPage('blog', data, 'Blog'); })
     .catch(function(e) { console.error('Blog load error:', e); });
   fetch('News_Blog_JPG/beelab_content/news.json')
     .then(function(r) { return r.json(); })
-    .then(function(data) { bnData.News = data; renderBNPage('news', data, 'News'); })
+    .then(function(data) { data = bnSortByDate(data); bnData.News = data; renderBNPage('news', data, 'News'); })
     .catch(function(e) { console.error('News load error:', e); });
 }
 
@@ -259,7 +274,6 @@ function bnFirstImage(item) {
 
 function buildCard(item, idx, type) {
   var first = bnFirstImage(item);
-  var dateStr = item.date ? item.date : '';
   var html = '<div class="bn-card" data-type="' + type + '" data-idx="' + idx + '">';
   if (first) {
     html += '<img class="bn-card-img" src="' + encodeURI(first) + '" alt="" loading="lazy" onerror="bnImgHide(this)">';
@@ -269,7 +283,6 @@ function buildCard(item, idx, type) {
   }
   html += '<div class="bn-card-body">';
   html += '<div class="bn-card-title">' + escapeHtml(item.title) + '</div>';
-  if (dateStr) html += '<div class="bn-card-date">' + escapeHtml(dateStr) + '</div>';
   html += '</div></div>';
   return html;
 }

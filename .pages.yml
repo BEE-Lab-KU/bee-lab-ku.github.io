@@ -22,6 +22,11 @@ content:
         label: 제목
         type: string
         required: true
+      - name: date
+        label: 날짜 (최신이 위로 정렬됨)
+        type: date
+        options:
+          format: yyyy-MM-dd
       - name: body
         label: 본문
         type: text
@@ -49,6 +54,11 @@ content:
         label: 제목
         type: string
         required: true
+      - name: date
+        label: 날짜 (최신이 위로 정렬됨)
+        type: date
+        options:
+          format: yyyy-MM-dd
       - name: body
         label: 본문
         type: text

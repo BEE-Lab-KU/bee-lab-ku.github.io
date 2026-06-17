@@ -1,7 +1,36 @@
 {
   "permissions": {
     "allow": [
-      "Bash(node -e:*)"
+      "Read(//private/tmp/**)",
+      "Bash(python3 tools_empty_members.py)",
+      "Bash(git add *)",
+      "Bash(git commit -q -m ' *)",
+      "Bash(git pull *)",
+      "Bash(git push *)",
+      "Bash(node --check js/app.js)",
+      "Bash(git --no-pager diff --stat)",
+      "Bash(git --no-pager diff 5662d32 HEAD -- js/app.js)",
+      "Bash(git --no-pager diff --word-diff=porcelain 5662d32 HEAD -- js/app.js)",
+      "Bash(grep -v '^[+-]$')",
+      "Bash(python3)",
+      "Bash(python3 -c \"import json;json.load\\(open\\('members.json'\\)\\);json.load\\(open\\('research-content/research.json'\\)\\);print\\('JSON OK'\\)\")",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('members.json'\\)\\);print\\([g['group'] for g in d['researchers']]\\);print\\(d['profiles']['jungyun']['roleLine']\\);print\\(d['profiles']['sangmin']['roleLine']\\)\")",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('members.json'\\)\\);print\\('groups:',[g['group'] for g in d['researchers']]\\);print\\('UBEM role-lines:',[p['roleLine'] for p in d['profiles'].values\\(\\) if 'UBEM' in p['roleLine']]\\)\")",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('News_Blog_JPG/beelab_content/blog.json'\\)\\);print\\('keys:',list\\(d[0].keys\\(\\)\\)\\);print\\(json.dumps\\(d[0],ensure_ascii=False\\)[:300]\\)\")",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('News_Blog_JPG/beelab_content/news.json'\\)\\);z=[it['folder'] for it in d if it['image_count']==0];print\\('image_count=0:',z if z else '없음 ✅'\\)\")",
+      "Bash(python3 -c \"import sys,unicodedata; [print\\(repr\\(l.rstrip\\(\\)\\)\\) for l in sys.stdin if '야구장' in unicodedata.normalize\\('NFC',l\\)]\")",
+      "WebFetch(domain:pagescms.org)",
+      "Bash(python3 tools_migrate_newsblog.py)",
+      "Bash(command -v ruby)",
+      "Bash(ruby -ryaml -e \"c=YAML.load_file\\('.pages.yml'\\); puts 'media: '+c['media'].map{|m| m['name']}.join\\(','\\); puts 'content: '+c['content'].map{|x| x['name']+'\\(list='+x['list'].to_s+'\\)'}.join\\(', '\\)\")",
+      "Bash(python3 -c \"import yaml;print\\('ok'\\)\")",
+      "Bash(pip3 install *)",
+      "Bash(python3 -c \"import yaml;c=yaml.safe_load\\(open\\('.pages.yml'\\)\\);print\\('parsed OK:',[x['name'] for x in c['content']]\\)\")",
+      "Bash(python3 -c \"import json;[print\\(t,'keys=',list\\(json.load\\(open\\(f'News_Blog_JPG/beelab_content/{t}.json'\\)\\)[0].keys\\(\\)\\)\\) for t in ['news','blog']]\")",
+      "Bash(python3 -c \"import json,os;bad=sum\\(1 for t in ['news','blog'] for it in json.load\\(open\\(f'News_Blog_JPG/beelab_content/{t}.json'\\)\\) for p in it['images'] if not os.path.isfile\\(p\\)\\);print\\('없는 경로:', bad if bad else '0 ✅'\\)\")",
+      "Bash(python3 -c \"import json;d=json.load\\(open\\('News_Blog_JPG/beelab_content/news.json'\\)\\);print\\('news[0].images[0]:',json.dumps\\(d[0]['images'][0],ensure_ascii=False\\)\\)\")",
+      "WebFetch(domain:github.com)"
     ]
   }
 }
