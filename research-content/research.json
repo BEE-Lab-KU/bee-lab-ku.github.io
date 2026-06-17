@@ -2,7 +2,7 @@
   {
     "id": "research-elevator",
     "title": "엘리베이터 샤프트 내 균일 냉각을 위한 급배기 위치 최적화",
-    "group": "Building Systems",
+    "group": "Building Energy Systems",
     "back": "main",
     "status": "진행 중 · 2025–",
     "researchers": [
@@ -18,7 +18,7 @@
   {
     "id": "research-da-preprocessing",
     "title": "로지스틱 맵 이미지 암호화 기법을 적용한 딥러닝 기반 재실자 감지 시스템 제안",
-    "group": "Data & Analysis",
+    "group": "Building Data Analytics & AI",
     "back": "data-analysis",
     "status": "진행 중 · 2026–",
     "researchers": [
@@ -40,7 +40,7 @@
   {
     "id": "research-da-thermal-seat",
     "title": "열적 특성 기반의 개인 맞춤형 좌석 선택 시스템 제안",
-    "group": "Data & Analysis",
+    "group": "Building Data Analytics & AI",
     "back": "data-analysis",
     "status": "진행 완료 · 2025",
     "completed": true,
@@ -64,7 +64,7 @@
   {
     "id": "research-um-ubem",
     "title": "도시 단위 건물 에너지 해석을 위한 건물 특성 지표 및 도시 건물 에너지 모델(UBEM) 개발",
-    "group": "Building & Urban Modeling",
+    "group": "Urban Building Energy Modeling (UBEM)",
     "back": "urban-modeling",
     "status": "진행 중 · 2024–",
     "researchers": [
@@ -96,7 +96,7 @@
   {
     "id": "research-whr-dc",
     "title": "데이터센터 폐열을 활용한 급탕 및 수열원 온도 유지 방안",
-    "group": "Building Systems",
+    "group": "Building Energy Systems",
     "back": "main",
     "status": "진행 중 · 2025–",
     "researchers": [
@@ -114,7 +114,7 @@
   {
     "id": "research-ai",
     "title": "이미지·벡터 하이브리드 기반 CAD 도면 공간 자동 인식 엔진 및 LLM 기반 자연어 질의응답 시스템 개발",
-    "group": "Building Systems",
+    "group": "Building Energy Systems",
     "back": "main",
     "status": "진행 중 · 2025–",
     "researchers": [
@@ -130,7 +130,7 @@
   {
     "id": "research-cascade-hp",
     "title": "건물 내 동시 냉방·급탕 수요의 열적 결합을 통한 캐스케이드 히트펌프 시스템",
-    "group": "Building Systems",
+    "group": "Building Energy Systems",
     "back": "main",
     "status": "진행 중 · 2025–",
     "researchers": [

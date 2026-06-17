@@ -81,7 +81,7 @@
   },
   "researchers": [
     {
-      "group": "Data & Analysis",
+      "group": "Building Data Analytics & AI",
       "members": [
         {
           "slug": "doyeon",
@@ -104,7 +104,7 @@
       ]
     },
     {
-      "group": "Building Systems",
+      "group": "Building Energy Systems",
       "members": [
         {
           "slug": "sangmin",
@@ -133,7 +133,7 @@
       ]
     },
     {
-      "group": "Building & Urban Modeling",
+      "group": "Urban Building Energy Modeling (UBEM)",
       "members": [
         {
           "slug": "jungyun",
@@ -167,7 +167,7 @@
   "profiles": {
     "sangmin": {
       "name": "이상민",
-      "roleLine": "Master's Student · Building Systems Group",
+      "roleLine": "Master's Student · Building Energy Systems Group",
       "avatar": "Photos/members/sangmin.jpeg",
       "bio": "건물 에너지 시스템의 동적 시뮬레이션 및 최적 제어를 연구하고 있습니다. 특히 CO₂ 히트펌프 시스템의 Modelica 기반 모델링과 실측 데이터 기반 검증에 집중하고 있습니다.",
       "research": [
@@ -235,7 +235,7 @@
     },
     "junghyun": {
       "name": "조정현",
-      "roleLine": "Master's Student · Building Systems Group",
+      "roleLine": "Master's Student · Building Energy Systems Group",
       "avatar": "Photos/members/junghyun.png",
       "bio": "고층 건물에서 발생하는 기류 특성인 연돌효과에 대해 연구하고 있습니다. 여러가지 연돌효과 저감 방안과 저감 방안이 건물의 에너지 및 재실자 측면에 미치는 영향에 대한 분석에 집중하고 있습니다.",
       "research": [
@@ -263,7 +263,7 @@
     },
     "jaeuk": {
       "name": "백재욱",
-      "roleLine": "Master's Student · Building Systems Group",
+      "roleLine": "Master's Student · Building Energy Systems Group",
       "avatar": "Photos/members/jaeuk.jpeg",
       "bio": "제로에너지 건축물 인증 체계와 건물 에너지 등급 향상을 위한 설비 최적화를 연구하고 있습니다.",
       "research": [
@@ -276,7 +276,7 @@
     },
     "jiung": {
       "name": "한지웅",
-      "roleLine": "Master's Student · Building Systems Group",
+      "roleLine": "Master's Student · Building Energy Systems Group",
       "avatar": "Photos/members/jiung.png",
       "bio": "데이터센터 폐열 회수 및 건물 내 히트펌프 시스템을 연구하고 있습니다. 또한 건물 자동 제어를 위한 AI Agent 파이프라인 구축에 집중하고 있습니다.",
       "research": [
@@ -307,7 +307,7 @@
     },
     "doyeon": {
       "name": "이도연",
-      "roleLine": "Ph.D. Candidate · Data & Analysis Group",
+      "roleLine": "Ph.D. Candidate · Building Data Analytics & AI Group",
       "avatar": "Photos/members/doyeon.png",
       "bio": "건물 에너지 데이터의 패턴 분석 및 이상 탐지 연구를 수행하고 있으며, 머신러닝 기반 에너지 효율 진단 기법 개발에 관심이 있습니다.",
       "research": [
@@ -400,7 +400,7 @@
     },
     "inseob": {
       "name": "김인섭",
-      "roleLine": "Master's Student · Data & Analysis Group",
+      "roleLine": "Master's Student · Building Data Analytics & AI Group",
       "avatar": "Photos/members/inseob.jpg",
       "bio": "딥러닝 기반 건물 에너지 수요 예측 연구를 수행하고 있으며, 시계열 모델링 및 전이 학습 기법에 관심이 있습니다.",
       "research": [
@@ -469,7 +469,7 @@
     },
     "jiyoung": {
       "name": "김지영",
-      "roleLine": "Undergraduate Researcher · Data & Analysis Group",
+      "roleLine": "Undergraduate Researcher · Building Data Analytics & AI Group",
       "avatar": "Photos/members/jiyoung.jpg",
       "bio": "재실자 감지 시스템 기반의 고정밀 재실 스케줄 도출 및 에너지 최적화 방안을 연구하고 있습니다. 실내 재실 패턴 분석과 연계한 건물 동적 제어 및 효율적인 에너지 수요 관리 시스템 구축에 집중하고 있습니다.",
       "research": [
@@ -496,7 +496,7 @@
     },
     "jungyun": {
       "name": "황정윤",
-      "roleLine": "Ph.D. Candidate · Building & Urban Modeling Group",
+      "roleLine": "Ph.D. Candidate · Urban Building Energy Modeling (UBEM) Group",
       "avatar": "Photos/members/jungyun.jpg",
       "bio": "도시 단위 건물 에너지 해석을 위한 건물 특성 기반 지표와 에너지 모델을 개발하고 있습니다. 형상 특성을 반영한 형상 지표를 제작하고, 베이지안 추론과 강화학습 보정으로 모델의 불확실성을 고려하여 정확도를 높이는 방법을 탐구합니다.",
       "research": [
@@ -616,7 +616,7 @@
     },
     "jisu": {
       "name": "임지수",
-      "roleLine": "Master's Student · Building & Urban Modeling Group",
+      "roleLine": "Master's Student · Urban Building Energy Modeling (UBEM) Group",
       "avatar": "Photos/members/jisu.jpg",
       "bio": "AI 객체 인식과 3D 비전 기술을 활용한 건물 에너지 데이터 자동 구축 및 District Building Energy Modeling 연구를 수행하고 있습니다.",
       "research": [
@@ -662,7 +662,7 @@
     },
     "hyunsu": {
       "name": "이현수",
-      "roleLine": "Undergraduate Researcher · Building & Urban Modeling Group",
+      "roleLine": "Undergraduate Researcher · Urban Building Energy Modeling (UBEM) Group",
       "avatar": "Photos/members/hyunsu.jpeg",
       "bio": "도시 건물 에너지 모델(UBEM) 기반의 도시 단위 에너지 사용량 예측 연구를 수행하고 있으며, 대리모델 기반 연산 효율화와 웹 기반 도시 에너지 플랫폼 구현에 관심이 있습니다.",
       "research": [
