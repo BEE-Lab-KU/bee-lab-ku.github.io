@@ -27,10 +27,17 @@ content:
         type: text
       - name: images
         label: 사진 (여러 장 가능, 첫 장이 대표 이미지)
-        type: image
-        options:
-          media: news_images
-          multiple: true
+        type: object
+        list: true
+        fields:
+          - name: src
+            label: 사진
+            type: image
+            options:
+              media: news_images
+          - name: caption
+            label: 설명글 (선택)
+            type: string
   - name: blog
     label: Blog
     type: file
@@ -47,7 +54,14 @@ content:
         type: text
       - name: images
         label: 사진 (여러 장 가능, 첫 장이 대표 이미지)
-        type: image
-        options:
-          media: blog_images
-          multiple: true
+        type: object
+        list: true
+        fields:
+          - name: src
+            label: 사진
+            type: image
+            options:
+              media: blog_images
+          - name: caption
+            label: 설명글 (선택)
+            type: string

@@ -248,9 +248,13 @@ function bnImgHide(img) {
   img.onerror = null;
 }
 
-// 첫 이미지 경로 (images 배열 기반; 구버전 folder/image_count는 더 이상 사용 안 함)
+// 이미지 항목에서 경로 추출 (객체 {src,caption} 또는 구버전 문자열 모두 지원)
+function bnImgSrc(im) {
+  return (typeof im === 'string') ? im : (im && im.src ? im.src : '');
+}
+// 첫 이미지 경로 (대표 썸네일)
 function bnFirstImage(item) {
-  return (item.images && item.images.length) ? item.images[0] : '';
+  return (item.images && item.images.length) ? bnImgSrc(item.images[0]) : '';
 }
 
 function buildCard(item, idx, type) {
@@ -311,8 +315,12 @@ function openBNDetail(type, item) {
   var m = document.getElementById('bn-modal');
   if (!m) { m = document.createElement('div'); m.id = 'bn-modal'; document.body.appendChild(m); }
   var imgs = '';
-  (item.images || []).forEach(function (p) {
-    imgs += '<img src="' + encodeURI(p) + '" style="width:100%;border-radius:8px;margin-bottom:12px;" loading="lazy" onerror="bnImgHide(this)">';
+  (item.images || []).forEach(function (im) {
+    var src = bnImgSrc(im);
+    if (!src) return;
+    var cap = (im && im.caption) ? im.caption : '';
+    imgs += '<img src="' + encodeURI(src) + '" style="width:100%;border-radius:8px;margin-bottom:' + (cap ? '6px' : '12px') + ';" loading="lazy" onerror="bnImgHide(this)">';
+    if (cap) imgs += '<div style="font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:16px;text-align:center;">' + escapeHtml(cap) + '</div>';
   });
   var body = cleanBody(item);
   body = body.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
