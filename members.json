@@ -87,7 +87,7 @@
           "slug": "doyeon",
           "avatar": "Photos/members/doyeon.png",
           "name": "이도연",
-          "role": "Ph.D. Candidate"
+          "role": "Ph.D. Student"
         },
         {
           "slug": "inseob",
@@ -139,7 +139,7 @@
           "slug": "jungyun",
           "avatar": "Photos/members/jungyun.jpg",
           "name": "황정윤",
-          "role": "Ph.D. Candidate"
+          "role": "Ph.D. Student"
         },
         {
           "slug": "jisu",
@@ -307,7 +307,7 @@
     },
     "doyeon": {
       "name": "이도연",
-      "roleLine": "Ph.D. Candidate · Building Data Analytics & AI Group",
+      "roleLine": "Ph.D. Student · Building Data Analytics & AI Group",
       "avatar": "Photos/members/doyeon.png",
       "bio": "건물 에너지 데이터의 패턴 분석 및 이상 탐지 연구를 수행하고 있으며, 머신러닝 기반 에너지 효율 진단 기법 개발에 관심이 있습니다.",
       "research": [
@@ -496,7 +496,7 @@
     },
     "jungyun": {
       "name": "황정윤",
-      "roleLine": "Ph.D. Candidate · UBEM Group",
+      "roleLine": "Ph.D. Student · UBEM Group",
       "avatar": "Photos/members/jungyun.jpg",
       "bio": "도시 단위 건물 에너지 해석을 위한 건물 특성 기반 지표와 에너지 모델을 개발하고 있습니다. 형상 특성을 반영한 형상 지표를 제작하고, 베이지안 추론과 강화학습 보정으로 모델의 불확실성을 고려하여 정확도를 높이는 방법을 탐구합니다.",
       "research": [
