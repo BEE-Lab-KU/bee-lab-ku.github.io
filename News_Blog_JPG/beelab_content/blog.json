@@ -1,152 +1,301 @@
 [
   {
     "title": "2026 이상민 석사 논문 심사",
-    "folder": "2026 이상민 석사 논문 심사",
-    "image_count": 3,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/2026 이상민 석사 논문 심사/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2026 이상민 석사 논문 심사/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2026 이상민 석사 논문 심사/003.jpg"
+    ]
   },
   {
     "title": "2026 축제 즐기기",
-    "folder": "2026 축제 즐기기",
-    "image_count": 2,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/2026 축제 즐기기/001.png",
+      "News_Blog_JPG/beelab_images/Blog/2026 축제 즐기기/002.png"
+    ]
   },
   {
     "title": "BEE Lab. 번개회식",
-    "folder": "BEE Lab. 번개회식",
-    "image_count": 2,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 번개회식/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 번개회식/002.png"
+    ]
   },
   {
     "title": "데이터넷 킥오프 워크샵과 BEE Lab MT",
-    "folder": "데이터넷 킥오프 워크샵과 BEE Lab MT",
-    "image_count": 7,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/데이터넷 킥오프 워크샵과 BEE Lab MT/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/데이터넷 킥오프 워크샵과 BEE Lab MT/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/데이터넷 킥오프 워크샵과 BEE Lab MT/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/데이터넷 킥오프 워크샵과 BEE Lab MT/004.jpg",
+      "News_Blog_JPG/beelab_images/Blog/데이터넷 킥오프 워크샵과 BEE Lab MT/005.jpg",
+      "News_Blog_JPG/beelab_images/Blog/데이터넷 킥오프 워크샵과 BEE Lab MT/006.jpg",
+      "News_Blog_JPG/beelab_images/Blog/데이터넷 킥오프 워크샵과 BEE Lab MT/007.jpg"
+    ]
   },
   {
     "title": "2025 송년회",
-    "folder": "2025 송년회",
-    "image_count": 5,
-    "body": "2025 BEE Lab의 송년회를 진행했습니다~! 서로의 산타가 되어 선물교환 이벤트를 진행하면서 즐거운 시간을 보냈습니다 !!"
+    "body": "2025 BEE Lab의 송년회를 진행했습니다~! 서로의 산타가 되어 선물교환 이벤트를 진행하면서 즐거운 시간을 보냈습니다 !!",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/2025 송년회/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2025 송년회/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2025 송년회/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2025 송년회/004.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2025 송년회/005.jpg"
+    ]
   },
   {
     "title": "SEATTLe 탐방기",
-    "folder": "SEATTLe 탐방기",
-    "image_count": 15,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/SEATTLe 탐방기/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/SEATTLe 탐방기/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/SEATTLe 탐방기/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/SEATTLe 탐방기/004.jpg",
+      "News_Blog_JPG/beelab_images/Blog/SEATTLe 탐방기/005.jpg",
+      "News_Blog_JPG/beelab_images/Blog/SEATTLe 탐방기/006.jpg",
+      "News_Blog_JPG/beelab_images/Blog/SEATTLe 탐방기/007.jpg",
+      "News_Blog_JPG/beelab_images/Blog/SEATTLe 탐방기/008.jpg",
+      "News_Blog_JPG/beelab_images/Blog/SEATTLe 탐방기/009.jpg",
+      "News_Blog_JPG/beelab_images/Blog/SEATTLe 탐방기/010.jpg",
+      "News_Blog_JPG/beelab_images/Blog/SEATTLe 탐방기/011.png",
+      "News_Blog_JPG/beelab_images/Blog/SEATTLe 탐방기/012.jpg",
+      "News_Blog_JPG/beelab_images/Blog/SEATTLe 탐방기/013.jpg",
+      "News_Blog_JPG/beelab_images/Blog/SEATTLe 탐방기/014.jpg",
+      "News_Blog_JPG/beelab_images/Blog/SEATTLe 탐방기/015.png"
+    ]
   },
   {
     "title": "뜨거웠던 여름, Bee_LAB의 509호 이사👷",
-    "folder": "뜨거웠던 여름, Bee_LAB의 509호 이사👷",
-    "image_count": 8,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/뜨거웠던 여름, Bee_LAB의 509호 이사👷/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/뜨거웠던 여름, Bee_LAB의 509호 이사👷/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/뜨거웠던 여름, Bee_LAB의 509호 이사👷/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/뜨거웠던 여름, Bee_LAB의 509호 이사👷/004.jpg",
+      "News_Blog_JPG/beelab_images/Blog/뜨거웠던 여름, Bee_LAB의 509호 이사👷/005.jpg",
+      "News_Blog_JPG/beelab_images/Blog/뜨거웠던 여름, Bee_LAB의 509호 이사👷/006.jpg",
+      "News_Blog_JPG/beelab_images/Blog/뜨거웠던 여름, Bee_LAB의 509호 이사👷/007.jpg",
+      "News_Blog_JPG/beelab_images/Blog/뜨거웠던 여름, Bee_LAB의 509호 이사👷/008.jpg"
+    ]
   },
   {
     "title": "BEE Lab. 야구장 투어⚾ 와 축제 즐기기",
-    "folder": "BEE Lab. 야구장 투어⚾ 와 축제 즐기기",
-    "image_count": 7,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 야구장 투어⚾ 와 축제 즐기기/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 야구장 투어⚾ 와 축제 즐기기/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 야구장 투어⚾ 와 축제 즐기기/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 야구장 투어⚾ 와 축제 즐기기/004.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 야구장 투어⚾ 와 축제 즐기기/005.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 야구장 투어⚾ 와 축제 즐기기/006.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 야구장 투어⚾ 와 축제 즐기기/007.jpg"
+    ]
   },
   {
     "title": "2025 BEE LAB.의 봄은 어떨까요~?🌻",
-    "folder": "2025 BEE LAB.의 봄은 어떨까요~🌻",
-    "image_count": 8,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/2025 BEE LAB.의 봄은 어떨까요~🌻/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2025 BEE LAB.의 봄은 어떨까요~🌻/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2025 BEE LAB.의 봄은 어떨까요~🌻/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2025 BEE LAB.의 봄은 어떨까요~🌻/004.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2025 BEE LAB.의 봄은 어떨까요~🌻/005.png",
+      "News_Blog_JPG/beelab_images/Blog/2025 BEE LAB.의 봄은 어떨까요~🌻/006.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2025 BEE LAB.의 봄은 어떨까요~🌻/007.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2025 BEE LAB.의 봄은 어떨까요~🌻/008.jpg"
+    ]
   },
   {
     "title": "BEE Lab. 1호 석사 탄생",
-    "folder": "BEE Lab. 1호 석사 탄생",
-    "image_count": 4,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 1호 석사 탄생/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 1호 석사 탄생/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 1호 석사 탄생/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 1호 석사 탄생/004.jpg"
+    ]
   },
   {
     "title": "2024 송년회",
-    "folder": "2024 송년회",
-    "image_count": 4,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/2024 송년회/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 송년회/002.png",
+      "News_Blog_JPG/beelab_images/Blog/2024 송년회/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 송년회/004.jpg"
+    ]
   },
   {
     "title": "BEE Lab.겨울보내기",
-    "folder": "BEE Lab.겨울보내기",
-    "image_count": 7,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab.겨울보내기/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab.겨울보내기/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab.겨울보내기/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab.겨울보내기/004.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab.겨울보내기/005.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab.겨울보내기/006.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab.겨울보내기/007.jpg"
+    ]
   },
   {
     "title": "2024 이경재 석사논문 심사",
-    "folder": "2024 이경재 석사논문 심사",
-    "image_count": 4,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/2024 이경재 석사논문 심사/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 이경재 석사논문 심사/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 이경재 석사논문 심사/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 이경재 석사논문 심사/004.jpg"
+    ]
   },
   {
     "title": "2024 건축친환경설비학회 추계학술발표대회",
-    "folder": "2024 건축친환경설비학회 추계학술발표대회",
-    "image_count": 11,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/2024 건축친환경설비학회 추계학술발표대회/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 건축친환경설비학회 추계학술발표대회/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 건축친환경설비학회 추계학술발표대회/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 건축친환경설비학회 추계학술발표대회/004.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 건축친환경설비학회 추계학술발표대회/005.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 건축친환경설비학회 추계학술발표대회/006.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 건축친환경설비학회 추계학술발표대회/007.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 건축친환경설비학회 추계학술발표대회/008.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 건축친환경설비학회 추계학술발표대회/009.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 건축친환경설비학회 추계학술발표대회/010.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 건축친환경설비학회 추계학술발표대회/011.jpg"
+    ]
   },
   {
     "title": "교수님 생신파티",
-    "folder": "교수님 생신파티",
-    "image_count": 5,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/교수님 생신파티/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/교수님 생신파티/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/교수님 생신파티/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/교수님 생신파티/004.jpg",
+      "News_Blog_JPG/beelab_images/Blog/교수님 생신파티/005.jpg"
+    ]
   },
   {
     "title": "2024 한국태양에너지 학회 추계학술발표대회",
-    "folder": "2024 한국태양에너지 학회 추계학술발표대회",
-    "image_count": 9,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/2024 한국태양에너지 학회 추계학술발표대회/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 한국태양에너지 학회 추계학술발표대회/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 한국태양에너지 학회 추계학술발표대회/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 한국태양에너지 학회 추계학술발표대회/004.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 한국태양에너지 학회 추계학술발표대회/005.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 한국태양에너지 학회 추계학술발표대회/006.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 한국태양에너지 학회 추계학술발표대회/007.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 한국태양에너지 학회 추계학술발표대회/008.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 한국태양에너지 학회 추계학술발표대회/009.jpg"
+    ]
   },
   {
     "title": "2024 ISAIA 14th KYOTO 참여",
-    "folder": "2024 ISAIA 14th KYOTO 참여",
-    "image_count": 8,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/2024 ISAIA 14th KYOTO 참여/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 ISAIA 14th KYOTO 참여/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 ISAIA 14th KYOTO 참여/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 ISAIA 14th KYOTO 참여/004.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 ISAIA 14th KYOTO 참여/005.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 ISAIA 14th KYOTO 참여/006.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 ISAIA 14th KYOTO 참여/007.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 ISAIA 14th KYOTO 참여/008.jpg"
+    ]
   },
   {
     "title": "2024 연구실 새장비 구입",
-    "folder": "2024 연구실 새장비 구입",
-    "image_count": 6,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/2024 연구실 새장비 구입/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 연구실 새장비 구입/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 연구실 새장비 구입/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 연구실 새장비 구입/004.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 연구실 새장비 구입/005.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 연구실 새장비 구입/006.jpg"
+    ]
   },
   {
     "title": "2024 연구실하계 워크숍",
-    "folder": "2024 연구실하계 워크숍",
-    "image_count": 7,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/2024 연구실하계 워크숍/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 연구실하계 워크숍/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 연구실하계 워크숍/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 연구실하계 워크숍/004.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 연구실하계 워크숍/005.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 연구실하계 워크숍/006.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 연구실하계 워크숍/007.jpg"
+    ]
   },
   {
     "title": "2024 대한설비공학회 하계학술발표대회",
-    "folder": "2024 대한설비공학회 하계학술발표대회",
-    "image_count": 8,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/2024 대한설비공학회 하계학술발표대회/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 대한설비공학회 하계학술발표대회/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 대한설비공학회 하계학술발표대회/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 대한설비공학회 하계학술발표대회/004.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 대한설비공학회 하계학술발표대회/005.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 대한설비공학회 하계학술발표대회/006.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 대한설비공학회 하계학술발표대회/007.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 대한설비공학회 하계학술발표대회/008.jpg"
+    ]
   },
   {
     "title": "2024 BEE Lab. 꽃놀이",
-    "folder": "2024 BEE Lab. 꽃놀이",
-    "image_count": 4,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/2024 BEE Lab. 꽃놀이/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 BEE Lab. 꽃놀이/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 BEE Lab. 꽃놀이/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024 BEE Lab. 꽃놀이/004.jpg"
+    ]
   },
   {
     "title": "2024건국대학교 전기 학위수여식",
-    "folder": "2024건국대학교 전기 학위수여식",
-    "image_count": 4,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/2024건국대학교 전기 학위수여식/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024건국대학교 전기 학위수여식/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024건국대학교 전기 학위수여식/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2024건국대학교 전기 학위수여식/004.jpg"
+    ]
   },
   {
     "title": "2023 BEE Lab. 송년회",
-    "folder": "2023 BEE Lab. 송년회",
-    "image_count": 3,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/2023 BEE Lab. 송년회/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2023 BEE Lab. 송년회/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/2023 BEE Lab. 송년회/003.jpg"
+    ]
   },
   {
     "title": "BEE Lab. 연구실 이사",
-    "folder": "BEE Lab. 연구실 이사",
-    "image_count": 5,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 연구실 이사/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 연구실 이사/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 연구실 이사/003.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 연구실 이사/004.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 연구실 이사/005.jpg"
+    ]
   },
   {
     "title": "BEE Lab. 의 꽃놀이",
-    "folder": "BEE Lab. 의 꽃놀이",
-    "image_count": 3,
-    "body": ""
+    "body": "",
+    "images": [
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 의 꽃놀이/001.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 의 꽃놀이/002.jpg",
+      "News_Blog_JPG/beelab_images/Blog/BEE Lab. 의 꽃놀이/003.jpg"
+    ]
   }
 ]

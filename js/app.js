@@ -240,30 +240,25 @@ function renderBNPage(prefix, items, type) {
   }).join('');
 }
 
-// Image extension fallback: .jpg -> .png -> .jpeg -> .webp
-var bnExtFallbacks = ['.png', '.jpeg', '.webp'];
+// 이미지 로드 실패 시: 숨기고, 바로 뒤에 placeholder(.bn-no-img)가 있으면 표시
+function bnImgHide(img) {
+  img.style.display = 'none';
+  var ph = img.nextElementSibling;
+  if (ph && ph.classList && ph.classList.contains('bn-no-img')) ph.style.display = 'flex';
+  img.onerror = null;
+}
 
-function bnImgFallback(img) {
-  var bp = img.getAttribute('data-basepath');
-  var tried = parseInt(img.getAttribute('data-ext-idx') || '0');
-  if (tried >= bnExtFallbacks.length) {
-    img.style.display = 'none';
-    var ph = img.nextElementSibling;
-    if (ph) ph.style.display = 'flex';
-    img.onerror = null;
-    return;
-  }
-  img.setAttribute('data-ext-idx', tried + 1);
-  img.src = bp + bnExtFallbacks[tried];
+// 첫 이미지 경로 (images 배열 기반; 구버전 folder/image_count는 더 이상 사용 안 함)
+function bnFirstImage(item) {
+  return (item.images && item.images.length) ? item.images[0] : '';
 }
 
 function buildCard(item, idx, type) {
-  var hasImg = item.image_count > 0;
-  var basePath = 'News_Blog_JPG/beelab_images/' + type + '/' + encodeURIComponent(item.folder) + '/001';
+  var first = bnFirstImage(item);
   var dateStr = item.date ? item.date : '';
   var html = '<div class="bn-card" data-type="' + type + '" data-idx="' + idx + '">';
-  if (hasImg) {
-    html += '<img class="bn-card-img" data-basepath="' + escapeHtml(basePath) + '" src="' + basePath + '.jpg" alt="" loading="lazy" onerror="bnImgFallback(this)">';
+  if (first) {
+    html += '<img class="bn-card-img" src="' + encodeURI(first) + '" alt="" loading="lazy" onerror="bnImgHide(this)">';
     html += '<div class="bn-no-img" style="display:none;">📷</div>';
   } else {
     html += '<div class="bn-no-img">📷</div>';
@@ -316,11 +311,9 @@ function openBNDetail(type, item) {
   var m = document.getElementById('bn-modal');
   if (!m) { m = document.createElement('div'); m.id = 'bn-modal'; document.body.appendChild(m); }
   var imgs = '';
-  for (var i = 1; i <= item.image_count; i++) {
-    var num = String(i).padStart(3, '0');
-    var bp = 'News_Blog_JPG/beelab_images/' + type + '/' + encodeURIComponent(item.folder) + '/' + num;
-    imgs += '<img data-basepath="' + escapeHtml(bp) + '" src="' + bp + '.jpg" style="width:100%;border-radius:8px;margin-bottom:12px;" loading="lazy" onerror="bnImgFallback(this)">';
-  }
+  (item.images || []).forEach(function (p) {
+    imgs += '<img src="' + encodeURI(p) + '" style="width:100%;border-radius:8px;margin-bottom:12px;" loading="lazy" onerror="bnImgHide(this)">';
+  });
   var body = cleanBody(item);
   body = body.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   m.style.display = 'block';

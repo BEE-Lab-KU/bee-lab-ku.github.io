@@ -1,0 +1,53 @@
+media:
+  - name: news_images
+    label: News 사진
+    input: News_Blog_JPG/beelab_images/News
+    output: News_Blog_JPG/beelab_images/News
+    extensions: [jpg, jpeg, png, webp]
+  - name: blog_images
+    label: Blog 사진
+    input: News_Blog_JPG/beelab_images/Blog
+    output: News_Blog_JPG/beelab_images/Blog
+    extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: news
+    label: News
+    type: file
+    path: News_Blog_JPG/beelab_content/news.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: 제목
+        type: string
+        required: true
+      - name: body
+        label: 본문
+        type: text
+      - name: images
+        label: 사진 (여러 장 가능, 첫 장이 대표 이미지)
+        type: image
+        options:
+          media: news_images
+          multiple: true
+  - name: blog
+    label: Blog
+    type: file
+    path: News_Blog_JPG/beelab_content/blog.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: 제목
+        type: string
+        required: true
+      - name: body
+        label: 본문
+        type: text
+      - name: images
+        label: 사진 (여러 장 가능, 첫 장이 대표 이미지)
+        type: image
+        options:
+          media: blog_images
+          multiple: true
