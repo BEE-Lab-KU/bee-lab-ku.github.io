@@ -209,7 +209,7 @@ function sendContactEmail(e) {
   var subject = document.getElementById('cf-subject').value;
   var message = document.getElementById('cf-message').value;
   var body = 'From: ' + name + ' (' + email + ')%0A%0A' + message;
-  window.location.href = 'mailto:hjw970301@gmail.com?subject=' + encodeURIComponent('[BEE Lab Contact] ' + subject) + '&body=' + body;
+  window.location.href = 'mailto:beelab.ku@gmail.com,hyunwoolim@konkuk.ac.kr?subject=' + encodeURIComponent('[BEE Lab Contact] ' + subject) + '&body=' + body;
 }
 
 
