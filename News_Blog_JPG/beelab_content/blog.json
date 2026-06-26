@@ -1,7 +1,7 @@
 [
   {
     "title": "2026 이상민 석사 논문 심사",
-    "date": "2026-01-28",
+    "date": "2026-06-05",
     "body": "BEE Lab.의 두번째 석사 논문 심사",
     "images": [
       {
@@ -11,7 +11,8 @@
         "src": "News_Blog_JPG/beelab_images/Blog/2026 이상민 석사 논문 심사/002.jpg"
       },
       {
-        "src": "News_Blog_JPG/beelab_images/Blog/2026 이상민 석사 논문 심사/003.jpg"
+        "src": "News_Blog_JPG/beelab_images/Blog/2026 이상민 석사 논문 심사/003.jpg",
+        "caption": "수고하셨습니다 ! 🥹"
       }
     ]
   },
@@ -23,7 +24,8 @@
         "src": "News_Blog_JPG/beelab_images/Blog/2026 축제 즐기기/001.png"
       },
       {
-        "src": "News_Blog_JPG/beelab_images/Blog/2026 축제 즐기기/002.png"
+        "src": "News_Blog_JPG/beelab_images/Blog/2026 축제 즐기기/002.png",
+        "caption": "너무 맛있었던 푸드트럭 음식 !! 😋"
       }
     ]
   },
@@ -35,13 +37,14 @@
         "src": "News_Blog_JPG/beelab_images/Blog/BEE Lab. 번개회식/001.jpg"
       },
       {
-        "src": "News_Blog_JPG/beelab_images/Blog/BEE Lab. 번개회식/002.png"
+        "src": "News_Blog_JPG/beelab_images/Blog/BEE Lab. 번개회식/002.png",
+        "caption": "상민선배의 맛있는 볶음밥 ! ✨"
       }
     ]
   },
   {
     "title": "데이터넷 킥오프 워크샵과 BEE Lab MT",
-    "date": "2026-01-25",
+    "date": "2026-02-27",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/데이터넷 킥오프 워크샵과 BEE Lab MT/001.jpg"
@@ -69,7 +72,7 @@
   {
     "title": "2025 송년회",
     "date": "2025-12-28",
-    "body": "2025 BEE Lab의 송년회를 진행했습니다~! 서로의 산타가 되어 선물교환 이벤트를 진행하면서 즐거운 시간을 보냈습니다 !!",
+    "body": "2025 BEE Lab의 송년회를 진행했습니다~! \n서로의 산타가 되어 선물교환 이벤트를 진행하면서 즐거운 시간을 보냈습니다 !!",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2025 송년회/001.jpg"
@@ -81,10 +84,12 @@
         "src": "News_Blog_JPG/beelab_images/Blog/2025 송년회/003.jpg"
       },
       {
-        "src": "News_Blog_JPG/beelab_images/Blog/2025 송년회/004.jpg"
+        "src": "News_Blog_JPG/beelab_images/Blog/2025 송년회/004.jpg",
+        "caption": "씨몽키야 ! 오래오래 같이 살자 ! 💗"
       },
       {
-        "src": "News_Blog_JPG/beelab_images/Blog/2025 송년회/005.jpg"
+        "src": "News_Blog_JPG/beelab_images/Blog/2025 송년회/005.jpg",
+        "caption": "상민선배 오래오래 입어주세요 -지영😉"
       }
     ]
   },
