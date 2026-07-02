@@ -452,7 +452,7 @@ function linkProfilePapersToDOI() {
     titleEl.appendChild(a);
   });
 }
-linkProfilePapersToDOI();
+// linkProfilePapersToDOI()는 publications.json + members.json 로드 완료 후 호출
 
 // ===== 프로젝트 상세 갤러리: Photos/projects/<key>-1.jpg, -2.jpg … 자동 탐색 (연속 번호) =====
 function openProjImg(src) {
@@ -569,7 +569,7 @@ document.addEventListener('keydown', function (e) {
   }
   function set(id, html){ var el = document.getElementById(id); if(el) el.innerHTML = html; }
 
-  fetch('publications.json')
+  window._pubReady = fetch('publications.json')
     .then(function(r){ return r.json(); })
     .then(function(data){
       set('pub-international', renderFlat(data.international || []));
@@ -668,7 +668,7 @@ document.addEventListener('keydown', function (e) {
 
   function set(id, html){ var el = document.getElementById(id); if(el) el.innerHTML = html; }
 
-  fetch('members.json')
+  window._memReady = fetch('members.json')
     .then(function(r){ return r.json(); })
     .then(function(data){
       set('mem-professor', renderProfessor(data.professor || {}));
@@ -681,3 +681,6 @@ document.addEventListener('keydown', function (e) {
     })
     .catch(function(err){ console.error('members load failed', err); });
 })();
+
+// publications.json + members.json 둘 다 로드 완료 후 DOI 연결
+Promise.all([window._pubReady, window._memReady]).then(function(){ linkProfilePapersToDOI(); });
