@@ -629,24 +629,6 @@
       "publications": [
         {
           "year": "2025",
-          "title": "Lee, D., Lim, H., Lim, J., Kim, S., Yoon, S., Kim, D. W., & Shim, J. Analyzing energy signature of building retrofits using public data.",
-          "venue": "Building and Environment",
-          "badge": "SCIE"
-        },
-        {
-          "year": "2024",
-          "title": "Hwang, J., Lim, H., & Lim, J. Reducing uncertainty of building shape information in urban building energy modeling using Bayesian calibration.",
-          "venue": "Sustainable Cities and Society",
-          "badge": "SCIE"
-        },
-        {
-          "year": "2024",
-          "title": "Choi, S., Lim, H., Lim, J., & Yoon, S. Retrofit building energy performance evaluation using an energy signature-based symbolic hierarchical clustering method.",
-          "venue": "Building and Environment",
-          "badge": "SCIE"
-        },
-        {
-          "year": "2025",
           "title": "임지수, 임현우. 지역 단위 건물 에너지 모델의 창면적비 추정을 위한 이미지 기반 객체 탐지 기법의 검증.",
           "venue": "2025년도 한국건축친환경설비학회 추계학술발표대회",
           "award": "🏆 우수논문발표상",
