@@ -813,15 +813,15 @@
     <div class="back-link" onclick="goBack('urban-modeling')">← Urban Building Energy Modeling (UBEM)</div>
     <div class="detail-grid">
       <div>
-        <h1 style="font-size:32px;">UBEM 기반 도시 단위 에너지 사용량 해석</h1>
+        <h1 style="font-size:32px;">도시 단위 건물 에너지 해석을 위한 건물 특성 지표 및 도시 건물 에너지 모델(UBEM) 개발</h1>
         <div class="detail-meta"><span class="status-dot"></span><span class="status-text">진행 중 · 2024–</span></div>
         <div class="detail-content">
           <h3>연구배경</h3>
-          <p>도시 단위의 건물 에너지 분석을 위해서는 대규모 건물 데이터와 시뮬레이션을 결합한 UBEM이 필요합니다. 그러나 건물 형상 정보의 불확실성과 시뮬레이션 연산 비용이 모델의 정확도와 실용성을 제한합니다.</p>
+          <p>도시화로 에너지 수요가 도시에 집중되면서 전력망을 비롯한 에너지 시스템의 부담이 가중되고 있습니다. 지속가능한 도시를 설계하기 위해서는 이러한 도시 에너지 생태계를 이해하는 것이 선행되어야 합니다. 도시 건물 에너지 모델(UBEM)은 도시 단위 건물 에너지 분석에 널리 활용되고 있으나, 계산 비용이 크고 실제 도시가 가진 불확실성을 충분히 반영하지 못한다는 한계가 있습니다. 따라서 건물 특성(형상, 부하, 패턴)을 기반으로 한 초기 분석과 불확실성을 고려한 모델 보정을 통해 정밀 분석으로 이어지는 방법론이 필요합니다.</p>
           <h3>연구목표</h3>
-          <p>대리모델 기반 연산 효율화와 불확실성 정량화, 자동 보정 프로세스를 통해 고정밀 UBEM 모델을 구축하고 건물 요소와 에너지 사용량 간 상관관계를 규명합니다.</p>
+          <p>건물 특성 지표 기반의 초기 분석부터 불확실성 보정을 통한 정밀 분석으로 정확한 도시 건물 에너지 모델(UBEM)을 구축하는 것을 목표로 합니다.</p>
           <h3>Keywords</h3>
-          <p>UBEM · Surrogate Model · Bayesian Calibration · Uncertainty Quantification · Reinforcement Learning · Building Feature Index</p>
+          <p>Urban Building Energy Modeling (UBEM) · Bayesian Calibration · Uncertainty Quantification · Reinforcement Learning · Building Feature Index</p>
         </div>
       </div>
       <div>
@@ -831,25 +831,28 @@
         </div>
         <div class="sidebar-block">
           <div class="sidebar-label">Tools</div>
-          <div class="sidebar-tags"><span class="sidebar-tag">EnergyPlus</span><span class="sidebar-tag">Python</span><span class="sidebar-tag">Bayesian Inference</span></div>
+          <div class="sidebar-tags"><span class="sidebar-tag">EnergyPlus</span><span class="sidebar-tag">Grasshopper</span><span class="sidebar-tag">QGIS</span><span class="sidebar-tag">Python</span></div>
         </div>
       </div>
     </div>
     <div style="margin-top:64px;border-top:1px solid var(--border);padding-top:48px;">
       <h3>관련 논문</h3>
-      <div style="padding:16px;border:1px solid var(--border);border-radius:8px;margin:8px 0;">
-        <div style="font-size:14px;font-weight:600;">Hwang, J., Lee, K., Lee, D., Kim, D. W., & Lim, H. Analysis of energy consumption impacts using public data-based building shape index: a case study of office buildings in Seoul.</div>
-        <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">Journal of Building Engineering · 2025</div>
+      <div style="padding:16px;border:1px solid var(--border);border-radius:8px;margin:8px 0;margin-bottom:16px;">
+        <div style="font-size:14px;font-weight:600;">Analysis of energy consumption impacts using public data-based building shape index: a case study of office buildings in Seoul</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">Hwang, J., Lee, K., Lee, D., Kim, D. W., & Lim, H. · 2025</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">Journal of Building Engineering</div>
         <a href="https://doi.org/10.1016/j.jobe.2025.114643" target="_blank" style="font-size:12px;color:#000;font-weight:600;text-decoration:underline;text-underline-offset:2px;">🔗 DOI</a>
       </div>
-      <div style="padding:16px;border:1px solid var(--border);border-radius:8px;margin:8px 0;">
-        <div style="font-size:14px;font-weight:600;">Hwang, J., Lim, H., & Lim, J. Reducing uncertainty of building shape information in urban building energy modeling using Bayesian calibration.</div>
-        <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">Sustainable Cities and Society · 2024</div>
+      <div style="padding:16px;border:1px solid var(--border);border-radius:8px;margin:8px 0;margin-bottom:16px;">
+        <div style="font-size:14px;font-weight:600;">Reducing uncertainty of building shape information in urban building energy modeling using Bayesian calibration</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">Hwang, J., Lim, H., & Lim, J. · 2024</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">Sustainable Cities and Society</div>
         <a href="https://doi.org/10.1016/j.scs.2024.105895" target="_blank" style="font-size:12px;color:#000;font-weight:600;text-decoration:underline;text-underline-offset:2px;">🔗 DOI</a>
       </div>
       <div style="padding:16px;border:1px solid var(--border);border-radius:8px;margin:8px 0;">
-        <div style="font-size:14px;font-weight:600;">Hwang, J., Lee, S., Lim, J., & Lim, H. Developing building shape indexes at the city-scale for understanding building energy consumption.</div>
-        <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">Building Simulation 2025: 19th Conference of IBPSA · 2025</div>
+        <div style="font-size:14px;font-weight:600;">Developing building shape indexes at the city-scale for understanding building energy consumption</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">Hwang, J., Lee, S., Lim, J., & Lim, H. · 2025</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">Building Simulation 2025: 19th Conference of IBPSA</div>
         <a href="https://doi.org/10.26868/25222708.2025.1603" target="_blank" style="font-size:12px;color:#000;font-weight:600;text-decoration:underline;text-underline-offset:2px;">🔗 DOI</a>
       </div>
     </div>
