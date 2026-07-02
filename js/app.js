@@ -437,19 +437,20 @@ function linkProfilePapersToDOI() {
     var link = row.querySelector('a[href^="http"]');
     if (titleEl && link) { doiMap[norm(titleEl.textContent)] = link.href; }
   });
-  // 2) 멤버 프로필의 논문 제목에 매칭되는 DOI가 있으면 제목 자체를 링크로 변환
+  // 2) 멤버 프로필의 논문 제목에 매칭되는 DOI가 있으면 제목 아래에 DOI 링크 추가
   document.querySelectorAll('[id^="page-member-"] .pub-title').forEach(function (titleEl) {
-    if (titleEl.querySelector('a')) return; // 이미 링크면 건너뜀
     var url = doiMap[norm(titleEl.textContent)];
     if (!url) return;
+    var parent = titleEl.parentElement;
+    if (parent.querySelector('.pub-doi-link')) return; // 이미 DOI 링크 있으면 건너뜀
     var a = document.createElement('a');
     a.href = url;
     a.target = '_blank';
     a.rel = 'noopener';
     a.className = 'pub-doi-link';
-    a.textContent = titleEl.textContent;
-    titleEl.textContent = '';
-    titleEl.appendChild(a);
+    a.style.cssText = 'font-size:12px;color:#000;font-weight:600;text-decoration:underline;text-underline-offset:2px;';
+    a.textContent = '🔗 DOI';
+    parent.appendChild(a);
   });
 }
 // linkProfilePapersToDOI()는 publications.json + members.json 로드 완료 후 호출
