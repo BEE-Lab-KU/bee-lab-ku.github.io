@@ -262,6 +262,22 @@
   ],
   "conferences": [
     {
+      "year": "2026",
+      "group": "2026",
+      "title": "Hwang, J., Lim, H. Shape Calibration Factors for Improving the Accuracy of Representative Building-Based Urban Building Energy Model (UBEM).",
+      "venue": "The 3rd Korea-Japan Symposium on Chemistry with AI for Carbon Neutrality (C-AICN 2025). June, Hiroshima, Japan.",
+      "badge": "CONF",
+      "section": "International Conferences"
+    },
+    {
+      "year": "2026",
+      "group": "2026",
+      "title": "Lim, J., Lim, H. Comparative Analysis of Street View-and UAV-Based WWR Extraction as Input for District Building Energy Modeling.",
+      "venue": "The 3rd Korea-Japan Symposium on Chemistry with AI for Carbon Neutrality (C-AICN 2025). June, Hiroshima, Japan.",
+      "badge": "CONF",
+      "section": "International Conferences"
+    },
+    {
       "year": "2025",
       "group": "2025",
       "title": "Lee, D., Lim, H. Analysis of the Relationship between Building Shape Indicators and Energy End-Use Using Public Data.",
