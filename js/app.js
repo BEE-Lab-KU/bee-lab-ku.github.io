@@ -409,7 +409,7 @@ function buildResearchPage(r) {
   '</div>';
 }
 function loadResearch() {
-  fetch('research-content/research.json')
+  return fetch('research-content/research.json')
     .then(function (r) { return r.json(); })
     .then(function (list) {
       list.forEach(function (r) {
@@ -423,7 +423,7 @@ function loadResearch() {
     })
     .catch(function (e) { console.error('research load error:', e); });
 }
-loadResearch();
+window._researchReady = loadResearch();
 
 // ===== 개인 프로필 논문 → DOI 링크 연결 (Publications 페이지를 단일 출처로 사용) =====
 function linkProfilePapersToDOI() {
@@ -451,6 +451,51 @@ function linkProfilePapersToDOI() {
     a.style.cssText = 'font-size:12px;color:#000;font-weight:600;text-decoration:underline;text-underline-offset:2px;';
     a.textContent = '🔗 DOI';
     parent.appendChild(a);
+  });
+}
+
+// ===== 연구 상세페이지 "관련 논문" → DOI 링크 연결 (Publications 페이지를 단일 출처로 사용) =====
+function linkResearchPapersToDOI() {
+  var norm = function (s) { return String(s || '').replace(/\s+/g, ' ').trim().toLowerCase(); };
+  var pubPage = document.getElementById('page-publications');
+  if (!pubPage) return;
+  // 1) Publications 페이지에서 "논문 제목(저자 포함) → DOI URL" 맵 구축
+  var doiMap = {};
+  pubPage.querySelectorAll('.pub-row').forEach(function (row) {
+    var titleEl = row.querySelector('.pub-title');
+    var link = row.querySelector('a[href^="http"]');
+    if (titleEl && link) { doiMap[norm(titleEl.textContent)] = link.href; }
+  });
+  // publications.json 제목은 "저자. 제목." 형식이므로 뒤쪽(제목부)이 일치해야 함
+  var stripEnd = function (s) { return s.replace(/[.\s]+$/, ''); };
+  var pubTitles = Object.keys(doiMap);
+  var pubTitlesStripped = pubTitles.map(stripEnd);
+  // 2) 각 연구 상세페이지의 "관련 논문" 카드 제목이 논문 제목의 끝부분과 일치하면 DOI 링크 추가
+  document.querySelectorAll('.detail-page').forEach(function (page) {
+    var heading = null;
+    page.querySelectorAll('h3').forEach(function (h) { if (h.textContent.trim() === '관련 논문') { heading = h; } });
+    if (!heading || !heading.parentElement) return;
+    Array.prototype.forEach.call(heading.parentElement.children, function (card) {
+      if (card.tagName !== 'DIV') return;                 // h3 등 건너뜀
+      if (card.querySelector('a[href^="http"]')) return;  // 이미 DOI 링크 있으면 건너뜀
+      var titleEl = card.querySelector('div');
+      if (!titleEl) return;
+      var cardTitle = stripEnd(norm(titleEl.textContent));
+      if (cardTitle.length < 12) return;                  // 너무 짧은 제목은 오매칭 방지
+      var url = null;
+      for (var i = 0; i < pubTitlesStripped.length; i++) {
+        var k = pubTitlesStripped[i];
+        if (k.length >= cardTitle.length && k.slice(k.length - cardTitle.length) === cardTitle) { url = doiMap[pubTitles[i]]; break; }
+      }
+      if (!url) return;
+      var a = document.createElement('a');
+      a.href = url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.style.cssText = 'font-size:12px;color:#000;font-weight:600;text-decoration:underline;text-underline-offset:2px;';
+      a.textContent = '🔗 DOI';
+      card.appendChild(a);
+    });
   });
 }
 // linkProfilePapersToDOI()는 publications.json + members.json 로드 완료 후 호출
@@ -683,5 +728,5 @@ document.addEventListener('keydown', function (e) {
     .catch(function(err){ console.error('members load failed', err); });
 })();
 
-// publications.json + members.json 둘 다 로드 완료 후 DOI 연결
-Promise.all([window._pubReady, window._memReady]).then(function(){ linkProfilePapersToDOI(); });
+// publications.json + members.json + research.json 로드 완료 후 DOI 연결
+Promise.all([window._pubReady, window._memReady, window._researchReady]).then(function(){ linkProfilePapersToDOI(); linkResearchPapersToDOI(); });
