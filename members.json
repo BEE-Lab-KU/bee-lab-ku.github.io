@@ -169,11 +169,11 @@
       "name": "이상민",
       "roleLine": "Master's Student · Building Energy Systems Group",
       "avatar": "Photos/members/sangmin.jpeg",
-      "bio": "건물 에너지 시스템의 동적 시뮬레이션 및 최적 제어를 연구하고 있습니다. 특히 CO₂ 히트펌프 시스템의 Modelica 기반 모델링과 실측 데이터 기반 검증에 집중하고 있습니다.",
+      "bio": "공동주택에서 히트펌프를 활용한 중앙식 급탕 시스템 (Central Heat Pump Water Heater, CHPWH)에 대해 연구하고 있습니다. CHPWH 시스템 적용 시 발생하는 반환수로 인한 성능 저하 문제 해결과, 시스템 제어 최적화에 집중하고 있습니다.",
       "research": [
         {
           "page": "research-chpwh",
-          "title": "부하 분리 기반 CHPWH 시스템 Physical Modeling 및 적응형 Load Shift 최적화",
+          "title": "공동주택 중앙식 히트펌프 급탕 시스템의 반환수 영향 저감을 위한 부하 분리와 적응형 Load Shift 최적화",
           "tags": "#CHPWH #load_shift #TRNSYS #hot_water_recirculation"
         },
         {

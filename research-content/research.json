@@ -74,7 +74,7 @@
     "goal": "건물 특성 지표 기반의 초기 분석부터 불확실성 보정을 통한 정밀 분석으로 정확한 도시 건물 에너지 모델(UBEM)을 구축하는 것을 목표로 합니다.",
     "keywords": ["Urban Building Energy Modeling (UBEM)", "Bayesian Calibration", "Uncertainty Quantification", "Reinforcement Learning", "Building Feature Index"],
     "tools": ["EnergyPlus", "Grasshopper", "QGIS", "Python"],
-    "figure": null,
+    "figure": "Photos/research-figs/ubem.png",
     "papers": [
       {
         "title": "Analysis of energy consumption impacts using public data-based building shape index: a case study of office buildings in Seoul",
@@ -142,5 +142,45 @@
     "tools": ["Modelica"],
     "figure": null,
     "papers": []
+  },
+  {
+    "id": "research-chpwh",
+    "title": "공동주택 중앙식 히트펌프 급탕 시스템의 반환수 영향 저감을 위한 부하 분리와 적응형 Load Shift 최적화",
+    "group": "Building Energy Systems",
+    "back": "main",
+    "status": "진행 중 · 2025–",
+    "researchers": [
+      { "slug": "sangmin", "name": "이상민", "role": "Master's Student", "avatar": "Photos/members/sangmin-sm.png" }
+    ],
+    "background": "중앙식 급탕 시스템에서는 온수 재순환 시스템으로 인한 반환수가 고려되고 있습니다. 하지만 반환수의 유입으로 인한 시스템의 성능 저하를 고려하거나, 이를 모델링 과정에 반영한 연구는 미흡한 실정입니다. 또한, 기존 Load Shift 전략은 운영자의 도메인 지식에 의존하며, 사전에 고정된 채 변화하지 않는 정적인 단계에 머물고 있습니다. 이에 따라, 반환수로 인한 성능 저하를 방지하기 위한 부하 분리 기반 CHPWH 시스템 시뮬레이션 모델의 구축과 급탕 부하 및 외기 조건에 따라 변화하는 적응형 Load Shift 전략의 도입이 필요합니다.",
+    "goal": "CHPWH 시스템에서 반환수로 인한 성능 저하를 방지하기 위한 부하 분리 방법론을 제시하고, 반환수를 고려한 부하 분리 기반의 CHPWH 시뮬레이션 모델을 구축합니다. 또한 급탕 부하와 외기 조건에 따라 변화하는 적응형 Load Shift 전략을 제시하고 비용 최적화 방안을 연구합니다.",
+    "keywords": ["Building Energy Simulation", "Central Heat Pump Water Heater", "Domestic Hot Water", "Hot Water Recirculation", "Load Shift", "TRNSYS"],
+    "tools": ["TRNSYS", "Python"],
+    "figure": "Photos/research-figs/chpwh.png",
+    "papers": [
+      { "title": "Load separation method for Enhancing performance of central heat pump water heater system with hot water recirculation", "authors": "Lee, S., Lim, H., Lee, K., Heller, J., & Spielman, S. · 2026", "venue": "Energy and Buildings" },
+      { "title": "급탕 환수 부하의 분리를 통한 중앙식 히트펌프 온수기의 성능 향상 분석", "authors": "이상민, 임현우 · 2025", "venue": "한국지열수열에너지학회 추계학술발표대회" },
+      { "title": "TRNSYS를 활용한 공동주택 Central Heat Pump Water Heater 시스템 구축", "authors": "이상민, 임현우 · 2025", "venue": "대한설비공학회 하계학술발표대회" }
+    ]
+  },
+  {
+    "id": "research-pmv-sensor",
+    "title": "도서관 최적 좌석 제시를 위한 PMV 가상센서 시스템 구축",
+    "group": "Building Energy Systems",
+    "back": "main",
+    "status": "진행 완료 · 2024",
+    "completed": true,
+    "researchers": [
+      { "slug": "sangmin", "name": "이상민", "role": "Master's Student", "avatar": "Photos/members/sangmin-sm.png" }
+    ],
+    "background": "같은 공간 내에서도 좌석 구조에 따라 열적 쾌적성은 달라지며, 같은 좌석을 사용하더라도 개인마다 열적 쾌적성을 다르게 느낄 수 있습니다. 그러나, 현재 도서관 열람실에 도입된 좌석 선택 시스템은 이러한 차이점을 고려하지 않아 재실자의 불만족도가 증가하고 있는 상황입니다. 이에 도서관 이용 시 개인의 열적쾌적성을 고려하는 좌석 선택 시스템이 필요하며, 이를 위해 PMV 가상센서를 구축하여 불만족도를 해결하고자 합니다.",
+    "goal": "PMV 가상센서를 구축하여 각 좌석마다의 열적쾌적성을 예측하고, 이를 실제 좌석 선택 시스템에 반영하여 재실자의 불만족도를 줄이고자 합니다.",
+    "keywords": ["Virtual Sensor", "Thermal Comfort", "Predicted Mean Vote", "Optimal Seat Reservation"],
+    "tools": ["Python-sklearn", "REVIT", "3D AutoCAD", "CFD Simulation"],
+    "figure": "Photos/research-figs/pmv.png",
+    "papers": [
+      { "title": "도서관 최적 좌석 제시를 위한 PMV 가상센서 시스템 구축", "authors": "이상민, 임현우 · 2024", "venue": "한국태양에너지학회 추계학술발표대회" },
+      { "title": "이상민, 이상원, 최서연, & 임현우. 도서관 최적 좌석 제시를 위한 PMV 가상센서 시스템 구축.", "authors": "", "venue": "한국태양에너지학회 논문집" }
+    ]
   }
 ]
