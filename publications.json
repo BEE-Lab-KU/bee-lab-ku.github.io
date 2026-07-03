@@ -219,6 +219,14 @@
   ],
   "domestic": [
     {
+      "year": "2026",
+      "group": "2026",
+      "title": "황정윤, 김덕우, 임현우. 건물 에너지 분석을 위한 공공데이터 기반 단독형·단지형 건축물 분류 및 공간·속성 정보 통합.",
+      "venue": "대한건축학회 논문집",
+      "doi": "https://doi.org/10.5659/JAIK.2026.42.6.283",
+      "badge": "KCI"
+    },
+    {
       "year": "2025",
       "group": "2025",
       "title": "김인섭, 서준원, 이성민, & 임현우. 건물 용도 조정을 통한 도시 에너지 사용량 패턴 평탄화 가능성 검토.",
@@ -253,6 +261,22 @@
     }
   ],
   "conferences": [
+    {
+      "year": "2026",
+      "group": "2026",
+      "title": "Hwang, J., Lim, H. Shape Calibration Factors for Improving the Accuracy of Representative Building-Based Urban Building Energy Model (UBEM).",
+      "venue": "The 3rd Korea-Japan Symposium on Chemistry with AI for Carbon Neutrality (C-AICN 2025). June, Hiroshima, Japan.",
+      "badge": "CONF",
+      "section": "International Conferences"
+    },
+    {
+      "year": "2026",
+      "group": "2026",
+      "title": "Lim, J., Lim, H. Comparative Analysis of Street View-and UAV-Based WWR Extraction as Input for District Building Energy Modeling.",
+      "venue": "The 3rd Korea-Japan Symposium on Chemistry with AI for Carbon Neutrality (C-AICN 2025). June, Hiroshima, Japan.",
+      "badge": "CONF",
+      "section": "International Conferences"
+    },
     {
       "year": "2025",
       "group": "2025",
