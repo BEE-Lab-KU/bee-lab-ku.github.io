@@ -147,7 +147,24 @@ function showPage(id, opts) {
   }
   currentPage = id;
   updateNav();
+  closeMenu();
   history.pushState(null, '', '#' + id);
+}
+
+// ===== 모바일 햄버거 메뉴 토글 =====
+function toggleMenu() {
+  var t = document.querySelector('.nav-toggle');
+  var n = document.getElementById('nav-right');
+  if (!n || !t) return;
+  var open = n.classList.toggle('open');
+  t.classList.toggle('open', open);
+  t.setAttribute('aria-expanded', open);
+}
+function closeMenu() {
+  var t = document.querySelector('.nav-toggle');
+  var n = document.getElementById('nav-right');
+  if (n) n.classList.remove('open');
+  if (t) { t.classList.remove('open'); t.setAttribute('aria-expanded', 'false'); }
 }
 
 function goBack(fallbackId) {
