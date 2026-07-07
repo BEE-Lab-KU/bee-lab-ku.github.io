@@ -114,7 +114,7 @@
         },
         {
           "slug": "junghyun",
-          "avatar": "Photos/members/junghyun.png",
+          "avatar": "Photos/members/junghyun.jpg",
           "name": "조정현",
           "role": "Master's Student"
         },
@@ -236,7 +236,7 @@
     "junghyun": {
       "name": "조정현",
       "roleLine": "Master's Student · Building Energy Systems Group",
-      "avatar": "Photos/members/junghyun.png",
+      "avatar": "Photos/members/junghyun.jpg",
       "bio": "고층 건물에서 발생하는 기류 특성인 연돌효과에 대해 연구하고 있습니다. 여러가지 연돌효과 저감 방안과 저감 방안이 건물의 에너지 및 재실자 측면에 미치는 영향에 대한 분석에 집중하고 있습니다.",
       "research": [
         {
