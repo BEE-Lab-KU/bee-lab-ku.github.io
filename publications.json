@@ -727,5 +727,23 @@
     "venue": "2022년도 대한설비공학회 하계학술발표대회",
     "badge": "CONF",
     "award": false
+  },
+  {
+    "category": "int-conf",
+    "year": "2026",
+    "title": "Lee, S., & Lim, H. Optimal Load Shift Control Strategy for CHPWH system Based on Load Separation Method.",
+    "venue": "The 12th International Conference on Indoor Air Quality, Ventilation & Energy Conservation in Buildings (IAQVEC 2026)",
+    "doi": "https://doi.org/10.1051/e3sconf/202671602020",
+    "badge": "CONF",
+    "award": false
+  },
+  {
+    "category": "int-conf",
+    "year": "2026",
+    "title": "Hwang, J., & Lim, H. Improving urban building energy modeling (UBEM) accuracy through shape and energy use pattern calibration factors based on representative buildings.",
+    "venue": "The 12th International Conference on Indoor Air Quality, Ventilation & Energy Conservation in Buildings (IAQVEC 2026)",
+    "doi": "https://doi.org/10.1051/e3sconf/202671604023",
+    "badge": "CONF",
+    "award": false
   }
 ]
