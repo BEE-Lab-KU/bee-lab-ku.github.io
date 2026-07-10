@@ -177,7 +177,7 @@
     "goal": "PMV 가상센서를 구축하여 각 좌석마다의 열적쾌적성을 예측하고, 이를 실제 좌석 선택 시스템에 반영하여 재실자의 불만족도를 줄이고자 합니다.",
     "keywords": ["Virtual Sensor", "Thermal Comfort", "Predicted Mean Vote", "Optimal Seat Reservation"],
     "tools": ["Python-sklearn", "REVIT", "3D AutoCAD", "CFD Simulation"],
-    "figure": "Photos/research-figs/pmv.png",
+    "figure": "Photos/research-figs/sm_pmv.png",
     "papers": [
       { "title": "도서관 최적 좌석 제시를 위한 PMV 가상센서 시스템 구축", "authors": "이상민, 임현우 · 2024", "venue": "한국태양에너지학회 추계학술발표대회" },
       { "title": "이상민, 이상원, 최서연, & 임현우. 도서관 최적 좌석 제시를 위한 PMV 가상센서 시스템 구축.", "authors": "", "venue": "한국태양에너지학회 논문집" }
