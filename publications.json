@@ -753,5 +753,12 @@
     "doi": "test",
     "badge": "CONF",
     "group": "2026"
+  },
+  {
+    "category": "dom-conf",
+    "year": "2026",
+    "title": "test 2 no commit",
+    "venue": "test2",
+    "award": "우수논문발표상 "
   }
 ]
