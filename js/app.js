@@ -605,27 +605,10 @@ document.addEventListener('keydown', function (e) {
                       : 'font-size:20px;font-weight:700;margin:40px 0 20px;';
     return '<div style="'+style+'">'+esc(y)+'</div>';
   }
-  function sectionHeader(s, first){
-    var style = first ? 'font-size:24px;font-weight:800;margin-bottom:32px;letter-spacing:-0.02em;'
-                      : 'font-size:24px;font-weight:800;margin:64px 0 32px;letter-spacing:-0.02em;border-top:2px solid var(--border);padding-top:48px;';
-    return '<div style="'+style+'">'+esc(s)+'</div>';
-  }
   function renderFlat(entries){
     var html = '', curGroup = null, first = true;
     entries.forEach(function(e){
       if(e.group !== curGroup){ html += groupHeader(e.group, first); curGroup = e.group; first = false; }
-      html += rowHtml(e);
-    });
-    return html;
-  }
-  function renderConferences(entries){
-    var html = '', curSec = null, curGroup = null, firstSec = true, firstGroup = true;
-    entries.forEach(function(e){
-      if(e.section !== curSec){
-        html += sectionHeader(e.section, firstSec);
-        curSec = e.section; firstSec = false; curGroup = null; firstGroup = true;
-      }
-      if(e.group !== curGroup){ html += groupHeader(e.group, firstGroup); curGroup = e.group; firstGroup = false; }
       html += rowHtml(e);
     });
     return html;
@@ -635,9 +618,13 @@ document.addEventListener('keydown', function (e) {
   window._pubReady = fetch('publications.json')
     .then(function(r){ return r.json(); })
     .then(function(data){
+      var confs = data.conferences || [];
+      var intConf = confs.filter(function(e){ return e.section === 'International Conferences'; });
+      var domConf = confs.filter(function(e){ return e.section === 'Domestic Conferences'; });
       set('pub-international', renderFlat(data.international || []));
       set('pub-domestic',     renderFlat(data.domestic || []));
-      set('pub-conferences',  renderConferences(data.conferences || []));
+      set('pub-int-conf',     renderFlat(intConf));
+      set('pub-dom-conf',     renderFlat(domConf));
     })
     .catch(function(err){ console.error('publications load failed', err); });
 })();
