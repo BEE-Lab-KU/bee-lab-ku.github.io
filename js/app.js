@@ -608,7 +608,8 @@ document.addEventListener('keydown', function (e) {
   function renderFlat(entries){
     var html = '', curGroup = null, first = true;
     entries.forEach(function(e){
-      if(e.group !== curGroup){ html += groupHeader(e.group, first); curGroup = e.group; first = false; }
+      var g = e.group || e.year;
+      if(g !== curGroup){ html += groupHeader(g, first); curGroup = g; first = false; }
       html += rowHtml(e);
     });
     return html;
@@ -617,14 +618,16 @@ document.addEventListener('keydown', function (e) {
 
   window._pubReady = fetch('publications.json')
     .then(function(r){ return r.json(); })
-    .then(function(data){
-      var confs = data.conferences || [];
-      var intConf = confs.filter(function(e){ return e.section === 'International Conferences'; });
-      var domConf = confs.filter(function(e){ return e.section === 'Domestic Conferences'; });
-      set('pub-international', renderFlat(data.international || []));
-      set('pub-domestic',     renderFlat(data.domestic || []));
-      set('pub-int-conf',     renderFlat(intConf));
-      set('pub-dom-conf',     renderFlat(domConf));
+    .then(function(list){
+      if(!Array.isArray(list)) list = [];
+      function byCat(cat){
+        return list.filter(function(e){ return e.category === cat; })
+                   .sort(function(a,b){ return (parseInt(b.year,10)||0) - (parseInt(a.year,10)||0); });
+      }
+      set('pub-international', renderFlat(byCat('international')));
+      set('pub-domestic',     renderFlat(byCat('domestic')));
+      set('pub-int-conf',     renderFlat(byCat('int-conf')));
+      set('pub-dom-conf',     renderFlat(byCat('dom-conf')));
     })
     .catch(function(err){ console.error('publications load failed', err); });
 })();
