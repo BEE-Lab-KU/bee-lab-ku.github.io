@@ -590,7 +590,7 @@ document.addEventListener('keydown', function (e) {
   }
   function awardHtml(a){
     if(!a) return '';
-    return '<span style="margin-left:8px;font-size:11px;font-weight:600;color:#D4A017;">'+esc(a)+'</span>';
+    return '<span style="margin-left:8px;font-size:11px;font-weight:600;color:#D4A017;">🏆 우수논문발표상</span>';
   }
   function rowHtml(e){
     return '<div class="pub-row">'

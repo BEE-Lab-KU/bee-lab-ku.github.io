@@ -121,5 +121,8 @@ content:
             - KCI
             - CONF
       - name: award
-        label: 우수논문발표상 수상 (체크하면 🏆 우수논문발표상 표시)
-        type: boolean
+        label: 수상 (선택, 예 "🏆 우수논문발표상")
+        type: string
+      - name: group
+        label: 연도 묶음 헤더 (선택 — 비우면 연도로 자동. 예 "2017 – 2018")
+        type: string
