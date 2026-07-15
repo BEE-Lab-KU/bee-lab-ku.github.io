@@ -79,6 +79,9 @@ a { color: inherit; text-decoration: none; }
   }
   .nav-right.open { max-height: 70vh; }
   .nav-right a { padding: 16px 24px; font-size: 16px; border-top: 1px solid var(--border); }
+  /* 히어로 위(투명 nav)에서도 열린 모바일 메뉴는 불투명 배경 → 링크를 어둡게(흰 글씨로 안 보이는 문제 방지) */
+  .top-bar.rhero-transparent .nav-right.open a,
+  .top-bar.rhero-transparent .nav-right.open a:hover { color: var(--text-muted); }
 }
 
 /* PAGE VIEW */
