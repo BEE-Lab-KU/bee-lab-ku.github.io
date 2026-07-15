@@ -97,12 +97,10 @@ content:
               label: International Conference (국제 학회)
             - value: dom-conf
               label: Domestic Conference (국내 학회)
-      - name: date
-        label: 날짜 (발표일/게재일 · 이 날짜의 연도로 묶이고 같은 해에선 최신순 자동 정렬)
-        type: date
+      - name: year
+        label: 연도 (예 2026, 최신이 위로 자동 정렬됨)
+        type: string
         required: true
-        options:
-          format: yyyy-MM-dd
       - name: title
         label: 제목 (저자 포함, 예 "Lee, S., ... Load separation method ...")
         type: text

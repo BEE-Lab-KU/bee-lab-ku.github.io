@@ -594,7 +594,7 @@ document.addEventListener('keydown', function (e) {
   }
   function rowHtml(e){
     return '<div class="pub-row">'
-      + '<div class="pub-year">'+esc(e.year)+'</div>'
+      + '<div class="pub-year">'+esc(String(e.date||'').slice(0,4))+'</div>'
       + '<div><div class="pub-title">'+esc(e.title)+'</div>'
       + '<div class="pub-journal">'+esc(e.venue)+'</div>'+doiHtml(e.doi)+awardHtml(e.award)+'</div>'
       + '<div>'+badgeHtml(e.badge)+'</div>'
@@ -608,7 +608,7 @@ document.addEventListener('keydown', function (e) {
   function renderFlat(entries){
     var html = '', curGroup = null, first = true;
     entries.forEach(function(e){
-      var g = e.group || e.year;
+      var g = String(e.date||'').slice(0,4);
       if(g !== curGroup){ html += groupHeader(g, first); curGroup = g; first = false; }
       html += rowHtml(e);
     });
@@ -622,7 +622,7 @@ document.addEventListener('keydown', function (e) {
       if(!Array.isArray(list)) list = [];
       function byCat(cat){
         return list.filter(function(e){ return e.category === cat; })
-                   .sort(function(a,b){ return (parseInt(b.year,10)||0) - (parseInt(a.year,10)||0); });
+                   .sort(function(a,b){ var da=String(a.date||''), db=String(b.date||''); return da<db?1:(da>db?-1:0); });
       }
       set('pub-international', renderFlat(byCat('international')));
       set('pub-domestic',     renderFlat(byCat('domestic')));
