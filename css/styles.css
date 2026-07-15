@@ -84,6 +84,12 @@ a { color: inherit; text-decoration: none; }
   .top-bar.rhero-transparent .nav-right.open a:hover { color: var(--text-muted); }
 }
 
+/* 모바일: 교수 프로필 카드 세로 스택 (인라인 고정폭이 좁은 화면에서 넘치는 문제 해결) */
+@media (max-width: 768px) {
+  .prof-header { flex-direction: column !important; gap: 20px !important; padding: 24px !important; }
+  .prof-photo { width: 160px !important; height: 200px !important; }
+}
+
 /* PAGE VIEW */
 .page-view { display: none; }
 .page-view.active { display: block; }

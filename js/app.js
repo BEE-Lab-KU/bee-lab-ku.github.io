@@ -659,8 +659,8 @@ document.addEventListener('keydown', function (e) {
     var links = (p.links||[]).map(function(l){
       return '<a href="'+esc(l.url)+'" target="_blank" style="font-size:13px;padding:6px 14px;border:1px solid var(--border);border-radius:100px;color:var(--text-mid);text-decoration:none;">'+esc(l.label)+'</a>';
     }).join('');
-    var header = '<div style="display:flex;gap:48px;align-items:flex-start;padding:40px;border:1px solid var(--border);border-radius:12px;margin-bottom:40px;">'
-      + '<img src="'+esc(p.avatar)+'" alt="'+esc(p.nameKr)+'" style="width:180px;height:220px;object-fit:cover;border-radius:12px;flex-shrink:0;background:#E0E0E0;">'
+    var header = '<div class="prof-header" style="display:flex;gap:48px;align-items:flex-start;padding:40px;border:1px solid var(--border);border-radius:12px;margin-bottom:40px;">'
+      + '<img class="prof-photo" src="'+esc(p.avatar)+'" alt="'+esc(p.nameKr)+'" style="width:180px;height:220px;object-fit:cover;border-radius:12px;flex-shrink:0;background:#E0E0E0;">'
       + '<div>'
       + '<div style="font-size:14px;font-weight:600;color:var(--text-muted);margin-bottom:8px;">Professor:</div>'
       + '<div style="font-size:32px;font-weight:900;letter-spacing:-0.03em;margin-bottom:4px;">'+esc(p.name)+'</div>'
