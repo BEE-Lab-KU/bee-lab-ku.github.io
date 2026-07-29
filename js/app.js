@@ -647,9 +647,11 @@ document.addEventListener('keydown', function (e) {
   }
 
   // --- 카드 (researchers / alumni) ---
+  // 사진이 아직 없을 때(로드 실패) 깨진 이미지 아이콘 대신 회색 원(1x1 투명 + 배경색) 표시
+  var AVATAR_FALLBACK = "this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='";
   function card(m){
     return '<div class="member-card" onclick="showPage(\'member-'+m.slug+'\')">'
-      + '<img class="member-avatar" src="'+esc(m.avatar)+'" alt="'+esc(m.name)+'"/>'
+      + '<img class="member-avatar" src="'+esc(m.avatar)+'" alt="'+esc(m.name)+'" onerror="'+AVATAR_FALLBACK+'"/>'
       + '<div class="name">'+esc(m.name)+'</div><div class="role">'+esc(m.role)+'</div>'
       + '<div class="arrow-hint">View Profile →</div></div>';
   }
@@ -698,7 +700,7 @@ document.addEventListener('keydown', function (e) {
   function renderProfile(slug, p){
     var bioStyle = p.bioStyle ? ' style="'+p.bioStyle+'"' : '';
     var top = '<div class="profile-top">'
-      + '<img class="profile-avatar" src="'+esc(p.avatar)+'" alt=""/>'
+      + '<img class="profile-avatar" src="'+esc(p.avatar)+'" alt="" onerror="'+AVATAR_FALLBACK+'"/>'
       + '<div class="profile-info"><h1>'+esc(p.name)+'</h1><div class="role-line">'+esc(p.roleLine)+'</div>'
       + '<div class="bio"'+bioStyle+'>'+(p.bio||'')+'</div></div>'
       + '</div>';
@@ -727,6 +729,7 @@ document.addEventListener('keydown', function (e) {
       set('mem-professor', renderProfessor(data.professor || {}));
       set('mem-researchers', renderResearchers(data.researchers || []));
       set('mem-alumni', renderAlumni(data.alumni || []));
+      set('mem-undergrad', renderAlumni(data.undergrad || []));
       var profs = data.profiles || {};
       Object.keys(profs).forEach(function(slug){
         set('page-member-'+slug, renderProfile(slug, profs[slug]));

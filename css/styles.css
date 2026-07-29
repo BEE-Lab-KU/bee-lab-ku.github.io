@@ -601,6 +601,7 @@ a { color: inherit; text-decoration: none; }
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
+  background: #E0E0E0;
 }
 .profile-info h1 {
   font-size: 42px;
@@ -1015,7 +1016,8 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.0;
   color: #fff;
   margin-bottom: 22px;
-  white-space: nowrap;
+  white-space: normal;      /* 긴 제목(UBEM 등)이 넘쳐 잘리지 않고 줄바꿈되도록 */
+  overflow-wrap: break-word;
 }
 .rhero-sub {
   font-size: 19px;
