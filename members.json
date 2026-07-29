@@ -152,6 +152,18 @@
           "avatar": "Photos/members/hyunsu.jpeg",
           "name": "이현수",
           "role": "Undergraduate Researcher"
+        },
+        {
+          "slug": "seyeon",
+          "avatar": "Photos/members/seyeon.jpg",
+          "name": "김세연",
+          "role": "Undergraduate Researcher"
+        },
+        {
+          "slug": "junho",
+          "avatar": "Photos/members/junho.jpg",
+          "name": "송준호",
+          "role": "Undergraduate Researcher"
         }
       ]
     }
@@ -162,20 +174,6 @@
       "avatar": "Photos/members/kyungjae.png",
       "name": "이경재",
       "role": "M.S. in Architectural Engineering (2025)"
-    }
-  ],
-  "undergrad": [
-    {
-      "slug": "seyeon",
-      "avatar": "Photos/members/seyeon.jpg",
-      "name": "김세연",
-      "role": "Undergraduate Researcher"
-    },
-    {
-      "slug": "junho",
-      "avatar": "Photos/members/junho.jpg",
-      "name": "송준호",
-      "role": "Undergraduate Researcher"
     }
   ],
   "profiles": {
@@ -809,13 +807,13 @@
     },
     "seyeon": {
       "name": "김세연",
-      "roleLine": "Undergraduate Researcher · BEE Lab",
+      "roleLine": "Undergraduate Researcher · UBEM Group",
       "avatar": "Photos/members/seyeon.jpg",
       "bio": "건축 에너지 및 환경 분야를 공부하며 연구실 활동에 참여하고 있는 학부 연구생입니다. (소개 문구는 추후 업데이트 예정)"
     },
     "junho": {
       "name": "송준호",
-      "roleLine": "Undergraduate Researcher · BEE Lab",
+      "roleLine": "Undergraduate Researcher · UBEM Group",
       "avatar": "Photos/members/junho.jpg",
       "bio": "건축 에너지 및 환경 분야를 공부하며 연구실 활동에 참여하고 있는 학부 연구생입니다. (소개 문구는 추후 업데이트 예정)"
     }

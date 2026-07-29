@@ -729,7 +729,6 @@ document.addEventListener('keydown', function (e) {
       set('mem-professor', renderProfessor(data.professor || {}));
       set('mem-researchers', renderResearchers(data.researchers || []));
       set('mem-alumni', renderAlumni(data.alumni || []));
-      set('mem-undergrad', renderAlumni(data.undergrad || []));
       var profs = data.profiles || {};
       Object.keys(profs).forEach(function(slug){
         set('page-member-'+slug, renderProfile(slug, profs[slug]));
