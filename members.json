@@ -152,7 +152,12 @@
           "avatar": "Photos/members/hyunsu.jpeg",
           "name": "이현수",
           "role": "Undergraduate Researcher"
-        },
+        }
+      ]
+    },
+    {
+      "group": "Undergraduate Researchers",
+      "members": [
         {
           "slug": "seyeon",
           "avatar": "Photos/members/seyeon.jpg",
@@ -807,13 +812,13 @@
     },
     "seyeon": {
       "name": "김세연",
-      "roleLine": "Undergraduate Researcher · UBEM Group",
+      "roleLine": "Undergraduate Researcher",
       "avatar": "Photos/members/seyeon.jpg",
       "bio": "건축 에너지 및 환경 분야를 공부하며 연구실 활동에 참여하고 있는 학부 연구생입니다. (소개 문구는 추후 업데이트 예정)"
     },
     "junho": {
       "name": "송준호",
-      "roleLine": "Undergraduate Researcher · UBEM Group",
+      "roleLine": "Undergraduate Researcher",
       "avatar": "Photos/members/junho.jpg",
       "bio": "건축 에너지 및 환경 분야를 공부하며 연구실 활동에 참여하고 있는 학부 연구생입니다. (소개 문구는 추후 업데이트 예정)"
     }
