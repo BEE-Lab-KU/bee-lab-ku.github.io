@@ -1,0 +1,59 @@
+name: 논문 태그와 CMS 목록 동기화
+
+# 논문이 추가되거나 구성원, 연구 페이지가 바뀌면 자동으로 맞춘다.
+#
+# 하는 일
+#  1. members 를 안 고른 논문에 저자를 자동으로 붙인다.
+#     이니셜은 믿지 않고 이름 전체가 확인될 때만 붙인다 (국문 이름 또는 Crossref).
+#  2. first(제1저자)를 채운다. 개인 프로필은 이 값만 본다.
+#  3. .pages.yml 의 구성원 명단과 연구 페이지 목록을 실제 데이터에서 다시 만든다.
+#     학생이 들어오면 members.json 에만 추가하면 CMS 드롭다운에 자동으로 나타난다.
+#
+# 이 워크플로가 멈춰도 사이트는 정상이다. 자동 보완이 안 될 뿐이고,
+# CMS 에서 직접 고른 값은 언제나 그대로 유지된다.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'publications/*.json'
+      - 'members.json'
+      - 'research-content/research.json'
+      - 'index.html'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-publications
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install --quiet PyYAML
+
+      - name: 태그와 목록 맞추기
+        run: python3 .github/scripts/sync_publications.py
+
+      - name: 바뀐 것이 있으면 커밋
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "맞출 것이 없습니다."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "논문 태그와 CMS 목록 자동 동기화
+
+          $(cat /tmp/sync-summary.txt 2>/dev/null || true)"
+          git push

@@ -30,42 +30,42 @@ _lab_members: &LAB_MEMBERS
     label: "이경재 (졸업)"
 
 _research_pages: &RESEARCH_PAGES
-  - value: research-whr-dc
-    label: "데이터센터 폐열을 활용한 급탕 및 수열원 온도 유지 방안"
   - value: research-ai
     label: "이미지·벡터 하이브리드 기반 CAD 도면 공간 자동 인식 엔진 및 LLM 기반 자연어 질의응답"
   - value: research-cascade-hp
     label: "건물 내 동시 냉방·급탕 수요의 열적 결합을 통한 캐스케이드 히트펌프 시스템"
   - value: research-chpwh
     label: "공동주택 중앙식 히트펌프 급탕 시스템의 반환수 영향 저감을 위한 부하 분리와 적응형 Load "
-  - value: research-pmv-sensor
-    label: "도서관 최적 좌석 제시를 위한 PMV 가상센서 시스템 구축"
-  - value: research-sample-size
-    label: "최소 샘플 크기 추정"
-  - value: research-elevator
-    label: "엘리베이터 샤프트 내 균일 냉각을 위한 급배기 위치 최적화"
-  - value: research-zeb-economy
-    label: "ZEB 에너지 사용량, 경제성 분석"
-  - value: research-da-ref-building
-    label: "업무시설의 에너지 기여도 기반 대표형상 건물(Reference Building) 도출 프레임워"
+  - value: research-da-apt-eui
+    label: "아파트·주상복합 EUI 비교 분석"
   - value: research-da-eui-framework
     label: "업종별 EUI 도출 프레임워크"
   - value: research-da-green-retrofit
     label: "에너지 시그니처를 활용한 그린 리모델링 효과 분석"
+  - value: research-da-preprocessing
+    label: "로지스틱 맵 이미지 암호화 기법을 적용한 딥러닝 기반 재실자 감지 시스템 제안"
+  - value: research-da-ref-building
+    label: "업무시설의 에너지 기여도 기반 대표형상 건물(Reference Building) 도출 프레임워"
+  - value: research-da-thermal-seat
+    label: "열적 특성 기반의 개인 맞춤형 좌석 선택 시스템 제안"
   - value: research-da-ubem-pattern
     label: "UBEM 에너지 사용 패턴 보정"
   - value: research-da-urban-load
     label: "도시 에너지 부하 평탄화"
-  - value: research-da-apt-eui
-    label: "아파트·주상복합 EUI 비교 분석"
-  - value: research-da-thermal-seat
-    label: "열적 특성 기반의 개인 맞춤형 좌석 선택 시스템 제안"
-  - value: research-da-preprocessing
-    label: "로지스틱 맵 이미지 암호화 기법을 적용한 딥러닝 기반 재실자 감지 시스템 제안"
-  - value: research-um-ubem
-    label: "도시 단위 건물 에너지 해석을 위한 건물 특성 지표 및 도시 건물 에너지 모델(UBEM) 개발"
+  - value: research-elevator
+    label: "엘리베이터 샤프트 내 균일 냉각을 위한 급배기 위치 최적화"
+  - value: research-pmv-sensor
+    label: "도서관 최적 좌석 제시를 위한 PMV 가상센서 시스템 구축"
+  - value: research-sample-size
+    label: "최소 샘플 크기 추정"
   - value: research-um-dbem
     label: "Load Sharing Community 조성을 위한 District Building Ener"
+  - value: research-um-ubem
+    label: "도시 단위 건물 에너지 해석을 위한 건물 특성 지표 및 도시 건물 에너지 모델(UBEM) 개발"
+  - value: research-whr-dc
+    label: "데이터센터 폐열을 활용한 급탕 및 수열원 온도 유지 방안"
+  - value: research-zeb-economy
+    label: "ZEB 에너지 사용량, 경제성 분석"
 
 media:
   - name: news_images

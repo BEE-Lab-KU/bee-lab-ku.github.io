@@ -578,6 +578,13 @@ function pubsFor(key, value){
     return Array.isArray(arr) && arr.indexOf(value) >= 0;
   }).sort(pubByDateDesc);
 }
+// 개인 프로필에는 제1저자 논문만 올린다. 공저까지 넣으면 목록이 과도하게 길어진다.
+// first 는 인용문의 첫 저자를 members 중에서 가려낸 값이다.
+function firstAuthorPubs(slug){
+  return (window.PUBLICATIONS || []).filter(function(e){
+    return e.first === slug;
+  }).sort(pubByDateDesc);
+}
 function researchPaperCard(e){
   var meta = pubBadgeHtml(e) + pubDoiHtml(e.doi) + pubAwardHtml(e.award);
   return '<div style="padding:16px;border:1px solid var(--border);border-radius:8px;margin:8px 0;">'
@@ -767,9 +774,9 @@ function fillResearchPapers(){
       research = '<div class="profile-research-list"><h3>Research</h3>'+items+'</div>';
     }
     // 논문은 publications/*.json 에서 members 태그로 골라 온다. members.json 에 따로 두지 않는다.
-    var mine = pubsFor('members', slug);
+    var mine = firstAuthorPubs(slug);
     var pubs = mine.length
-      ? '<div class="profile-research-list" style="margin-top:48px;"><h3>Publications</h3>'+mine.map(pubRow).join('')+'</div>'
+      ? '<div class="profile-research-list" style="margin-top:48px;"><h3>Publications <span style="font-size:13px;font-weight:400;color:var(--text-muted);">(제1저자)</span></h3>'+mine.map(pubRow).join('')+'</div>'
       : '';
     return '<div class="profile-page fade-in">'
       + '<div class="back-link" onclick="goBack(\'members-all\')">← People</div>'
