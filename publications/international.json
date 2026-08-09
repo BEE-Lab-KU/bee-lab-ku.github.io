@@ -44,8 +44,7 @@
     "doi": "https://doi.org/10.1016/J.BUILDENV.2025.113525",
     "badge": "SCIE",
     "members": [
-      "doyeon",
-      "jisu"
+      "doyeon"
     ]
   },
   {
@@ -76,7 +75,6 @@
     "doi": "https://doi.org/10.1016/j.scs.2024.105895",
     "badge": "SCIE",
     "members": [
-      "jisu",
       "jungyun"
     ],
     "research": [
@@ -107,10 +105,7 @@
     "citation": "Choi, S., Lim, H., Lim, J., & Yoon, S. (2024). Retrofit building energy performance evaluation using an energy signature-based symbolic hierarchical clustering method. Building and Environment, 251, 111206.",
     "date": "2024-03-01",
     "doi": "https://doi.org/10.1016/j.buildenv.2024.111206",
-    "badge": "SCIE",
-    "members": [
-      "jisu"
-    ]
+    "badge": "SCIE"
   },
   {
     "citation": "Choi, Y., Jeong, E.-S., Mun, J.-H., Yang, K.-H., Lee, S.-J., & Lim, H. (2023). Thermal performance and condensation analysis of insulated concrete panels using a thermal-meta structure. Applied Thermal Engineering, 230, 120761.",
