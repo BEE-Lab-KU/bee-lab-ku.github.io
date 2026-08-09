@@ -75,53 +75,141 @@ content:
           - name: caption
             label: 설명글 (선택)
             type: string
-  - name: publications
-    label: Publications
+  - name: pub-international
+    label: International Publications (국제 저널)
     type: file
-    path: publications.json
+    path: publications/international.json
     format: json
     list: true
     fields:
-      - name: category
-        label: 종류 (탭 선택)
-        type: select
+      - name: citation
+        label: 인용문 (Google Scholar 의 Cite → APA 를 그대로 붙여넣기)
+        type: text
         required: true
         options:
-          multiple: false
-          values:
-            - value: international
-              label: International Publication (국제 논문)
-            - value: domestic
-              label: Domestic Publication (국내 논문)
-            - value: int-conf
-              label: International Conference (국제 학회)
-            - value: dom-conf
-              label: Domestic Conference (국내 학회)
+          description: '예: Lee, S., Lim, H., & Kim, I. (2026). Load separation method for enhancing performance of central heat pump water heater. Energy and Buildings, 348, 116501.'
       - name: date
-        label: 날짜 (발표일/게재일 · 이 날짜의 연도로 묶이고 같은 해에선 최신순 자동 정렬)
+        label: 날짜 (연도로 묶이고 같은 해에선 최신순 자동 정렬)
         type: date
         required: true
         options:
           format: yyyy-MM-dd
-      - name: title
-        label: 제목 (저자 포함, 예 "Lee, S., ... Load separation method ...")
-        type: text
-        required: true
-      - name: venue
-        label: 저널명 / 학회명
-        type: string
       - name: doi
-        label: DOI / 링크 (선택)
+        label: 'DOI (선택). 반드시 https://doi.org/10.... 형태로 넣으세요. 저널 사이트 주소는 링크가 안 열립니다'
         type: string
       - name: badge
-        label: 배지 (국제논문 SCIE / 국내논문 KCI / 학회 CONF)
+        label: 배지 (비워두면 SCIE 자동)
         type: select
         options:
           multiple: false
           values:
             - SCIE
+            - SCOPUS
             - KCI
-            - CONF
       - name: award
-        label: 우수논문발표상 수상 (체크하면 🏆 우수논문발표상 표시)
-        type: boolean
+        label: 수상 (상장에 적힌 이름 그대로. 해당 없으면 비워둘 것)
+        type: select
+        options:
+          multiple: false
+          values:
+            - 우수논문상
+            - 우수논문발표상
+  - name: pub-domestic
+    label: Domestic Publications (국내 저널)
+    type: file
+    path: publications/domestic.json
+    format: json
+    list: true
+    fields:
+      - name: citation
+        label: 인용문 (Google Scholar 의 Cite → APA 를 그대로 붙여넣기)
+        type: text
+        required: true
+        options:
+          description: '예: 황정윤, 김덕우, 임현우. (2026). 건물 에너지 분석을 위한 공공데이터 기반 건축물 분류. 대한건축학회 논문집, 42(6), 283-290.'
+      - name: date
+        label: 날짜 (연도로 묶이고 같은 해에선 최신순 자동 정렬)
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: doi
+        label: 'DOI (선택). 반드시 https://doi.org/10.... 형태로 넣으세요. 저널 사이트 주소는 링크가 안 열립니다'
+        type: string
+      - name: badge
+        label: 배지 (비워두면 KCI 자동)
+        type: select
+        options:
+          multiple: false
+          values:
+            - SCIE
+            - SCOPUS
+            - KCI
+      - name: award
+        label: 수상 (상장에 적힌 이름 그대로. 해당 없으면 비워둘 것)
+        type: select
+        options:
+          multiple: false
+          values:
+            - 우수논문상
+            - 우수논문발표상
+  - name: pub-int-conf
+    label: International Conferences (국제 학회)
+    type: file
+    path: publications/int-conf.json
+    format: json
+    list: true
+    fields:
+      - name: citation
+        label: 인용문 (Google Scholar 의 Cite → APA 를 그대로 붙여넣기)
+        type: text
+        required: true
+        options:
+          description: '예: Hwang, J., & Lim, H. (2024). Improvement of accuracy in urban building energy modeling. International Symposium on Architectural Interchanges in Asia (ISAIA 2024).'
+      - name: date
+        label: 날짜 (연도로 묶이고 같은 해에선 최신순 자동 정렬)
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: doi
+        label: 'DOI (선택). 반드시 https://doi.org/10.... 형태로 넣으세요. 저널 사이트 주소는 링크가 안 열립니다'
+        type: string
+      - name: award
+        label: 수상 (상장에 적힌 이름 그대로. 해당 없으면 비워둘 것)
+        type: select
+        options:
+          multiple: false
+          values:
+            - 우수논문상
+            - 우수논문발표상
+  - name: pub-dom-conf
+    label: Domestic Conferences (국내 학회)
+    type: file
+    path: publications/dom-conf.json
+    format: json
+    list: true
+    fields:
+      - name: citation
+        label: 인용문 (Google Scholar 의 Cite → APA 를 그대로 붙여넣기)
+        type: text
+        required: true
+        options:
+          description: '예: 이도연, 임현우. (2026). 건물 운영진단을 위한 LLM기반 데이터 분석 방법론 설계. 2026년도 대한설비공학회 하계학술발표대회.'
+      - name: date
+        label: 날짜 (연도로 묶이고 같은 해에선 최신순 자동 정렬)
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: doi
+        label: 'DOI (선택). 반드시 https://doi.org/10.... 형태로 넣으세요. 저널 사이트 주소는 링크가 안 열립니다'
+        type: string
+      - name: award
+        label: 수상 (상장에 적힌 이름 그대로. 해당 없으면 비워둘 것)
+        type: select
+        options:
+          multiple: false
+          values:
+            - 우수논문상
+            - 우수논문발표상

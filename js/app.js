@@ -415,6 +415,7 @@ function buildResearchPage(r) {
           '<div style="font-size:14px;font-weight:600;">' + rEsc(p.title) + '</div>' +
           '<div style="font-size:12px;color:var(--text-muted);margin-top:4px;">' + rEsc(p.authors) + '</div>' +
           (p.venue ? '<div style="font-size:12px;color:var(--text-muted);margin-top:2px;">' + rEsc(p.venue) + '</div>' : '') +
+          (p.doi ? '<div style="margin-top:6px;">' + pubDoiHtml(p.doi) + '</div>' : '') +
           '</div>';
       }).join('') + '</div>';
   }
@@ -453,80 +454,9 @@ function loadResearch() {
 }
 window._researchReady = loadResearch();
 
-// ===== 개인 프로필 논문 → DOI 링크 연결 (Publications 페이지를 단일 출처로 사용) =====
-function linkProfilePapersToDOI() {
-  var norm = function (s) { return String(s || '').replace(/\s+/g, ' ').trim().toLowerCase(); };
-  var pubPage = document.getElementById('page-publications');
-  if (!pubPage) return;
-  // 1) Publications 페이지에서 "논문 제목 → DOI URL" 맵 구축
-  var doiMap = {};
-  pubPage.querySelectorAll('.pub-row').forEach(function (row) {
-    var titleEl = row.querySelector('.pub-title');
-    var link = row.querySelector('a[href^="http"]');
-    if (titleEl && link) { doiMap[norm(titleEl.textContent)] = link.href; }
-  });
-  // 2) 멤버 프로필의 논문 제목에 매칭되는 DOI가 있으면 제목 아래에 DOI 링크 추가
-  document.querySelectorAll('[id^="page-member-"] .pub-title').forEach(function (titleEl) {
-    var url = doiMap[norm(titleEl.textContent)];
-    if (!url) return;
-    var parent = titleEl.parentElement;
-    if (parent.querySelector('.pub-doi-link')) return; // 이미 DOI 링크 있으면 건너뜀
-    var a = document.createElement('a');
-    a.href = url;
-    a.target = '_blank';
-    a.rel = 'noopener';
-    a.className = 'pub-doi-link';
-    a.style.cssText = 'font-size:12px;color:#000;font-weight:600;text-decoration:underline;text-underline-offset:2px;';
-    a.textContent = '🔗 DOI';
-    parent.appendChild(a);
-  });
-}
-
-// ===== 연구 상세페이지 "관련 논문" → DOI 링크 연결 (Publications 페이지를 단일 출처로 사용) =====
-function linkResearchPapersToDOI() {
-  var norm = function (s) { return String(s || '').replace(/\s+/g, ' ').trim().toLowerCase(); };
-  var pubPage = document.getElementById('page-publications');
-  if (!pubPage) return;
-  // 1) Publications 페이지에서 "논문 제목(저자 포함) → DOI URL" 맵 구축
-  var doiMap = {};
-  pubPage.querySelectorAll('.pub-row').forEach(function (row) {
-    var titleEl = row.querySelector('.pub-title');
-    var link = row.querySelector('a[href^="http"]');
-    if (titleEl && link) { doiMap[norm(titleEl.textContent)] = link.href; }
-  });
-  // publications.json 제목은 "저자. 제목." 형식이므로 뒤쪽(제목부)이 일치해야 함
-  var stripEnd = function (s) { return s.replace(/[.\s]+$/, ''); };
-  var pubTitles = Object.keys(doiMap);
-  var pubTitlesStripped = pubTitles.map(stripEnd);
-  // 2) 각 연구 상세페이지의 "관련 논문" 카드 제목이 논문 제목의 끝부분과 일치하면 DOI 링크 추가
-  document.querySelectorAll('.detail-page').forEach(function (page) {
-    var heading = null;
-    page.querySelectorAll('h3').forEach(function (h) { if (h.textContent.trim() === '관련 논문') { heading = h; } });
-    if (!heading || !heading.parentElement) return;
-    Array.prototype.forEach.call(heading.parentElement.children, function (card) {
-      if (card.tagName !== 'DIV') return;                 // h3 등 건너뜀
-      if (card.querySelector('a[href^="http"]')) return;  // 이미 DOI 링크 있으면 건너뜀
-      var titleEl = card.querySelector('div');
-      if (!titleEl) return;
-      var cardTitle = stripEnd(norm(titleEl.textContent));
-      if (cardTitle.length < 12) return;                  // 너무 짧은 제목은 오매칭 방지
-      var url = null;
-      for (var i = 0; i < pubTitlesStripped.length; i++) {
-        var k = pubTitlesStripped[i];
-        if (k.length >= cardTitle.length && k.slice(k.length - cardTitle.length) === cardTitle) { url = doiMap[pubTitles[i]]; break; }
-      }
-      if (!url) return;
-      var a = document.createElement('a');
-      a.href = url;
-      a.target = '_blank';
-      a.rel = 'noopener';
-      a.style.cssText = 'font-size:12px;color:#000;font-weight:600;text-decoration:underline;text-underline-offset:2px;';
-      a.textContent = '🔗 DOI';
-      card.appendChild(a);
-    });
-  });
-}
-// linkProfilePapersToDOI()는 publications.json + members.json 로드 완료 후 호출
+// DOI 는 이제 데이터(publications/*.json, members.json, research.json)에 직접 들어 있다.
+// 예전에는 Publications 페이지의 화면 텍스트를 대조해 연결했는데, 인용문 형식으로 바뀌면서
+// 그 방식이 성립하지 않는다. 렌더링 시점에 doi 필드를 그대로 링크로 만든다.
 
 // ===== 프로젝트 상세 갤러리: Photos/projects/<key>-1.jpg, -2.jpg … 자동 탐색 (연속 번호) =====
 function openProjImg(src) {
@@ -607,9 +537,11 @@ function pubBadgeLabel(e){
     case 'int-conf':      return 'INT. CONF.';
     case 'dom-conf':      return 'DOM. CONF.';
   }
-  // 프로필과 연구 페이지에는 category가 없다. 학회명 언어로 국제와 국내를 가른다.
-  if (b === 'CONF') return /[가-힣]/.test(String((e && e.venue) || '')) ? 'DOM. CONF.' : 'INT. CONF.';
-  return b;   // 알 수 없는 값은 그대로 노출해서 조용히 사라지지 않게 한다
+  // 프로필과 연구 페이지에는 category가 없다. 저널은 항상 배지를 갖고 있으므로
+  // 여기까지 온 항목은 학회다. 인용문의 언어로 국제와 국내를 가른다.
+  var txt = String((e && (e.citation || e.venue)) || '');
+  if (!txt) return b;   // 알 수 없는 값은 그대로 노출해서 조용히 사라지지 않게 한다
+  return /[가-힣]/.test(txt) ? 'DOM. CONF.' : 'INT. CONF.';
 }
 function pubBadgeHtml(e){
   var label = pubBadgeLabel(e);
@@ -618,22 +550,40 @@ function pubBadgeHtml(e){
   return '<span class="pub-badge '+cls+'">'+label.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</span>';
 }
 
-// ===== Publications: publications.json 으로 목록 자동 생성 =====
+// ===== 인용문 표시 =====
+// citation 은 APA 형태의 한 줄이다. 끝부분의 저널명(또는 학회명)만 찾아 이탤릭으로 강조한다.
+// 매칭에 실패하면 원문을 그대로 내보내므로 표시가 깨지지 않는다.
+var PUB_VENUE_RE = /\.\s*([^.]+?)(?:,\s*\d+(?:\(\d+\))?)?(?:,\s*(?:Article\s+)?[\d–-]+)?\.\s*$/;
+function pubEsc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function citationHtml(cite){
+  var raw = String(cite || '');
+  var m = PUB_VENUE_RE.exec(raw);
+  if (!m) return pubEsc(raw);
+  var start = m.index + m[0].indexOf(m[1]);
+  var end = start + m[1].length;
+  return pubEsc(raw.slice(0, start)) + '<em>' + pubEsc(raw.slice(start, end)) + '</em>' + pubEsc(raw.slice(end));
+}
+function pubDoiHtml(url){
+  if (!url) return '';
+  return '<a href="'+pubEsc(url)+'" target="_blank" rel="noopener" class="pub-doi-link" style="font-size:12px;color:#000;font-weight:600;text-decoration:underline;text-underline-offset:2px;">🔗 DOI</a>';
+}
+// 수상은 이름을 데이터에 담는다. 우수논문상과 우수논문발표상은 다른 상이다.
+// 예전 데이터의 true 는 학회 발표에만 붙어 있었으므로 우수논문발표상으로 본다.
+function pubAwardHtml(a){
+  if (!a) return '';
+  var name = (a === true) ? '우수논문발표상' : String(a).replace(/^🏆\s*/, '').trim();
+  if (!name) return '';
+  return '<span style="margin-left:8px;font-size:11px;font-weight:600;color:#D4A017;">🏆 '+pubEsc(name)+'</span>';
+}
+
+// ===== Publications: publications/<종류>.json 4개로 목록 자동 생성 =====
 (function () {
   function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-  function doiHtml(url){
-    if(!url) return '';
-    return '<a href="'+esc(url)+'" target="_blank" style="font-size:12px;color:#000;font-weight:600;text-decoration:underline;text-underline-offset:2px;">🔗 DOI</a>';
-  }
-  function awardHtml(a){
-    if(!a) return '';
-    return '<span style="margin-left:8px;font-size:11px;font-weight:600;color:#D4A017;">🏆 우수논문발표상</span>';
-  }
   function rowHtml(e){
     return '<div class="pub-row">'
       + '<div class="pub-year">'+esc(String(e.date||'').slice(0,4))+'</div>'
-      + '<div><div class="pub-title">'+esc(e.title)+'</div>'
-      + '<div class="pub-journal">'+esc(e.venue)+'</div>'+doiHtml(e.doi)+awardHtml(e.award)+'</div>'
+      + '<div><div class="pub-title">'+citationHtml(e.citation)+'</div>'
+      + pubDoiHtml(e.doi)+pubAwardHtml(e.award)+'</div>'
       + '<div>'+pubBadgeHtml(e)+'</div>'
       + '</div>';
   }
@@ -653,20 +603,26 @@ function pubBadgeHtml(e){
   }
   function set(id, html){ var el = document.getElementById(id); if(el) el.innerHTML = html; }
 
-  window._pubReady = fetch('publications.json')
-    .then(function(r){ return r.json(); })
-    .then(function(list){
-      if(!Array.isArray(list)) list = [];
-      function byCat(cat){
-        return list.filter(function(e){ return e.category === cat; })
-                   .sort(function(a,b){ var da=String(a.date||''), db=String(b.date||''); return da<db?1:(da>db?-1:0); });
-      }
-      set('pub-international', renderFlat(byCat('international')));
-      set('pub-domestic',     renderFlat(byCat('domestic')));
-      set('pub-int-conf',     renderFlat(byCat('int-conf')));
-      set('pub-dom-conf',     renderFlat(byCat('dom-conf')));
-    })
-    .catch(function(err){ console.error('publications load failed', err); });
+  // 종류별로 파일이 나뉘어 있다. 어느 파일에서 왔는지가 곧 category 이므로
+  // 데이터에 category 를 저장하지 않고 불러올 때 붙인다.
+  var PUB_SOURCES = [
+    { cat: 'international', panel: 'pub-international' },
+    { cat: 'domestic',      panel: 'pub-domestic' },
+    { cat: 'int-conf',      panel: 'pub-int-conf' },
+    { cat: 'dom-conf',      panel: 'pub-dom-conf' }
+  ];
+  window._pubReady = Promise.all(PUB_SOURCES.map(function(src){
+    return fetch('publications/'+src.cat+'.json')
+      .then(function(r){ return r.json(); })
+      .then(function(list){
+        if(!Array.isArray(list)) list = [];
+        list.forEach(function(e){ e.category = src.cat; });
+        list.sort(function(a,b){ var da=String(a.date||''), db=String(b.date||''); return da<db?1:(da>db?-1:0); });
+        set(src.panel, renderFlat(list));
+        return list;
+      })
+      .catch(function(err){ console.error('publications load failed: '+src.cat, err); return []; });
+  }));
 })();
 
 // ===== Members: members.json 으로 리스팅 + 프로필 페이지 자동 생성 =====
@@ -674,11 +630,10 @@ function pubBadgeHtml(e){
   function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
   // --- 공통: 프로필/논문 행 ---
-  function awardHtml(a){ if(!a) return ''; return '<span style="margin-left:8px;font-size:11px;font-weight:600;color:#D4A017;">'+esc(a)+'</span>'; }
   function pubRow(e){
     return '<div class="pub-row"><div class="pub-year">'+esc(e.year)+'</div>'
-      + '<div><div class="pub-title">'+esc(e.title)+'</div>'
-      + '<div class="pub-journal">'+esc(e.venue)+'</div>'+awardHtml(e.award)+'</div>'
+      + '<div><div class="pub-title">'+citationHtml(e.citation)+'</div>'
+      + pubDoiHtml(e.doi)+pubAwardHtml(e.award)+'</div>'
       + '<div>'+pubBadgeHtml(e)+'</div></div>';
   }
 
@@ -815,5 +770,5 @@ function pubBadgeHtml(e){
     .catch(function(err){ console.error('members load failed', err); });
 })();
 
-// publications.json + members.json + research.json 로드 완료 후 DOI 연결
-Promise.all([window._pubReady, window._memReady, window._researchReady]).then(function(){ linkProfilePapersToDOI(); linkResearchPapersToDOI(); });
+// 세 데이터가 모두 로드되면 준비 완료. 후처리로 연결할 것이 더는 없다.
+window._siteReady = Promise.all([window._pubReady, window._memReady, window._researchReady]);
