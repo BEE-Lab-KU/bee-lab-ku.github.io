@@ -181,6 +181,17 @@ function switchRP(btn, panelId) {
   document.getElementById(panelId).classList.add('active');
 }
 
+// rp-panel 안쪽의 하위 탭 전환. 바깥 switchRP와 클래스를 분리해 서로 간섭하지 않는다.
+function switchSub(btn, panelId) {
+  var wrap = btn.closest('.rp-panel');
+  if (!wrap) return;
+  btn.parentElement.querySelectorAll('.pill').forEach(function(p){p.classList.remove('active');});
+  btn.classList.add('active');
+  wrap.querySelectorAll('.sub-panel').forEach(function(p){p.classList.remove('active');});
+  var el = document.getElementById(panelId);
+  if (el) el.classList.add('active');
+}
+
 // ===== Research 그룹 히어로: nav 투명 전환 + 스크롤 reveal (한 번만 등록) =====
 var RESEARCH_PAGES = { 'main': 1, 'data-analysis': 1, 'urban-modeling': 1 };
 // 풀스크린 히어로가 있어 nav가 처음엔 투명해야 하는 페이지 (메인 intro 포함)
@@ -576,14 +587,40 @@ document.addEventListener('keydown', function (e) {
 });
 
 
+// ===== Publications 배지 =====
+// 사람이 고르는 값은 저널의 SCIE / SCOPUS / KCI 뿐이다.
+// 학회의 국제와 국내는 카테고리가 이미 결정하므로 입력받지 않고 유도한다.
+// badge를 비워두면 카테고리 기본값이 붙으므로 기존 데이터를 고칠 필요가 없다.
+var PUB_BADGE_CLASS = {
+  'SCIE':       'sci',
+  'SCOPUS':     'scopus',
+  'KCI':        'kci',
+  'INT. CONF.': 'int-conf',
+  'DOM. CONF.': 'dom-conf'
+};
+function pubBadgeLabel(e){
+  var b = String((e && e.badge) || '').trim().toUpperCase();
+  if (b === 'SCIE' || b === 'SCOPUS' || b === 'KCI') return b;   // 지정값 우선
+  switch (e && e.category) {
+    case 'international': return 'SCIE';
+    case 'domestic':      return 'KCI';
+    case 'int-conf':      return 'INT. CONF.';
+    case 'dom-conf':      return 'DOM. CONF.';
+  }
+  // 프로필과 연구 페이지에는 category가 없다. 학회명 언어로 국제와 국내를 가른다.
+  if (b === 'CONF') return /[가-힣]/.test(String((e && e.venue) || '')) ? 'DOM. CONF.' : 'INT. CONF.';
+  return b;   // 알 수 없는 값은 그대로 노출해서 조용히 사라지지 않게 한다
+}
+function pubBadgeHtml(e){
+  var label = pubBadgeLabel(e);
+  if (!label) return '';
+  var cls = PUB_BADGE_CLASS[label] || 'conf';
+  return '<span class="pub-badge '+cls+'">'+label.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</span>';
+}
+
 // ===== Publications: publications.json 으로 목록 자동 생성 =====
 (function () {
   function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-  function badgeHtml(b){
-    if(!b) return '';
-    var cls = (b === 'SCIE') ? 'sci' : 'conf';
-    return '<span class="pub-badge '+cls+'">'+esc(b)+'</span>';
-  }
   function doiHtml(url){
     if(!url) return '';
     return '<a href="'+esc(url)+'" target="_blank" style="font-size:12px;color:#000;font-weight:600;text-decoration:underline;text-underline-offset:2px;">🔗 DOI</a>';
@@ -597,7 +634,7 @@ document.addEventListener('keydown', function (e) {
       + '<div class="pub-year">'+esc(String(e.date||'').slice(0,4))+'</div>'
       + '<div><div class="pub-title">'+esc(e.title)+'</div>'
       + '<div class="pub-journal">'+esc(e.venue)+'</div>'+doiHtml(e.doi)+awardHtml(e.award)+'</div>'
-      + '<div>'+badgeHtml(e.badge)+'</div>'
+      + '<div>'+pubBadgeHtml(e)+'</div>'
       + '</div>';
   }
   function groupHeader(y, first){
@@ -637,24 +674,26 @@ document.addEventListener('keydown', function (e) {
   function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
   // --- 공통: 프로필/논문 행 ---
-  function badgeHtml(b){ if(!b) return ''; var cls=(b==='SCIE')?'sci':'conf'; return '<span class="pub-badge '+cls+'">'+esc(b)+'</span>'; }
   function awardHtml(a){ if(!a) return ''; return '<span style="margin-left:8px;font-size:11px;font-weight:600;color:#D4A017;">'+esc(a)+'</span>'; }
   function pubRow(e){
     return '<div class="pub-row"><div class="pub-year">'+esc(e.year)+'</div>'
       + '<div><div class="pub-title">'+esc(e.title)+'</div>'
       + '<div class="pub-journal">'+esc(e.venue)+'</div>'+awardHtml(e.award)+'</div>'
-      + '<div>'+badgeHtml(e.badge)+'</div></div>';
+      + '<div>'+pubBadgeHtml(e)+'</div></div>';
   }
 
   // --- 카드 (researchers / alumni) ---
   // 사진이 아직 없을 때(로드 실패) 깨진 이미지 아이콘 대신 회색 원(1x1 투명 + 배경색) 표시
   var AVATAR_FALLBACK = "this.onerror=null;this.src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='";
-  function card(m){
+  // subtitle을 주면 카드 두 번째 줄을 그것으로 바꾼다. 학위별 보기에서는 역할 대신 연구분야를 보여준다.
+  function card(m, subtitle){
+    var sub = (subtitle == null) ? m.role : subtitle;
     return '<div class="member-card" onclick="showPage(\'member-'+m.slug+'\')">'
       + '<img class="member-avatar" src="'+esc(m.avatar)+'" alt="'+esc(m.name)+'" onerror="'+AVATAR_FALLBACK+'"/>'
-      + '<div class="name">'+esc(m.name)+'</div><div class="role">'+esc(m.role)+'</div>'
+      + '<div class="name">'+esc(m.name)+'</div><div class="role">'+esc(sub)+'</div>'
       + '<div class="arrow-hint">View Profile →</div></div>';
   }
+  function cardOnly(m){ return card(m); }   // map()의 index가 subtitle로 새는 것 방지
 
   // --- 교수 패널 ---
   function renderProfessor(p){
@@ -682,18 +721,56 @@ document.addEventListener('keydown', function (e) {
     return header + secs;
   }
 
-  // --- 연구원 패널 (그룹별) ---
+  function sectionHead(label, n){
+    return '<div style="font-size:20px;font-weight:700;margin-bottom:8px;color:var(--text-muted);">'
+      + esc(label) + (n ? ' <span style="font-weight:500;">('+n+')</span>' : '') + '</div>';
+  }
+
+  // --- 연구원 패널: 연구분야별 ---
   function renderResearchers(groups){
     return (groups||[]).map(function(g){
-      var cards = (g.members||[]).map(card).join('');
-      return '<div style="font-size:20px;font-weight:700;margin-bottom:8px;color:var(--text-muted);">'+esc(g.group)+'</div>'
+      var cards = (g.members||[]).map(cardOnly).join('');
+      return sectionHead(g.group, (g.members||[]).length)
+        + '<div class="members-grid" style="margin-bottom:40px;">'+cards+'</div>';
+    }).join('');
+  }
+
+  // --- 연구원 패널: 학위별 ---
+  // 학위는 role 문자열에서 유도한다. members.json에 별도 필드를 두지 않으므로
+  // 표기가 바뀌어도(Ph.D. Student / 박사과정 등) 같은 칸에 들어가도록 폭넓게 매칭한다.
+  var DEGREE_ORDER = [
+    { key: 'phd',      label: 'Ph.D. Students' },
+    { key: 'master',   label: "Master's Students" },
+    { key: 'bachelor', label: 'Undergraduate Researchers' },
+    { key: 'other',    label: 'Others' }
+  ];
+  function degreeKey(role){
+    var r = String(role||'').toLowerCase();
+    if (/ph\.?\s*d|doctoral|박사/.test(r)) return 'phd';
+    if (/master|\bm\.\s*s\.?|석사/.test(r)) return 'master';
+    if (/undergrad|bachelor|\bb\.\s*s\.?|학부|학사/.test(r)) return 'bachelor';
+    return 'other';
+  }
+  function renderByDegree(groups){
+    var buckets = {};
+    (groups||[]).forEach(function(g){
+      (g.members||[]).forEach(function(m){
+        var k = degreeKey(m.role);
+        (buckets[k] = buckets[k] || []).push({ m: m, group: g.group });
+      });
+    });
+    return DEGREE_ORDER.map(function(d){
+      var arr = buckets[d.key];
+      if (!arr || !arr.length) return '';
+      var cards = arr.map(function(x){ return card(x.m, x.group); }).join('');
+      return sectionHead(d.label, arr.length)
         + '<div class="members-grid" style="margin-bottom:40px;">'+cards+'</div>';
     }).join('');
   }
 
   // --- 졸업생 패널 ---
   function renderAlumni(list){
-    return '<div class="members-grid">'+(list||[]).map(card).join('')+'</div>';
+    return '<div class="members-grid">'+(list||[]).map(cardOnly).join('')+'</div>';
   }
 
   // --- 개인 프로필 페이지 ---
@@ -727,7 +804,8 @@ document.addEventListener('keydown', function (e) {
     .then(function(r){ return r.json(); })
     .then(function(data){
       set('mem-professor', renderProfessor(data.professor || {}));
-      set('mem-researchers', renderResearchers(data.researchers || []));
+      set('mem-by-area',   renderResearchers(data.researchers || []));
+      set('mem-by-degree', renderByDegree(data.researchers || []));
       set('mem-alumni', renderAlumni(data.alumni || []));
       var profs = data.profiles || {};
       Object.keys(profs).forEach(function(slug){

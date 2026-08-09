@@ -1576,7 +1576,14 @@
   <div id="mem-professor" class="rp-panel active"></div>
 
   <!-- Researchers -->
-  <div id="mem-researchers" class="rp-panel"></div>
+  <div id="mem-researchers" class="rp-panel">
+    <div class="pill-row" style="margin-bottom:28px;">
+      <div class="pill pill-sm active" onclick="switchSub(this,'mem-by-area')">By Research Area</div>
+      <div class="pill pill-sm" onclick="switchSub(this,'mem-by-degree')">By Degree</div>
+    </div>
+    <div id="mem-by-area" class="sub-panel active"></div>
+    <div id="mem-by-degree" class="sub-panel"></div>
+  </div>
 
   <!-- Alumni -->
   <div id="mem-alumni" class="rp-panel"></div>
