@@ -1,6 +1,6 @@
 # BEE Lab 홈페이지
 
-건국대학교 건축학부 Building Energy & Environment Lab 사이트입니다.
+건국대학교 건축대학 건축환경 및 에너지 연구실(Building Energy & Environment Laboratory) 사이트입니다.
 <https://beelab.kr> (= <https://bee-lab-ku.github.io>)
 
 ## 무엇을 하려고 오셨나요
