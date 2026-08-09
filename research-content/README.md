@@ -26,25 +26,28 @@ Photos/research-figs/
      "completed": false,                    // true면 회색 상태점
      "researchers": [
        { "slug": "junghyun", "name": "조정현", "role": "Master's Student",
-         "avatar": "Photos/members/junghyun-sm.png" }
+         "avatar": "Photos/members/junghyun.jpg" }
      ],
      "background": "연구 배경 …",
      "goal": "연구 목표 …",
      "keywords": ["Stack effect", "Stratification"],
      "tools": ["EnergyPlus", "CONTAM"],
-     "figure": "Photos/research-figs/elevator.png",  // 그림 없으면 null
-     "papers": [
-       { "title": "논문 제목", "authors": "저자 · 2026", "venue": "학회/저널" }
-     ]
+     "figure": "Photos/research-figs/elevator.png"   // 그림 없으면 null
    }
    ```
 3. 그림이 있으면 `Photos/research-figs/`에 ASCII 파일명으로 저장하고 `figure` 경로를 적습니다(없으면 `"figure": null`).
+
+> **관련 논문은 여기에 적지 않습니다.** `papers` 필드는 없어졌습니다.
+> 논문은 `publications/`에만 두고, CMS의 **관련 연구 주제**에서 이 연구의 `id`를 고르면
+> 상세 페이지에 자동으로 표시됩니다. [Publications 가이드](../publications/README.md) 참고.
 4. **멤버 프로필 페이지의 연결**: `index.html`의 해당 멤버 카드에서 `showPage('<id>')`와 `<h4>제목</h4>`이 `research.json`의 `id`·`title`과 맞는지만 확인(신규 연구면 멤버 페이지에 `profile-research-item` 한 줄 추가).
 
 ## 동작 원리
 - 페이지 로드 시 `loadResearch()`가 `research.json`을 읽어 각 항목을 `#page-<id>` 상세 페이지로 렌더링합니다.
 - `index.html`에 같은 id의 빈 셸(`<div id="page-<id>" class="page-view"></div>`)이 있으면 그 안을 채우고, 없으면 새로 만들어 붙입니다.
 - 그림 경로(`figure`)가 404면 자동으로 숨겨집니다.
+- 관련 논문은 상세 페이지의 `<div data-research="<id>">` 칸에 `publications/*.json`에서 자동으로 채워집니다.
+  `index.html`에 하드코딩된 연구 페이지도 같은 칸을 쓰므로 방식이 동일합니다.
 
 ## 현재 이관된 연구(파일럿)
 `research-elevator`(조정현) · `research-da-preprocessing`·`research-da-thermal-seat`(김지영·이현수) · `research-um-ubem`(황정윤) ·

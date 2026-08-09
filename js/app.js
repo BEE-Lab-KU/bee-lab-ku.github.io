@@ -407,18 +407,8 @@ function buildResearchPage(r) {
   var tools = (r.tools || []).map(function (t) { return '<span class="sidebar-tag">' + rEsc(t) + '</span>'; }).join('');
   var kw = (r.keywords || []).map(rEsc).join(' · ');
   var dot = r.completed ? '<span class="status-dot" style="background:#999999;"></span>' : '<span class="status-dot"></span>';
-  var papers = '';
-  if (r.papers && r.papers.length) {
-    papers = '<div style="margin-top:64px;border-top:1px solid var(--border);padding-top:48px;"><h3>관련 논문</h3>' +
-      r.papers.map(function (p) {
-        return '<div style="padding:16px;border:1px solid var(--border);border-radius:8px;margin:8px 0;">' +
-          '<div style="font-size:14px;font-weight:600;">' + rEsc(p.title) + '</div>' +
-          '<div style="font-size:12px;color:var(--text-muted);margin-top:4px;">' + rEsc(p.authors) + '</div>' +
-          (p.venue ? '<div style="font-size:12px;color:var(--text-muted);margin-top:2px;">' + rEsc(p.venue) + '</div>' : '') +
-          (p.doi ? '<div style="margin-top:6px;">' + pubDoiHtml(p.doi) + '</div>' : '') +
-          '</div>';
-      }).join('') + '</div>';
-  }
+  // 관련 논문은 publications/*.json 의 research 태그에서 자동으로 채워진다.
+  var papers = '<div data-research="' + rEsc(r.id) + '" style="margin-top:64px;"></div>';
   return '<div class="detail-page fade-in">' +
     '<div class="back-link" onclick="goBack(\'' + rEsc(r.back) + '\')">← ' + rEsc(r.group) + '</div>' +
     '<div class="detail-grid"><div>' +
@@ -576,6 +566,35 @@ function pubAwardHtml(a){
   return '<span style="margin-left:8px;font-size:11px;font-weight:600;color:#D4A017;">🏆 '+pubEsc(name)+'</span>';
 }
 
+// 논문은 publications/*.json 이 유일한 출처다.
+// 각 항목의 members 와 research 태그를 보고 프로필과 연구 페이지가 알아서 골라 간다.
+function pubByDateDesc(a, b){
+  var da = String(a.date||''), db = String(b.date||'');
+  return da < db ? 1 : (da > db ? -1 : 0);
+}
+function pubsFor(key, value){
+  return (window.PUBLICATIONS || []).filter(function(e){
+    var arr = e[key];
+    return Array.isArray(arr) && arr.indexOf(value) >= 0;
+  }).sort(pubByDateDesc);
+}
+function researchPaperCard(e){
+  var meta = pubBadgeHtml(e) + pubDoiHtml(e.doi) + pubAwardHtml(e.award);
+  return '<div style="padding:16px;border:1px solid var(--border);border-radius:8px;margin:8px 0;">'
+    + '<div style="font-size:14px;line-height:1.55;">' + citationHtml(e.citation) + '</div>'
+    + (meta ? '<div style="margin-top:10px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;">' + meta + '</div>' : '')
+    + '</div>';
+}
+// 연구 상세 페이지의 [data-research] 칸을 채운다. 정적 페이지와 research.json 페이지 모두 같은 방식이다.
+function fillResearchPapers(){
+  document.querySelectorAll('[data-research]').forEach(function(box){
+    var items = pubsFor('research', box.getAttribute('data-research'));
+    box.innerHTML = items.length
+      ? '<h3>관련 논문</h3>' + items.map(researchPaperCard).join('')
+      : '';
+  });
+}
+
 // ===== Publications: publications/<종류>.json 4개로 목록 자동 생성 =====
 (function () {
   function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -617,12 +636,16 @@ function pubAwardHtml(a){
       .then(function(list){
         if(!Array.isArray(list)) list = [];
         list.forEach(function(e){ e.category = src.cat; });
-        list.sort(function(a,b){ var da=String(a.date||''), db=String(b.date||''); return da<db?1:(da>db?-1:0); });
+        list.sort(pubByDateDesc);
         set(src.panel, renderFlat(list));
         return list;
       })
       .catch(function(err){ console.error('publications load failed: '+src.cat, err); return []; });
-  }));
+  })).then(function(groups){
+    // 프로필과 연구 페이지가 여기서 논문을 가져간다. 유일한 출처다.
+    window.PUBLICATIONS = groups.reduce(function(a,b){ return a.concat(b); }, []).sort(pubByDateDesc);
+    return window.PUBLICATIONS;
+  });
 })();
 
 // ===== Members: members.json 으로 리스팅 + 프로필 페이지 자동 생성 =====
@@ -631,7 +654,7 @@ function pubAwardHtml(a){
 
   // --- 공통: 프로필/논문 행 ---
   function pubRow(e){
-    return '<div class="pub-row"><div class="pub-year">'+esc(e.year)+'</div>'
+    return '<div class="pub-row"><div class="pub-year">'+esc(String(e.date||e.year||'').slice(0,4))+'</div>'
       + '<div><div class="pub-title">'+citationHtml(e.citation)+'</div>'
       + pubDoiHtml(e.doi)+pubAwardHtml(e.award)+'</div>'
       + '<div>'+pubBadgeHtml(e)+'</div></div>';
@@ -743,10 +766,11 @@ function pubAwardHtml(a){
       }).join('');
       research = '<div class="profile-research-list"><h3>Research</h3>'+items+'</div>';
     }
-    var pubs = '';
-    if(p.publications && p.publications.length){
-      pubs = '<div class="profile-research-list" style="margin-top:48px;"><h3>Publications</h3>'+p.publications.map(pubRow).join('')+'</div>';
-    }
+    // 논문은 publications/*.json 에서 members 태그로 골라 온다. members.json 에 따로 두지 않는다.
+    var mine = pubsFor('members', slug);
+    var pubs = mine.length
+      ? '<div class="profile-research-list" style="margin-top:48px;"><h3>Publications</h3>'+mine.map(pubRow).join('')+'</div>'
+      : '';
     return '<div class="profile-page fade-in">'
       + '<div class="back-link" onclick="goBack(\'members-all\')">← People</div>'
       + top + research + pubs
@@ -755,9 +779,12 @@ function pubAwardHtml(a){
 
   function set(id, html){ var el = document.getElementById(id); if(el) el.innerHTML = html; }
 
-  window._memReady = fetch('members.json')
-    .then(function(r){ return r.json(); })
-    .then(function(data){
+  window._memReady = Promise.all([
+      fetch('members.json').then(function(r){ return r.json(); }),
+      window._pubReady
+    ])
+    .then(function(res){
+      var data = res[0];
       set('mem-professor', renderProfessor(data.professor || {}));
       set('mem-by-area',   renderResearchers(data.researchers || []));
       set('mem-by-degree', renderByDegree(data.researchers || []));
@@ -771,4 +798,5 @@ function pubAwardHtml(a){
 })();
 
 // 세 데이터가 모두 로드되면 준비 완료. 후처리로 연결할 것이 더는 없다.
-window._siteReady = Promise.all([window._pubReady, window._memReady, window._researchReady]);
+window._siteReady = Promise.all([window._pubReady, window._memReady, window._researchReady])
+  .then(function(){ fillResearchPapers(); });

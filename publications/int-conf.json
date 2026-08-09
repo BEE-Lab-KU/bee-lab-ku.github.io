@@ -1,48 +1,84 @@
 [
   {
     "citation": "Hwang, J., & Lim, H. (2026). Shape Calibration Factors for Improving the Accuracy of Representative Building-Based Urban Building Energy Model (UBEM). The 3rd Korea-Japan Symposium on Chemistry with AI for Carbon Neutrality (C-AICN 2026).",
-    "date": "2026-06-29"
+    "date": "2026-06-29",
+    "members": [
+      "jungyun"
+    ]
   },
   {
     "citation": "Lim, J., & Lim, H. (2026). Comparative Analysis of Street View-and UAV-Based WWR Extraction as Input for District Building Energy Modeling. The 3rd Korea-Japan Symposium on Chemistry with AI for Carbon Neutrality (C-AICN 2026).",
-    "date": "2026-06-29"
+    "date": "2026-06-29",
+    "members": [
+      "jisu"
+    ]
   },
   {
     "citation": "Lee, S., & Lim, H. (2026). Optimal Load Shift Control Strategy for CHPWH system Based on Load Separation Method. E3S Web of Conferences, 716, 02020.",
     "date": "2026-06-09",
-    "doi": "https://doi.org/10.1051/e3sconf/202671602020"
+    "doi": "https://doi.org/10.1051/e3sconf/202671602020",
+    "members": [
+      "sangmin"
+    ]
   },
   {
     "citation": "Hwang, J., & Lim, H. (2026). Improving urban building energy modeling (UBEM) accuracy through shape and energy use pattern calibration factors based on representative buildings. E3S Web of Conferences, 716, 04023.",
     "date": "2026-06-09",
-    "doi": "https://doi.org/10.1051/e3sconf/202671604023"
+    "doi": "https://doi.org/10.1051/e3sconf/202671604023",
+    "members": [
+      "jungyun"
+    ]
   },
   {
     "citation": "Lee, D., Lim, H., & Kim, I. (2025). Disentangling rebound effects and construction errors in building retrofits using integrated energy signature analysis. Proceedings of Building Simulation 2025: 19th Conference of IBPSA, 19.",
     "date": "2025-08-24",
-    "doi": "https://doi.org/10.26868/25222708.2025.1590"
+    "doi": "https://doi.org/10.26868/25222708.2025.1590",
+    "members": [
+      "doyeon",
+      "inseob"
+    ]
   },
   {
     "citation": "Hwang, J., Lim, H., Lee, S., & Lim, J. (2025). Developing building shape indexes at the city-scale for understanding building energy consumption. Proceedings of Building Simulation 2025: 19th Conference of IBPSA, 19.",
     "date": "2025-08-24",
-    "doi": "https://doi.org/10.26868/25222708.2025.1603"
+    "doi": "https://doi.org/10.26868/25222708.2025.1603",
+    "members": [
+      "jisu",
+      "jungyun",
+      "sangmin"
+    ],
+    "research": [
+      "research-um-ubem"
+    ]
   },
   {
     "citation": "Lee, D., & Lim, H. (2026). Analysis of the Relationship Between Building Shape Indicators and Energy End-Use Using Public Data. Proceedings of the 15th REHVA HVAC World Congress - CLIMA 2025, 1282-1291.",
     "date": "2025-06-04",
-    "doi": "https://doi.org/10.1007/978-3-032-10546-2_121"
+    "doi": "https://doi.org/10.1007/978-3-032-10546-2_121",
+    "members": [
+      "doyeon"
+    ]
   },
   {
     "citation": "Hwang, J., & Lim, H. (2024). Improvement of accuracy in urban building energy modeling using representative buildings: through reducing shape information uncertainty. International Symposium on Architectural Interchanges in Asia (ISAIA 2024).",
-    "date": "2024-09-10"
+    "date": "2024-09-10",
+    "members": [
+      "jungyun"
+    ]
   },
   {
     "citation": "Lee, D., & Lim, H. (2024). Comparative analysis of energy usage before and after Green Remodeling through Change Point Model. International Symposium on Architectural Interchanges in Asia (ISAIA 2024).",
-    "date": "2024-09-10"
+    "date": "2024-09-10",
+    "members": [
+      "doyeon"
+    ]
   },
   {
     "citation": "Lee, K., & Lim, H. (2024). Investigate how to handle missing values when developing building energy benchmarking models. International Symposium on Architectural Interchanges in Asia (ISAIA 2024).",
-    "date": "2024-09-10"
+    "date": "2024-09-10",
+    "members": [
+      "kyungjae"
+    ]
   },
   {
     "citation": "Lim, H., & Zhai, Z. (2020). Prediction of Building Stock Energy Demand. Proceedings of the 11th International Symposium on Heating, Ventilation and Air Conditioning (ISHVAC 2019).",

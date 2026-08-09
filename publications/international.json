@@ -9,13 +9,28 @@
     "citation": "Lee, S., Lim, H., Lee, K., Heller, J., & Spielman, S. (2026). Load separation method for Enhancing performance of central heat pump water heater system with hot water recirculation. Energy and Buildings, 362, 117540.",
     "date": "2026-07-01",
     "doi": "https://doi.org/10.1016/j.enbuild.2026.117540",
-    "badge": "SCIE"
+    "badge": "SCIE",
+    "members": [
+      "kyungjae",
+      "sangmin"
+    ],
+    "research": [
+      "research-chpwh"
+    ]
   },
   {
     "citation": "Hwang, J., Lee, K., Lee, D., Kim, D.-W., & Lim, H. (2025). Analysis of energy consumption impacts using public data-based building shape index: a case study of office buildings in Seoul. Journal of Building Engineering, 116, 114643.",
     "date": "2025-12-15",
     "doi": "https://doi.org/10.1016/j.jobe.2025.114643",
-    "badge": "SCIE"
+    "badge": "SCIE",
+    "members": [
+      "doyeon",
+      "jungyun",
+      "kyungjae"
+    ],
+    "research": [
+      "research-um-ubem"
+    ]
   },
   {
     "citation": "Shim, J., Lim, H., Song, D., & Park, S. (2025). Continuous or intermittent heating?: Uncovering practical heating control strategies amid common misconceptions about radiant floor heating. Energy and Buildings, 348, 116501.",
@@ -27,43 +42,75 @@
     "citation": "Lee, D., Lim, H., Lim, J., Kim, S., Yoon, S., Kim, D.-W., & Shim, J. (2025). Analyzing energy signature of building retrofits using public data. Building and Environment, 285, 113525.",
     "date": "2025-11-01",
     "doi": "https://doi.org/10.1016/J.BUILDENV.2025.113525",
-    "badge": "SCIE"
+    "badge": "SCIE",
+    "members": [
+      "doyeon",
+      "jisu"
+    ]
   },
   {
     "citation": "Lee, K., Lim, H., Kim, I., & Lee, S. (2025). Data-driven methodology for identifying gross floor area thresholds in building energy benchmarking. Journal of Building Engineering, 112, 113768.",
     "date": "2025-10-15",
     "doi": "https://doi.org/10.1016/j.jobe.2025.113768",
-    "badge": "SCIE"
+    "badge": "SCIE",
+    "members": [
+      "inseob",
+      "kyungjae",
+      "sangmin"
+    ]
   },
   {
     "citation": "Lee, K., Lim, H., Hwang, J., & Lee, D. (2025). Development of building benchmarking index for improving gross-floor-area-based energy use intensity. Energy and Buildings, 328, 115103.",
     "date": "2025-02-01",
     "doi": "https://doi.org/10.1016/j.enbuild.2024.115103",
-    "badge": "SCIE"
+    "badge": "SCIE",
+    "members": [
+      "doyeon",
+      "jungyun",
+      "kyungjae"
+    ]
   },
   {
     "citation": "Hwang, J., Lim, H., & Lim, J. (2024). Reducing uncertainty of building shape information in urban building energy modeling using Bayesian calibration. Sustainable Cities and Society, 116, 105895.",
     "date": "2024-12-01",
     "doi": "https://doi.org/10.1016/j.scs.2024.105895",
-    "badge": "SCIE"
+    "badge": "SCIE",
+    "members": [
+      "jisu",
+      "jungyun"
+    ],
+    "research": [
+      "research-um-ubem"
+    ]
   },
   {
     "citation": "Lee, K., Lim, H., Hwang, J., & Lee, D. (2024). Evaluating missing data handling methods for developing building energy benchmarking models. Energy, 308, 132979.",
     "date": "2024-11-01",
     "doi": "https://doi.org/10.1016/j.energy.2024.132979",
-    "badge": "SCIE"
+    "badge": "SCIE",
+    "members": [
+      "doyeon",
+      "jungyun",
+      "kyungjae"
+    ]
   },
   {
     "citation": "Lee, K., & Lim, H. (2024). Correlation analysis of building parameters according to ASHRAE Standard 90.1. Journal of Building Engineering, 82, 108130.",
     "date": "2024-04-01",
     "doi": "https://doi.org/10.1016/j.jobe.2023.108130",
-    "badge": "SCIE"
+    "badge": "SCIE",
+    "members": [
+      "kyungjae"
+    ]
   },
   {
     "citation": "Choi, S., Lim, H., Lim, J., & Yoon, S. (2024). Retrofit building energy performance evaluation using an energy signature-based symbolic hierarchical clustering method. Building and Environment, 251, 111206.",
     "date": "2024-03-01",
     "doi": "https://doi.org/10.1016/j.buildenv.2024.111206",
-    "badge": "SCIE"
+    "badge": "SCIE",
+    "members": [
+      "jisu"
+    ]
   },
   {
     "citation": "Choi, Y., Jeong, E.-S., Mun, J.-H., Yang, K.-H., Lee, S.-J., & Lim, H. (2023). Thermal performance and condensation analysis of insulated concrete panels using a thermal-meta structure. Applied Thermal Engineering, 230, 120761.",
