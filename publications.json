@@ -747,5 +747,14 @@
     "doi": "https://doi.org/10.1051/e3sconf/202671604023",
     "badge": "CONF",
     "award": false
+  },
+  {
+    "category": "international",
+    "date": "2026-08-08",
+    "title": "Kim, H. G., Shin, H. R., Chu, H. G., Yi, D. H., Park, S. L., Kim, D. S., ... & Kim, D. W. DataNet: linking multi-faceted building energy datasets for effective performance analysis at scale.",
+    "venue": "Energy and Buildings",
+    "doi": "10.1016/j.enbuild.2026.117886",
+    "badge": "SCIE",
+    "award": false
   }
 ]
