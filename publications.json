@@ -314,8 +314,9 @@
   {
     "category": "int-conf",
     "date": "2025-08-24",
-    "title": "Lee, D., Lim, H. Disentangling Rebound Effects and Construction Errors in Building Retrofits Using Integrated Energy Signature Analysis.",
-    "venue": "International Building Performance Simulation Association, Building Simulation 2025.",
+    "title": "Lee, D., Lim, H., & Kim, I. Disentangling Rebound Effects and Construction Errors in Building Retrofits Using Integrated Energy Signature Analysis.",
+    "venue": "Proceedings of Building Simulation 2025: 19th Conference of IBPSA",
+    "doi": "https://doi.org/10.26868/25222708.2025.1590",
     "badge": "CONF",
     "award": false
   },
@@ -323,7 +324,7 @@
     "category": "int-conf",
     "date": "2025-08-24",
     "title": "Hwang, J., Lim, H. Developing building shape indexes at the city-scale for understanding building energy consumption.",
-    "venue": "International Building Performance Simulation Association, Building Simulation 2025.",
+    "venue": "Proceedings of Building Simulation 2025: 19th Conference of IBPSA",
     "doi": "https://doi.org/10.26868/25222708.2025.1603",
     "badge": "CONF",
     "award": false
