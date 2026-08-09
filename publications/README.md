@@ -213,4 +213,4 @@ CMS에 한 번만 넣으면 됩니다. 예전에는 프로필과 연구 페이�
 
 ---
 
-관련 가이드: [News와 Blog](../News_Blog_JPG/README.md), [연구 상세 페이지](../research-content/README.md)
+관련 가이드: [News와 Blog](../News_Blog_JPG/README.md), [연구 상세 페이지](../research-content/README.md), [이미지](../Photos/IMAGES.md)

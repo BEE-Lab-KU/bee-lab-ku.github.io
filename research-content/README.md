@@ -48,6 +48,8 @@ Photos/research-figs/
 - 그림 경로(`figure`)가 404면 자동으로 숨겨집니다.
 - 관련 논문은 상세 페이지의 `<div data-research="<id>">` 칸에 `publications/*.json`에서 자동으로 채워집니다.
   `index.html`에 하드코딩된 연구 페이지도 같은 칸을 쓰므로 방식이 동일합니다.
+- **새 연구 페이지를 만들면 CMS 드롭다운에 자동으로 나타납니다.** `.pages.yml`을 손댈 필요가 없습니다.
+  자동화가 실제 존재하는 `research-*` 페이지 id를 훑어 목록을 다시 만듭니다.
 
 ## 현재 이관된 연구(파일럿)
 `research-elevator`(조정현) · `research-da-preprocessing`·`research-da-thermal-seat`(김지영·이현수) · `research-um-ubem`(황정윤) ·

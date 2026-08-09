@@ -9,7 +9,9 @@ News와 Blog 글은 **Pages CMS(웹 편집기)** 로 올리는 것을 권장합�
 Pages CMS 왼쪽 목록은 여섯 개입니다.
 
 - **News**, **Blog**: 이 가이드에서 다룹니다
-- **International / Domestic Publications**, **International / Domestic Conferences**: 논문 등록. [Publications 가이드](../publications/README.md) 참고
+- **International Publications (국제 저널)**, **Domestic Publications (국내 저널)**,
+  **International Conferences (국제 학회)**, **Domestic Conferences (국내 학회)**:
+  논문 등록. [Publications 가이드](../publications/README.md) 참고
 
 ## 웹에서 올리기 (Pages CMS)
 
@@ -64,4 +66,4 @@ CMS 대신 파일을 직접 고칠 경우, `images`의 각 경로는 **실제 �
 
 ---
 
-관련 가이드: [Publications](../publications/README.md), [연구 상세 페이지](../research-content/README.md)
+관련 가이드: [Publications](../publications/README.md), [연구 상세 페이지](../research-content/README.md), [이미지](../Photos/IMAGES.md)
