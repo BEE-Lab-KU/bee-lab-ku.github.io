@@ -4,7 +4,7 @@
     "nameKr": "임현우",
     "title": "Associate Professor",
     "affiliation": "School of Architecture, College of Architecture, Konkuk University",
-    "avatar": "Photos/members/professor.png",
+    "avatar": "Photos/members/professor.jpg",
     "links": [
       {
         "label": "Google Scholar ↗",
@@ -91,7 +91,7 @@
       "members": [
         {
           "slug": "doyeon",
-          "avatar": "Photos/members/doyeon.png",
+          "avatar": "Photos/members/doyeon.jpg",
           "name": "이도연",
           "role": "Ph.D. Student"
         },
@@ -114,7 +114,7 @@
       "members": [
         {
           "slug": "sangmin",
-          "avatar": "Photos/members/sangmin.jpeg",
+          "avatar": "Photos/members/sangmin.jpg",
           "name": "이상민",
           "role": "Master's Student"
         },
@@ -126,7 +126,7 @@
         },
         {
           "slug": "jaeuk",
-          "avatar": "Photos/members/jaeuk.jpeg",
+          "avatar": "Photos/members/jaeuk.jpg",
           "name": "백재욱",
           "role": "Master's Student"
         },
@@ -155,7 +155,7 @@
         },
         {
           "slug": "hyunsu",
-          "avatar": "Photos/members/hyunsu.jpeg",
+          "avatar": "Photos/members/hyunsu.jpg",
           "name": "이현수",
           "role": "Undergraduate Researcher"
         }
@@ -182,7 +182,7 @@
   "alumni": [
     {
       "slug": "kyungjae",
-      "avatar": "Photos/members/kyungjae.png",
+      "avatar": "Photos/members/kyungjae.jpg",
       "name": "이경재",
       "role": "M.S. in Architectural Engineering (2025)"
     }
@@ -191,7 +191,7 @@
     "sangmin": {
       "name": "이상민",
       "roleLine": "Master's Student · Building Energy Systems Group",
-      "avatar": "Photos/members/sangmin.jpeg",
+      "avatar": "Photos/members/sangmin.jpg",
       "bio": "공동주택에서 히트펌프를 활용한 중앙식 급탕 시스템 (Central Heat Pump Water Heater, CHPWH)에 대해 연구하고 있습니다. CHPWH 시스템 적용 시 발생하는 반환수로 인한 성능 저하 문제 해결과, 시스템 제어 최적화에 집중하고 있습니다.",
       "research": [
         {
@@ -279,7 +279,7 @@
     "jaeuk": {
       "name": "백재욱",
       "roleLine": "Master's Student · Building Energy Systems Group",
-      "avatar": "Photos/members/jaeuk.jpeg",
+      "avatar": "Photos/members/jaeuk.jpg",
       "bio": "제로에너지 건축물 인증 체계와 건물 에너지 등급 향상을 위한 설비 최적화를 연구하고 있습니다.",
       "research": [
         {
@@ -332,7 +332,7 @@
     "doyeon": {
       "name": "이도연",
       "roleLine": "Ph.D. Student · Building Data Analytics & AI Group",
-      "avatar": "Photos/members/doyeon.png",
+      "avatar": "Photos/members/doyeon.jpg",
       "bio": "건물 에너지 데이터의 패턴 분석 및 이상 탐지 연구를 수행하고 있으며, 머신러닝 기반 에너지 효율 진단 기법 개발에 관심이 있습니다.",
       "research": [
         {
@@ -622,7 +622,7 @@
     "hyunsu": {
       "name": "이현수",
       "roleLine": "Undergraduate Researcher · UBEM Group",
-      "avatar": "Photos/members/hyunsu.jpeg",
+      "avatar": "Photos/members/hyunsu.jpg",
       "bio": "도시 건물 에너지 모델(UBEM) 기반의 도시 단위 에너지 사용량 예측 연구를 수행하고 있으며, 대리모델 기반 연산 효율화와 웹 기반 도시 에너지 플랫폼 구현에 관심이 있습니다.",
       "research": [
         {
@@ -646,7 +646,7 @@
     "kyungjae": {
       "name": "이경재",
       "roleLine": "Alumni · Kyungjae Lee",
-      "avatar": "Photos/members/kyungjae.png",
+      "avatar": "Photos/members/kyungjae.jpg",
       "bio": "<div style=\"font-weight:600;margin-bottom:8px;\">Academic degrees :</div>\n        <ul style=\"margin:0 0 16px 20px;line-height:1.8;color:var(--text-mid);\">\n          <li>M.S. in Architectural Engineering (2025)</li>\n          <li>B.E. in Architecture Engineering (2023) with a Minor in Real Estate</li>\n        </ul>\n        <ul style=\"margin:0 0 0 20px;line-height:1.8;color:var(--text-mid);\">\n          <li>전) 건국대학교 건축환경 및 에너지 연구실 석사연구생</li>\n          <li>한국친환경설비학회 2022 Building Technology 공모전 특별상 수상</li>\n          <li>한국태양에너지학회 2023 추계학술발표대회 우수논문상 수상</li>\n        </ul>",
       "bioStyle": "margin-top:16px;",
       "publications": [

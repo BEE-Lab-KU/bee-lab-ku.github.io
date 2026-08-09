@@ -1,0 +1,52 @@
+name: 사진 자동 최적화
+
+# News 와 Blog 사진이 올라오면 자동으로 줄인다.
+# CMS 로 올린 휴대폰 원본(3MB 이상)이 그대로 쌓이는 것을 막는 장치다.
+#
+# 이 워크플로가 멈춰도 사이트는 정상 동작한다. 사진이 안 줄어들 뿐이다.
+# 콘텐츠를 만들어내는 빌드가 아니므로 실패해도 글이 사라지지 않는다.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'News_Blog_JPG/beelab_images/**'
+      - 'Photos/**'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: optimize-images
+  cancel-in-progress: false
+
+jobs:
+  optimize:
+    # 이 워크플로가 만든 커밋에 다시 반응하지 않도록 막는다.
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install --quiet Pillow
+
+      - name: 사진 줄이기
+        run: python3 .github/scripts/optimize_images.py
+
+      - name: 바뀐 것이 있으면 커밋
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "줄일 사진이 없습니다."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "사진 자동 최적화
+
+          $(cat /tmp/optimize-summary.txt 2>/dev/null || true)"
+          git push
