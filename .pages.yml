@@ -176,7 +176,7 @@ content:
             - SCOPUS
             - KCI
       - name: members
-        label: 연구실 저자 (해당하는 사람을 모두 고르면 그 사람 프로필에 자동으로 표시됨)
+        label: 연구실 공저자 (제1저자는 넣지 않음. 비워두면 자동으로 채워짐)
         type: select
         options:
           multiple: true
@@ -227,7 +227,7 @@ content:
             - SCOPUS
             - KCI
       - name: members
-        label: 연구실 저자 (해당하는 사람을 모두 고르면 그 사람 프로필에 자동으로 표시됨)
+        label: 연구실 공저자 (제1저자는 넣지 않음. 비워두면 자동으로 채워짐)
         type: select
         options:
           multiple: true
@@ -269,7 +269,7 @@ content:
         label: 'DOI (선택). 반드시 https://doi.org/10.... 형태로 넣으세요. 저널 사이트 주소는 링크가 안 열립니다'
         type: string
       - name: members
-        label: 연구실 저자 (해당하는 사람을 모두 고르면 그 사람 프로필에 자동으로 표시됨)
+        label: 연구실 공저자 (제1저자는 넣지 않음. 비워두면 자동으로 채워짐)
         type: select
         options:
           multiple: true
@@ -311,7 +311,7 @@ content:
         label: 'DOI (선택). 반드시 https://doi.org/10.... 형태로 넣으세요. 저널 사이트 주소는 링크가 안 열립니다'
         type: string
       - name: members
-        label: 연구실 저자 (해당하는 사람을 모두 고르면 그 사람 프로필에 자동으로 표시됨)
+        label: 연구실 공저자 (제1저자는 넣지 않음. 비워두면 자동으로 채워짐)
         type: select
         options:
           multiple: true

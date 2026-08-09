@@ -9,7 +9,8 @@
      - 국문 인용문: 한글 이름 전체가 들어 있으면 그 사람
      - DOI 가 있는 논문: Crossref 가 주는 given name 전체를 대조
    이미 members 를 지정한 논문은 건드리지 않는다. 사람이 고른 것이 우선이다.
-   first 는 인용문의 첫 저자를 members 중에서 가려낸 값이다.
+   first 는 인용문의 첫 저자다. members 는 그 외의 연구실 공저자만 담는다.
+   제1저자는 members 에 넣지 않는다.
    개인 프로필은 first 가 자기인 논문만 보여 준다. 공저까지 넣으면 목록이 과도해진다.
 
 2. CMS 선택 목록 동기화
@@ -50,9 +51,9 @@ INITIAL = {
 }
 
 
-def first_author(e, names, cache):
-    """인용문의 첫 저자가 members 중 누구인지. 못 정하면 None."""
-    ms = e.get('members') or []
+def first_author(e, names, cache, pool=None):
+    """인용문의 첫 저자가 연구실 구성원 중 누구인지. 못 정하면 None."""
+    ms = list(pool if pool is not None else (e.get('members') or []))
     if not ms:
         return None
     head = (re.match(r'^(.*?)\s*\(\d{4}\)', e.get('citation', '')) or [None, ''])[1]
@@ -131,7 +132,9 @@ def auto_tag_members(names):
         arr = json.load(open(f, encoding='utf-8'))
         changed = False
         for e in arr:
-            if 'members' in e:          # 사람이 이미 골랐다. 존중한다.
+            # 사람이 이미 정했으면(공저자든 제1저자든) 존중한다.
+            # first 만 있고 members 가 없는 것은 '연구실 공저자 없음'을 뜻한다.
+            if 'members' in e or 'first' in e:
                 continue
             cit = e.get('citation', '')
             head = (re.match(r'^(.*?)\s*\(\d{4}\)', cit) or [None, ''])[1]
@@ -154,22 +157,41 @@ def auto_tag_members(names):
                             if any(af == fam and any(g in ag for g in givens) for af, ag in auth):
                                 found.add(slug)
             if found:
-                e['members'] = sorted(found)
+                fa = first_author(e, names, cache, pool=sorted(found))
+                co = sorted(found - {fa}) if fa else sorted(found)
+                if fa:
+                    e['first'] = fa
+                if co:
+                    e['members'] = co
                 changed = True
-                added.append((sorted(found), cit[:70]))
-        # members 가 있는데 first 가 비어 있으면 채운다
+                added.append((fa, co, cit[:66]))
+        # 이미 members 가 있는데 first 만 비어 있으면 채우고, 제1저자는 공저에서 뺀다
         for e in arr:
             if e.get('members') and not e.get('first'):
                 fa = first_author(e, names, cache)
                 if fa:
                     e['first'] = fa
+                    rest = [m for m in e['members'] if m != fa]
+                    if rest:
+                        e['members'] = rest
+                    else:
+                        del e['members']
                     changed = True
                     print(f"    first={fa}  {e.get('citation','')[:62]}")
+            # 제1저자가 공저 목록에 남아 있으면 뺀다
+            fa = e.get('first')
+            if fa and fa in (e.get('members') or []):
+                rest = [m for m in e['members'] if m != fa]
+                if rest:
+                    e['members'] = rest
+                else:
+                    del e['members']
+                changed = True
         if changed:
             json.dump(arr, open(f, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
-    print(f"  members 자동 부여 {len(added)}건 (Crossref 조회 {looked}회)")
-    for who, cit in added:
-        print(f"    + {who}  {cit}")
+    print(f"  저자 자동 부여 {len(added)}건 (Crossref 조회 {looked}회)")
+    for fa, co, cit in added:
+        print(f"    + 1저자={fa or '외부'} 공저={co or '없음'}  {cit}")
     return len(added)
 
 
