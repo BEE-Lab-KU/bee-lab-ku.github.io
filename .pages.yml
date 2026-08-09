@@ -16,7 +16,10 @@ content:
     type: file
     path: News_Blog_JPG/beelab_content/news.json
     format: json
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{index}. {date}  {title}"
     fields:
       - name: title
         label: 제목
@@ -48,7 +51,10 @@ content:
     type: file
     path: News_Blog_JPG/beelab_content/blog.json
     format: json
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{index}. {date}  {title}"
     fields:
       - name: title
         label: 제목
@@ -80,7 +86,10 @@ content:
     type: file
     path: publications.json
     format: json
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{index}. [{category}] {date}  {title}"
     fields:
       - name: category
         label: 종류 (탭 선택)
