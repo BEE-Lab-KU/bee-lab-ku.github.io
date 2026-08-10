@@ -6,11 +6,13 @@
  - 도표와 로고는 PNG 유지. 글자가 번지지 않게 하고 투명도를 지킨다.
  - 알파 채널이 있어도 전부 불투명하면 사진으로 보고 JPEG 로 바꾼다.
  - 줄인 결과가 원본보다 크면 원본을 그대로 둔다.
+ - 휴대폰 사진은 회전을 픽셀이 아니라 EXIF 에 담는다. 다시 저장하면 EXIF 가 사라져
+   사진이 뒤집혀 보인다. 그래서 저장 전에 회전을 픽셀에 구워 넣는다.
 
 확장자가 png 에서 jpg 로 바뀌면 참조하는 파일(json, html)도 함께 고친다.
 """
 import os, sys, glob, json, re
-from PIL import Image
+from PIL import Image, ImageOps
 
 # (경로 접두어, 최대 긴변, JPEG 품질, PNG 유지 여부)
 RULES = [
@@ -56,6 +58,18 @@ def uses_alpha(im):
     return lo < 250
 
 
+def upright(im):
+    """EXIF 회전 정보를 픽셀에 반영한다.
+
+    다시 저장하면 EXIF 가 날아가므로, 그 전에 실제로 돌려 놓아야 한다.
+    이걸 빠뜨려서 세로 사진 4장과 뒤집힌 사진 2장이 잘못 표시된 적이 있다.
+    """
+    try:
+        return ImageOps.exif_transpose(im)
+    except Exception:
+        return im
+
+
 def fit(im, maxw):
     if maxw and max(im.size) > maxw:
         r = maxw / max(im.size)
@@ -64,7 +78,7 @@ def fit(im, maxw):
 
 
 def save_png(im, dst, maxw):
-    im = fit(im, maxw)
+    im = fit(upright(im), maxw)
     best, bestsize = None, None
     for cand in ("quant", "plain"):
         tmp = dst + "." + cand
@@ -90,6 +104,7 @@ def save_png(im, dst, maxw):
 
 
 def save_jpeg(im, dst, maxw, q):
+    im = upright(im)
     if im.mode in ("RGBA", "LA", "P"):
         bg = Image.new("RGB", im.size, (255, 255, 255))
         im = im.convert("RGBA")
@@ -148,7 +163,14 @@ def main():
             continue
         # 확장자가 그대로면 이득이 뚜렷할 때만 교체한다. 그래야 재실행해도 커밋이 안 생긴다.
         gain = osz - nsz
-        enough = (dst != p) or (gain >= MIN_GAIN_BYTES and gain / osz >= MIN_GAIN_RATIO)
+        # 회전 정보가 있는 사진은 이득이 작아도 반드시 다시 저장한다.
+        # 안 그러면 EXIF 만 믿고 있던 사진이 계속 뒤집힌 채로 남는다.
+        rotated = False
+        try:
+            rotated = Image.open(p).getexif().get(274, 1) not in (0, 1)
+        except Exception:
+            pass
+        enough = (dst != p) or rotated or (gain >= MIN_GAIN_BYTES and gain / osz >= MIN_GAIN_RATIO)
         if nsz >= osz or not enough:
             os.remove(tmp)
             after += osz
