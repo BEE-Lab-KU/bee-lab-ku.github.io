@@ -15,8 +15,7 @@
     ],
     "research": [
       "research-chpwh"
-    ],
-    "first": "sangmin"
+    ]
   },
   {
     "citation": "Hwang, J., Lee, K., Lee, D., Kim, D.-W., & Lim, H. (2025). Analysis of energy consumption impacts using public data-based building shape index: a case study of office buildings in Seoul. Journal of Building Engineering, 116, 114643.",
@@ -29,8 +28,7 @@
     ],
     "research": [
       "research-um-ubem"
-    ],
-    "first": "jungyun"
+    ]
   },
   {
     "citation": "Shim, J., Lim, H., Song, D., & Park, S. (2025). Continuous or intermittent heating?: Uncovering practical heating control strategies amid common misconceptions about radiant floor heating. Energy and Buildings, 348, 116501.",
@@ -42,8 +40,7 @@
     "citation": "Lee, D., Lim, H., Lim, J., Kim, S., Yoon, S., Kim, D.-W., & Shim, J. (2025). Analyzing energy signature of building retrofits using public data. Building and Environment, 285, 113525.",
     "date": "2025-11-01",
     "doi": "https://doi.org/10.1016/J.BUILDENV.2025.113525",
-    "badge": "SCIE",
-    "first": "doyeon"
+    "badge": "SCIE"
   },
   {
     "citation": "Lee, K., Lim, H., Kim, I., & Lee, S. (2025). Data-driven methodology for identifying gross floor area thresholds in building energy benchmarking. Journal of Building Engineering, 112, 113768.",
@@ -53,8 +50,7 @@
     "members": [
       "inseob",
       "sangmin"
-    ],
-    "first": "kyungjae"
+    ]
   },
   {
     "citation": "Lee, K., Lim, H., Hwang, J., & Lee, D. (2025). Development of building benchmarking index for improving gross-floor-area-based energy use intensity. Energy and Buildings, 328, 115103.",
@@ -64,8 +60,7 @@
     "members": [
       "doyeon",
       "jungyun"
-    ],
-    "first": "kyungjae"
+    ]
   },
   {
     "citation": "Hwang, J., Lim, H., & Lim, J. (2024). Reducing uncertainty of building shape information in urban building energy modeling using Bayesian calibration. Sustainable Cities and Society, 116, 105895.",
@@ -74,8 +69,7 @@
     "badge": "SCIE",
     "research": [
       "research-um-ubem"
-    ],
-    "first": "jungyun"
+    ]
   },
   {
     "citation": "Lee, K., Lim, H., Hwang, J., & Lee, D. (2024). Evaluating missing data handling methods for developing building energy benchmarking models. Energy, 308, 132979.",
@@ -85,15 +79,13 @@
     "members": [
       "doyeon",
       "jungyun"
-    ],
-    "first": "kyungjae"
+    ]
   },
   {
     "citation": "Lee, K., & Lim, H. (2024). Correlation analysis of building parameters according to ASHRAE Standard 90.1. Journal of Building Engineering, 82, 108130.",
     "date": "2024-04-01",
     "doi": "https://doi.org/10.1016/j.jobe.2023.108130",
-    "badge": "SCIE",
-    "first": "kyungjae"
+    "badge": "SCIE"
   },
   {
     "citation": "Choi, S., Lim, H., Lim, J., & Yoon, S. (2024). Retrofit building energy performance evaluation using an energy signature-based symbolic hierarchical clustering method. Building and Environment, 251, 111206.",
@@ -202,5 +194,14 @@
     "date": "2014-05-08",
     "doi": "https://doi.org/10.1177/1420326X13480055",
     "badge": "SCIE"
+  },
+  {
+    "citation": "Kim, I., Cho, J. Y., & Lim, H. (2026). Urban Electricity Load Flattening through Building-Use Mix Adjustment. Sustainable Cities and Society, 107808.",
+    "date": "2026-10-15",
+    "doi": "https://doi.org/10.1016/j.scs.2026.107808",
+    "badge": "SCIE",
+    "research": [
+      "research-da-urban-load"
+    ]
   }
 ]
