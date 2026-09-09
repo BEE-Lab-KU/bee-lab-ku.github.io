@@ -40,7 +40,8 @@
     "citation": "Lee, D., Lim, H., Lim, J., Kim, S., Yoon, S., Kim, D.-W., & Shim, J. (2025). Analyzing energy signature of building retrofits using public data. Building and Environment, 285, 113525.",
     "date": "2025-11-01",
     "doi": "https://doi.org/10.1016/J.BUILDENV.2025.113525",
-    "badge": "SCIE"
+    "badge": "SCIE",
+    "first": "doyeon"
   },
   {
     "citation": "Lee, K., Lim, H., Kim, I., & Lee, S. (2025). Data-driven methodology for identifying gross floor area thresholds in building energy benchmarking. Journal of Building Engineering, 112, 113768.",
@@ -69,7 +70,8 @@
     "badge": "SCIE",
     "research": [
       "research-um-ubem"
-    ]
+    ],
+    "first": "jungyun"
   },
   {
     "citation": "Lee, K., Lim, H., Hwang, J., & Lee, D. (2024). Evaluating missing data handling methods for developing building energy benchmarking models. Energy, 308, 132979.",
@@ -85,7 +87,8 @@
     "citation": "Lee, K., & Lim, H. (2024). Correlation analysis of building parameters according to ASHRAE Standard 90.1. Journal of Building Engineering, 82, 108130.",
     "date": "2024-04-01",
     "doi": "https://doi.org/10.1016/j.jobe.2023.108130",
-    "badge": "SCIE"
+    "badge": "SCIE",
+    "first": "kyungjae"
   },
   {
     "citation": "Choi, S., Lim, H., Lim, J., & Yoon, S. (2024). Retrofit building energy performance evaluation using an energy signature-based symbolic hierarchical clustering method. Building and Environment, 251, 111206.",
@@ -202,6 +205,7 @@
     "badge": "SCIE",
     "research": [
       "research-da-urban-load"
-    ]
+    ],
+    "first": "inseob"
   }
 ]
