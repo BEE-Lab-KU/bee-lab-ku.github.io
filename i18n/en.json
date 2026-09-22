@@ -1,0 +1,288 @@
+{
+  "badge": {
+    "govtProgram": "Government Program",
+    "govtProgramOngoing": "<span class=\"status-dot\"></span> Government Program, Ongoing",
+    "govtTask": "Government Task",
+    "govtTaskOngoing": "<span class=\"status-dot\"></span> Government Task, Ongoing",
+    "individualResearch": "Individual Research",
+    "subProjectOngoing": "<span class=\"status-dot\"></span> Sub Project, Ongoing"
+  },
+  "common": {
+    "exploreArrow": "Explore →",
+    "period2024Present": "2024-Present",
+    "projectOverview": "Project Overview",
+    "researchBackground": "Research Background",
+    "researchContent": "Research Content",
+    "researchObjective": "Research Objectives",
+    "viewProfileArrow": "View Profile →"
+  },
+  "detailMeta": {
+    "completed2024": "Completed, 2024",
+    "completed20242025": "Completed, 2024-2025",
+    "ongoing2024Open": "Ongoing, 2024-",
+    "ongoing2025Open": "Ongoing, 2025-"
+  },
+  "form": {
+    "emailPlaceholder": "Enter your email",
+    "messagePlaceholder": "Enter your message",
+    "namePlaceholder": "Enter your name",
+    "subjectPlaceholder": "Enter a subject"
+  },
+  "home": {
+    "contact": {
+      "address": "509, Architecture Building, Konkuk University, 120 Neungdong-ro, Gwangjin-gu, Seoul<br>\n        <a href=\"mailto:hyunwoolim@konkuk.ac.kr\">hyunwoolim@konkuk.ac.kr</a>, +82-2-450-3457",
+      "heading": "We Are Looking for Research Collaborators"
+    },
+    "heroSubtitle": "Data-driven research for a sustainable, resilient, carbon-neutral built environment",
+    "rtCard": {
+      "buildingEnergySystems": "Dynamic simulation of heat source systems, optimal control of HVAC equipment, and data center waste heat recovery",
+      "dataAnalysis": "Building energy data analysis, AI-based demand forecasting, and big data pattern classification",
+      "urbanModeling": "Urban energy modeling, digital twin simulation, and GIS-linked building stock analysis"
+    }
+  },
+  "introduce": {
+    "heroSubtitle": "Research for a sustainable built energy environment"
+  },
+  "nav": {
+    "languageSelection": "Language selection",
+    "menuOpen": "Open menu"
+  },
+  "person": {
+    "doyeon": "Doyeon Lee",
+    "hyunsu": "Hyeonsu Lee",
+    "inseob": "Inseop Kim",
+    "jaeuk": "Jaewook Baek",
+    "jisu": "Jisoo Lim",
+    "jiung": "Jiung Hann",
+    "jiyoung": "Jiyoung Kim",
+    "junghyun": "Junghyun Cho",
+    "jungyun": "Jeongyun Hwang",
+    "sangmin": "Sangmin Lee"
+  },
+  "project": {
+    "carbonNeutral": {
+      "heroDesc": "District building energy modeling (DBEM) for load-sharing communities predicts and evaluates building- and household-level loads, achieving community-level energy and carbon reduction through optimal load-flattening control.",
+      "overview": "As rapid urbanization intensifies energy supply and demand challenges, strategies for reducing energy and carbon at the community scale, rather than the individual building scale, are increasingly needed. This project develops a district building energy modeling method for load-sharing communities, predicting and evaluating building- and household-level loads and deriving community-wide load patterns that account for interactions between buildings. It further applies optimal control technology that links the predictions to a shared management system to flatten and adjust loads, achieving community-level energy and carbon reduction.",
+      "researchContent": "A hybrid district building energy model (DBEM) captures spatial interactions arising from building geometry and, based on predicted occupant behavior, evaluates heterogeneous load schedules by building use and household along with uncertainty across spatial and temporal resolutions. An integrated control strategy links a central heat pump water heater (CHPWH) based load-sharing system with renewable generation such as photovoltaics, and these component technologies are combined into a community-level optimal design and operation algorithm covering building layout, system selection, load shifting, offsetting, and generation interactions.",
+      "summary": "Derives community-wide load patterns using district building energy modeling (DBEM) for load-sharing communities and applies optimal load-flattening control"
+    },
+    "dataNet": {
+      "heroDesc": "A national-scale data framework that links and integrates 17 administrative datasets by address, centered on the building register and energy consumption databases, to analyze the factors driving building energy consumption. BEE Lab develops building shape, form, and shading indicators to conduct energy performance diagnosis and benchmarking research.",
+      "overview": "DataNet is a project to build a national-scale data framework that links and integrates 17 administrative datasets by address, centered on the building register and energy consumption databases, enabling analysis of the various factors that influence building energy consumption.",
+      "researchContent": "The Building Environment and Energy (BEE) Lab develops building shape, form, and shading indicators. It analyzes the relationships and effects between each indicator and total energy use and heating and cooling levels, and uses these findings to conduct shape-based energy performance diagnosis and benchmarking research.",
+      "siteLink": "🔗 DataNet Website",
+      "subtitle": "A Data Framework Based on the Integrated National Building Energy Database",
+      "summary": "A national-scale data framework that links and integrates 17 administrative datasets by address and diagnoses and benchmarks energy performance using building form and shading indicators"
+    },
+    "greenRemodeling": {
+      "allMembers": "All Members",
+      "heroDesc": "Quantitatively verifies the effectiveness of Green Remodeling projects that improve the energy performance of aging buildings through post-occupancy performance evaluation, and identifies the causes of gaps between design-stage predictions and actual as-built performance.",
+      "overview": "Green Remodeling is a national policy program that systematically improves the energy performance of aging public and private buildings. BEE Lab conducts post-occupancy performance evaluations of buildings that have completed Green Remodeling to quantitatively verify the program's effectiveness and identify the causes of gaps between design-stage predictions and actual as-built performance.",
+      "researchContent": "Material and equipment test reports are reviewed, and energy performance is calculated through ECO2-OD simulation. On-site measurements verify window shading performance through SHGC measurement, and thermal imaging cameras diagnose thermal bridges at exterior wall corners and around windows to assess construction quality.",
+      "summary": "A program that quantitatively verifies the gap between design predictions and actual as-built performance through post-occupancy evaluation of buildings that have completed Green Remodeling",
+      "title": "Green Remodeling Regional Hub Platform"
+    },
+    "lhGeothermal": {
+      "overview": "A research service commissioned by the Korea Land and Housing Corporation (LH) and conducted by the Korea Society of Geothermal and Hydrothermal Energy, targeting geothermal heat pump systems installed in apartment complexes. It aims to diagnose the gap between design performance and actual operating performance using field measurement data, and to establish a sustainable management system that addresses early-occupancy complaints and the limitations of long-term operation.",
+      "peopleLabel": "Sangmin Lee, Jaewook Baek",
+      "researchContent": "During commissioning and the early occupancy period, temperature, flow rate, and power data are collected to analyze hourly COP and efficiency, and operational problems such as flow imbalances and control errors are diagnosed and improved. The project also reviews the feasibility (economic viability) of introducing auxiliary heat sources, establishes maintenance standards and manuals for each piece of equipment, develops a household-level billing scheme, and standardizes monitoring, including sensor specifications and guidelines.",
+      "summary": "Verifies performance based on field measurement data from geothermal heat pump systems in apartment complexes, and derives measures for operational improvement, maintenance, and monitoring standardization.",
+      "title": "Field Measurement-Based Performance Monitoring of Geothermal Systems in Apartment Complexes"
+    }
+  },
+  "pub": {
+    "llm": {
+      "abstract": "Reviews recent research trends in LLM-based multi-agent systems for building energy optimization. Analyzes the potential and limitations of LLM applications in areas such as building energy simulation, equipment control, and diagnostics."
+    },
+    "roomvent": {
+      "abstract": "A paper presented at the ROOMVENT 2026 international conference, evaluating the energy performance of a data center cooling system using a water-source heat pump. Published by EDP Sciences, 14 pages, in parallel English and Korean text.",
+      "title": "Energy Performance Evaluation of a WWHP-Based Data Center Cooling System"
+    },
+    "whr": {
+      "abstract": "This study proposes a data center waste heat recovery system based on a water-source heat pump (WWHP) using thermal energy from the Han River. The system's energy performance was evaluated through annual dynamic simulation using TRNSYS, and the energy savings compared to a conventional air-cooled cooling system were quantitatively analyzed."
+    }
+  },
+  "publications": {
+    "subtitle": "Journal Papers and Conference Presentations"
+  },
+  "research": {
+    "ai": {
+      "summary": "Development of a pipeline that automatically converts spatial information from architectural CAD drawings into structured data usable by AI",
+      "title": "CAD Spatial Auto-Recognition Engine and LLM-Based Question-Answering System"
+    },
+    "beSystems": {
+      "heroOverview": "The Building Energy Systems group analyzes and optimizes the energy performance of building-level equipment systems, aiming to realize efficient and sustainable buildings. It researches practical energy-saving measures through dynamic simulation using tools such as TRNSYS and EnergyPlus.",
+      "heroSub": "Design, simulation, and optimization of mechanical and equipment systems within buildings"
+    },
+    "cascadeHp": {
+      "summary": "Proposes a cascade integrated heat pump system that reuses heat rejected from cooling as a domestic hot water heat source, and verifies annual energy savings using Modelica",
+      "title": "A Cascade Heat Pump System Through Thermal Coupling of Simultaneous Cooling and Hot Water Demand in Buildings"
+    },
+    "chpwh": {
+      "summary": "Development of a load-separation-based CHPWH simulation model to prevent performance degradation from return water, and optimization of an adaptive load shift strategy",
+      "title": "Load Separation and Adaptive Load Shift Optimization to Reduce Return Water Effects in Central Heat Pump Water Heating Systems for Apartment Complexes"
+    },
+    "daAptEui": {
+      "background": "In Korea's building energy statistics, mixed-use residential-commercial buildings are classified as apartments under the Building Act and aggregated under the same use category, but their energy use structure is fundamentally different from apartments because they include commercial facilities and large common areas. The conventional single EUI indicator based on total floor area carries a structural bias that can undervalue the residential performance of mixed-use buildings relative to their actual performance.",
+      "cardSummary": "Quantitatively identifies differences in energy use characteristics between apartments and mixed-use residential-commercial buildings by comparing EUI based on total floor area and exclusive floor area",
+      "objective": "Targeting apartment complexes completed in Seoul since 2010, this study compares EUI based on total floor area and exclusive floor area to quantitatively identify differences in energy use characteristics between apartments and mixed-use residential-commercial buildings and the influence of electricity density in commercial and common areas, and proposes the need for a dual EUI analysis approach.",
+      "title": "Comparative EUI Analysis of Apartments and Mixed-Use Residential-Commercial Buildings"
+    },
+    "daEuiFramework": {
+      "background": "Assigning a single representative use to mixed-use buildings distorts energy benchmarking because of the heterogeneity of the business types within them. A weighted-average EUI calculated from the floor area share of each business type has been proposed as an alternative, but the detailed EUI benchmarks for individual business types that this approach requires have not been systematically established either in Korea or internationally.",
+      "cardSummary": "Development of a data-filtering framework that derives pure, business-type-specific EUI at the intermediate classification level within mixed-use buildings by linking administrative data",
+      "objective": "Presents a reproducible framework that derives pure, business-type-specific EUI at the intermediate classification level within mixed-use buildings using only the linkage and processing of administrative data (commercial district and licensing records). This provides a basis for accurate energy benchmarking of mixed-use buildings and for establishing business-type-specific energy policy.",
+      "title": "A Framework for Deriving Business-Type-Specific EUI"
+    },
+    "daGreenRetrofit": {
+      "background": "Existing building energy efficiency evaluations rely mainly on simulation-based assumptions. Shifting green remodeling evaluation to a measured-data-based approach is expected to enable deeper data-driven evaluation not only at the individual building level but also across large-scale portfolios.",
+      "cardSummary": "Quantitatively evaluates the actual energy savings from green remodeling by deriving CPM-based energy signatures and applying hierarchical cluster analysis",
+      "objective": "Develops a data-driven framework that derives CPM-based energy signatures and quantitatively evaluates the actual energy savings from green remodeling at both the individual building and large-scale portfolio levels through hierarchical cluster analysis and four-quadrant analysis.",
+      "title": "Analysis of Green Remodeling Effectiveness Using Energy Signatures"
+    },
+    "daPreprocessing": {
+      "cardSummary": "Combines logistic map image encryption with deep learning to protect privacy and improve long-range occupancy detection and recognition of irregular postures",
+      "title": "A Deep Learning-Based Occupancy Detection System Using Logistic Map Image Encryption"
+    },
+    "daRefBuilding": {
+      "background": "While reference buildings play a pivotal role in energy policy evaluation and design alternative comparison, DOE reference buildings are based on US data and define only a single geometry per building type, failing to reflect the geometric diversity of actual building stocks. Studies have attempted to address this by deriving representative geometries through clustering based on measured data, but the clustering variables have relied on researcher experience or literature frequency without verifying their contribution to energy performance, leaving the energy representativeness of the results unconfirmed.",
+      "cardSummary": "Quantitatively evaluates the contribution of shape indicators to each EUI component to select key variables, derives representative geometries through GMM clustering, and identifies the heating-cooling energy trade-off",
+      "objective": "Quantitatively evaluates the contribution of shape indicators to each EUI component to select key variables (S/V ratio, RC, roof area ratio), and presents a reproducible methodology that derives representative geometries for office buildings in Seoul through GMM clustering. It also separates size effects from shape effects to interpret differences in heating and cooling EUI between clusters from a shape-indicator perspective and identifies the heating-cooling trade-off.",
+      "title": "A Framework for Deriving Representative Reference Buildings for Office Facilities Based on Energy Contribution"
+    },
+    "daThermalSeat": {
+      "cardSummary": "Personalizes PMV by estimating individual MET values, and develops a real-time optimal seat recommendation system using virtual sensing technology",
+      "title": "A Personalized Seat Selection System Based on Thermal Characteristics"
+    },
+    "daUbemPattern": {
+      "background": "When an urban building energy model (UBEM) uses representative buildings to probabilistically derive energy use, the shape and schedule of the representative building are fixed, creating uncertainty because they fail to reflect differences in monthly energy use patterns among buildings of the same type. Bayesian calibration based on such fixed patterns can accumulate error and reduce the accuracy of UBEM's distributional predictions.",
+      "cardSummary": "Compares actual measured patterns with patterns based on parametric distributions to improve the accuracy of Bayesian calibration, verifying the feasibility of using sampled data in large-scale UBEM",
+      "objective": "Identifies the effect of representative buildings' energy use patterns on the accuracy of UBEM Bayesian calibration, and compares the calibration performance of actual measured patterns against regular patterns resampled from parametric distributions to verify the feasibility of using sampled data in large-scale UBEM.",
+      "title": "UBEM Energy Use Pattern Calibration"
+    },
+    "daUrbanLoad": {
+      "background": "Differences in energy use patterns among building uses in cities increase the volatility of electricity demand by time of day and season, and peak loads threaten power grid stability. Existing research has focused mainly on improving energy efficiency at the individual building level or on demand response (DR) strategies, but few studies have approached demand flattening at the urban scale by adjusting the composition ratio of building uses.",
+      "cardSummary": "Verifies the flattening effect on monthly and hourly electricity load curves through optimization of building use ratios, and demonstrates the potential for peak load reduction",
+      "objective": "Analyzes energy use patterns by building use for a specific district and applies an optimization algorithm to adjust the use-type ratios, verifying the flattening effect on monthly and hourly electricity load curves. Demonstrates that significant peak load reduction is achievable even with minimal changes to the urban use ratio.",
+      "title": "Urban Energy Load Flattening"
+    },
+    "dataAnalysis": {
+      "heroOverview": "The Building Data Analytics & AI group analyzes diverse data in the building energy domain to understand energy consumption structures and identify ways to improve efficiency. Using statistical models and machine learning, it researches energy diagnosis and benchmarking, urban energy demand forecasting and optimization, and occupancy and indoor environment analysis.",
+      "heroSub": "Collection, analysis, and AI-based forecasting and optimization of building energy data"
+    },
+    "elevator": {
+      "summary": "Reduces the impact of the stack effect in high-rise buildings and improves occupant usability and energy efficiency",
+      "title": "A Study on Stack Effect Mitigation Using an Elevator Shaft Cooling System"
+    },
+    "pmvSensor": {
+      "summary": "Builds a PMV virtual sensor to predict thermal comfort at each seat and implements a personalized optimal seat selection system",
+      "title": "Development of a PMV Virtual Sensor System for Optimal Seat Recommendation in Libraries"
+    },
+    "sampleSize": {
+      "background": "Understanding building energy use at the urban scale requires a large volume of energy use data. Since it is generally not possible to collect all such data, sample sizes are usually estimated using formulas based on statistical theory. However, it remains uncertain whether this approach adequately represents actual energy use, and further research is still needed on sample sizes according to various indicators. This study therefore uses actual electricity use data from buildings in Seoul to estimate, through a combinatorial method that considers building type and building indicators, the minimum sample size that can represent the whole population.",
+      "objective": "This study uses actual electricity use data from Seoul, together with the various building types and building indicators defined in the study, to estimate the minimum sample size for urban-scale building energy use and to discuss methods for reducing that sample size.",
+      "summary": "Estimates the minimum sample size for urban-scale building energy use using a combinatorial method that considers building type and indicators, based on Seoul electricity use data",
+      "title": "Minimum Sample Size Estimation"
+    },
+    "umDbem": {
+      "background": "Reliable building geometry data is essential for constructing DBEM and Load Sharing Communities, but existing collection methods make it difficult to obtain data for urban buildings that were missed. A new methodology is therefore needed to overcome this limitation and automatically build large-scale simulation data.",
+      "cardSummary": "Automatically derives building energy data using AI object recognition and 3D vision technology, and combines it with DBEM to develop a city-scale energy optimization system",
+      "cardTitle": "Building a DBEM for Load Sharing Community Development",
+      "objective": "Researches an integrated workflow that automatically derives essential energy data from building exteriors using AI object recognition and 3D vision technology. The collected data is combined with DBEM to efficiently manage community-wide energy, aiming to develop a city-scale energy optimization system for sustainable Load Sharing Communities.",
+      "title": "Building a District Building Energy Model for Load Sharing Community Development"
+    },
+    "umUbem": {
+      "background": "As urbanization concentrates energy demand in cities, the burden on energy systems, including power grids, is increasing. Understanding this urban energy ecosystem is a prerequisite for designing sustainable cities. Urban building energy models (UBEM) are widely used for building energy analysis at the urban scale, but they have limitations in that they are computationally expensive and do not sufficiently reflect the uncertainty of real cities. A methodology is therefore needed that moves from initial analysis based on building characteristics (shape, load, pattern) to detailed analysis through model calibration that accounts for uncertainty.",
+      "cardSummary": "Builds a high-precision UBEM through surrogate-model-based computational efficiency, uncertainty quantification, and an automated calibration process, and identifies correlations between building factors and energy use",
+      "cardTitle": "UBEM-Based Interpretation of Urban-Scale Energy Use",
+      "objective": "Aims to build an accurate urban building energy model (UBEM) by progressing from initial analysis based on building characteristic indicators to detailed analysis through uncertainty calibration.",
+      "title": "Development of Building Characteristic Indicators and an Urban Building Energy Model (UBEM) for Urban-Scale Energy Analysis"
+    },
+    "urbanModeling": {
+      "heroOverview": "The Urban Building Energy Modeling (UBEM) group models building energy environments capable of analyzing energy use from the individual building to the urban scale, in support of carbon neutrality in the building sector. Using EnergyPlus as the simulation engine, it develops building energy simulation (BEM) and urban building energy simulation (UBEM) to derive energy-saving measures and support policy decision-making.",
+      "heroSub": "Energy modeling, digital twins, and GIS-based analysis at the building and urban scales"
+    },
+    "whrDc": {
+      "summary": "Controls discharge water temperature during data center waste heat recovery via a water-source system and improves energy performance",
+      "title": "Domestic Hot Water Utilization of Data Center Waste Heat and Discharge Temperature Control Using a Water-Source Heat Pump"
+    },
+    "zebEconomy": {
+      "background": "A gap exists between predicted and measured energy use in ZEB apartment complexes. Verification of the design factors affecting energy savings and their economic feasibility is needed through analysis of actual operational data.",
+      "objective": "Derives sensitivity-based design factors through deviation analysis based on actual energy use data, and presents economic feasibility and rational decision-making criteria by comparing the additional construction cost of upgrading ZEB ratings against life-cycle energy savings.",
+      "summary": "Derives design factors through deviation analysis based on actual energy use data and verifies the economic feasibility of upgrading ZEB ratings",
+      "title": "ZEB Energy Use and Economic Feasibility Analysis"
+    }
+  },
+  "status": {
+    "completed": "Completed",
+    "inPreparation": "In Preparation",
+    "ongoing": "Ongoing"
+  },
+  "tag": {
+    "aiReport": "AI Report",
+    "calendar": "Calendar",
+    "conference": "Conference",
+    "energyUsageAnalysis": "Energy Usage Analysis",
+    "greenRemodeling": "Green Remodeling",
+    "influencingFactorAnalysis": "Influencing Factor Analysis",
+    "loadFlattening": "Load Flattening",
+    "multiSourceDataLinkage": "Multi-Source Data Linkage",
+    "nationalBuildingEnergyDb": "National Building Energy Integrated DB",
+    "postOccupancyEval": "Post-Occupancy Evaluation",
+    "presentationSession": "Presentation Session",
+    "renewableEnergy": "Renewable Energy",
+    "renewableEnergyLinkage": "Renewable Energy Linkage",
+    "reviewPeriod": "Review Period",
+    "scheduleCoordination": "Schedule Coordination",
+    "shadingIndex": "Shading Index",
+    "shapeIndex": "Shape Index",
+    "shapeShadingIndex": "Shape and Shading Index",
+    "shgcMeasurement": "SHGC Measurement",
+    "slotBooking": "Slot Booking",
+    "solarRadiationAnalysis": "Solar Radiation Analysis",
+    "thermalBridgeDiagnosis": "Thermal Bridge Diagnosis",
+    "thermalBridgeDiagnosisImaging": "Thermal Bridge Diagnosis (Thermal Imaging)",
+    "timezone": "Time Zone",
+    "travelRoute": "Travel Route",
+    "urbanBuildingEnergySimulation": "Urban Building Energy Simulation"
+  },
+  "tool": {
+    "buzzPlan": {
+      "summary": "Select the talks you want to attend from a conference program to build your own schedule. It shows travel distance and buffer time between venues and lets you export the schedule to your calendar.",
+      "title": "Conference Presentation Session Scheduler"
+    },
+    "journalIndex": {
+      "summary": "Compares JCR subject percentile, review period, and APC across journals in the built environment, building, and urban energy fields in a single table. Provides year-over-year trends and field filters.",
+      "title": "Journal Metrics Comparison Table"
+    },
+    "membersOnly": "🔒 Members Only",
+    "paperHive": {
+      "title": "Paper Reading Assistant Tool"
+    },
+    "pickATime": {
+      "summary": "Gathers everyone's available times on a single screen to schedule a meeting. Times marked by dragging overlap as a heatmap, and you can also open slots in advance to accept bookings. Confirmed times can be exported to your calendar.",
+      "title": "Meeting Time Coordination"
+    },
+    "ubeePlatform": {
+      "summary": "Quickly predicts solar radiation conditions and energy use based on urban building information and surrounding environmental data. Provides key influencing factor analysis, LLM-based result interpretation, and automatic generation of energy analysis reports.",
+      "title": "UBEE Platform"
+    }
+  },
+  "contact": {
+    "addressBlock": "<strong>Address</strong>　120 Neungdong-ro, Gwangjin-gu, Seoul<br><span style=\"visibility:hidden;\"><strong>Address</strong>　</span>509, Architecture Building, Konkuk University"
+  },
+  "dynamic": {
+    "research": {
+      "background": "Research Background",
+      "goal": "Research Objectives",
+      "relatedPapers": "Related Publications"
+    },
+    "members": {
+      "firstAuthor": "First Author"
+    },
+    "gallery": {
+      "previous": "Previous",
+      "next": "Next"
+    }
+  }
+}

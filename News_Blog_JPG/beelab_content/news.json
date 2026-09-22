@@ -1,8 +1,11 @@
 [
   {
+    "id": "99b7af8a-33ed-4154-b5a5-752726b8990a",
     "title": "2026 대한건축학회 춘계학술발표대회",
+    "titleEn": "2026 AIK Spring Conference",
     "date": "2026-04-30",
     "body": "발표자: 김지영, 황정윤\n김지영, 임현우. (2026). 로지스틱 맵 이미지 암호화 기법을 적용한 딥러닝 기반 재실자 감지 시스템 제안 (우수발표논문상)\n황정윤, 임현우. (2026). 단독형·단지형 유형별 건물 에너지 사용량 해석을 위한 공간·속성정보 통합",
+    "bodyEn": "Presenters: Jiyoung Kim, Jeongyun Hwang\nKim, J., Lim, H. (2026). Proposal for a deep learning based occupancy detection system using logistic map image encryption (Outstanding Presentation Award)\nHwang, J., Lim, H. (2026). Integration of spatial and attribute information for analyzing building energy use by detached and multi complex housing type",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2026 대한건축학회 춘계학술발표대회/001.jpg"
@@ -16,9 +19,12 @@
     ]
   },
   {
+    "id": "f6ad7e38-dbee-4ccf-a775-08802ffebcf7",
     "title": "2025 녹색건축 한마당",
+    "titleEn": "2025 Green Building Festival",
     "date": "2025-12-04",
     "body": "발표자: 한지웅\n수상자: 한지웅, 최다정, 김동준\n한지웅, 임현우. (2025). 수열원 히트펌프 기반 데이터센터 폐열 활용 급탕과 방류 수온 회복 시스템",
+    "bodyEn": "Presenter: Jiung Hann\nAwardees: Jiung Hann, Dajeong Choi, Dongjun Kim\nHan, J., Lim, H. (2025). Water source heat pump based hot water supply and discharge water temperature recovery system utilizing data center waste heat",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2025 녹색건축 한마당/001.jpg"
@@ -32,9 +38,12 @@
     ]
   },
   {
+    "id": "a0132f9f-7ad5-4147-9a24-ac4c42dce6da",
     "title": "[2025 제13회 HVAC 경진대회] 장려상, 우수지도 교수상",
+    "titleEn": "[2025 13th HVAC Design Competition] Merit Award, Outstanding Advisor Award",
     "date": "2025-11-27",
     "body": "수상자:김지영, 이현수 (장려상)\n제 13회 HVAC 경진대회에서 \"열적 특성 기반의 개인 맞춤형 좌석 시스템 제안\"으로 장려상 수상\n임현우(우수지도 교수상)",
+    "bodyEn": "Awardees: Jiyoung Kim, Hyeonsu Lee (Merit Award)\nReceived the Merit Award at the 13th HVAC Design Competition for \"Proposal for a Personalized Seat System Based on Thermal Characteristics\"\nHyunwoo Lim (Outstanding Advisor Award)",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/[2025 제13회 HVAC 경진대회] 장려상, 우수지도 교수상/001.jpg"
@@ -45,9 +54,12 @@
     ]
   },
   {
+    "id": "a9d4ca7d-701f-4835-98c1-b02558f8dbab",
     "title": "2025 대한설비공학회 동계학술발표대회",
+    "titleEn": "2025 SAREK Winter Annual Conference",
     "date": "2025-11-27",
     "body": "발표자: 이도연, 조정현\n이도연, 임현우. (2025). 상권 및 인허가 데이터 기반 중요 업종별 EUI 특성분석\n(우수발표논문상)\n조정현, 임현우. (2025). 연돌효과 저감을 위한 엘리베이터 샤프트 냉각 시스템 적용 시 샤프트 온도 분포에 따른 영향 분석",
+    "bodyEn": "Presenters: Doyeon Lee, Junghyun Cho\nLee, D., Lim, H. (2025). Analysis of EUI characteristics by key business type based on commercial district and permit data\n(Outstanding Presentation Award)\nCho, J., Lim, H. (2025). Analysis of the effect of shaft temperature distribution when applying an elevator shaft cooling system to reduce stack effect",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2025 대한설비공학회 동계학술발표대회/001.jpg"
@@ -61,9 +73,12 @@
     ]
   },
   {
+    "id": "9d2dd12c-c760-4558-a401-3284b5c1ce60",
     "title": "2025 한국건축친환경설비학회 추계학술발표대회",
+    "titleEn": "2025 KIEAE Fall Conference",
     "date": "2025-11-13",
     "body": "발표자: 김인섭, 임지수, 황정윤\n김인섭, 임현우. (2025). 연면적과 전용면적 EUI 비교를 통한 아파트와 주상복합 에너지사용 특성 분석\n임지수, 임현우. (2025). 지역 단위 건물 에너지 모델의 창면적비 추정을 위한 이미지 기반 객체 탐지 기법의 검증 (우수발표논문상)\n황정윤, 임현우. (2025). DataNet: 건물의 형상적 특성에 따른 에너지 사용 수준 파악을 위한 건물 형상 지표 개발",
+    "bodyEn": "Presenters: Inseop Kim, Jisoo Lim, Jeongyun Hwang\nKim, I., Lim, H. (2025). Analysis of energy use characteristics of apartments and mixed use residential buildings through comparison of gross floor area and exclusive area EUI\nLim, J., Lim, H. (2025). Validation of an image based object detection method for estimating window to wall ratio in a district scale building energy model (Outstanding Presentation Award)\nHwang, J., Lim, H. (2025). DataNet: Development of a building shape index for assessing energy use levels according to building shape characteristics",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2025 한국건축친환경설비학회 추계학술발표대회/001.jpg"
@@ -80,9 +95,12 @@
     ]
   },
   {
+    "id": "6d0e3d49-dc2a-446f-8787-974d7a00b767",
     "title": "2025 한국태양에너지학회 추계학술발표대회",
+    "titleEn": "2025 KSES Fall Annual Conference",
     "date": "2025-11-06",
     "body": "발표자: 이현수, 한지웅\n이현수, 김지영, 임현우. (2025). 열적 특성 기반의 개인 맞춤형 좌석 선택 시스템 제안 (우수발표논문상)\n한지웅, 김동준, 최다정, 임현우. (2025). 수열원 히트펌프 기반 데이터센터 폐열 활용 급탕과 방류 수온 회복 시스템",
+    "bodyEn": "Presenters: Hyeonsu Lee, Jiung Hann\nLee, H., Kim, J., Lim, H. (2025). Proposal for a personalized seat selection system based on thermal characteristics (Outstanding Presentation Award)\nHan, J., Kim, D., Choi, D., Lim, H. (2025). Water source heat pump based hot water supply and discharge water temperature recovery system utilizing data center waste heat",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2025 한국태양에너지학회 추계학술발표대회/001.jpg"
@@ -102,9 +120,12 @@
     ]
   },
   {
+    "id": "96c00317-5008-48db-87e8-204c6e641801",
     "title": "[2025 대한민국 녹색건축대전(제3회 에너지 최적화 디자인 공모전)] 국토부장관상 수상",
+    "titleEn": "[2025 Korea Green Building Award (3rd Energy Optimization Design Competition)] Minister of Land, Infrastructure and Transport Award",
     "date": "2025-12-04",
     "body": "수상자: 한지웅, 최다정, 김동준\n\"한강수열원 히트펌프 기반 데이터센터 폐열 활용 급탕과 방류 수온 회복 시스템\"\n🏅[국토교통부장관상]\nhttps://www.konkuk.ac.kr/bbs/konkuk/258/1161675/artclView.do",
+    "bodyEn": "Awardees: Jiung Hann, Dajeong Choi, Dongjun Kim\n\"Han River water source heat pump based hot water supply and discharge water temperature recovery system utilizing data center waste heat\"\n🏅[Minister of Land, Infrastructure and Transport Award]\nhttps://www.konkuk.ac.kr/bbs/konkuk/258/1161675/artclView.do",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2025 대한민국 녹색건축대전(제3회 에너지 최적화 디자인 공모전) 수상/001.jpg"
@@ -115,9 +136,12 @@
     ]
   },
   {
+    "id": "15125649-dcec-4cd5-a705-6bb19f79a7d8",
     "title": "2025 대한건축학회 창립80주년기념 학술발표대회",
+    "titleEn": "2025 AIK 80th Anniversary Conference",
     "date": "2025-10-30",
     "body": "발표자: 황정윤\n황정윤, 임현우. (2025). 대표 건물 기반 urban building energy model (UBEM)의 정확도 향상을 위한 형상 보정 계수 적용 (우수발표논문상)",
+    "bodyEn": "Presenter: Jeongyun Hwang\nHwang, J., Lim, H. (2025). Application of shape calibration factors to improve the accuracy of a representative building based urban building energy model (UBEM) (Outstanding Presentation Award)",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2025 대한건축학회 창립80주년기념 학술발표대회/001.png"
@@ -128,9 +152,12 @@
     ]
   },
   {
+    "id": "a8c95033-3706-4abf-a6aa-1c7e57eb52ea",
     "title": "2025 한국지열수열에너지학회 추계학술발표대회 및 20주년 기념행사",
+    "titleEn": "2025 Korea Society of Geothermal and Hydrothermal Energy Fall Conference and 20th Anniversary Event",
     "date": "2025-10-31",
     "body": "발표자: 이상민\n이상민, 임현우. (2025). 급탕 환수 부하 분리를 통한 중앙식 히트펌프 온수기의 성능 향상 분석",
+    "bodyEn": "Presenter: Sangmin Lee\nLee, S., Lim, H. (2025). Analysis of performance improvement of a central heat pump water heater through separation of hot water return load",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2025 한국지열수열에너지학회 추계학술발표대회 및 20주년 기념행사/001.jpg"
@@ -144,9 +171,12 @@
     ]
   },
   {
+    "id": "4a0c1848-e08d-4ea8-9d6b-2eaef6f23e66",
     "title": "2025 Building simulation",
+    "titleEn": "2025 Building simulation",
     "date": "2025-08-25",
     "body": "발표자: 황정윤, 이도연\nHwang, J., Lim, H., Lee, S., & Lim, J. (2025, August 25). Developing building shape indexes at the city-scale for understanding building energy consumption. Proceedings of Building Simulation 2025: 19th Conference of IBPSA.\nLee, D., Lim, H., Kim, S. (2025, August 25).\nDisentangling Rebound Effects and Construction Errors in Building Retrofits Using Integrated Energy Signature Analysis. Building Simulation\n. Proceedings of Building Simulation 2025: 19th Conference of IBPSA.",
+    "bodyEn": "Presenters: Jeongyun Hwang, Doyeon Lee\nHwang, J., Lim, H., Lee, S., & Lim, J. (2025, August 25). Developing building shape indexes at the city-scale for understanding building energy consumption. Proceedings of Building Simulation 2025: 19th Conference of IBPSA.\nLee, D., Lim, H., Kim, S. (2025, August 25).\nDisentangling Rebound Effects and Construction Errors in Building Retrofits Using Integrated Energy Signature Analysis. Building Simulation\n. Proceedings of Building Simulation 2025: 19th Conference of IBPSA.",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2025 Building simulation/001.jpg"
@@ -160,9 +190,12 @@
     ]
   },
   {
+    "id": "b52643dc-ebcb-4c35-8a06-5f1913d671c7",
     "title": "2025 ASHRAE CRCs(Chater Regional ConFERENCE) 2025 현장",
+    "titleEn": "2025 ASHRAE CRCs(Chater Regional ConFERENCE) 2025 On Site",
     "date": "2025-08-14",
     "body": "수원 컨벤션 센터에서 진행된 ASHRAE Xlll CRCs에 참여하여\n컨벤션 센터와 아쿠아리움을 견학 및 안내하고, 홍콩, 일본, 대만 등 각 국에서 온 ASHRAE Member들과 의견을 교류하는 시간을 가졌다.\n또한, 반 년간 준비한 밴드 공연을 성황리에 마무리하며 Student Performance Competition 1위를 거머쥐었다.\n참여자: 임현우 교수님, 황정윤, 이도연, 김인섭, 이상민, 임지수, 조정현, 백재욱, 이현수, 한지웅, 김지영",
+    "bodyEn": "Participated in the ASHRAE Xlll CRCs held at Suwon Convention Center, giving tours of the convention center and aquarium and exchanging views with ASHRAE Members from Hong Kong, Japan, Taiwan, and other countries.\nThe band performance prepared over six months also concluded successfully, winning first place in the Student Performance Competition.\nParticipants: Prof. Hyunwoo Lim, Jeongyun Hwang, Doyeon Lee, Inseop Kim, Sangmin Lee, Jisoo Lim, Junghyun Cho, Jaewook Baek, Hyeonsu Lee, Jiung Hann, Jiyoung Kim",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2025 ASHRAE CRCs(Chater Regional ConFERENCE) 2025 현장/001.jpg"
@@ -188,9 +221,12 @@
     ]
   },
   {
+    "id": "0bbd6e9c-9ac9-465e-bab3-0057035063eb",
     "title": "2025 ECOTOPE 견학",
+    "titleEn": "2025 ECOTOPE Site Visit",
     "date": "2025-01-18",
     "body": "Seattle에 있는 Ecotope을 방문하여\n중앙 히트펌프 온수기(CHPWH) 시스템의 실제 적용사례를 견학하고, 시스템의 작동 원리와 모델링 방법에 대해 교육진행\n참여자: 임현우 교수님, 황정윤, 이도연, 김인섭, 이상민\nWhat a privilege to host Professor Hyunwoo Lim from Konkuk University and his students — Jeongyun Hwang, Doyeon Lee, Inseop Kim, and Sangmin Lee — last week at Ecotope! | Ecotope, Inc.",
+    "bodyEn": "Visited Ecotope in Seattle to tour a real world application of a central heat pump water heater (CHPWH) system and receive training on its operating principles and modeling methods.\nParticipants: Prof. Hyunwoo Lim, Jeongyun Hwang, Doyeon Lee, Inseop Kim, Sangmin Lee\nWhat a privilege to host Professor Hyunwoo Lim from Konkuk University and his students — Jeongyun Hwang, Doyeon Lee, Inseop Kim, and Sangmin Lee — last week at Ecotope! | Ecotope, Inc.",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2025 ECOTOPE 견학/001.jpg"
@@ -207,9 +243,12 @@
     ]
   },
   {
+    "id": "215b9d8d-f4e2-454f-a9d6-5c12a2359369",
     "title": "2025 고덕 온빛채 제로에너지 아파트 현장견학",
+    "titleEn": "2025 Godeok Onbitchae Zero Energy Apartment Site Visit",
     "date": "2025-06-27",
     "body": "백재욱 선임님의 안내로, 제로에너지 건축물(ZEB) 3등급을 받은 고덕 온빛채 아파트 현장 견학진행\n참여자: 임현우 교수님, 황정윤, 이도연, 김인섭, 이상민, 임지수, 조정현, 이현수, 김지영",
+    "bodyEn": "Conducted a site visit, guided by Senior Researcher Jaewook Baek, to the Godeok Onbitchae apartment complex, which received a Zero Energy Building (ZEB) Grade 3 certification\nParticipants: Prof. Hyunwoo Lim, Jeongyun Hwang, Doyeon Lee, Inseop Kim, Sangmin Lee, Jisoo Lim, Junghyun Cho, Hyeonsu Lee, Jiyoung Kim",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2025 고덕 온빛채 제로에너지 아파트 현장견학/001.jpg"
@@ -229,9 +268,12 @@
     ]
   },
   {
+    "id": "648a1e33-49e0-4e3e-aabe-170cbdfd9701",
     "title": "2025 대한설비공학회 하계학술발표대회",
+    "titleEn": "2025 SAREK Summer Annual Conference",
     "date": "2025-06-19",
     "body": "발표자 : 황정윤, 이도연, 김인섭, 이상민, 임지수, 조정현\n황정윤, 임현우. (2025). 건물 에너지 소비량 데이터 기반 총면적비 추정 모델의 성능 비교\n이도연, 임현우. (2025). 공공데이터를 활용한 건물 에너지 벤치마킹 분류기준의 설명력 개선 연구 (우수발표논문상)\n김인섭, 임현우. (2025). 도시 건물 에너지 사용량 패턴 평탄화를 위한 건물 용도 비율 최적화\n이상민, 임현우. (2025). TRNSYS를 활용한 공동주택 Central Heat Pump Water Heater 시스템 구축\n임지수, 임현우. (2025). 에너지 공유 시스템을 위한 지역 건물 에너지 모델 구축과정\n조정현, 임현우. (2025). 연돌효과가 고층 사무용 건물 냉난방 부하에 미치는 영향 (우수발표논문상)",
+    "bodyEn": "Presenters: Jeongyun Hwang, Doyeon Lee, Inseop Kim, Sangmin Lee, Jisoo Lim, Junghyun Cho\nHwang, J., Lim, H. (2025). Performance comparison of models for estimating window to wall ratio based on building energy consumption data\nLee, D., Lim, H. (2025). A study on improving the explanatory power of building energy benchmarking classification criteria using public data (Outstanding Presentation Award)\nKim, I., Lim, H. (2025). Optimization of building use ratio for flattening urban building energy use patterns\nLee, S., Lim, H. (2025). Development of a central heat pump water heater (CHPWH) system for multi family housing using TRNSYS\nLim, J., Lim, H. (2025). Process for building a district scale building energy model for an energy sharing system\nCho, J., Lim, H. (2025). Effect of stack effect on the heating and cooling load of a high rise office building (Outstanding Presentation Award)",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2025 대한설비공학회 하계학술발표대회/001.jpg"
@@ -263,9 +305,12 @@
     ]
   },
   {
+    "id": "f22f8fdd-d665-4f3d-a2a0-5ed9f4a64a80",
     "title": "2025 Clima 15th rehva hvac world congress",
+    "titleEn": "2025 Clima 15th rehva hvac world congress",
     "date": "2025-06-06",
     "body": "포스터 발표: 이도연\nLee, D., & Lim, H. (2025). Analysis of the relationship between building shape indicators and energy end-use using public data. In C. Zilio, F. Busato, L. Mazzarella, & M. Noro (Eds.), Proceedings of the 15th REHVA HVAC World Congress – CLIMA 2025 (Vol. 1). Springer Cham.",
+    "bodyEn": "Poster presentation: Doyeon Lee\nLee, D., & Lim, H. (2025). Analysis of the relationship between building shape indicators and energy end-use using public data. In C. Zilio, F. Busato, L. Mazzarella, & M. Noro (Eds.), Proceedings of the 15th REHVA HVAC World Congress – CLIMA 2025 (Vol. 1). Springer Cham.",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/Clima 2025-15th rehva hvac world congress/001.jpg"
@@ -276,9 +321,12 @@
     ]
   },
   {
+    "id": "9742c580-9afa-41ba-94ba-150fc748b1ec",
     "title": "[2025 건국대학교 베스트티처] 시상식",
+    "titleEn": "[2025 Konkuk University Best Teacher] Award Ceremony",
     "date": "2025-01-14",
     "body": "2025학년도 1학기 베스트티처상 수상\n과목명: '건축종합설계2', ‘Architectural Environment Theory’\nhttps://www.konkuk.ac.kr/bbs/konkuk/257/1150720/artclView.do",
+    "bodyEn": "Received the Best Teacher Award for the first semester of the 2025 academic year\nCourses: 'Integrated Architectural Design 2,' 'Architectural Environment Theory'\nhttps://www.konkuk.ac.kr/bbs/konkuk/257/1150720/artclView.do",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2025학년도 1학기 베스티처 시상식/001.jpg"
@@ -292,9 +340,12 @@
     ]
   },
   {
+    "id": "4188f321-32a3-4031-8fa1-92f7268c4042",
     "title": "2025 지열히트펌프 현장견학",
+    "titleEn": "2025 Geothermal Heat Pump Site Visit",
     "date": "2025-01-13",
     "body": "티이엔 김상원 부사장님과 함께\n참여 인원: 임현우 교수님, 이경재, 황정윤, 이도연, 김인섭, 이상민, 임지수, 이현수",
+    "bodyEn": "With Vice President Sangwon Kim of T.E.N LTD.\nParticipants: Prof. Hyunwoo Lim, Kyungjae Lee, Jeongyun Hwang, Doyeon Lee, Inseop Kim, Sangmin Lee, Jisoo Lim, Hyeonsu Lee",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2025 지열히트펌프 현장견학/001.jpg"
@@ -311,9 +362,12 @@
     ]
   },
   {
+    "id": "9ffb06c7-79df-43f8-b027-5728b69d0694",
     "title": "2024 대한설비공학회 동계학술발표대회",
+    "titleEn": "2024 SAREK Winter Annual Conference",
     "date": "2024-11-29",
     "body": "발표자 : 황정윤, 임현우 교수님\n황정윤(2024) 확률론적 추론 방법을 통한 건물 에너지 소비 기반 창면적비 추정(우수발표논문상)\n임현우(2024) 국내 건물 커미셔닝 정책을 위한 시애틀의 건물 튠업 사례조사",
+    "bodyEn": "Presenters: Jeongyun Hwang, Prof. Hyunwoo Lim\nHwang, J. (2024) Estimation of window to wall ratio based on building energy consumption using probabilistic inference methods (Outstanding Presentation Award)\nLim, H. (2024) A case study of Seattle's building tune up program for domestic building commissioning policy",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2024 대한설비공학회 동계학술발표대회/001.jpg"
@@ -333,9 +387,12 @@
     ]
   },
   {
+    "id": "2ebdb886-37fe-42b5-abe5-fb3bb57d5652",
     "title": "2024 한국건축친환경설비학회 추계학술발표대회",
+    "titleEn": "2024 KIEAE Fall Conference",
     "date": "2024-10-28",
     "body": "발표자 : 이도연\n포스터 발표 : 김인섭\n사회자 : 임현우 교수님\n이도연, 임현우(2024) 건물 형상지표에 따른 용도별 에너지 사용량 분석\n김인섭, 임현우(2024) 도시 전력 효율 증대를 위한 건물 용도 비율 최적화",
+    "bodyEn": "Presenter: Doyeon Lee\nPoster presentation: Inseop Kim\nModerator: Prof. Hyunwoo Lim\nLee, D., Lim, H. (2024) Analysis of energy use by building type according to building shape indexes\nKim, I., Lim, H. (2024) Optimization of building use ratio for improving urban electric power efficiency",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2024 한국건축친환경설비학회 추계학술발표대회/001.jpg"
@@ -352,9 +409,12 @@
     ]
   },
   {
+    "id": "3137116c-fa0f-4e6d-9489-a16591d80508",
     "title": "2024 한국태양에너지학회 추계학술발표대회",
+    "titleEn": "2024 KSES Fall Annual Conference",
     "date": "2024-10-27",
     "body": "발표자 : 김인섭, 이상민\n김인섭, 임현우(2024) 건물 용도 조정을 통한 도시 에너지 사용량 패턴 평탄화\n(우수발표논문상)\n이상민, 임현우(2024) 도서관 최적 좌석 제시를 위한 PMV 가상센서 시스템 구축\n(우수발표논문상)",
+    "bodyEn": "Presenters: Inseop Kim, Sangmin Lee\nKim, I., Lim, H. (2024) Flattening of urban energy use patterns through building use adjustment\n(Outstanding Presentation Award)\nLee, S., Lim, H. (2024) Development of a PMV virtual sensor system for optimal library seat recommendation\n(Outstanding Presentation Award)",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2024 한국태양에너지 학회 추계학술발표대회/001.jpg"
@@ -374,9 +434,12 @@
     ]
   },
   {
+    "id": "51ddb93c-2fc8-4627-b13a-b6031be740b8",
     "title": "[2024 대한민국 녹색건축대전(제2회 에너지 최적화 디자인 공모전)] 한국태양에너지학회장상, 한국에너지공단 이사장상 수상",
+    "titleEn": "[2024 Korea Green Building Award (2nd Energy Optimization Design Competition)] KSES President's Award, Korea Energy Agency President's Award",
     "date": "2024-01-28",
     "body": "수상자: 이상민, 이상원, 최서연\n\"\n도서관 최적 좌석 제시를 위한 PMV 가상센서 시스템 구축\"\n🏅[한국태양에너지학회장상]\n수상자: 김인섭, 이성민, 서준원\n\"\n건물 용도 조정을 통한 도시 에너지 사용량 패턴 평탄화\"\n🏅[한국에너지공단이사장상]",
+    "bodyEn": "Awardees: Sangmin Lee, Sangwon Lee, Seoyeon Choi\n\"\nDevelopment of a PMV virtual sensor system for optimal library seat recommendation\"\n🏅[KSES President's Award]\nAwardees: Inseop Kim, Seongmin Lee, Junwon Seo\n\"\nFlattening of urban energy use patterns through building use adjustment\"\n🏅[Korea Energy Agency President's Award]",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2024 대한민국 녹색건축대전(제2회 에너지 최적화 디자인 공모전) 수상/001.jpg"
@@ -387,9 +450,12 @@
     ]
   },
   {
+    "id": "2ef6f445-dcef-46db-b8ee-a0af1b80bd77",
     "title": "2024 ISAIA 14th KYOTO 참여",
+    "titleEn": "2024 ISAIA 14th KYOTO Participation",
     "date": "2024-01-27",
     "body": "장소: Kyoto Institute of Technology\n발표자: 이경재, 황정윤, 이도연\nLee, K., Lim, H. (2024).Investigate how to handle missing values when developing building energy benchmarking models. International Symposium on Architectural Interchanges in Asia (ISAIA 2024). September, Kyoto, Japan.\nHwang, J., Lim, H. (2024). Improvement of accuracy in urban building energy modeling using representative buildings: through reducing shape information uncertainty. International Symposium on Architectural Interchanges in Asia (ISAIA 2024). September, Kyoto, Japan.\nLee, D., Lim, H. (2024). Comparative analysis of energy usage before and after Green Remodeling through Change Point Model. International Symposium on Architectural Interchanges in Asia (ISAIA 2024). September, Kyoto, Japan.",
+    "bodyEn": "Venue: Kyoto Institute of Technology\nPresenters: Kyungjae Lee, Jeongyun Hwang, Doyeon Lee\nLee, K., Lim, H. (2024).Investigate how to handle missing values when developing building energy benchmarking models. International Symposium on Architectural Interchanges in Asia (ISAIA 2024). September, Kyoto, Japan.\nHwang, J., Lim, H. (2024). Improvement of accuracy in urban building energy modeling using representative buildings: through reducing shape information uncertainty. International Symposium on Architectural Interchanges in Asia (ISAIA 2024). September, Kyoto, Japan.\nLee, D., Lim, H. (2024). Comparative analysis of energy usage before and after Green Remodeling through Change Point Model. International Symposium on Architectural Interchanges in Asia (ISAIA 2024). September, Kyoto, Japan.",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2024 ISAIA 14th KYOTO 참여/001.jpg"
@@ -406,9 +472,12 @@
     ]
   },
   {
+    "id": "946684b8-c7e2-46b2-9887-853949d98ea0",
     "title": "2024 건물에너지 소비 데이터 통합관리 기반기술 2차년도, 7월 세미나",
+    "titleEn": "2024 Building Energy Consumption Data Integrated Management Base Technology, Year 2 July Seminar",
     "date": "2024-01-26",
     "body": "장소 : KICT 본관 30주년 홀 (+일산호수공원 탐방)\n참여자 : 이경재, 황정윤, 이도연, 임지수, 김인섭, 이상민, 박소현\n발표자 : 이경재",
+    "bodyEn": "Venue: KICT Main Building 30th Anniversary Hall (plus a visit to Ilsan Lake Park)\nParticipants: Kyungjae Lee, Jeongyun Hwang, Doyeon Lee, Jisoo Lim, Inseop Kim, Sangmin Lee, Sohyeon Park\nPresenter: Kyungjae Lee",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2024 건물에너지 소비 데이터 통합관리 기반기술 2차년도, 7월 세미나/001.jpg"
@@ -425,9 +494,12 @@
     ]
   },
   {
+    "id": "39b2d989-c9a4-4474-ba59-b513e783df7f",
     "title": "2024 대한설비공학회 하계학술발표대회",
+    "titleEn": "2024 SAREK Summer Annual Conference",
     "date": "2024-01-25",
     "body": "발표자: 이경재, 황정윤, 이도연, 김인섭, 이상민\n이경재, 임현우. (2024). 연면적 기반 EUI 개선을 위한 건물 에너지 벤치마킹 평가지표 개발 기초연구\n황정윤, 임현우. (2024). 공공데이터 기반 건물 형상에 따른 냉난방 및 기저에너지 소비 영향력 분석\n이도연, 김덕우, 임현우. (2024). 공공데이터 기반의 그린리모델링 효과 분석\n김인섭, 임현우. (2024). 도시 건물 에너지 소비량 예측 및 정확도 향상을 위한 에너지 사용 패턴 재구성 (우수발표논문상 수상)\n이상민, 임현우. (2024). 도시단위에서 건물 유형별 에너지 사용량을 대표하는 최소 샘플 크기 추정",
+    "bodyEn": "Presenters: Kyungjae Lee, Jeongyun Hwang, Doyeon Lee, Inseop Kim, Sangmin Lee\nLee, K., Lim, H. (2024). A basic study on developing a building energy benchmarking evaluation index for improving gross floor area based EUI\nHwang, J., Lim, H. (2024). Analysis of the effect of public data based building shape on heating, cooling, and base energy consumption\nLee, D., Kim, D., Lim, H. (2024). Analysis of the effects of green remodeling based on public data\nKim, I., Lim, H. (2024). Reconstruction of energy use patterns for improving urban building energy consumption forecasting and accuracy (Outstanding Presentation Award)\nLee, S., Lim, H. (2024). Estimation of the minimum sample size representing energy use by building type at the urban scale",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2024 대한설비공학회 하계학술발표대회/001.jpg"
@@ -453,9 +525,12 @@
     ]
   },
   {
+    "id": "54eecac3-0b24-48a9-9257-bfb425db7645",
     "title": "2024 한국산업기술시험원(KTL) 이동혁 박사 특별 세미나",
+    "titleEn": "2024 Korea Testing Laboratory (KTL) Dr. Donghyuk Lee Special Seminar",
     "date": "2024-01-24",
     "body": "한국산업기술시험원 이동혁 박사님의 GIS 기반 에너지 시뮬레이션 모델링 자동화 기술 세미나\n참여자: 이경재, 황정윤, 이도연",
+    "bodyEn": "Seminar by Dr. Donghyuk Lee of the Korea Testing Laboratory on GIS based automation technology for energy simulation modeling\nParticipants: Kyungjae Lee, Jeongyun Hwang, Doyeon Lee",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2024 한국산업기술시험원(KTL) 이동혁 박사 특별 세미나/001.jpg"
@@ -472,9 +547,12 @@
     ]
   },
   {
+    "id": "ffc1c241-a3c4-4324-9ac6-0e3fa63c3dcd",
     "title": "2024 그린빌딩의날 임현우 교수님 초청강연",
+    "titleEn": "2024 Green Building Day, Invited Lecture by Prof. Hyunwoo Lim",
     "date": "2024-01-23",
     "body": "'AI시대의 그린빌딩'을 주제로한 2024 그린빌딩의 날 행사 초청강연자로\n임현우 교수님 발표진행\n'공공데이터를 활용한 AI기반 건물성능 평가'를 주제로 한국형 에너지 벤치마킹에 대한 필요성을 강조 (http://www.kharn.kr/mobile/article.html?no=24866)",
+    "bodyEn": "Prof. Hyunwoo Lim gave an invited lecture at the 2024 Green Building Day event on the theme 'Green Building in the AI Era'\nHe emphasized the need for Korean style energy benchmarking under the theme 'AI Based Building Performance Evaluation Using Public Data' (http://www.kharn.kr/mobile/article.html?no=24866)",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2024 그린빌딩의날 임현우 교수님 초청강연/001.jpg"
@@ -488,9 +566,12 @@
     ]
   },
   {
+    "id": "6ea4c75a-9ec0-4fcf-9a5c-e3f4ad353bd0",
     "title": "2024 ASHRAE 한국지회 DL 세미나 참석",
+    "titleEn": "2024 ASHRAE Korea Chapter DL Seminar Attendance",
     "date": "2024-01-22",
     "body": "건축분야 내재탄소 감축 설계동향 공유를 위한 ASHRAE 한국지회 DL(Distingguished Lecture) 세미나 참석\n참여자: 이경재, 황정윤, 이도연, 이상민, 김인섭",
+    "bodyEn": "Attended the ASHRAE Korea Chapter DL(Distingguished Lecture) seminar to share design trends for reducing embodied carbon in the building sector\nParticipants: Kyungjae Lee, Jeongyun Hwang, Doyeon Lee, Sangmin Lee, Inseop Kim",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2024 ASHRAE 한국지회 DL 세미나 참석/001.jpg"
@@ -504,9 +585,12 @@
     ]
   },
   {
+    "id": "f550c3ae-21f3-41cf-ab20-005102e712fd",
     "title": "2024 건물에너지 소비 데이터 통합관리 기반기술  2차년도, 킥오프 워크샵",
+    "titleEn": "2024 Building Energy Consumption Data Integrated Management Base Technology, Year 2 Kickoff Workshop",
     "date": "2024-01-21",
     "body": "장소 : 인천 네스트 호텔\n참여자 : 이경재, 황정윤, 이도연\n발표자 : 임현우 교수님",
+    "bodyEn": "Venue: Incheon Nest Hotel\nParticipants: Kyungjae Lee, Jeongyun Hwang, Doyeon Lee\nPresenter: Prof. Hyunwoo Lim",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2024 건물에너지 소비 데이터 통합관리 기반기술 2차년도, 킥오프 워크샵/001.jpg"
@@ -520,9 +604,12 @@
     ]
   },
   {
+    "id": "029c014c-439d-4cad-ba71-79179e28f427",
     "title": "2024 그린리모델링 현장 측정",
+    "titleEn": "2024 Green Remodeling Field Measurement",
     "date": "2024-01-20",
     "body": "그린리모델링 진행 어린이집 대상 시공상태 현장조사\n참여자: 이경재, 황정윤, 이신화, 김주원, 김인섭, 박민건, 이상민, 이도연",
+    "bodyEn": "On site construction condition survey of a daycare center undergoing green remodeling\nParticipants: Kyungjae Lee, Jeongyun Hwang, Sinhwa Lee, Juwon Kim, Inseop Kim, Mingeon Park, Sangmin Lee, Doyeon Lee",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2024 그린리모델링 현장 측정/001.jpg"
@@ -560,9 +647,12 @@
     ]
   },
   {
+    "id": "11be5981-5845-4ee6-96b9-94a7ed26da15",
     "title": "[2023 제11회 HVAC 경진대회] 은상 수상",
+    "titleEn": "[2023 11th HVAC Design Competition] Silver Award",
     "date": "2023-01-28",
     "body": "수상자: 이신화, 최성권, 이종섭\n제 11회 HVAC 경진대회에서 \"VRF Heat Recovery mode를 통한 데이터센터 냉방부하, Central HPWH 급탕부하 절감 최적 설계 방안 제시\"로 은상 수상",
+    "bodyEn": "Awardees: Sinhwa Lee, Seonggwon Choi, Jongseop Lee\nReceived the Silver Award at the 11th HVAC Design Competition for \"Proposing an Optimal Design Strategy for Reducing Data Center Cooling Load and Central HPWH Hot Water Load Through VRF Heat Recovery Mode\"",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/[2023 제11회 HVAC 경진대회] 은상/001.jpg"
@@ -579,9 +669,12 @@
     ]
   },
   {
+    "id": "5c0bca29-1f95-45b9-9d05-454f3c6f6f7f",
     "title": "2023 대한설비공학회 동계학술발표대회",
+    "titleEn": "2023 SAREK Winter Annual Conference",
     "date": "2023-01-27",
     "body": "발표자 : 이신화, 이경재\n임현우 교수님 [최상홍 인재 신진공학자상] 수상\n이신화, 최성권, 이종섭, 임현우. (2023). VRF Heat Recovery mode를 통한 데이터센터 냉방부하, Central HPWH 급탕부하 절감 최적 설계 방안 제시\n이경재, 임현우. (2023). 건물 에너지 평가를 위한 건축물대장 핵심변수 선별 방법론 (우수발표논문상)",
+    "bodyEn": "Presenters: Sinhwa Lee, Kyungjae Lee\nProf. Hyunwoo Lim received the [Choi Sang-hong Young Engineer Award]\nLee, S., Choi, S., Lee, J., Lim, H. (2023). Proposing an optimal design strategy for reducing data center cooling load and Central HPWH hot water load through VRF Heat Recovery mode\nLee, K., Lim, H. (2023). A methodology for selecting key variables from the building register for building energy evaluation (Outstanding Presentation Award)",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2023 대한설비공학회 동계학술발표대회/001.jpg"
@@ -601,9 +694,12 @@
     ]
   },
   {
+    "id": "3eb564f8-182f-43e1-9852-5ceea2d742e9",
     "title": "2023 한국건축친환경설비학회 추계학술발표대회",
+    "titleEn": "2023 KIEAE Fall Conference",
     "date": "2023-01-26",
     "body": "발표자 : 황정윤, 김진엽\n김진엽, 이나윤, 이지현, 임현우. (2023). Change Point Model을 통한 그린리모델링 전후 에너지 사용량 분석\n황정윤, 임현우. (2023). 공공데이터 기반 건물 형상 정보가 에너지 사용량에 미치는 영향 (우수발표논문상)",
+    "bodyEn": "Presenters: Jeongyun Hwang, Jinyeop Kim\nKim, J., Lee, N., Lee, J., Lim, H. (2023). Analysis of energy use before and after green remodeling using a Change Point Model\nHwang, J., Lim, H. (2023). Effect of public data based building shape information on energy use (Outstanding Presentation Award)",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2023 한국건축친환경설비학회 추계학술발표대회/001.jpg"
@@ -620,9 +716,12 @@
     ]
   },
   {
+    "id": "19d89fe6-d1c4-4430-9078-436dfa44c64d",
     "title": "2023 한국태양에너지학회추계학술발표대회",
+    "titleEn": "2023 KSES Fall Annual Conference",
     "date": "2023-01-25",
     "body": "발표자 : 이경재, 황정윤\n이경재, 임현우. (2023). 건물 에너지 데이터 결측치 처리방식에 따른 차원 축소 및 모델 예측 성능 분석 (우수발표논문상, 우수논문상)\n황정윤, 임현우. (2023). 자연 채광 및 환기를 위한 실시간 제어 키네틱 파사드 시스템 설계 및 검토",
+    "bodyEn": "Presenters: Kyungjae Lee, Jeongyun Hwang\nLee, K., Lim, H. (2023). Analysis of dimensionality reduction and model prediction performance according to missing value handling methods for building energy data (Outstanding Presentation Award, Best Paper Award)\nHwang, J., Lim, H. (2023). Design and review of a real time controlled kinetic facade system for natural lighting and ventilation",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2023 한국태양에너지학회추계학술발표대회/001.jpg"
@@ -645,9 +744,12 @@
     ]
   },
   {
+    "id": "d3a27abc-0f8b-4454-8b1e-14236f35e514",
     "title": "[2023 대한민국 녹색 건축대전(제1회 에너지 최적화 디자인 공모전)] 국토부장관상 수상",
+    "titleEn": "[2023 Korea Green Building Award (1st Energy Optimization Design Competition)] Minister of Land, Infrastructure and Transport Award",
     "date": "2023-01-24",
     "body": "수상자 : 황정윤, 김가은, 임도훈\n2023 대한민국 녹색건축대전 아이디어 부문에서\n\"실시간 키네틱파사드 및 자연환기 시스템의 실내환경 쾌적 제어\"\n🏅 [국토부 장관상 수상]",
+    "bodyEn": "Awardees: Jeongyun Hwang, Gaeun Kim, Dohun Lim\nIn the idea category of the 2023 Korea Green Building Award\n\"Indoor Environmental Comfort Control Using a Real Time Kinetic Facade and Natural Ventilation System\"\n🏅 [Minister of Land, Infrastructure and Transport Award]",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/[2023 대한민국 녹색 건축대전] 국토부장관상 수상/001.png"
@@ -667,9 +769,12 @@
     ]
   },
   {
+    "id": "93d07847-b82b-46eb-b854-34d05b27eb6b",
     "title": "2023 대한설비공학회 하계학술발표대회",
+    "titleEn": "2023 SAREK Summer Annual Conference",
     "date": "2023-01-23",
     "body": "발표자 : 이경재, 황정윤\n이경재, 임현우. (2023). 건물 에너지 규정에 의한 매개변수간의 상관관계가 주성분 분석에 미치는 영향\n황정윤, 임현우. (2023). 도시건물에너지 모델링에서 에너지 소비량을 통한 건물 형상정보 추정 (우수발표논문상)",
+    "bodyEn": "Presenters: Kyungjae Lee, Jeongyun Hwang\nLee, K., Lim, H. (2023). Effect of correlation among parameters under building energy codes on principal component analysis\nHwang, J., Lim, H. (2023). Estimation of building shape information through energy consumption in urban building energy modeling (Outstanding Presentation Award)",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2023 대한설비공학회 하계학술발표대회/001.jpg"
@@ -692,9 +797,12 @@
     ]
   },
   {
+    "id": "3784cc38-c5bd-46b5-922e-b02f70f79df6",
     "title": "2023 건물에너지 소비 데이터 통합관리 기반기술 개발 과제1회 킥오프 워크샵",
+    "titleEn": "2023 Building Energy Consumption Data Integrated Management Base Technology Development Project 1st Kickoff Workshop",
     "date": "2023-01-22",
     "body": "장소 : 인천 네스트 호텔\n참여자 : 이경재, 황정윤, 이신화, 김진엽\n발표자 : 임현우 교수님",
+    "bodyEn": "Venue: Incheon Nest Hotel\nParticipants: Kyungjae Lee, Jeongyun Hwang, Sinhwa Lee, Jinyeop Kim\nPresenter: Prof. Hyunwoo Lim",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2023 대한설비공학회 동계학술발표대회/001.jpg"
@@ -714,9 +822,12 @@
     ]
   },
   {
+    "id": "8a7a0979-b275-4206-a98e-9c49affdb8ba",
     "title": "2023 BEE Lab .  HVAC KOREA 참석",
+    "titleEn": "2023 BEE Lab. HVAC KOREA Attendance",
     "date": "2023-01-21",
     "body": "대한민국 기계설비전시회 참가\n참여자: 이경재, 황정윤, 이신화, 김진엽",
+    "bodyEn": "Participated in HVAC KOREA, Korea's Leading Exhibition on HVAC and Plumbing\nParticipants: Kyungjae Lee, Jeongyun Hwang, Sinhwa Lee, Jinyeop Kim",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2023 BEE Lab . HVAC KOREA 참석/001.jpg"
@@ -730,9 +841,12 @@
     ]
   },
   {
+    "id": "eabfa987-6714-42af-af5b-0f97e4f067dc",
     "title": "2022 대한설비공학회 동계학술발표대회",
+    "titleEn": "2022 SAREK Winter Annual Conference",
     "date": "2022-12-28",
     "body": "발표자: 박성현\n박성현, 조민기, 한아름, 임현우. (2022). 베이지안 보정을 활용한 그린리모델링 대상 국공립 어린이집 확률론적 건물 집단 에너지 모델 개발 (우수논문상)",
+    "bodyEn": "Presenter: Seonghyun Park\nPark, S., Cho, M., Han, A., Lim, H. (2022). Development of a probabilistic building group energy model for public daycare centers targeted for green remodeling using Bayesian calibration (Best Paper Award)",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2022 대한설비공학회 동계학술발표대회/001.jpg"
@@ -740,9 +854,12 @@
     ]
   },
   {
+    "id": "94a08306-373e-4353-a09f-3f43bfc426af",
     "title": "2022 한국친환경설비학회 추계학술발표대회",
+    "titleEn": "2022 KIEAE Fall Conference",
     "date": "2022-10-28",
     "body": "발표자 : 이경재, 박성현\n이경재, 황정윤, 임현우. (2022). 건물 에너지 설계 기준에 의한 입력변수의 상관관계를 고려한 민감도 분석\n[Building Technology 공모전] 박성현, 조민기, 한아름, 임현우 우수상 수상",
+    "bodyEn": "Presenters: Kyungjae Lee, Seonghyun Park\nLee, K., Hwang, J., Lim, H. (2022). Sensitivity analysis considering the correlation of input variables under building energy design standards\n[Building Technology Competition] Seonghyun Park, Mingi Cho, Areum Han, and Hyunwoo Lim received the Excellence Award",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2022 한국친환경설비학회 추계학술발표대회/001.jpg"
@@ -756,9 +873,12 @@
     ]
   },
   {
+    "id": "4b094a9c-9b9e-487c-9020-1d4e62af6e95",
     "title": "2022 그린리모델링 프로젝트",
+    "titleEn": "2022 Green Remodeling Project",
     "date": "2022-01-28",
     "body": "참여자: 이경재, 황정윤, 이신화, 박성현",
+    "bodyEn": "Participants: Kyungjae Lee, Jeongyun Hwang, Sinhwa Lee, Seonghyun Park",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2022 그린리모델링 프로젝트/001.jpg"
@@ -778,9 +898,12 @@
     ]
   },
   {
+    "id": "adae87b1-c4a0-40f1-b5cb-e43563af67b6",
     "title": "2022 대한설비공학회 하계학술발표대회",
+    "titleEn": "2022 SAREK Summer Annual Conference",
     "date": "2022-01-27",
     "body": "발표자 : 차명훈, 이경재\n차명훈, 임현우. (2022). 1인 가구 에너지 사용량을 이용한 재실자 스케쥴 파악\n이경재, 임현우. (2022). 사무소 건물의 에너지 성능 기준 향상을 고려한 민감도 분석",
+    "bodyEn": "Presenters: Myeonghun Cha, Kyungjae Lee\nCha, M., Lim, H. (2022). Identifying occupant schedules using single person household energy use\nLee, K., Lim, H. (2022). Sensitivity analysis considering the improvement of energy performance standards for office buildings",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2022 대한설비공학회 하계학술발표대회/001.jpg"
@@ -800,9 +923,12 @@
     ]
   },
   {
+    "id": "485c5323-cc54-45ef-b323-414625a3b8d9",
     "title": "2022 BEE Lab . 의 시작",
+    "titleEn": "2022 The Beginning of BEE Lab.",
     "date": "2022-01-26",
     "body": "차명훈, 이경재, 황정윤, 이신화, 박성현",
+    "bodyEn": "Myeonghun Cha, Kyungjae Lee, Jeongyun Hwang, Sinhwa Lee, Seonghyun Park",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/BEE Lab의 시작/001.jpg"
@@ -810,9 +936,12 @@
     ]
   },
   {
+    "id": "127fbe2d-2055-484c-82cf-8df2de47c68f",
     "title": "'2026 IAQVEC 12th LOS ANGELES' 참여",
+    "titleEn": "'2026 IAQVEC 12th LOS ANGELES' Participation",
     "date": "2026-05-18",
     "body": "발표자 : 이상민, 황정윤 \nLee, S., Lim, h. (2026, May 21). Optimal Load Shift Control Strategy for CHPWH system Based on Load Separation Method\nHwang, J., Lim, h. (2026, May 19). Improving urban building energy modeling (UBEM) accuracy through shape and energy use pattern calibration factors based on representative buildings",
+    "bodyEn": "Presenters: Sangmin Lee, Jeongyun Hwang \nLee, S., Lim, h. (2026, May 21). Optimal Load Shift Control Strategy for CHPWH system Based on Load Separation Method\nHwang, J., Lim, h. (2026, May 19). Improving urban building energy modeling (UBEM) accuracy through shape and energy use pattern calibration factors based on representative buildings",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2026 IAQVEC 12th LOS ANGELES/001.jpg"
@@ -826,9 +955,12 @@
     ]
   },
   {
+    "id": "b0a8b763-b530-401c-b51e-bd8c1e98f64d",
     "title": "'2026 AI서울테크 연구지원사업' 장학생 선정",
+    "titleEn": "'2026 AI Seoul Tech Research Support Program' Scholarship Selection",
     "date": "2026-06-19",
     "body": "이도연, 황정윤 석박통합과정생 '2026 AI서울테크연구지원사업' 장학생으로 선정되었습니다. ",
+    "bodyEn": "Doyeon Lee and Jeongyun Hwang, combined master's and doctoral program students, were selected as scholarship recipients for the '2026 AI Seoul Tech Research Support Program.' ",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2026 AI서울테크 연구지원사업 장학생선정/KakaoTalk_20260626_104133667.jpg"
@@ -842,9 +974,12 @@
     ]
   },
   {
+    "id": "d2bdfb5a-526f-4c9e-b231-a082a5133d7a",
     "title": "2026 대한설비공학회 하계학술발표대회",
+    "titleEn": "2026 SAREK Summer Annual Conference",
     "date": "2026-06-26",
     "body": "발표자 : 이도연, 조정현, 한지웅, 백재욱, 이현수 \n이도연, 임현우. (2026). 건물 운영진단을 위한 LLM기반 데이터 분석 방법론 설계\n조정현, 임현우. (2026). 엘리베이터 샤프트 내 균일 냉각을 위한 유전 알고리즘 기반 급·배기 위치 최적화\n한지웅, 임현우. (2026). 데이터센터 폐열 회수 및 방류 수온 복원을 위한 수열원 히트펌프 시스템\n백재욱, 임현우. (2026). 공동주택 단지 실측 데이터를 활용한 단위세대 유형별 에너지 성능 격차 분석 사례 연구 (우수발표논문상)\n이현수, 임현우. (2026). 도시 단위 건물 에너지 분석을 위한 일사 반영 대리모델 개발",
+    "bodyEn": "Presenters: Doyeon Lee, Junghyun Cho, Jiung Hann, Jaewook Baek, Hyeonsu Lee \nLee, D., Lim, H. (2026). Design of an LLM based data analysis methodology for building operation diagnostics\nCho, J., Lim, H. (2026). Genetic algorithm based optimization of supply and exhaust locations for uniform cooling within an elevator shaft\nHan, J., Lim, H. (2026). A water source heat pump system for data center waste heat recovery and discharge water temperature restoration\nBaek, J., Lim, H. (2026). A case study on the analysis of energy performance gaps by unit type using measured data from a multi family housing complex (Outstanding Presentation Award)\nLee, H., Lim, H. (2026). Development of a solar radiation reflecting surrogate model for urban scale building energy analysis",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/2026 대한설비공학회 하계학술발표대회/단체사진.jpg"
@@ -870,9 +1005,12 @@
     ]
   },
   {
+    "id": "69b44b42-2bc7-429a-8e23-bc6eae6259f0",
     "title": "2026 제3회 한일국제심포지엄",
+    "titleEn": "2026 3rd Korea-Japan International Symposium",
     "date": "2026-06-30",
     "body": "포스터 발표자 : 황정윤, 임지수\n황정윤, 임현우. (2026). Shape Calibration Factors for Improving the Accuracy of Representative Building-Based Urban Building Energy Model (UBEM) \n임지수, 임현우. (2026). A UAV Photogrammetry-Based Framework for Generating WWR as Geometric Input for District Building Energy Modeling",
+    "bodyEn": "Poster presenters: Jeongyun Hwang, Jisoo Lim\nHwang, J., Lim, H. (2026). Shape Calibration Factors for Improving the Accuracy of Representative Building-Based Urban Building Energy Model (UBEM) \nLim, J., Lim, H. (2026). A UAV Photogrammetry-Based Framework for Generating WWR as Geometric Input for District Building Energy Modeling",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/News/제3회 한일국제심포지엄/001.jpg"

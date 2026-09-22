@@ -19,12 +19,12 @@ Pages CMS 왼쪽 목록은 여섯 개입니다.
 2. 처음 한 번 `BEE-Lab-KU/bee-lab-ku.github.io` 저장소 **권한 승인**
 3. 왼쪽에서 **News** 또는 **Blog** 선택 → **새 항목 추가**
 4. 입력:
-   - **제목**
+   - **제목** (`title`, 한글) + **제목_영어** (`titleEn`, English): 모두 필수
    - **날짜**: 선택한 날짜 기준으로 **최신이 자동으로 맨 위**에 표시됩니다
-   - **본문** (짧은 글)
+   - **본문** (`body`, 한글) + **본문_영어** (`bodyEn`, English): 한글 본문이 있으면 영어 본문도 필수. 예외는 이미지만 있는 Blog(본문 생략 가능, 이 경우 body/bodyEn 모두 비움)
    - **사진**: "사진 추가"로 여러 장 등록 (첫 장이 카드 대표 이미지)
-     - 각 사진마다 **설명글(선택)** 을 달 수 있어요 → 상세보기에서 해당 사진 아래에 표시됩니다
-5. **저장** → 자동으로 저장소에 커밋되고, 1~2분 뒤 사이트에 반영
+     - 각 사진마다 한글 설명글(`caption`)과 영어 설명글(`captionEn`): 한글 설명이 있으면 영어 설명도 필수
+5. **저장** → 검증 후 성공하면 1~2분 뒤 사이트 반영. 실패하면 [메인 README의 Actions 확인법](../README.md#actions-탭에서-실패를-확인하고-고치는-방법)을 참고하세요.
 
 > 목록에서 항목을 드래그해 순서를 바꿀 수 있지만 **사이트 표시 순서에는 영향이 없습니다.** 화면 순서는 오직 날짜가 결정합니다. 순서를 바꾸고 싶으면 날짜를 고치세요.
 
@@ -54,7 +54,11 @@ Pages CMS 왼쪽 목록은 여섯 개입니다.
 ## 데이터 구조 (참고)
 
 - 글 목록: `beelab_content/news.json`, `beelab_content/blog.json`
-  - 각 항목: `{ "title": ..., "date": "YYYY-MM-DD", "body": ..., "images": [{ "src": "경로", "caption": "설명글" }, ...] }`
+  - 각 항목: `{ "title": "제목", "titleEn": "English Title", "date": "YYYY-MM-DD", "body": "본문...", "bodyEn": "English body...", "images": [{ "src": "경로", "caption": "설명글", "captionEn": "Caption in English" }, ...] }`
+  - `titleEn`: 필수
+  - `body` 있으면 `bodyEn` 필수. 예외는 `body`와 `bodyEn` 모두 비어있는 이미지 전용 Blog.
+  - 한글 `caption`이 있으면 `captionEn` 필수. 기존 영어 `caption`은 그대로 사용할 수 있음.
+  - 모든 필드가 완성되지 않으면 배포 실패(한글 fallback 없음).
   - 사이트는 `date` 내림차순(최신 먼저)으로 자동 정렬합니다.
 - 사진 파일: `beelab_images/News/...`, `beelab_images/Blog/...`
   - `images` 배열의 경로가 그대로 화면에 사용됩니다 (폴더명 규칙·개수 입력 불필요).
