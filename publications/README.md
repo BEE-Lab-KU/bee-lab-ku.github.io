@@ -8,12 +8,14 @@
 
 CMS 왼쪽에 Publications가 네 개로 나뉘어 있습니다. **여기서 고른 것이 곧 사이트의 탭**이 됩니다. 예전처럼 "종류" 드롭다운을 따로 고르지 않습니다.
 
-| CMS 항목 | 사이트 탭 | 파일 |
-|---|---|---|
-| International Publications (국제 저널) | International Publications | `publications/international.json` |
-| Domestic Publications (국내 저널) | Domestic Publications | `publications/domestic.json` |
-| International Conferences (국제 학회) | International Conferences | `publications/int-conf.json` |
-| Domestic Conferences (국내 학회) | Domestic Conferences | `publications/dom-conf.json` |
+| CMS 항목 | 사이트 탭 | 파일 | citation 입력 |
+|---|---|---|---|
+| International Publications (국제 저널) | International Publications | `publications/international.json` | 영어만. 기존 데이터 그대로 유지 |
+| Domestic Publications (국내 저널) | Domestic Publications | `publications/domestic.json` | 한글 + citationEn(영어) 모두 필수 |
+| International Conferences (국제 학회) | International Conferences | `publications/int-conf.json` | 영어만. 기존 데이터 그대로 유지 |
+| Domestic Conferences (국내 학회) | Domestic Conferences | `publications/dom-conf.json` | 한글 + citationEn(영어) 모두 필수 |
+
+국제 저널과 학회는 지금까지의 영어 `citation` 데이터를 그대로 씁니다. 국내 저널과 학회는 한글 `citation`과 영어 `citationEn`을 모두 필수로 입력해야 합니다.
 
 ## 2. 인용문: Google Scholar에서 APA 가져오기
 
@@ -42,31 +44,51 @@ Scholar도 가끔 틀립니다. 세 가지만 눈으로 봐 주세요.
 - 연도가 맞는지
 - 저널명이 약어가 아닌 정식 명칭인지
 
-### 국문 논문은 한글 그대로
+### 국문 논문: 한글과 영어 함께 입력
 
-한국 저널 논문은 Scholar에 **영문 제목으로** 올라와 있는 경우가 많습니다. 그대로 가져오면 사이트의 국문 논문 목록이 영어로 바뀝니다. **한글 표기를 쓰세요.**
+한국 저널 논문은 Scholar에 **영문 제목으로** 올라와 있는 경우가 많습니다. 국내 저널의 경우 한글 표기(한글 제목, 한글 저자)로 쓰고, **동시에 영어 버전도 입력해야 합니다.**
 
+한글 버전:
 ```
 황정윤, 김덕우, 임현우. (2026). 건물 에너지 분석을 위한 공공데이터 기반 단독형·단지형 건축물 분류 및
 공간·속성 정보 통합. 대한건축학회 논문집, 42(6), 283-290.
 ```
 
-권과 호, 페이지는 논문 첫 장이나 학회 홈페이지에서 확인해 채웁니다.
+영어 버전 (같은 논문):
+```
+Hwang, J., Kim, D., & Lim, H. (2026). Classification and integration of single-unit and complex buildings based on public data for building energy analysis. Journal of the Architectural Institute of Korea, 42(6), 283-290.
+```
 
-### 국내 학회는 직접 입력
+권과 호, 페이지는 논문 첫 장이나 학회 홈페이지에서 확인해 채웁니다. 둘 다 같은 숫자입니다.
 
-국내 학회 발표는 Scholar에 거의 올라오지 않습니다. 아래 틀에 맞춰 직접 씁니다.
+### 국내 학회는 한글과 영어 함께 입력
 
+국내 학회 발표는 Scholar에 거의 올라오지 않습니다. 한글과 영어 버전을 모두 직접 씁니다.
+
+한글 버전:
 ```
 이도연, 임현우. (2026). 건물 운영진단을 위한 LLM기반 데이터 분석 방법론 설계.
 2026년도 대한설비공학회 하계학술발표대회.
 ```
 
-권과 페이지가 있으면 학회명 뒤에 붙입니다.
+영어 버전:
+```
+Lee, D., & Lim, H. (2026). Design of LLM-based data analysis methodology for building operation diagnosis.
+2026 Summer Conference of the Society of Air-Conditioning and Refrigerating Engineers of Korea.
+```
 
+권과 페이지가 있으면 학회명 뒤에 붙입니다 (한글과 영어 모두).
+
+한글:
 ```
 이현수, 김지영, 임현우. (2025). 열적 특성 기반의 개인 맞춤형 좌석 선택 시스템 제안.
 한국태양에너지학회 추계학술발표대회, 45(2), 72.
+```
+
+영어:
+```
+Lee, H., Kim, J., & Lim, H. (2025). Proposal of personalized seat selection system based on thermal characteristics.
+Autumn Conference of the Korean Solar Energy Society, 45(2), 72.
 ```
 
 ## 3. APA 틀 정리
@@ -183,6 +205,7 @@ CMS에 한 번만 넣으면 됩니다. 예전에는 프로필과 연구 페이�
 
 파일은 종류별로 넷입니다. 어느 파일에 들어 있는지가 곧 종류이므로 `category` 필드는 없습니다.
 
+국제 저널·학회 (현재 형식 유지):
 ```json
 {
   "citation": "Lee, K., Lim, H., Kim, I., & Lee, S. (2025). Data-driven methodology for identifying gross floor area thresholds in building energy benchmarking. Journal of Building Engineering, 112, 113768.",
@@ -196,9 +219,25 @@ CMS에 한 번만 넣으면 됩니다. 예전에는 프로필과 연구 페이�
 }
 ```
 
+국내 저널·학회 (한글과 영어):
+```json
+{
+  "citation": "황정윤, 김덕우, 임현우. (2026). 건물 에너지 분석을 위한 공공데이터 기반 단독형·단지형 건축물 분류 및 공간·속성 정보 통합. 대한건축학회 논문집, 42(6), 283-290.",
+  "citationEn": "Hwang, J., Kim, D., & Lim, H. (2026). Classification and integration of single-unit and complex buildings based on public data for building energy analysis. Journal of the Architectural Institute of Korea, 42(6), 283-290.",
+  "date": "2026-06-30",
+  "doi": "https://doi.org/10.6993/JAIA.2026.42.6.283",
+  "badge": "KCI",
+  "first": "jungyun",
+  "members": [],
+  "research": ["research-da-eui-framework"],
+  "award": "우수논문상"
+}
+```
+
 | 필드 | 필수 | 설명 |
 |---|---|---|
-| `citation` | 예 | APA 인용문 한 줄 |
+| `citation` | 예 | APA 인용문 한 줄. 국제 출판은 영어, 국내 출판은 한글. |
+| `citationEn` | 국내만 | 국내 저널·학회는 필수. 영어 버전 인용문. 국제 출판에는 없음. |
 | `date` | 예 | `YYYY-MM-DD`. 정렬과 연도 표시에 쓰입니다 |
 | `doi` | 아니오 | `https://doi.org/...` 형태 |
 | `badge` | 아니오 | 저널만. `SCIE`, `SCOPUS`, `KCI` |
@@ -207,7 +246,7 @@ CMS에 한 번만 넣으면 됩니다. 예전에는 프로필과 연구 페이�
 | `research` | 아니오 | 연구 페이지 id 목록. 그 페이지에 표시됨 |
 | `award` | 아니오 | `우수논문상` 또는 `우수논문발표상` |
 
-사이트는 `date` 내림차순으로 자동 정렬합니다.
+사이트는 `date` 내림차순으로 자동 정렬합니다. 국내 출판에서 `citationEn`이 없으면 검증 실패합니다. 국내 한글 `citation` 변경 후 `citationEn`을 갱신하지 않아도 검증 실패입니다.
 
 설정 파일은 저장소 루트의 `.pages.yml`입니다.
 

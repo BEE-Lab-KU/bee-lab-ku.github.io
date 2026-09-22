@@ -1,11 +1,13 @@
 [
   {
+    "id": "46591f9f-e29d-4b82-bb90-3998c3d7b694",
     "citation": "Kim, H.-G., Shin, H., Chu, H.-G., Yi, D. H., Park, S.-L., Kim, D., Lim, H., Yoon, S., Kim, E.-J., Joe, J., Kim, S., Ahn, H., Heo, Y., Yang, I.-H., & Kim, D.-W. (2026). DataNet: linking multi-faceted building energy datasets for effective performance analysis at scale. Energy and Buildings, 369, 117886.",
     "date": "2026-10-15",
     "doi": "https://doi.org/10.1016/j.enbuild.2026.117886",
     "badge": "SCIE"
   },
   {
+    "id": "a6e3cffb-6772-4d22-9b40-f94a8b8ee76c",
     "citation": "Lee, S., Lim, H., Lee, K., Heller, J., & Spielman, S. (2026). Load separation method for Enhancing performance of central heat pump water heater system with hot water recirculation. Energy and Buildings, 362, 117540.",
     "date": "2026-07-01",
     "doi": "https://doi.org/10.1016/j.enbuild.2026.117540",
@@ -18,6 +20,7 @@
     ]
   },
   {
+    "id": "0f47fa83-285d-4049-b642-31f81778afab",
     "citation": "Hwang, J., Lee, K., Lee, D., Kim, D.-W., & Lim, H. (2025). Analysis of energy consumption impacts using public data-based building shape index: a case study of office buildings in Seoul. Journal of Building Engineering, 116, 114643.",
     "date": "2025-12-15",
     "doi": "https://doi.org/10.1016/j.jobe.2025.114643",
@@ -31,12 +34,14 @@
     ]
   },
   {
+    "id": "aa5d45d0-077f-4436-a5bd-3af14241b74d",
     "citation": "Shim, J., Lim, H., Song, D., & Park, S. (2025). Continuous or intermittent heating?: Uncovering practical heating control strategies amid common misconceptions about radiant floor heating. Energy and Buildings, 348, 116501.",
     "date": "2025-12-01",
     "doi": "https://doi.org/10.1016/j.enbuild.2025.116501",
     "badge": "SCIE"
   },
   {
+    "id": "07d4aeb9-c9ca-4195-9bab-fc17d794397a",
     "citation": "Lee, D., Lim, H., Lim, J., Kim, S., Yoon, S., Kim, D.-W., & Shim, J. (2025). Analyzing energy signature of building retrofits using public data. Building and Environment, 285, 113525.",
     "date": "2025-11-01",
     "doi": "https://doi.org/10.1016/J.BUILDENV.2025.113525",
@@ -44,6 +49,7 @@
     "first": "doyeon"
   },
   {
+    "id": "cea4646d-36c5-47a9-ac36-fe1a98dc7829",
     "citation": "Lee, K., Lim, H., Kim, I., & Lee, S. (2025). Data-driven methodology for identifying gross floor area thresholds in building energy benchmarking. Journal of Building Engineering, 112, 113768.",
     "date": "2025-10-15",
     "doi": "https://doi.org/10.1016/j.jobe.2025.113768",
@@ -54,6 +60,7 @@
     ]
   },
   {
+    "id": "949259b6-2319-4210-bfaa-16c361e268d3",
     "citation": "Lee, K., Lim, H., Hwang, J., & Lee, D. (2025). Development of building benchmarking index for improving gross-floor-area-based energy use intensity. Energy and Buildings, 328, 115103.",
     "date": "2025-02-01",
     "doi": "https://doi.org/10.1016/j.enbuild.2024.115103",
@@ -64,6 +71,7 @@
     ]
   },
   {
+    "id": "57379eb4-4bb3-4eb9-a6b7-91cf21cdfbee",
     "citation": "Hwang, J., Lim, H., & Lim, J. (2024). Reducing uncertainty of building shape information in urban building energy modeling using Bayesian calibration. Sustainable Cities and Society, 116, 105895.",
     "date": "2024-12-01",
     "doi": "https://doi.org/10.1016/j.scs.2024.105895",
@@ -74,6 +82,7 @@
     "first": "jungyun"
   },
   {
+    "id": "3a158b69-a185-4732-9079-349789398f70",
     "citation": "Lee, K., Lim, H., Hwang, J., & Lee, D. (2024). Evaluating missing data handling methods for developing building energy benchmarking models. Energy, 308, 132979.",
     "date": "2024-11-01",
     "doi": "https://doi.org/10.1016/j.energy.2024.132979",
@@ -84,6 +93,7 @@
     ]
   },
   {
+    "id": "d0984d03-035d-4810-8444-724232543f2e",
     "citation": "Lee, K., & Lim, H. (2024). Correlation analysis of building parameters according to ASHRAE Standard 90.1. Journal of Building Engineering, 82, 108130.",
     "date": "2024-04-01",
     "doi": "https://doi.org/10.1016/j.jobe.2023.108130",
@@ -91,114 +101,133 @@
     "first": "kyungjae"
   },
   {
+    "id": "f4a92e27-3c7c-4d5a-b295-b2b6abbbb1d9",
     "citation": "Choi, S., Lim, H., Lim, J., & Yoon, S. (2024). Retrofit building energy performance evaluation using an energy signature-based symbolic hierarchical clustering method. Building and Environment, 251, 111206.",
     "date": "2024-03-01",
     "doi": "https://doi.org/10.1016/j.buildenv.2024.111206",
     "badge": "SCIE"
   },
   {
+    "id": "b69683ed-be17-47e5-8c1d-9e92b290e7d8",
     "citation": "Choi, Y., Jeong, E.-S., Mun, J.-H., Yang, K.-H., Lee, S.-J., & Lim, H. (2023). Thermal performance and condensation analysis of insulated concrete panels using a thermal-meta structure. Applied Thermal Engineering, 230, 120761.",
     "date": "2023-07-25",
     "doi": "https://doi.org/10.1016/j.applthermaleng.2023.120761",
     "badge": "SCIE"
   },
   {
+    "id": "a078b56a-6682-4185-8c62-c46fe2d0d5e5",
     "citation": "Lim, J., Ooka, R., & Lim, H. (2022). Multicollinearity issue for the parameterization of urban ventilation potential with urban morphology. Sustainable Cities and Society, 87, 104218.",
     "date": "2022-12-01",
     "doi": "https://doi.org/10.1016/j.scs.2022.104218",
     "badge": "SCIE"
   },
   {
+    "id": "31e7da20-8f6b-442d-be71-4308ccc061d3",
     "citation": "Banks, A., Grist, C., Heller, J., & Lim, H. (2022). Field Measurement of Central CO2 Heat Pump Water Heater for Multifamily Retrofit. Sustainability, 14(13), 8048.",
     "date": "2022-07-01",
     "doi": "https://doi.org/10.3390/su14138048",
     "badge": "SCIE"
   },
   {
+    "id": "4521de37-83d7-41e4-aa95-b09f6419037f",
     "citation": "Park, S., Cai, Y., Lim, H., & Song, D. (2022). Analysis of vertical movement of particulate matter due to the stack effect in high-rise buildings. Atmospheric Environment, 279, 119113.",
     "date": "2022-06-15",
     "doi": "https://doi.org/10.1016/j.atmosenv.2022.119113",
     "badge": "SCIE"
   },
   {
+    "id": "d6c3a655-2d30-4b04-a23f-cd2ebe48e380",
     "citation": "Bak, J., Koo, J., Yoon, S., & Lim, H. (2022). Thermal Draft Load Coefficient for Heating Load Differences Caused by Stack-Driven Infiltration by Floor in Multifamily High-Rise Buildings. Energies, 15(4), 1386.",
     "date": "2022-02-14",
     "doi": "https://doi.org/10.3390/en15041386",
     "badge": "SCIE"
   },
   {
+    "id": "f8c24573-a10b-4dc5-bc28-7629fb5e6c28",
     "citation": "Lim, H., & Zhai, Z. J. (2022). Estimating unknown parameters of a building stock using a stochastic-deterministic-coupled approach. Energy and Buildings, 255, 111673.",
     "date": "2022-01-15",
     "doi": "https://doi.org/10.1016/j.enbuild.2021.111673",
     "badge": "SCIE"
   },
   {
+    "id": "5a73acdf-aa93-4784-b337-aaf671bb715f",
     "citation": "Bak, J., Yoon, S., Song, D., Lim, H., & Kim, Y.-S. (2020). Weather-driven infiltration and interzonal airflow in a multifamily high-rise building: Dwelling infiltration distribution. Building and Environment, 181, 107098.",
     "date": "2020-08-15",
     "doi": "https://doi.org/10.1016/j.buildenv.2020.107098",
     "badge": "SCIE"
   },
   {
+    "id": "f969ea38-e08f-4a1f-93c0-4d7bb81515ea",
     "citation": "Kim, J., Song, D., Kim, S., Park, S., Choi, Y., & Lim, H. (2020). Energy-Saving Potential of Extending Temperature Set-Points in a VRF Air-Conditioned Building. Energies, 13(9), 2160.",
     "date": "2020-05-01",
     "doi": "https://doi.org/10.3390/en13092160",
     "badge": "SCIE"
   },
   {
+    "id": "bb155c6e-7cde-4b73-809c-8363ab545829",
     "citation": "Kim, J., Myoung, J., Lim, H., & Song, D. (2020). Efficiency Gap Caused by the Input Data in Evaluating Energy Efficiency of Low-Income Households’ Energy Retrofit Program. Sustainability, 12(7), 2774.",
     "date": "2020-04-01",
     "doi": "https://doi.org/10.3390/su12072774",
     "badge": "SCIE"
   },
   {
+    "id": "2f1484d0-5977-403d-9b74-25943abcd0aa",
     "citation": "Lim, H., Seo, J., Song, D., Yoon, S., & Kim, J. (2020). Interaction analysis of countermeasures for the stack effect in a high-rise office building. Building and Environment, 168, 106530.",
     "date": "2020-01-15",
     "doi": "https://doi.org/10.1016/j.buildenv.2019.106530",
     "badge": "SCIE"
   },
   {
+    "id": "c98e6512-8b8f-4fb1-8819-ef64f671f962",
     "citation": "Yoon, S., Song, D., Kim, J., Kim, J., Lim, H., & Koo, J. (2020). Identifying stack-driven indoor environmental problems and associated pressure difference in high-rise residential buildings: Airflow noise and draft. Building and Environment, 168, 106483.",
     "date": "2020-01-15",
     "doi": "https://doi.org/10.1016/j.buildenv.2019.106483",
     "badge": "SCIE"
   },
   {
+    "id": "0aff86b4-e731-42ff-9122-27b62840ea8a",
     "citation": "Song, D., Yoon, S., Jeong, C., Kim, J., & Lim, H. (2019). Heat, vapor, and CO2 transportation caused by airflow in high-rise residential buildings. Building and Environment, 160, 106176.",
     "date": "2019-08-01",
     "doi": "https://doi.org/10.1016/j.buildenv.2019.106176",
     "badge": "SCIE"
   },
   {
+    "id": "7dbb5d5c-7ae7-4085-bd2e-153c77ea725a",
     "citation": "Yoon, S., Song, D., Kim, J., & Lim, H. (2019). Stack-driven infiltration and heating load differences by floor in high-rise residential buildings. Building and Environment, 157, 366-379.",
     "date": "2019-06-15",
     "doi": "https://doi.org/10.1016/j.buildenv.2019.05.006",
     "badge": "SCIE"
   },
   {
+    "id": "ee63bf2f-549b-4704-8ab0-8ab7a68beb3a",
     "citation": "Lim, H., & Zhai, Z. J. (2018). Influences of energy data on Bayesian calibration of building energy model. Applied Energy, 231, 686-698.",
     "date": "2018-12-01",
     "doi": "https://doi.org/10.1016/j.apenergy.2018.09.156",
     "badge": "SCIE"
   },
   {
+    "id": "12ece0ee-2a09-4928-a89b-9cb6fdd00b95",
     "citation": "Lim, H., & Zhai, Z. J. (2017). Comprehensive evaluation of the influence of meta-models on Bayesian calibration. Energy and Buildings, 155, 66-75.",
     "date": "2017-11-15",
     "doi": "https://doi.org/10.1016/j.enbuild.2017.09.009",
     "badge": "SCIE"
   },
   {
+    "id": "adb023af-f79e-492e-9474-e431d4c31bfe",
     "citation": "Lim, H., & Zhai, Z. J. (2017). Review on stochastic modeling methods for building stock energy prediction. Building Simulation, 10(5), 607-624.",
     "date": "2017-05-29",
     "doi": "https://doi.org/10.1007/s12273-017-0383-y",
     "badge": "SCIE"
   },
   {
+    "id": "c96ba914-ce61-4c13-b529-17406f4f49d8",
     "citation": "Song, D., Lim, H., Lee, J., & Seo, J. (2013). Application of the mechanical ventilation in elevator shaft space to mitigate stack effect under operation stage in high-rise buildings. Indoor and Built Environment, 23(1), 81-91.",
     "date": "2014-05-08",
     "doi": "https://doi.org/10.1177/1420326X13480055",
     "badge": "SCIE"
   },
   {
+    "id": "52bebcc9-e9f1-4037-82bf-f818de93312c",
     "citation": "Kim, I., Cho, J. Y., & Lim, H. (2026). Urban Electricity Load Flattening through Building-Use Mix Adjustment. Sustainable Cities and Society, 107808.",
     "date": "2026-10-15",
     "doi": "https://doi.org/10.1016/j.scs.2026.107808",
@@ -209,6 +238,7 @@
     "first": "inseob"
   },
   {
+    "id": "c10cfcb0-e459-4f5e-b7bc-851468a42170",
     "citation": "Jo, J. H., Lim, H., Yoon, S., & Jing, J. (2026). Ten questions concerning stack effect issues in high-rise buildings. Building and Environment, 115049.",
     "date": "2026-10-01",
     "doi": "https://doi.org/10.1016/j.buildenv.2026.115049",

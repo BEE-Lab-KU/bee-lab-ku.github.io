@@ -34,10 +34,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # github.event.before can be several commits back in a multi-commit push.
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
+      - name: 번역 검증
+        run: |
+          BASE="${{ github.event.before }}"
+          if [ -n "$BASE" ] && [ "$BASE" != "0000000000000000000000000000000000000000" ]; then
+            python3 .github/scripts/validate_translations.py --base "$BASE"
+          else
+            python3 .github/scripts/validate_translations.py
+          fi
 
       - run: pip install --quiet PyYAML
 
@@ -53,7 +65,19 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "논문 태그와 CMS 목록 자동 동기화
+          git commit -m "논문 태그와 CMS 목록 자동 동기화" -m "$(cat /tmp/sync-summary.txt 2>/dev/null || true)
 
-          $(cat /tmp/sync-summary.txt 2>/dev/null || true)"
-          git push
+          source-base: ${{ github.event.before }}
+          source-sha: ${{ github.event.after }}
+          workflow-run: ${{ github.run_id }}"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "push 경합으로 재시도합니다 ($attempt/3)."
+            sleep 2
+          done
+          echo "세 번의 push 재시도가 모두 실패했습니다." >&2
+          exit 1

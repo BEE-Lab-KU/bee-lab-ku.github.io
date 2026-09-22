@@ -54,12 +54,24 @@
           "· 대한설비공학회, 2021 – Present",
           "· 한국건축학회, 2021 – Present",
           "· 녹색건축인증 (G-SEED) 심의위원회, 2023 – Present"
+        ],
+        "linesEn": [
+          "· Early Career Editorial Board Member, <em>Energy and Buildings</em>, Mar. 2023 – Present",
+          "· Reviewer: Energy and Buildings, Building and Environment, Applied Energy, Sustainable Cities and Society, Building Simulation",
+          "· Associate Member, ASHRAE, Jul. 2020 – Present",
+          "· Korean Institute of Architectural Sustainable Environment and Building Systems (KIAEBS), 2021 – Present",
+          "· The Society of Air-Conditioning and Refrigerating Engineers of Korea (SAREK), 2021 – Present",
+          "· Architectural Institute of Korea (AIK), 2021 – Present",
+          "· G-SEED (Green Standard for Energy and Environmental Design) Review Committee, 2023 – Present"
         ]
       },
       {
         "title": "Patents",
         "lines": [
           "· 냉매유량가변형 시스템을 이용한 건물 내 연돌효과 저감 시스템 및 그의 구동 방법 (등록)<br><span style=\"font-size:13px;color:var(--text-muted);\">특허 제 10-2971386 호 · 출원 2025.03.26 · 등록 2026.05.27 · 발명자 임현우 · 권리자 건국대학교 산학협력단</span>"
+        ],
+        "linesEn": [
+          "· A Stack Effect Reduction System for Buildings Using a Variable Refrigerant Flow Rate System, and Its Operating Method (Registered)<br><span style=\"font-size:13px;color:var(--text-muted);\">Patent No. 10-2971386, Filed Mar. 26, 2025, Registered May 27, 2026, Inventor Hyunwoo Lim, Assignee Konkuk University Industry-Academic Cooperation Foundation</span>"
         ]
       },
       {
@@ -68,6 +80,15 @@
           "· 우수논문상, 한국태양에너지학회, 추계학술발표대회, 2023",
           "· 최상홍 인재 신진공학자상, 대한설비공학회, 2023",
           "· 우수논문상, 대한설비공학회, 동계학술발표대회, 2022",
+          "· Doctoral Assistantship for Completion of Dissertation, University of Colorado Boulder, Jan. 2016",
+          "· Award for Excellence in Research, Sungkyunkwan University, Mar. 2009",
+          "· Brain Korea 21 Research Fellowship, Korea Research Foundation, Mar. 2009, Sep. 2008",
+          "· The First Prize of Capstone Design Project in Architectural Engineering, Sungkyunkwan University, Nov. 2007"
+        ],
+        "linesEn": [
+          "· Excellent Paper Award, Korean Solar Energy Society, Fall Annual Conference, 2023",
+          "· Choi Sang-hong Young Engineer Award, SAREK, 2023",
+          "· Excellent Paper Award, SAREK, Winter Annual Conference, 2022",
           "· Doctoral Assistantship for Completion of Dissertation, University of Colorado Boulder, Jan. 2016",
           "· Award for Excellence in Research, Sungkyunkwan University, Mar. 2009",
           "· Brain Korea 21 Research Fellowship, Korea Research Foundation, Mar. 2009, Sep. 2008",
@@ -93,18 +114,21 @@
           "slug": "doyeon",
           "avatar": "Photos/members/doyeon.jpg",
           "name": "이도연",
+          "nameEn": "Doyeon Lee",
           "role": "Ph.D. Student"
         },
         {
           "slug": "inseob",
           "avatar": "Photos/members/inseob.jpg",
           "name": "김인섭",
+          "nameEn": "Inseop Kim",
           "role": "Master's Student"
         },
         {
           "slug": "jiyoung",
           "avatar": "Photos/members/jiyoung.jpg",
           "name": "김지영",
+          "nameEn": "Jiyoung Kim",
           "role": "Undergraduate Researcher"
         }
       ]
@@ -116,24 +140,28 @@
           "slug": "sangmin",
           "avatar": "Photos/members/sangmin.jpg",
           "name": "이상민",
+          "nameEn": "Sangmin Lee",
           "role": "Master's Student"
         },
         {
           "slug": "junghyun",
           "avatar": "Photos/members/junghyun.jpg",
           "name": "조정현",
+          "nameEn": "Junghyun Cho",
           "role": "Master's Student"
         },
         {
           "slug": "jaeuk",
           "avatar": "Photos/members/jaeuk.jpg",
           "name": "백재욱",
+          "nameEn": "Jaewook Baek",
           "role": "Master's Student"
         },
         {
           "slug": "jiung",
           "avatar": "Photos/members/jiung.png",
           "name": "한지웅",
+          "nameEn": "Jiung Hann",
           "role": "Master's Student"
         }
       ]
@@ -145,18 +173,21 @@
           "slug": "jungyun",
           "avatar": "Photos/members/jungyun.jpg",
           "name": "황정윤",
+          "nameEn": "Jeongyun Hwang",
           "role": "Ph.D. Student"
         },
         {
           "slug": "jisu",
           "avatar": "Photos/members/jisu.jpg",
           "name": "임지수",
+          "nameEn": "Jisoo Lim",
           "role": "Master's Student"
         },
         {
           "slug": "hyunsu",
           "avatar": "Photos/members/hyunsu.jpg",
           "name": "이현수",
+          "nameEn": "Hyeonsu Lee",
           "role": "Undergraduate Researcher"
         }
       ]
@@ -168,12 +199,14 @@
           "slug": "seyeon",
           "avatar": "Photos/members/seyeon.jpg",
           "name": "김세연",
+          "nameEn": "Seyeon Kim",
           "role": "Undergraduate Researcher"
         },
         {
           "slug": "junho",
           "avatar": "Photos/members/junho.jpg",
           "name": "송준호",
+          "nameEn": "Junho Song",
           "role": "Undergraduate Researcher"
         }
       ]
@@ -184,203 +217,249 @@
       "slug": "kyungjae",
       "avatar": "Photos/members/kyungjae.jpg",
       "name": "이경재",
+      "nameEn": "Kyungjae Lee",
       "role": "M.S. in Architectural Engineering (2025)"
     }
   ],
   "profiles": {
     "sangmin": {
       "name": "이상민",
+      "nameEn": "Sangmin Lee",
       "roleLine": "Master's Student · Building Energy Systems Group",
       "avatar": "Photos/members/sangmin.jpg",
       "bio": "공동주택에서 히트펌프를 활용한 중앙식 급탕 시스템 (Central Heat Pump Water Heater, CHPWH)에 대해 연구하고 있습니다. CHPWH 시스템 적용 시 발생하는 반환수로 인한 성능 저하 문제 해결과, 시스템 제어 최적화에 집중하고 있습니다.",
+      "bioEn": "I am researching a central heat pump water heater (CHPWH) system for multi-family housing. My work focuses on resolving the performance degradation caused by return water in CHPWH systems and on optimizing system control.",
       "research": [
         {
           "page": "research-chpwh",
           "title": "공동주택 중앙식 히트펌프 급탕 시스템의 반환수 영향 저감을 위한 부하 분리와 적응형 Load Shift 최적화",
+          "titleEn": "Load Separation and Adaptive Load Shift Optimization to Reduce the Impact of Return Water in a Central Heat Pump Water Heater System for Multi-Family Housing",
           "tags": "#CHPWH #load_shift #TRNSYS #hot_water_recirculation"
         },
         {
           "page": "research-pmv-sensor",
           "title": "도서관 최적 좌석 제시를 위한 PMV 가상센서 시스템 구축",
+          "titleEn": "Development of a PMV Virtual Sensor System for Optimal Seat Recommendation in Libraries",
           "tags": "#virtual_sensor #thermal_comfort #PMV #optimal_seat"
         },
         {
           "page": "research-sample-size",
           "title": "최소 샘플 크기 추정",
+          "titleEn": "Minimum Sample Size Estimation",
           "tags": "#sample_size #representation #building_type #urban_energy"
         }
       ]
     },
     "junghyun": {
       "name": "조정현",
+      "nameEn": "Junghyun Cho",
       "roleLine": "Master's Student · Building Energy Systems Group",
       "avatar": "Photos/members/junghyun.jpg",
       "bio": "고층 건물에서 발생하는 기류 특성인 연돌효과에 대해 연구하고 있습니다. 여러가지 연돌효과 저감 방안과 저감 방안이 건물의 에너지 및 재실자 측면에 미치는 영향에 대한 분석에 집중하고 있습니다.",
+      "bioEn": "I am researching the stack effect, an airflow phenomenon that occurs in high-rise buildings. My work focuses on various stack effect mitigation strategies and on analyzing how these strategies affect building energy performance and occupants.",
       "research": [
         {
           "page": "research-elevator",
           "title": "엘리베이터 샤프트 내 균일 냉각을 위한 급배기 위치 최적화",
+          "titleEn": "Optimization of Supply and Exhaust Locations for Uniform Cooling in Elevator Shafts",
           "tags": "#stack_effect #elevator_shaft_cooling #supply_exhaust #stratification"
         }
       ]
     },
     "jaeuk": {
       "name": "백재욱",
+      "nameEn": "Jaewook Baek",
       "roleLine": "Master's Student · Building Energy Systems Group",
       "avatar": "Photos/members/jaeuk.jpg",
       "bio": "제로에너지 건축물 인증 체계와 건물 에너지 등급 향상을 위한 설비 최적화를 연구하고 있습니다.",
+      "bioEn": "I study the zero energy building certification system and system optimization for improving building energy ratings.",
       "research": [
         {
           "page": "research-zeb-economy",
           "title": "ZEB 에너지 사용량, 경제성 분석",
+          "titleEn": "ZEB Energy Consumption and Economic Analysis",
           "tags": "#ZEB #ECO2 #BEMS #LCC"
         }
       ]
     },
     "jiung": {
       "name": "한지웅",
+      "nameEn": "Jiung Hann",
       "roleLine": "Master's Student · Building Energy Systems Group",
       "avatar": "Photos/members/jiung.png",
       "bio": "데이터센터 폐열 회수 및 건물 내 히트펌프 시스템을 연구하고 있습니다. 또한 건물 자동 제어를 위한 AI Agent 파이프라인 구축에 집중하고 있습니다.",
+      "bioEn": "I research data center waste heat recovery and heat pump systems in buildings. I also focus on building an AI agent pipeline for automated building control.",
       "research": [
         {
           "page": "research-whr-dc",
           "title": "데이터센터 폐열을 활용한 급탕 및 수열원 온도 유지 방안",
+          "titleEn": "Domestic Hot Water Supply and Water Source Temperature Maintenance Using Data Center Waste Heat",
           "tags": "#data_center #WWHP #waste_heat_recovery"
         },
         {
           "page": "research-ai",
           "title": "이미지·벡터 하이브리드 기반 CAD 도면 공간 자동 인식 엔진 및 LLM 기반 자연어 질의응답 시스템 개발",
+          "titleEn": "Development of an Image and Vector Hybrid CAD Drawing Space Recognition Engine and an LLM-Based Natural Language Question Answering System",
           "tags": "#AI_agent #LLM #CAD #ontology"
         },
         {
           "page": "research-cascade-hp",
           "title": "건물 내 동시 냉방·급탕 수요의 열적 결합을 통한 캐스케이드 히트펌프 시스템",
+          "titleEn": "A Cascade Heat Pump System Based on Thermal Coupling of Simultaneous Cooling and Domestic Hot Water Demand in Buildings",
           "tags": "#cascade_heat_pump #IWHP #Modelica #5GDHC"
         }
       ]
     },
     "doyeon": {
       "name": "이도연",
+      "nameEn": "Doyeon Lee",
       "roleLine": "Ph.D. Student · Building Data Analytics & AI Group",
       "avatar": "Photos/members/doyeon.jpg",
       "bio": "건물 에너지 데이터의 패턴 분석 및 이상 탐지 연구를 수행하고 있으며, 머신러닝 기반 에너지 효율 진단 기법 개발에 관심이 있습니다.",
+      "bioEn": "I conduct research on pattern analysis and anomaly detection in building energy data, and I am interested in developing machine learning-based methods for diagnosing energy efficiency.",
       "research": [
         {
           "page": "research-da-ref-building",
           "title": "업무시설의 에너지 기여도 기반 대표형상 건물(Reference Building) 도출 프레임워크",
+          "titleEn": "A Framework for Deriving a Representative Reference Building Shape Based on Energy Contribution in Office Buildings",
           "tags": "#reference_building #building_shape #office_building"
         },
         {
           "page": "research-da-eui-framework",
           "title": "업종별 EUI 도출 프레임워크",
+          "titleEn": "A Framework for Deriving EUI by Building Use Type",
           "tags": "#mixed_use_building #energy_benchmarking #eui_framework"
         },
         {
           "page": "research-da-green-retrofit",
           "title": "에너지 시그니처를 활용한 그린 리모델링 효과 분석",
+          "titleEn": "Analysis of Green Remodeling Effects Using Energy Signature",
           "tags": "#building_retrofit #energy_signature #energy_performance"
         }
       ]
     },
     "inseob": {
       "name": "김인섭",
+      "nameEn": "Inseop Kim",
       "roleLine": "Master's Student · Building Data Analytics & AI Group",
       "avatar": "Photos/members/inseob.jpg",
       "bio": "딥러닝 기반 건물 에너지 수요 예측 연구를 수행하고 있으며, 시계열 모델링 및 전이 학습 기법에 관심이 있습니다.",
+      "bioEn": "I conduct research on deep learning-based building energy demand forecasting, and I am interested in time series modeling and transfer learning techniques.",
       "research": [
         {
           "page": "research-da-ubem-pattern",
           "title": "UBEM 에너지 사용 패턴 보정",
+          "titleEn": "Calibration of UBEM Energy Use Patterns",
           "tags": "#UBEM #bayesian_calibration #energy_pattern"
         },
         {
           "page": "research-da-urban-load",
           "title": "도시 에너지 부하 평탄화",
+          "titleEn": "Urban Energy Load Flattening",
           "tags": "#load_flattening #building_optimization #peak_demand"
         },
         {
           "page": "research-da-apt-eui",
           "title": "아파트·주상복합 EUI 비교 분석",
+          "titleEn": "Comparative Analysis of EUI in Apartments and Mixed-Use Residential Buildings",
           "tags": "#EUI #apartment #mixed_use_residential"
         }
       ]
     },
     "jiyoung": {
       "name": "김지영",
+      "nameEn": "Jiyoung Kim",
       "roleLine": "Undergraduate Researcher · Building Data Analytics & AI Group",
       "avatar": "Photos/members/jiyoung.jpg",
       "bio": "재실자 감지 시스템 기반의 고정밀 재실 스케줄 도출 및 에너지 최적화 방안을 연구하고 있습니다. 실내 재실 패턴 분석과 연계한 건물 동적 제어 및 효율적인 에너지 수요 관리 시스템 구축에 집중하고 있습니다.",
+      "bioEn": "I research high-precision occupancy schedule derivation and energy optimization strategies based on occupancy detection systems. My work focuses on dynamic building control linked to indoor occupancy pattern analysis and on building an efficient energy demand management system.",
       "research": [
         {
           "page": "research-da-preprocessing",
           "title": "로지스틱 맵 이미지 암호화 기법을 적용한 딥러닝 기반 재실자 감지 시스템 제안",
+          "titleEn": "A Deep Learning-Based Occupancy Detection System Using Logistic Map Image Encryption",
           "tags": "#occupancy_detection #logistic_map #encryption #CNN #YOLO"
         },
         {
           "page": "research-da-thermal-seat",
           "title": "열적 특성 기반의 개인 맞춤형 좌석 선택 시스템 제안",
+          "titleEn": "A Personalized Seat Selection System Based on Individual Thermal Characteristics",
           "tags": "#PMV #virtual_sensing #thermal_comfort #personalized"
         }
       ]
     },
     "jungyun": {
       "name": "황정윤",
+      "nameEn": "Jeongyun Hwang",
       "roleLine": "Ph.D. Student · UBEM Group",
       "avatar": "Photos/members/jungyun.jpg",
       "bio": "도시 단위 건물 에너지 해석을 위한 건물 특성 기반 지표와 에너지 모델을 개발하고 있습니다. 형상 특성을 반영한 형상 지표를 제작하고, 베이지안 추론과 강화학습 보정으로 모델의 불확실성을 고려하여 정확도를 높이는 방법을 탐구합니다.",
+      "bioEn": "I develop building-feature-based indices and energy models for city-scale building energy analysis. I create shape indices that reflect geometric characteristics and explore methods to improve model accuracy by accounting for uncertainty through Bayesian inference and reinforcement learning calibration.",
       "research": [
         {
           "page": "research-um-ubem",
           "title": "도시 단위 건물 에너지 해석을 위한 건물 특성 지표 및 도시 건물 에너지 모델(UBEM) 개발",
+          "titleEn": "Development of Building Feature Indices and an Urban Building Energy Model (UBEM) for City-Scale Building Energy Analysis",
           "tags": "#UBEM #bayesian_calibration #uncertainty_quantification #reinforcement_learning #building_feature_index"
         }
       ]
     },
     "jisu": {
       "name": "임지수",
+      "nameEn": "Jisoo Lim",
       "roleLine": "Master's Student · UBEM Group",
       "avatar": "Photos/members/jisu.jpg",
       "bio": "AI 객체 인식과 3D 비전 기술을 활용한 건물 에너지 데이터 자동 구축 및 District Building Energy Modeling 연구를 수행하고 있습니다.",
+      "bioEn": "I conduct research on automated building energy data construction and District Building Energy Modeling using AI object recognition and 3D vision technology.",
       "research": [
         {
           "page": "research-um-dbem",
           "title": "Load Sharing Community 조성을 위한 District Building Energy Modeling 구축",
+          "titleEn": "Development of a District Building Energy Model for Establishing a Load Sharing Community",
           "tags": "#UBEM #DBEM #load_sharing_community #computer_vision #3D_photogrammetry"
         }
       ]
     },
     "hyunsu": {
       "name": "이현수",
+      "nameEn": "Hyeonsu Lee",
       "roleLine": "Undergraduate Researcher · UBEM Group",
       "avatar": "Photos/members/hyunsu.jpg",
       "bio": "도시 건물 에너지 모델(UBEM) 기반의 도시 단위 에너지 사용량 예측 연구를 수행하고 있으며, 대리모델 기반 연산 효율화와 웹 기반 도시 에너지 플랫폼 구현에 관심이 있습니다.",
+      "bioEn": "I conduct research on predicting city-scale energy consumption based on Urban Building Energy Models (UBEM), and I am interested in improving computational efficiency using surrogate models and implementing a web-based urban energy platform.",
       "research": [
         {
           "page": "research-da-thermal-seat",
           "title": "열적 특성 기반의 개인 맞춤형 좌석 선택 시스템 (공동연구)",
+          "titleEn": "A Personalized Seat Selection System Based on Individual Thermal Characteristics (Joint Research)",
           "tags": "#PMV #thermal_comfort #personalized_seat"
         }
       ]
     },
     "kyungjae": {
       "name": "이경재",
+      "nameEn": "Kyungjae Lee",
       "roleLine": "Alumni · Kyungjae Lee",
       "avatar": "Photos/members/kyungjae.jpg",
       "bio": "<div style=\"font-weight:600;margin-bottom:8px;\">Academic degrees :</div>\n        <ul style=\"margin:0 0 16px 20px;line-height:1.8;color:var(--text-mid);\">\n          <li>M.S. in Architectural Engineering (2025)</li>\n          <li>B.E. in Architecture Engineering (2023) with a Minor in Real Estate</li>\n        </ul>\n        <ul style=\"margin:0 0 0 20px;line-height:1.8;color:var(--text-mid);\">\n          <li>전) 건국대학교 건축환경 및 에너지 연구실 석사연구생</li>\n          <li>한국친환경설비학회 2022 Building Technology 공모전 특별상 수상</li>\n          <li>한국태양에너지학회 2023 추계학술발표대회 우수논문상 수상</li>\n        </ul>",
+      "bioEn": "<div style=\"font-weight:600;margin-bottom:8px;\">Academic degrees :</div>\n        <ul style=\"margin:0 0 16px 20px;line-height:1.8;color:var(--text-mid);\">\n          <li>M.S. in Architectural Engineering (2025)</li>\n          <li>B.E. in Architecture Engineering (2023) with a Minor in Real Estate</li>\n        </ul>\n        <ul style=\"margin:0 0 0 20px;line-height:1.8;color:var(--text-mid);\">\n          <li>Former Master's Researcher, Building Environment and Energy Laboratory, Konkuk University</li>\n          <li>Special Award, 2022 Building Technology Competition, Korean Institute of Architectural Sustainable Environment and Building Systems</li>\n          <li>Excellent Paper Award, 2023 Fall Annual Conference, Korean Solar Energy Society</li>\n        </ul>",
       "bioStyle": "margin-top:16px;"
     },
     "seyeon": {
       "name": "김세연",
+      "nameEn": "Seyeon Kim",
       "roleLine": "Undergraduate Researcher",
       "avatar": "Photos/members/seyeon.jpg",
-      "bio": "건축 에너지 및 환경 분야를 공부하며 연구실 활동에 참여하고 있는 학부 연구생입니다. (소개 문구는 추후 업데이트 예정)"
+      "bio": "건축 에너지 및 환경 분야를 공부하며 연구실 활동에 참여하고 있는 학부 연구생입니다. (소개 문구는 추후 업데이트 예정)",
+      "bioEn": "I am an undergraduate researcher studying building energy and environment and participating in lab activities. (Bio to be updated.)"
     },
     "junho": {
       "name": "송준호",
+      "nameEn": "Junho Song",
       "roleLine": "Undergraduate Researcher",
       "avatar": "Photos/members/junho.jpg",
-      "bio": "건축 에너지 및 환경 분야를 공부하며 연구실 활동에 참여하고 있는 학부 연구생입니다. (소개 문구는 추후 업데이트 예정)"
+      "bio": "건축 에너지 및 환경 분야를 공부하며 연구실 활동에 참여하고 있는 학부 연구생입니다. (소개 문구는 추후 업데이트 예정)",
+      "bioEn": "I am an undergraduate researcher studying building energy and environment and participating in lab activities. (Bio to be updated.)"
     }
   }
 }

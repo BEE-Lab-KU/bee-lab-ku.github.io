@@ -1,8 +1,11 @@
 [
   {
+    "id": "5270f716-6cd1-4639-83ad-da397393e2ed",
     "title": "2026 이상민 석사 논문 심사",
+    "titleEn": "2026 Sangmin Lee Master's Thesis Defense",
     "date": "2026-06-05",
     "body": "BEE Lab.의 두번째 석사 논문 심사",
+    "bodyEn": "The second master's thesis defense at BEE Lab.",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2026 이상민 석사 논문 심사/001.jpg"
@@ -12,39 +15,51 @@
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2026 이상민 석사 논문 심사/003.jpg",
-        "caption": "수고하셨습니다 ! 🥹"
+        "caption": "수고하셨습니다 ! 🥹",
+        "captionEn": "Great work, everyone! 🥹"
       }
     ]
   },
   {
+    "id": "e7b344a2-96a7-4f9f-a160-c7470589742e",
     "title": "2026 축제 즐기기",
+    "titleEn": "2026 Enjoying the Festival",
     "date": "2026-01-27",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2026 축제 즐기기/001.jpg"
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2026 축제 즐기기/002.jpg",
-        "caption": "너무 맛있었던 푸드트럭 음식 !! 😋"
+        "caption": "너무 맛있었던 푸드트럭 음식 !! 😋",
+        "captionEn": "The food truck food was so delicious!! 😋"
       }
     ]
   },
   {
+    "id": "f063e5d8-a9a7-4197-ad18-436f8692bfe3",
     "title": "BEE Lab. 번개회식",
+    "titleEn": "BEE Lab. Impromptu Get-Together",
     "date": "2026-01-26",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/BEE Lab. 번개회식/001.jpg"
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/BEE Lab. 번개회식/002.jpg",
-        "caption": "상민선배의 맛있는 볶음밥 ! ✨"
+        "caption": "상민선배의 맛있는 볶음밥 ! ✨",
+        "captionEn": "Sangmin's delicious fried rice! ✨"
       }
     ]
   },
   {
+    "id": "7b0c66c6-f351-4d4f-abe3-30963c24144b",
     "title": "데이터넷 킥오프 워크샵과 BEE Lab MT",
+    "titleEn": "DataNet Kickoff Workshop and BEE Lab Retreat",
     "date": "2026-02-27",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/데이터넷 킥오프 워크샵과 BEE Lab MT/001.jpg"
@@ -70,9 +85,12 @@
     ]
   },
   {
+    "id": "463e7970-2b59-4767-bdc7-27c9dd397d52",
     "title": "2025 송년회",
+    "titleEn": "2025 Year-End Party",
     "date": "2025-12-28",
     "body": "2025 BEE Lab의 송년회를 진행했습니다~! \n서로의 산타가 되어 선물교환 이벤트를 진행하면서 즐거운 시간을 보냈습니다 !!",
+    "bodyEn": "We held the 2025 BEE Lab year end party~! \nWe had a great time exchanging gifts as each other's secret Santa!!",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2025 송년회/001.jpg"
@@ -85,17 +103,22 @@
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2025 송년회/004.jpg",
-        "caption": "씨몽키야 ! 오래오래 같이 살자 ! 💗"
+        "caption": "씨몽키야 ! 오래오래 같이 살자 ! 💗",
+        "captionEn": "Sea Monkeys! Let's live together for a long, long time! 💗"
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2025 송년회/005.jpg",
-        "caption": "상민선배 오래오래 입어주세요 -지영😉"
+        "caption": "상민선배 오래오래 입어주세요 -지영😉",
+        "captionEn": "Sangmin, please wear this for a long time - Jiyoung 😉"
       }
     ]
   },
   {
+    "id": "eb0f510d-3f32-4d23-8408-3a394ec6fb07",
     "title": "SEATTLE 탐방기",
+    "titleEn": "SEATTLE Exploration",
     "date": "2025-12-27",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/SEATTLe 탐방기/001.jpg"
@@ -145,8 +168,11 @@
     ]
   },
   {
+    "id": "94cadbe8-e1f8-4b15-97da-2bf5fc5b718e",
     "title": "뜨거웠던 여름, Bee_LAB의 509호 이사👷",
+    "titleEn": "A Hot Summer, Bee_LAB's Move to Room 509 👷",
     "date": "2025-12-26",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/뜨거웠던 여름, Bee_LAB의 509호 이사👷/001.jpg"
@@ -175,8 +201,11 @@
     ]
   },
   {
+    "id": "412b0e75-eee1-4165-b0d1-b908f8fc62d4",
     "title": "BEE Lab. 야구장 투어⚾ 와 축제 즐기기",
+    "titleEn": "BEE Lab. Baseball Stadium Tour ⚾ and Enjoying the Festival",
     "date": "2025-12-25",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/BEE Lab. 야구장 투어⚾ 와 축제 즐기기/001.jpg"
@@ -202,8 +231,11 @@
     ]
   },
   {
+    "id": "229395c4-27ad-41a3-abd5-fee37f55ec4e",
     "title": "2025 BEE LAB.의 봄은 어떨까요~?🌻",
+    "titleEn": "2025 What Might Spring Be Like at BEE LAB.? 🌻",
     "date": "2025-03-28",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2025 BEE LAB.의 봄은 어떨까요~🌻/001.jpg"
@@ -232,8 +264,11 @@
     ]
   },
   {
+    "id": "78f084a4-ef4a-4da8-bd6d-d6778858cf70",
     "title": "BEE Lab. 1호 석사 탄생",
+    "titleEn": "BEE Lab.'s First Master's Graduate",
     "date": "2025-03-27",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/BEE Lab. 1호 석사 탄생/001.jpg"
@@ -250,8 +285,11 @@
     ]
   },
   {
+    "id": "cddf2296-faf2-48c8-b435-914b304b9014",
     "title": "2024 송년회",
+    "titleEn": "2024 Year-End Party",
     "date": "2024-12-28",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2024 송년회/001.jpg"
@@ -268,8 +306,11 @@
     ]
   },
   {
+    "id": "aecb2cfc-8c77-4fc7-bb18-33164dd0c870",
     "title": "BEE Lab.겨울보내기",
+    "titleEn": "BEE Lab. Spending Winter",
     "date": "2024-12-27",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/BEE Lab.겨울보내기/001.jpg"
@@ -295,8 +336,11 @@
     ]
   },
   {
+    "id": "c43df0d2-834c-46c5-bb26-ff5eceb568a6",
     "title": "2024 이경재 석사논문 심사",
+    "titleEn": "2024 Kyungjae Lee Master's Thesis Defense",
     "date": "2024-01-28",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2024 이경재 석사논문 심사/001.jpg"
@@ -313,8 +357,11 @@
     ]
   },
   {
+    "id": "fc37e8bf-babd-4904-b07a-6d3500c1644e",
     "title": "2024 건축친환경설비학회 추계학술발표대회",
+    "titleEn": "2024 KIEAE Fall Conference",
     "date": "2024-01-27",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2024 건축친환경설비학회 추계학술발표대회/001.jpg"
@@ -352,8 +399,11 @@
     ]
   },
   {
+    "id": "03517c3c-e81c-440d-94f5-27f773991f5a",
     "title": "교수님 생신파티",
+    "titleEn": "Professor's Birthday Party",
     "date": "2024-01-26",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/교수님 생신파티/001.jpg"
@@ -373,8 +423,11 @@
     ]
   },
   {
+    "id": "c9fd3bf4-7f94-460d-b5e5-b1bf3d95e77d",
     "title": "2024 한국태양에너지 학회 추계학술발표대회",
+    "titleEn": "2024 KSES Fall Annual Conference",
     "date": "2024-01-25",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2024 한국태양에너지 학회 추계학술발표대회/001.jpg"
@@ -406,8 +459,11 @@
     ]
   },
   {
+    "id": "8ab37f2f-1cd2-4692-ae35-ac72e9ee5e64",
     "title": "2024 ISAIA 14th KYOTO 참여",
+    "titleEn": "2024 ISAIA 14th KYOTO Participation",
     "date": "2024-01-24",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2024 ISAIA 14th KYOTO 참여/001.jpg"
@@ -436,8 +492,11 @@
     ]
   },
   {
+    "id": "c690e40e-84e3-4930-b670-4df6ccb325ba",
     "title": "2024 연구실 새장비 구입",
+    "titleEn": "2024 New Lab Equipment Purchase",
     "date": "2024-01-23",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2024 연구실 새장비 구입/001.jpg"
@@ -460,8 +519,11 @@
     ]
   },
   {
+    "id": "092126f7-7f42-4a4a-9868-8157765a5174",
     "title": "2024 연구실하계 워크숍",
+    "titleEn": "2024 Lab Summer Workshop",
     "date": "2024-01-22",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2024 연구실하계 워크숍/001.jpg"
@@ -487,8 +549,11 @@
     ]
   },
   {
+    "id": "57c7bb6a-c021-4fb3-bdc3-1fcc83b19cae",
     "title": "2024 대한설비공학회 하계학술발표대회",
+    "titleEn": "2024 SAREK Summer Annual Conference",
     "date": "2024-01-21",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2024 대한설비공학회 하계학술발표대회/001.jpg"
@@ -517,8 +582,11 @@
     ]
   },
   {
+    "id": "90b02a43-8a99-4c22-9f47-cc1ce86e6f8b",
     "title": "2024 BEE Lab. 꽃놀이",
+    "titleEn": "2024 BEE Lab. Flower Viewing",
     "date": "2024-01-20",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2024 BEE Lab. 꽃놀이/001.jpg"
@@ -535,8 +603,11 @@
     ]
   },
   {
+    "id": "e8879e58-22e8-4234-9684-be32ea19aca5",
     "title": "2024 건국대학교 전기 학위수여식",
+    "titleEn": "2024 Konkuk University Spring Commencement Ceremony",
     "date": "2024-01-19",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2024건국대학교 전기 학위수여식/001.jpg"
@@ -553,8 +624,11 @@
     ]
   },
   {
+    "id": "e8e2b2cb-e384-4f7f-923e-c7fd38c06c86",
     "title": "2023 BEE Lab 송년회",
+    "titleEn": "2023 BEE Lab Year-End Party",
     "date": "2023-12-28",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2023 BEE Lab. 송년회/001.jpg"
@@ -568,8 +642,11 @@
     ]
   },
   {
+    "id": "20383d8c-d6ad-467b-b0dc-57e953731b83",
     "title": "BEE Lab. 연구실 이사",
+    "titleEn": "BEE Lab. Office Move",
     "date": "2023-12-27",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/BEE Lab. 연구실 이사/001.jpg"
@@ -589,8 +666,11 @@
     ]
   },
   {
+    "id": "d1f41d39-7eb2-4cc3-bf80-18b96483d0a6",
     "title": "BEE Lab. 의 꽃놀이",
+    "titleEn": "BEE Lab.'s Flower Viewing",
     "date": "2023-12-26",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/BEE Lab. 의 꽃놀이/001.jpg"
@@ -604,13 +684,17 @@
     ]
   },
   {
+    "id": "02708058-79d2-4022-9c4c-104f4377a95d",
     "title": "BEE Lab. 월드컵 응원 (508호와 친해지기🧑‍🤝‍🧑)",
+    "titleEn": "BEE Lab. World Cup Cheering (Getting to Know Room 508 🧑‍🤝‍🧑)",
     "date": "2026-06-12",
     "body": "BEE Lab.의 첫 월드컵 공식 응원 진행했습니다.\n(Positive)",
+    "bodyEn": "We held BEE Lab.'s first official World Cup cheering event.\n(Positive)",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/BEE Lab. 월드컵 응원 (508호와 친해지기🧑‍🤝‍🧑)/KakaoTalk_20260615_145354532_01.jpg",
-        "caption": "자 ~ 지금부터 응원 시작하겠습니다~🎉"
+        "caption": "자 ~ 지금부터 응원 시작하겠습니다~🎉",
+        "captionEn": "Alright, let the cheering begin~ 🎉"
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/BEE Lab. 월드컵 응원 (508호와 친해지기🧑‍🤝‍🧑)/스크린샷 2026-06-17 180935.jpg",
@@ -618,64 +702,82 @@
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/BEE Lab. 월드컵 응원 (508호와 친해지기🧑‍🤝‍🧑)/KakaoTalk_20260615_145354532_04.jpg",
-        "caption": "대~한민국📣 짝짝 짝 짝짝👏🏻"
+        "caption": "대~한민국📣 짝짝 짝 짝짝👏🏻",
+        "captionEn": "Dae-han-min-guk! 📣 Clap clap, clap, clap clap 👏🏻"
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/BEE Lab. 월드컵 응원 (508호와 친해지기🧑‍🤝‍🧑)/KakaoTalk_20260615_145354532_02.jpg",
-        "caption": "저희의 뜨거운 응원 덕분이죠 ^,^ 맞쬬~? 선수 여러분들 고생 많으셨습니다⚽"
+        "caption": "저희의 뜨거운 응원 덕분이죠 ^,^ 맞쬬~? 선수 여러분들 고생 많으셨습니다⚽",
+        "captionEn": "It's thanks to our passionate cheering, right ^,^? Great work, players! ⚽"
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/BEE Lab. 월드컵 응원 (508호와 친해지기🧑‍🤝‍🧑)/KakaoTalk_20260615_145354532.jpg",
-        "caption": "508호 우리와 영원히 함께해 ~ ⭐"
+        "caption": "508호 우리와 영원히 함께해 ~ ⭐",
+        "captionEn": "Room 508, stay with us forever ~ ⭐"
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/BEE Lab. 월드컵 응원 (508호와 친해지기🧑‍🤝‍🧑)/스크린샷 2026-06-17 181556.jpg",
-        "caption": "펜팔 친구를 만들었습니다 >,<💌"
+        "caption": "펜팔 친구를 만들었습니다 >,<💌",
+        "captionEn": "We made a pen pal friend >,< 💌"
       }
     ]
   },
   {
+    "id": "9e6ad075-da23-49ae-a75e-5827e793f50c",
     "title": "2026 1학기 종강 기념 회식",
+    "titleEn": "2026 1st Semester End-of-Term Dinner",
     "date": "2026-07-03",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2026 1학기 종강 기념 회식/001.jpg",
-        "caption": "맛있는 회 먹기~ 🐟🐟"
+        "caption": "맛있는 회 먹기~ 🐟🐟",
+        "captionEn": "Enjoying delicious sashimi~ 🐟🐟"
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2026 1학기 종강 기념 회식/002.jpg"
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2026 1학기 종강 기념 회식/003.jpg",
-        "caption": "남은 2026년도 화이팅 ~! ✨"
+        "caption": "남은 2026년도 화이팅 ~! ✨",
+        "captionEn": "Fighting for the rest of 2026~! ✨"
       }
     ]
   },
   {
+    "id": "9db27efd-351a-4a84-9d3b-e66442fc311f",
     "title": "2026 이상민 석사 졸업식",
+    "titleEn": "2026 Sangmin Lee Master's Graduation Ceremony",
     "date": "2026-08-21",
+    "bodyEn": "",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2026 이상민 석사 졸업식/2.jpg",
-        "caption": "상민선배 졸업 축하드려요 ~!! 🎓"
+        "caption": "상민선배 졸업 축하드려요 ~!! 🎓",
+        "captionEn": "Congratulations on your graduation, Sangmin ~!! 🎓"
       }
     ]
   },
   {
+    "id": "f3edfa20-2ce4-4e3b-a6cc-1dfaab1206ce",
     "title": "2026 2학기 개강 전 회식 ",
+    "titleEn": "2026 Dinner Before the Start of the 2nd Semester",
     "date": "2026-08-30",
     "body": "상민선배와 함께하는 마지막 회식 ㅜㅜ \n(개강도 화이팅,,) ",
+    "bodyEn": "Our last dinner together with Sangmin T_T \n(Let's do our best in the new semester too!!) ",
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2026 개강 전 회식/1.jpg"
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2026 개강 전 회식/3.jpg",
-        "caption": "상민선배 졸업 진심으로 축하드려요  ~~~ 🍈"
+        "caption": "상민선배 졸업 진심으로 축하드려요  ~~~ 🍈",
+        "captionEn": "Congratulations from the bottom of our hearts on your graduation, Sangmin ~~~ 🍈"
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/2026 개강 전 회식/2.jpg",
-        "caption": "개강도 힘내기 !! "
+        "caption": "개강도 힘내기 !! ",
+        "captionEn": "Let's do our best for the new semester too!! "
       }
     ]
   }

@@ -54,6 +54,32 @@ a { color: inherit; text-decoration: none; }
   transition: color 0.15s;
 }
 .nav-right a:hover { color: var(--text); }
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: -12px;
+  padding-left: 12px;
+  border-left: 1px solid var(--border);
+}
+.lang-switch button {
+  min-width: 32px;
+  padding: 4px 7px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-muted);
+  font: 600 11px/1 var(--font);
+  cursor: pointer;
+}
+.lang-switch button:hover { color: var(--text); }
+.lang-switch button.active { background: var(--text); color: var(--bg); }
+.top-bar.rhero-transparent .lang-switch { border-left-color: rgba(255,255,255,0.35); }
+.top-bar.rhero-transparent .lang-switch button { color: rgba(255,255,255,0.7); }
+.top-bar.rhero-transparent .lang-switch button:hover { color: #fff; }
+.top-bar.rhero-transparent .lang-switch button.active { background: #fff; color: #000; }
+html[data-lang="en"] [data-ko-parallel] { display: none !important; }
+html[data-lang="en"]:not([data-i18n-ready="true"]) body { visibility: hidden; }
 
 /* 햄버거 버튼: 데스크톱 기본 숨김 */
 .nav-toggle { display: none; }
@@ -77,11 +103,22 @@ a { color: inherit; text-decoration: none; }
     background: var(--bg); border-bottom: 1px solid var(--border);
     max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
   }
-  .nav-right.open { max-height: 70vh; }
+  .nav-right.open { max-height: 80vh; overflow-y: auto; }
   .nav-right a { padding: 16px 24px; font-size: 16px; border-top: 1px solid var(--border); }
+  .lang-switch {
+    margin: 0;
+    padding: 14px 24px;
+    border-left: 0;
+    border-top: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .lang-switch button { min-width: 42px; padding: 8px 10px; font-size: 12px; }
   /* 히어로 위(투명 nav)에서도 열린 모바일 메뉴는 불투명 배경 → 링크를 어둡게(흰 글씨로 안 보이는 문제 방지) */
   .top-bar.rhero-transparent .nav-right.open a,
   .top-bar.rhero-transparent .nav-right.open a:hover { color: var(--text-muted); }
+  .top-bar.rhero-transparent .nav-right.open .lang-switch { border-top-color: var(--border); }
+  .top-bar.rhero-transparent .nav-right.open .lang-switch button { color: var(--text-muted); }
+  .top-bar.rhero-transparent .nav-right.open .lang-switch button.active { background: var(--text); color: var(--bg); }
 }
 
 /* 모바일: 교수 프로필 카드 세로 스택 (인라인 고정폭이 좁은 화면에서 넘치는 문제 해결) */

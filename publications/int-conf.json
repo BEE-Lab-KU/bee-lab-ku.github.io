@@ -1,5 +1,6 @@
 [
   {
+    "id": "937d8dbc-d2cb-444b-a9c8-c25c48754a09",
     "citation": "Hwang, J., & Lim, H. (2026). Shape Calibration Factors for Improving the Accuracy of Representative Building-Based Urban Building Energy Model (UBEM). The 3rd Korea-Japan Symposium on Chemistry with AI for Carbon Neutrality (C-AICN 2026).",
     "date": "2026-06-29",
     "first": "jungyun",
@@ -8,6 +9,7 @@
     ]
   },
   {
+    "id": "2a87d93e-e83e-43ba-ba0d-ad292bd125e9",
     "citation": "Lim, J., & Lim, H. (2026). Comparative Analysis of Street View-and UAV-Based WWR Extraction as Input for District Building Energy Modeling. The 3rd Korea-Japan Symposium on Chemistry with AI for Carbon Neutrality (C-AICN 2026).",
     "date": "2026-06-29",
     "first": "jisu",
@@ -16,18 +18,21 @@
     ]
   },
   {
+    "id": "2d4a495c-4990-4e94-a610-ceeea4c62189",
     "citation": "Lee, S., & Lim, H. (2026). Optimal Load Shift Control Strategy for CHPWH system Based on Load Separation Method. E3S Web of Conferences, 716, 02020.",
     "date": "2026-06-09",
     "doi": "https://doi.org/10.1051/e3sconf/202671602020",
     "first": "sangmin"
   },
   {
+    "id": "5cc78789-3536-49dc-8139-e987e3311680",
     "citation": "Hwang, J., & Lim, H. (2026). Improving urban building energy modeling (UBEM) accuracy through shape and energy use pattern calibration factors based on representative buildings. E3S Web of Conferences, 716, 04023.",
     "date": "2026-06-09",
     "doi": "https://doi.org/10.1051/e3sconf/202671604023",
     "first": "jungyun"
   },
   {
+    "id": "87583b20-0f92-40c9-8e69-1697cfedfc7e",
     "citation": "Lee, D., Lim, H., & Kim, I. (2025). Disentangling rebound effects and construction errors in building retrofits using integrated energy signature analysis. Proceedings of Building Simulation 2025: 19th Conference of IBPSA, 19.",
     "date": "2025-08-24",
     "doi": "https://doi.org/10.26868/25222708.2025.1590",
@@ -37,6 +42,7 @@
     "first": "doyeon"
   },
   {
+    "id": "da389d54-3252-43a8-9c47-d56d95c791ab",
     "citation": "Hwang, J., Lim, H., Lee, S., & Lim, J. (2025). Developing building shape indexes at the city-scale for understanding building energy consumption. Proceedings of Building Simulation 2025: 19th Conference of IBPSA, 19.",
     "date": "2025-08-24",
     "doi": "https://doi.org/10.26868/25222708.2025.1603",
@@ -50,12 +56,14 @@
     "first": "jungyun"
   },
   {
+    "id": "48c002f7-fc39-4147-80e2-d8d03ccb0a10",
     "citation": "Lee, D., & Lim, H. (2026). Analysis of the Relationship Between Building Shape Indicators and Energy End-Use Using Public Data. Proceedings of the 15th REHVA HVAC World Congress - CLIMA 2025, 1282-1291.",
     "date": "2025-06-04",
     "doi": "https://doi.org/10.1007/978-3-032-10546-2_121",
     "first": "doyeon"
   },
   {
+    "id": "ec9dbfc5-adf2-4d91-8f13-4d96c0746e61",
     "citation": "Hwang, J., & Lim, H. (2024). Improvement of accuracy in urban building energy modeling using representative buildings: through reducing shape information uncertainty. International Symposium on Architectural Interchanges in Asia (ISAIA 2024).",
     "date": "2024-09-10",
     "first": "jungyun",
@@ -64,6 +72,7 @@
     ]
   },
   {
+    "id": "1fcecaac-dbba-42db-bf2f-d7aecd3d484a",
     "citation": "Lee, D., & Lim, H. (2024). Comparative analysis of energy usage before and after Green Remodeling through Change Point Model. International Symposium on Architectural Interchanges in Asia (ISAIA 2024).",
     "date": "2024-09-10",
     "first": "doyeon",
@@ -72,19 +81,23 @@
     ]
   },
   {
+    "id": "0e8efba7-64c3-406f-9421-0d96b8af2531",
     "citation": "Lee, K., & Lim, H. (2024). Investigate how to handle missing values when developing building energy benchmarking models. International Symposium on Architectural Interchanges in Asia (ISAIA 2024).",
     "date": "2024-09-10",
     "first": "kyungjae"
   },
   {
+    "id": "02d6572e-a73c-4a27-9e56-d12ad02959b6",
     "citation": "Lim, H., & Zhai, Z. (2020). Prediction of Building Stock Energy Demand. Proceedings of the 11th International Symposium on Heating, Ventilation and Air Conditioning (ISHVAC 2019).",
     "date": "2020-03-20"
   },
   {
+    "id": "abb246d7-c2a8-4798-9d40-16700a77913a",
     "citation": "Lim, H., Kim, J., & Krarti, M. (2012). Design of distributed generation systems for an apartment complex in Korea. Proceedings of the ASME 2012 6th International Conference on Energy Sustainability.",
     "date": "2012-07-23"
   },
   {
+    "id": "aaff5a14-7546-4b66-a145-7fcac448dd03",
     "citation": "Lim, H., Lee, J., Song, D., Lee, J., & Wallbaum, H. (2010). A new proposal of a control method for the stack effect in super tall buildings: E/L Shaft cooling system. International Conference on Sustainable Building Asia (SB10 Seoul).",
     "date": "2010-02-24"
   }

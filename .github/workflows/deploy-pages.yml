@@ -1,0 +1,118 @@
+name: GitHub Pages 배포
+
+# main 에 푸시되거나 후속 자동 작업이 끝나면, 번역 검증을 통과한 뒤에만
+# 공개 사이트에 필요한 파일을 모아 GitHub Pages 로 배포한다.
+#
+# 번역 검증이 실패하면 배포 자체가 진행되지 않는다 (build 잡에서 중단).
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - 사진 자동 최적화
+      - 논문 태그와 CMS 목록 동기화
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 동시에 여러 배포가 겹치지 않게 한다. 진행 중인 배포는 취소하지 않고
+# 대기시켜서, 오래된 커밋의 배포가 최신 커밋의 배포를 덮어쓰는 상황을 막는다.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    outputs:
+      deploy: ${{ steps.target.outputs.deploy }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # workflow_run에서도 자동 작업이 반영된 최신 main을 확인한다.
+          ref: main
+          fetch-depth: 0
+
+      - name: 배포 대상 확인
+        id: target
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PUSH_BASE: ${{ github.event.before }}
+        run: |
+          DEPLOY=true
+          if [ "$EVENT_NAME" = "workflow_run" ]; then
+            SOURCE_BASE="$(git log -1 --format='%(trailers:key=source-base,valueonly)' HEAD | tr -d '[:space:]')"
+            SOURCE_SHA="$(git log -1 --format='%(trailers:key=source-sha,valueonly)' HEAD | tr -d '[:space:]')"
+            AUTHOR_EMAIL="$(git log -1 --format=%ae)"
+            SUBJECT="$(git log -1 --format=%s)"
+            if [ "$AUTHOR_EMAIL" != "41898282+github-actions[bot]@users.noreply.github.com" ] ||
+               { [ "$SUBJECT" != "사진 자동 최적화" ] && [ "$SUBJECT" != "논문 태그와 CMS 목록 자동 동기화" ]; } ||
+               [ -z "$SOURCE_BASE" ] ||
+               [ -z "$SOURCE_SHA" ] ||
+               ! git merge-base --is-ancestor "$SOURCE_BASE" "$SOURCE_SHA" ||
+               ! git merge-base --is-ancestor "$SOURCE_SHA" HEAD; then
+              echo "최신 main이 검증 가능한 자동 작업 커밋이 아니므로 후속 배포를 건너뜁니다."
+              DEPLOY=false
+            else
+              PUSH_BASE="$SOURCE_BASE"
+            fi
+          fi
+          echo "deploy=$DEPLOY" >> "$GITHUB_OUTPUT"
+          echo "base=$PUSH_BASE" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-python@v5
+        if: steps.target.outputs.deploy == 'true'
+        with:
+          python-version: '3.12'
+
+      - name: 번역 검증
+        if: steps.target.outputs.deploy == 'true'
+        run: |
+          BASE="${{ steps.target.outputs.base }}"
+          if [ -n "$BASE" ] && [ "$BASE" != "0000000000000000000000000000000000000000" ]; then
+            echo "베이스 커밋과 비교하여 검증합니다: $BASE"
+            python3 .github/scripts/validate_translations.py --base "$BASE"
+          else
+            echo "베이스 커밋이 없어 전체 검증만 수행합니다 (수동 실행 또는 새 브랜치)."
+            python3 .github/scripts/validate_translations.py
+          fi
+
+      - name: GitHub Pages 환경 구성
+        if: steps.target.outputs.deploy == 'true'
+        uses: actions/configure-pages@v5
+
+      - name: 공개 사이트 파일 준비
+        if: steps.target.outputs.deploy == 'true'
+        run: |
+          mkdir -p _site/News_Blog_JPG _site/publications _site/research-content
+          cp index.html CNAME members.json _site/
+          cp -R Photos css js i18n _site/
+          cp -R News_Blog_JPG/beelab_images News_Blog_JPG/beelab_content _site/News_Blog_JPG/
+          cp publications/*.json _site/publications/
+          cp research-content/research.json _site/research-content/
+          touch _site/.nojekyll
+
+      - name: 공개 사이트 업로드
+        if: steps.target.outputs.deploy == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
+
+  deploy:
+    needs: build
+    if: needs.build.outputs.deploy == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: GitHub Pages 배포
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -2,19 +2,24 @@
   {
     "id": "research-elevator",
     "title": "엘리베이터 샤프트 내 균일 냉각을 위한 급배기 위치 최적화",
+    "titleEn": "Optimization of Supply and Exhaust Locations for Uniform Cooling in Elevator Shafts",
     "group": "Building Energy Systems",
     "back": "main",
     "status": "진행 중 · 2025–",
+    "statusEn": "In Progress, 2025–",
     "researchers": [
       {
         "slug": "junghyun",
         "name": "조정현",
+        "nameEn": "Junghyun Cho",
         "role": "Master's Student",
         "avatar": "Photos/members/junghyun.jpg"
       }
     ],
     "background": "건물의 고층화가 진행됨에 따라 고층 건물에서 발생하는 기류 특성인 연돌효과로 인한 문제점 해소가 필요합니다. 연돌효과는 건물을 사용하는 재실자에게 불편함을 야기하며 건물의 에너지 측면에도 영향을 미칩니다. 이러한 문제점을 해소하기 위해 연돌효과 저감 방안들 중 엘리베이터 샤프트 냉각 시스템에 대해 연구를 수행하였습니다. 이때 샤프트 냉각 시스템의 성능을 극대화하기 위해서는 샤프트 내부를 균일하게 냉각해야 합니다. 따라서 샤프트 온도를 냉각시키는 것과 동시에, 샤프트 내부를 균일하게 냉각할 수 있는 최적의 급기와 배기 위치에 대해 검토가 필요합니다.",
+    "backgroundEn": "As buildings grow taller, the stack effect, an airflow phenomenon characteristic of high-rise buildings, creates problems that must be addressed. The stack effect causes discomfort for occupants and affects building energy performance. To address this problem, this study investigates elevator shaft cooling systems as a stack effect mitigation strategy. Maximizing the performance of a shaft cooling system requires uniform cooling throughout the shaft. Therefore, in addition to lowering the shaft temperature, it is necessary to examine optimal supply and exhaust locations that achieve uniform cooling inside the shaft.",
     "goal": "연돌효과 저감 방안인 엘리베이터 샤프트 냉각 시스템의 최적 급배기 설계를 통해 시스템의 성능을 향상시킵니다.",
+    "goalEn": "This study improves the performance of the elevator shaft cooling system, a stack effect mitigation strategy, through optimal supply and exhaust design.",
     "keywords": [
       "Stack effect",
       "High-rise building",
@@ -31,19 +36,24 @@
   {
     "id": "research-da-preprocessing",
     "title": "로지스틱 맵 이미지 암호화 기법을 적용한 딥러닝 기반 재실자 감지 시스템 제안",
+    "titleEn": "A Deep Learning-Based Occupancy Detection System Using Logistic Map Image Encryption",
     "group": "Building Data Analytics & AI",
     "back": "data-analysis",
     "status": "진행 중 · 2026–",
+    "statusEn": "In Progress, 2026–",
     "researchers": [
       {
         "slug": "jiyoung",
         "name": "김지영",
+        "nameEn": "Jiyoung Kim",
         "role": "Undergraduate Researcher",
         "avatar": "Photos/members/jiyoung.jpg"
       }
     ],
     "background": "대부분의 건물 에너지 관리 시스템은 실제 거주자의 재실 패턴을 고려하지 않고, 미리 설정된 고정 스케줄에 따라 냉난방 및 조명 설비를 운영하고 있습니다. 이를 해결하기 위해 비전 기반 재실자 감지 기술이 주목받고 있지만, 프라이버시와 원거리 탐지 성능, 비정형 자세 인식 성능을 동시에 개선하는 접근이 필요합니다. 따라서 고도화된 재실자 감지 시스템을 제안하고 스케줄 분석을 통해 건물의 에너지 저감 방안을 제시하고자 합니다.",
+    "backgroundEn": "Most building energy management systems operate HVAC and lighting equipment on preset fixed schedules without accounting for actual occupancy patterns. Vision-based occupancy detection has drawn attention as a solution, but an approach that simultaneously improves privacy protection, long-range detection performance, and recognition of irregular postures is still needed. This study therefore proposes an advanced occupancy detection system and presents energy reduction strategies based on schedule analysis.",
     "goal": "재실자의 프라이버시를 보호하고 고도화된 재실자 감지 시스템으로 건물의 에너지 저감 효과를 분석합니다.",
+    "goalEn": "This study protects occupant privacy and analyzes the building energy savings achieved by an advanced occupancy detection system.",
     "keywords": [
       "Occupancy detection",
       "Logistic Map",
@@ -61,26 +71,32 @@
   {
     "id": "research-da-thermal-seat",
     "title": "열적 특성 기반의 개인 맞춤형 좌석 선택 시스템 제안",
+    "titleEn": "A Personalized Seat Selection System Based on Individual Thermal Characteristics",
     "group": "Building Data Analytics & AI",
     "back": "data-analysis",
     "status": "진행 완료 · 2025",
+    "statusEn": "Completed, 2025",
     "completed": true,
     "researchers": [
       {
         "slug": "jiyoung",
         "name": "김지영",
+        "nameEn": "Jiyoung Kim",
         "role": "Undergraduate Researcher",
         "avatar": "Photos/members/jiyoung.jpg"
       },
       {
         "slug": "hyunsu",
         "name": "이현수",
+        "nameEn": "Hyeonsu Lee",
         "role": "Undergraduate Researcher",
         "avatar": "Photos/members/hyunsu.jpg"
       }
     ],
     "background": "현재 대부분의 좌석 배치 시스템은 좌석 간 온열환경의 차이를 반영하지 못해 개인의 열적 쾌적성을 고려하지 못하는 한계가 존재합니다. 이를 개선하기 위해 대표적인 열적 쾌적성 지표인 PMV가 활용되고 있으나, 기존 PMV는 대사율 지표인 MET를 표준화하여 사용함으로써 개인별 열적 특성 차이를 충분히 반영하지 못하고 있습니다.",
+    "backgroundEn": "Most current seat allocation systems fail to account for differences in thermal environment between seats, limiting their ability to reflect individual thermal comfort. Predicted Mean Vote (PMV), a widely used thermal comfort index, has been applied to address this issue, but conventional PMV relies on a standardized metabolic rate (MET) value and therefore does not adequately reflect individual differences in thermal characteristics.",
     "goal": "개인별 MET를 산정하여 PMV를 개인화하고, 이를 기반으로 맞춤형 좌석 선택 시스템을 제안합니다. Virtual Sensing 기술을 활용하여 개인의 열적 특성을 예측하고, 실시간으로 최적 좌석을 추천하는 시스템 개발을 목표로 합니다.",
+    "goalEn": "This study personalizes PMV by estimating individual MET values and proposes a customized seat selection system based on the personalized index. The goal is to develop a system that predicts individual thermal characteristics using virtual sensing technology and recommends the optimal seat in real time.",
     "keywords": [
       "Predicted Mean Vote",
       "Virtual Sensing",
@@ -97,19 +113,24 @@
   {
     "id": "research-um-ubem",
     "title": "도시 단위 건물 에너지 해석을 위한 건물 특성 지표 및 도시 건물 에너지 모델(UBEM) 개발",
+    "titleEn": "Development of Building Feature Indices and an Urban Building Energy Model (UBEM) for City-Scale Building Energy Analysis",
     "group": "Urban Building Energy Modeling (UBEM)",
     "back": "urban-modeling",
     "status": "진행 중 · 2024–",
+    "statusEn": "In Progress, 2024–",
     "researchers": [
       {
         "slug": "jungyun",
         "name": "황정윤",
+        "nameEn": "Jeongyun Hwang",
         "role": "Ph.D. Candidate",
         "avatar": "Photos/members/jungyun.jpg"
       }
     ],
     "background": "도시화로 에너지 수요가 도시에 집중되면서 전력망을 비롯한 에너지 시스템의 부담이 가중되고 있습니다. 지속가능한 도시를 설계하기 위해서는 이러한 도시 에너지 생태계를 이해하는 것이 선행되어야 합니다. 도시 건물 에너지 모델(UBEM)은 도시 단위 건물 에너지 분석에 널리 활용되고 있으나, 계산 비용이 크고 실제 도시가 가진 불확실성을 충분히 반영하지 못한다는 한계가 있습니다. 따라서 건물 특성(형상, 부하, 패턴)을 기반으로 한 초기 분석과 불확실성을 고려한 모델 보정을 통해 정밀 분석으로 이어지는 방법론이 필요합니다.",
+    "backgroundEn": "As urbanization concentrates energy demand in cities, the burden on energy systems, including power grids, continues to grow. Understanding this urban energy ecosystem is a prerequisite for designing sustainable cities. Urban Building Energy Modeling (UBEM) is widely used for city-scale building energy analysis, but it has limitations in computational cost and in capturing the uncertainty inherent in real cities. A methodology is therefore needed that proceeds from an initial analysis based on building characteristics (shape, load, and pattern) to a detailed analysis through uncertainty-aware model calibration.",
     "goal": "건물 특성 지표 기반의 초기 분석부터 불확실성 보정을 통한 정밀 분석으로 정확한 도시 건물 에너지 모델(UBEM)을 구축하는 것을 목표로 합니다.",
+    "goalEn": "This study aims to build an accurate Urban Building Energy Model (UBEM) by progressing from an initial analysis based on building feature indices to a detailed analysis through uncertainty calibration.",
     "keywords": [
       "Urban Building Energy Modeling (UBEM)",
       "Bayesian Calibration",
@@ -128,19 +149,24 @@
   {
     "id": "research-whr-dc",
     "title": "데이터센터 폐열을 활용한 급탕 및 수열원 온도 유지 방안",
+    "titleEn": "Domestic Hot Water Supply and Water Source Temperature Maintenance Using Data Center Waste Heat",
     "group": "Building Energy Systems",
     "back": "main",
     "status": "진행 중 · 2025–",
+    "statusEn": "In Progress, 2025–",
     "researchers": [
       {
         "slug": "jiung",
         "name": "한지웅",
+        "nameEn": "Jiung Hann",
         "role": "Master's Student",
         "avatar": "Photos/members/jiung.png"
       }
     ],
     "background": "생성형 인공지능의 급격한 확산에 따라 데이터센터 수요가 폭발적으로 증가하고 있습니다. 데이터센터는 운영 과정에서 대량의 폐열을 지속적으로 발생시키며, 이를 효과적으로 활용하기 위한 연구가 활발히 진행되고 있습니다. 그러나 기존의 수열원 기반 폐열 활용 연구는 폐열 방류로 인한 수온 상승의 환경적 영향을 충분히 고려하지 못했습니다. 따라서 폐열의 에너지 활용 성능을 높이는 동시에, 방류수의 수온 변화까지 종합적으로 검토하는 접근이 필요합니다.",
+    "backgroundEn": "The rapid spread of generative artificial intelligence has driven an explosive increase in data center demand. Data centers continuously generate large amounts of waste heat during operation, and research on effectively utilizing this waste heat is actively underway. However, existing studies on water-source-based waste heat utilization have not adequately considered the environmental impact of the water temperature rise caused by waste heat discharge. An approach is therefore needed that both improves the energy utilization performance of the waste heat and comprehensively examines the resulting change in discharge water temperature.",
     "goal": "수열원을 통해 폐열을 회수할 때 시스템으로 방류 수온을 제어하고, 폐열 활용에 따른 에너지 성능을 향상시킵니다.",
+    "goalEn": "This study controls the discharge water temperature of the system when recovering waste heat through a water source and improves the energy performance achieved through waste heat utilization.",
     "keywords": [
       "Data Center",
       "Water to Water Heat Pump",
@@ -155,19 +181,24 @@
   {
     "id": "research-ai",
     "title": "이미지·벡터 하이브리드 기반 CAD 도면 공간 자동 인식 엔진 및 LLM 기반 자연어 질의응답 시스템 개발",
+    "titleEn": "Development of an Image and Vector Hybrid CAD Drawing Space Recognition Engine and an LLM-Based Natural Language Question Answering System",
     "group": "Building Energy Systems",
     "back": "main",
     "status": "진행 중 · 2025–",
+    "statusEn": "In Progress, 2025–",
     "researchers": [
       {
         "slug": "jiung",
         "name": "한지웅",
+        "nameEn": "Jiung Hann",
         "role": "Master's Student",
         "avatar": "Photos/members/jiung.png"
       }
     ],
     "background": "도시 건축물의 에너지 소비는 전체 에너지 소비의 약 40%를 차지하며, 이를 절감하기 위한 AI Agent 기반 건물 에너지 관리 연구가 활발히 진행되고 있습니다. AI Agent가 건물을 자율적으로 운영·제어하려면 대상 건물의 공간 구성(층별 실 배치, 면적, 용도 등)과 설비 간의 관계를 구조적으로 파악해야 합니다.\n그러나 CAD 도면에서 공간 데이터를 자동으로 추출하는 기술은 아직 확립되지 않아 대부분 수작업에 의존하며, 도시 단위로 대상 건축물이 급증할 경우 규모적으로 한계가 있습니다.\n또한 기존의 이미지 기반 딥러닝은 좌표·치수 정보가 소실되고, 벡터 기반 접근은 벽체 선분의 단절이나 레이어 명칭 불일치에 취약하며, 도면 내 텍스트 주석과 해당 공간을 의미적으로 연결하는 연구도 부족한 실정입니다.",
+    "backgroundEn": "Building energy consumption in cities accounts for about 40% of total energy consumption, and research on AI agent-based building energy management to reduce this share is actively underway. For an AI agent to autonomously operate and control a building, it must structurally understand the building's spatial configuration (room layout by floor, area, and usage) and the relationships between building systems.\nHowever, the technology for automatically extracting spatial data from CAD drawings is not yet established and still relies mostly on manual work, which limits scalability when the number of target buildings increases sharply at the city scale.\nIn addition, existing image-based deep learning approaches lose coordinate and dimension information, vector-based approaches are vulnerable to disconnected wall segments and inconsistent layer naming, and research that semantically links text annotations in drawings to their corresponding spaces remains insufficient.",
     "goal": "도시 단위 AI Agent 구축을 위한 기반 연구로서, 이미지·벡터 하이브리드 기반 CAD 도면 공간 자동 인식 엔진과 LLM 기반 자연어 질의응답 시스템을 개발합니다. 이미지 딥러닝으로 닫힌 공간을 1차 탐지한 뒤 벡터 벽체를 추적·보정하여 공간을 인식하고, YOLO-obb와 VLM으로 주석을 공간과 매칭해 구조화된 메타데이터로 변환한 후 Brick Schema·BOT 온톨로지로 매핑합니다. 이를 기반으로 사용자가 자연어로 건물의 공간·설비 정보를 질의·응답할 수 있는 시스템을 구축합니다.",
+    "goalEn": "As a foundational study for building a city-scale AI agent, this research develops an image and vector hybrid CAD drawing space recognition engine and an LLM-based natural language question answering system. Enclosed spaces are first detected using image-based deep learning, then recognized by tracing and correcting vector wall segments. Annotations are matched to spaces using YOLO-obb and a vision-language model (VLM), converted into structured metadata, and mapped to the Brick Schema and BOT ontology. Based on this pipeline, the study builds a system that allows users to query and receive answers about a building's spatial and system information in natural language.",
     "keywords": [
       "Architectural Drawings",
       "AI Agent",
@@ -184,19 +215,24 @@
   {
     "id": "research-cascade-hp",
     "title": "건물 내 동시 냉방·급탕 수요의 열적 결합을 통한 캐스케이드 히트펌프 시스템",
+    "titleEn": "A Cascade Heat Pump System Based on Thermal Coupling of Simultaneous Cooling and Domestic Hot Water Demand in Buildings",
     "group": "Building Energy Systems",
     "back": "main",
     "status": "진행 중 · 2025–",
+    "statusEn": "In Progress, 2025–",
     "researchers": [
       {
         "slug": "jiung",
         "name": "한지웅",
+        "nameEn": "Jiung Hann",
         "role": "Master's Student",
         "avatar": "Photos/members/jiung.png"
       }
     ],
     "background": "건물에서 사용하는 에너지의 상당 부분은 냉방과 급탕에 쓰입니다. 냉방은 실내의 열을 외부로 버리는 과정이고 급탕은 물을 데우기 위해 열을 필요로 하므로, 같은 건물 안에서 버려지는 열과 필요한 열이 동시에 존재합니다. 그러나 대부분의 건물에서는 냉방과 급탕 설비가 따로 운영되어 냉방 과정의 폐열이 그대로 버려지고, 급탕은 이를 활용하지 못한 채 처음부터 다시 에너지를 들여 물을 데웁니다. 냉방 폐열을 급탕의 열원으로 재사용하면 상당한 에너지를 절감할 수 있으나, 냉방에 알맞은 낮은 온도와 급탕에 필요한 높은 온도의 차이가 커 단일 장비로 한 번에 끌어올리면 효율이 떨어집니다. 따라서 열을 두 단계에 걸쳐 차례로 승온하는 캐스케이드(cascade) 방식이 필요합니다.",
+    "backgroundEn": "A substantial portion of the energy used in buildings goes to cooling and domestic hot water (DHW). Cooling rejects heat from indoor spaces to the outside, while DHW requires heat to warm water, so a building simultaneously has heat to reject and heat to supply. In most buildings, however, cooling and DHW systems operate separately: the waste heat from cooling is discarded, and DHW is produced by adding energy from scratch without utilizing that waste heat. Reusing cooling waste heat as a heat source for DHW can save substantial energy, but the large temperature gap between the low temperature suited to cooling and the high temperature required for DHW reduces efficiency if a single unit raises the temperature in one step. A cascade approach that raises the temperature sequentially in two stages is therefore needed.",
     "goal": "냉방에서 버려지는 열을 급탕의 열원으로 재사용하는 캐스케이드 통합 히트펌프 시스템을 제안하고, Modelica 시뮬레이션으로 연간 운전을 재현하여 에너지 절감 효과를 검증합니다. 냉방·급탕 분리 운영, 단순 통합, 캐스케이드 방식을 동일한 조건에서 비교하여 열 재사용에 따른 절감 효과만을 분리하고, 절감이 발생하는 원리와 냉방·급탕 수요의 중첩 정도·축열 탱크 용량 등 절감 효과를 극대화하는 조건을 규명하는 것을 목표로 합니다.",
+    "goalEn": "This study proposes a cascade integrated heat pump system that reuses heat rejected from cooling as a heat source for DHW and verifies its energy savings by reproducing annual operation through Modelica simulation. Separate cooling and DHW operation, simple integration, and the cascade approach are compared under identical conditions to isolate the savings attributable to heat reuse. The goal is to identify the mechanism behind the savings and the conditions, such as the degree of overlap between cooling and DHW demand and the thermal storage tank capacity, that maximize the savings effect.",
     "keywords": [
       "Cascade Heat Pump",
       "Integrated Heat Pump (IWHP)",
@@ -211,19 +247,24 @@
   {
     "id": "research-chpwh",
     "title": "공동주택 중앙식 히트펌프 급탕 시스템의 반환수 영향 저감을 위한 부하 분리와 적응형 Load Shift 최적화",
+    "titleEn": "Load Separation and Adaptive Load Shift Optimization to Reduce the Impact of Return Water in a Central Heat Pump Water Heater System for Multi-Family Housing",
     "group": "Building Energy Systems",
     "back": "main",
     "status": "진행 중 · 2025–",
+    "statusEn": "In Progress, 2025–",
     "researchers": [
       {
         "slug": "sangmin",
         "name": "이상민",
+        "nameEn": "Sangmin Lee",
         "role": "Master's Student",
         "avatar": "Photos/members/sangmin.jpg"
       }
     ],
     "background": "중앙식 급탕 시스템에서는 온수 재순환 시스템으로 인한 반환수가 고려되고 있습니다. 하지만 반환수의 유입으로 인한 시스템의 성능 저하를 고려하거나, 이를 모델링 과정에 반영한 연구는 미흡한 실정입니다. 또한, 기존 Load Shift 전략은 운영자의 도메인 지식에 의존하며, 사전에 고정된 채 변화하지 않는 정적인 단계에 머물고 있습니다. 이에 따라, 반환수로 인한 성능 저하를 방지하기 위한 부하 분리 기반 CHPWH 시스템 시뮬레이션 모델의 구축과 급탕 부하 및 외기 조건에 따라 변화하는 적응형 Load Shift 전략의 도입이 필요합니다.",
+    "backgroundEn": "Central domestic hot water (DHW) systems account for return water generated by hot water recirculation. However, few studies have considered the resulting performance degradation or reflected it in system modeling. In addition, existing load shift strategies depend on operator domain knowledge and remain static, fixed in advance rather than adapting to changing conditions. This study therefore develops a load-separation-based Central Heat Pump Water Heater (CHPWH) simulation model to prevent performance degradation caused by return water, and introduces an adaptive load shift strategy that responds to changes in DHW load and outdoor air conditions.",
     "goal": "CHPWH 시스템에서 반환수로 인한 성능 저하를 방지하기 위한 부하 분리 방법론을 제시하고, 반환수를 고려한 부하 분리 기반의 CHPWH 시뮬레이션 모델을 구축합니다. 또한 급탕 부하와 외기 조건에 따라 변화하는 적응형 Load Shift 전략을 제시하고 비용 최적화 방안을 연구합니다.",
+    "goalEn": "This study presents a load separation methodology to prevent performance degradation caused by return water in a CHPWH system and builds a load-separation-based CHPWH simulation model that accounts for return water. It also presents an adaptive load shift strategy that responds to DHW load and outdoor air conditions and investigates cost optimization approaches.",
     "keywords": [
       "Building Energy Simulation",
       "Central Heat Pump Water Heater",
@@ -241,20 +282,25 @@
   {
     "id": "research-pmv-sensor",
     "title": "도서관 최적 좌석 제시를 위한 PMV 가상센서 시스템 구축",
+    "titleEn": "Development of a PMV Virtual Sensor System for Optimal Seat Recommendation in Libraries",
     "group": "Building Energy Systems",
     "back": "main",
     "status": "진행 완료 · 2024",
+    "statusEn": "Completed, 2024",
     "completed": true,
     "researchers": [
       {
         "slug": "sangmin",
         "name": "이상민",
+        "nameEn": "Sangmin Lee",
         "role": "Master's Student",
         "avatar": "Photos/members/sangmin.jpg"
       }
     ],
     "background": "같은 공간 내에서도 좌석 구조에 따라 열적 쾌적성은 달라지며, 같은 좌석을 사용하더라도 개인마다 열적 쾌적성을 다르게 느낄 수 있습니다. 그러나, 현재 도서관 열람실에 도입된 좌석 선택 시스템은 이러한 차이점을 고려하지 않아 재실자의 불만족도가 증가하고 있는 상황입니다. 이에 도서관 이용 시 개인의 열적쾌적성을 고려하는 좌석 선택 시스템이 필요하며, 이를 위해 PMV 가상센서를 구축하여 불만족도를 해결하고자 합니다.",
+    "backgroundEn": "Even within the same space, thermal comfort varies with seat configuration, and individuals can perceive thermal comfort differently even at the same seat. However, seat selection systems currently deployed in library reading rooms do not account for these differences, leading to increasing occupant dissatisfaction. A seat selection system that considers individual thermal comfort is therefore needed for library use, and this study builds a PMV virtual sensor to address this dissatisfaction.",
     "goal": "PMV 가상센서를 구축하여 각 좌석마다의 열적쾌적성을 예측하고, 이를 실제 좌석 선택 시스템에 반영하여 재실자의 불만족도를 줄이고자 합니다.",
+    "goalEn": "This study builds a PMV virtual sensor to predict thermal comfort at each seat and reflects it in an actual seat selection system to reduce occupant dissatisfaction.",
     "keywords": [
       "Virtual Sensor",
       "Thermal Comfort",

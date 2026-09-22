@@ -1,10 +1,16 @@
 // ===== BEE Lab scripts (extracted from index.html) =====
+function fetchJson(path) {
+  return fetch(path, { cache: 'no-cache' }).then(function (response) {
+    if (!response.ok) throw new Error('HTTP ' + response.status);
+    return response.json();
+  });
+}
+
   // ===== 메인 페이지 전용 동작: 최신 News/Blog 로드 + 스크롤 등장 =====
   window.addEventListener('load', function () {
     // 1) 최신 News/Blog 3개씩 렌더 (기존 buildCard / bnData / 클릭 핸들러 재사용)
     function renderHomeLatest(jsonPath, type, targetId) {
-      fetch(jsonPath)
-        .then(function (r) { return r.json(); })
+      fetchJson(jsonPath)
         .then(function (data) {
           var box = document.getElementById(targetId);
           if (!box) return;
@@ -84,6 +90,26 @@ var scrollPositions = {};
 var tabState = {};
 var navStack = [];
 var currentPage = 'intro';
+
+function currentLanguage() {
+  return window.BeeI18n ? window.BeeI18n.language : 'ko';
+}
+
+function localizedField(item, key) {
+  if (window.BeeI18n) return window.BeeI18n.field(item, key);
+  return item && item[key] != null ? item[key] : '';
+}
+
+function localizedText(key, fallback) {
+  return window.BeeI18n ? window.BeeI18n.text(key, fallback) : fallback;
+}
+
+document.addEventListener('languagechange', function () {
+  var y = window.scrollY;
+  requestAnimationFrame(function () {
+    window.scrollTo({ top: y, behavior: 'instant' });
+  });
+}, true);
 
 // 떠나는 페이지의 스크롤 위치 + 활성 탭(rp-panel) 상태 저장
 function captureState(pageId) {
@@ -259,12 +285,10 @@ function bnSortByDate(items) {
 }
 
 function loadBlogNews() {
-  fetch('News_Blog_JPG/beelab_content/blog.json')
-    .then(function(r) { return r.json(); })
+  fetchJson('News_Blog_JPG/beelab_content/blog.json')
     .then(function(data) { data = bnSortByDate(data); bnData.Blog = data; renderBNPage('blog', data, 'Blog'); })
     .catch(function(e) { console.error('Blog load error:', e); });
-  fetch('News_Blog_JPG/beelab_content/news.json')
-    .then(function(r) { return r.json(); })
+  fetchJson('News_Blog_JPG/beelab_content/news.json')
     .then(function(data) { data = bnSortByDate(data); bnData.News = data; renderBNPage('news', data, 'News'); })
     .catch(function(e) { console.error('News load error:', e); });
 }
@@ -302,6 +326,7 @@ function bnFirstImage(item) {
 
 function buildCard(item, idx, type) {
   var first = bnFirstImage(item);
+  var title = localizedField(item, 'title');
   var html = '<div class="bn-card" data-type="' + type + '" data-idx="' + idx + '">';
   if (first) {
     html += '<img class="bn-card-img" src="' + encodeURI(first) + '" alt="" loading="lazy" onerror="bnImgHide(this)">';
@@ -310,7 +335,7 @@ function buildCard(item, idx, type) {
     html += '<div class="bn-no-img">📷</div>';
   }
   html += '<div class="bn-card-body">';
-  html += '<div class="bn-card-title">' + escapeHtml(item.title) + '</div>';
+  html += '<div class="bn-card-title">' + escapeHtml(title) + '</div>';
   html += '</div></div>';
   return html;
 }
@@ -322,11 +347,12 @@ function escapeHtml(t) {
 }
 
 function cleanBody(item) {
-  var body = item.body || '';
+  var body = localizedField(item, 'body');
+  var title = localizedField(item, 'title');
   if (!body) return '';
   // Remove title if duplicated at start
-  if (item.title && body.indexOf(item.title) === 0) {
-    body = body.substring(item.title.length).replace(/^\s*\n/, '');
+  if (title && body.indexOf(title) === 0) {
+    body = body.substring(title.length).replace(/^\s*\n/, '');
   }
   // Remove date/location that duplicate the separate fields
   if (item.date) {
@@ -352,17 +378,23 @@ document.addEventListener('click', function(e) {
   if (bnData[type] && bnData[type][idx]) openBNDetail(type, bnData[type][idx]);
 });
 
+var openBNState = null;
+
 function openBNDetail(type, item) {
+  openBNState = { type: type, id: item.id || null, item: item };
   var m = document.getElementById('bn-modal');
   if (!m) { m = document.createElement('div'); m.id = 'bn-modal'; document.body.appendChild(m); }
+  if (m._scrollRestoreCleanup) m._scrollRestoreCleanup();
+  var previousScroll = m.firstElementChild ? m.firstElementChild.scrollTop : 0;
   var imgs = '';
   (item.images || []).forEach(function (im) {
     var src = bnImgSrc(im);
     if (!src) return;
-    var cap = (im && im.caption) ? im.caption : '';
+    var cap = (im && typeof im === 'object') ? localizedField(im, 'caption') : '';
     imgs += '<img src="' + encodeURI(src) + '" style="width:100%;border-radius:8px;margin-bottom:' + (cap ? '6px' : '12px') + ';" loading="lazy" onerror="bnImgHide(this)">';
     if (cap) imgs += '<div style="font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:16px;text-align:center;">' + escapeHtml(cap) + '</div>';
   });
+  var title = localizedField(item, 'title');
   var body = cleanBody(item);
   body = body.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   m.style.display = 'block';
@@ -370,16 +402,56 @@ function openBNDetail(type, item) {
   m.innerHTML = '<div style="position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1000;overflow-y:auto;padding:40px 20px;-webkit-overflow-scrolling:touch;" onclick="if(event.target===this){closeBNModal();}">' +
     '<div style="max-width:700px;margin:0 auto;background:#fff;border-radius:14px;padding:36px;position:relative;">' +
     '<div onclick="closeBNModal()" style="position:absolute;top:16px;right:20px;font-size:20px;cursor:pointer;color:#999;z-index:1;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#f5f5f5;">✕</div>' +
-    '<h2 style="font-size:22px;font-weight:800;margin-bottom:10px;letter-spacing:-0.02em;line-height:1.35;padding-right:40px;">' + escapeHtml(item.title) + '</h2>' +
+    '<h2 style="font-size:22px;font-weight:800;margin-bottom:10px;letter-spacing:-0.02em;line-height:1.35;padding-right:40px;">' + escapeHtml(title) + '</h2>' +
     (item.date ? '<div style="font-size:13px;color:#999;margin-bottom:4px;">📅 ' + escapeHtml(item.date) + '</div>' : '') +
     (item.location ? '<div style="font-size:13px;color:#999;margin-bottom:20px;">📍 ' + escapeHtml(item.location) + '</div>' : '<div style="margin-bottom:20px;"></div>') +
     (body ? '<div style="font-size:14px;color:#444;line-height:1.85;margin-bottom:24px;white-space:pre-line;border-top:1px solid #eee;padding-top:20px;">' + body + '</div>' : '') +
     imgs + '</div></div>';
+  if (previousScroll && m.firstElementChild) {
+    var scroller = m.firstElementChild;
+    var pendingImages = [];
+    var cancelled = false;
+    var cleanup = function () {
+      if (cancelled) return;
+      cancelled = true;
+      window.clearTimeout(cleanupTimer);
+      ['wheel', 'touchstart', 'pointerdown'].forEach(function (eventName) {
+        scroller.removeEventListener(eventName, cleanup);
+      });
+      document.removeEventListener('keydown', cleanup);
+      pendingImages.forEach(function (image) {
+        image.removeEventListener('load', restoreScroll);
+      });
+      if (m._scrollRestoreCleanup === cleanup) m._scrollRestoreCleanup = null;
+    };
+    var restoreScroll = function () {
+      if (!cancelled && m.firstElementChild === scroller) scroller.scrollTop = previousScroll;
+    };
+    var cleanupTimer = window.setTimeout(cleanup, 1000);
+    m._scrollRestoreCleanup = cleanup;
+    ['wheel', 'touchstart', 'pointerdown'].forEach(function (eventName) {
+      scroller.addEventListener(eventName, cleanup, { once: true });
+    });
+    document.addEventListener('keydown', cleanup, { once: true });
+    restoreScroll();
+    window.requestAnimationFrame(restoreScroll);
+    scroller.querySelectorAll('img').forEach(function (image) {
+      if (!image.complete) {
+        pendingImages.push(image);
+        image.addEventListener('load', restoreScroll);
+      }
+    });
+  }
 }
 
 function closeBNModal() {
   var m = document.getElementById('bn-modal');
-  if (m) { m.style.display = 'none'; m.innerHTML = ''; }
+  if (m) {
+    if (m._scrollRestoreCleanup) m._scrollRestoreCleanup();
+    m.style.display = 'none';
+    m.innerHTML = '';
+  }
+  openBNState = null;
   document.body.style.overflow = '';
 }
 
@@ -388,6 +460,20 @@ document.addEventListener('keydown', function(e) {
 });
 
 loadBlogNews();
+
+document.addEventListener('languagechange', function () {
+  if (bnData.Blog.length) {
+    renderBNPage('blog', bnData.Blog, 'Blog');
+    var homeBlog = document.getElementById('main-blog-grid');
+    if (homeBlog) homeBlog.innerHTML = bnData.Blog.slice(0, 4).map(function (item, i) { return buildCard(item, i, 'Blog'); }).join('');
+  }
+  if (bnData.News.length) {
+    renderBNPage('news', bnData.News, 'News');
+    var homeNews = document.getElementById('main-news-grid');
+    if (homeNews) homeNews.innerHTML = bnData.News.slice(0, 4).map(function (item, i) { return buildCard(item, i, 'News'); }).join('');
+  }
+  if (openBNState) openBNDetail(openBNState.type, openBNState.item);
+});
 
 // ===== 개인연구: research-content/research.json 으로 상세 페이지 자동 생성 =====
 function rEsc(t) { return String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
@@ -399,9 +485,13 @@ function rParas(t) {
     .join('');
 }
 function buildResearchPage(r) {
-  var fig = r.figure ? '<img class="research-fig" src="' + rEsc(r.figure) + '" alt="' + rEsc(r.title) + '" loading="lazy" onerror="this.style.display=\'none\'">' : '';
+  var title = localizedField(r, 'title');
+  var status = localizedField(r, 'status');
+  var background = localizedField(r, 'background');
+  var goal = localizedField(r, 'goal');
+  var fig = r.figure ? '<img class="research-fig" src="' + rEsc(r.figure) + '" alt="' + rEsc(title) + '" loading="lazy" onerror="this.style.display=\'none\'">' : '';
   var researchers = (r.researchers || []).map(function (p) {
-    return '<div class="sidebar-person" onclick="showPage(\'member-' + rEsc(p.slug) + '\')"><img src="' + rEsc(p.avatar) + '" alt=""/><div><div class="name">' + rEsc(p.name) + '</div><div class="role">' + rEsc(p.role) + '</div></div></div>';
+    return '<div class="sidebar-person" onclick="showPage(\'member-' + rEsc(p.slug) + '\')"><img src="' + rEsc(p.avatar) + '" alt=""/><div><div class="name">' + rEsc(localizedField(p, 'name')) + '</div><div class="role">' + rEsc(p.role) + '</div></div></div>';
   }).join('');
   var rLabel = (r.researchers && r.researchers.length > 1) ? 'Researchers' : 'Researcher';
   var tools = (r.tools || []).map(function (t) { return '<span class="sidebar-tag">' + rEsc(t) + '</span>'; }).join('');
@@ -412,12 +502,12 @@ function buildResearchPage(r) {
   return '<div class="detail-page fade-in">' +
     '<div class="back-link" onclick="goBack(\'' + rEsc(r.back) + '\')">← ' + rEsc(r.group) + '</div>' +
     '<div class="detail-grid"><div>' +
-      '<h1 style="font-size:32px;">' + rEsc(r.title) + '</h1>' +
-      '<div class="detail-meta">' + dot + '<span class="status-text">' + rEsc(r.status) + '</span></div>' +
+      '<h1 style="font-size:32px;">' + rEsc(title) + '</h1>' +
+      '<div class="detail-meta">' + dot + '<span class="status-text">' + rEsc(status) + '</span></div>' +
       fig +
       '<div class="detail-content">' +
-        '<h3>연구배경</h3>' + rParas(r.background) +
-        '<h3>연구목표</h3>' + rParas(r.goal) +
+        '<h3>' + rEsc(localizedText('dynamic.research.background', '연구배경')) + '</h3>' + rParas(background) +
+        '<h3>' + rEsc(localizedText('dynamic.research.goal', '연구목표')) + '</h3>' + rParas(goal) +
         '<h3>Keywords</h3><p>' + kw + '</p>' +
       '</div>' +
     '</div><div>' +
@@ -427,15 +517,19 @@ function buildResearchPage(r) {
     papers +
   '</div>';
 }
+var researchData = [];
+function renderResearchPages(list) {
+  (list || []).forEach(function (r) {
+    var el = document.getElementById('page-' + r.id);
+    if (!el) { el = document.createElement('div'); el.id = 'page-' + r.id; el.className = 'page-view'; document.body.appendChild(el); }
+    el.innerHTML = buildResearchPage(r);
+  });
+}
 function loadResearch() {
-  return fetch('research-content/research.json')
-    .then(function (r) { return r.json(); })
+  return fetchJson('research-content/research.json')
     .then(function (list) {
-      list.forEach(function (r) {
-        var el = document.getElementById('page-' + r.id);
-        if (!el) { el = document.createElement('div'); el.id = 'page-' + r.id; el.className = 'page-view'; document.body.appendChild(el); }
-        el.innerHTML = buildResearchPage(r);
-      });
+      researchData = Array.isArray(list) ? list : [];
+      renderResearchPages(researchData);
       // 딥링크 보정: 현재 해시가 방금 만든 연구 페이지면 다시 표시
       var h = location.hash.replace('#', '');
       if (h && document.getElementById('page-' + h)) { showPage(h); }
@@ -460,8 +554,8 @@ function loadProjGallery(key, containerId) {
   if (!box) return;
   // 캐러셀 구조 생성
   var track = document.createElement('div'); track.className = 'pc-track';
-  var prev = document.createElement('button'); prev.className = 'pc-arrow pc-prev hidden'; prev.setAttribute('aria-label', '이전'); prev.innerHTML = '‹';
-  var next = document.createElement('button'); next.className = 'pc-arrow pc-next hidden'; next.setAttribute('aria-label', '다음'); next.innerHTML = '›';
+  var prev = document.createElement('button'); prev.className = 'pc-arrow pc-prev hidden'; prev.setAttribute('aria-label', localizedText('dynamic.gallery.previous', '이전')); prev.innerHTML = '‹';
+  var next = document.createElement('button'); next.className = 'pc-arrow pc-next hidden'; next.setAttribute('aria-label', localizedText('dynamic.gallery.next', '다음')); next.innerHTML = '›';
   var dots = document.createElement('div'); dots.className = 'pc-dots';
   box.appendChild(track); box.appendChild(prev); box.appendChild(next); box.appendChild(dots);
 
@@ -502,6 +596,14 @@ function loadProjGallery(key, containerId) {
   })(1);
 }
 ['datanet', 'green', 'lh', 'carbon'].forEach(function (k) { loadProjGallery(k, 'proj-gallery-' + k); });
+document.addEventListener('languagechange', function () {
+  document.querySelectorAll('.pc-prev').forEach(function (button) {
+    button.setAttribute('aria-label', localizedText('dynamic.gallery.previous', '이전'));
+  });
+  document.querySelectorAll('.pc-next').forEach(function (button) {
+    button.setAttribute('aria-label', localizedText('dynamic.gallery.next', '다음'));
+  });
+});
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') { var lb = document.getElementById('proj-lightbox'); if (lb) lb.classList.remove('open'); }
 });
@@ -563,6 +665,10 @@ function pubAwardHtml(a){
   if (!a) return '';
   var name = (a === true) ? '우수논문발표상' : String(a).replace(/^🏆\s*/, '').trim();
   if (!name) return '';
+  if (currentLanguage() === 'en') {
+    if (name === '우수논문상') name = 'Best Paper Award';
+    if (name === '우수논문발표상') name = 'Best Presentation Award';
+  }
   return '<span style="margin-left:8px;font-size:11px;font-weight:600;color:#D4A017;">🏆 '+pubEsc(name)+'</span>';
 }
 
@@ -588,7 +694,7 @@ function firstAuthorPubs(slug){
 function researchPaperCard(e){
   var meta = pubBadgeHtml(e) + pubDoiHtml(e.doi) + pubAwardHtml(e.award);
   return '<div style="padding:16px;border:1px solid var(--border);border-radius:8px;margin:8px 0;">'
-    + '<div style="font-size:14px;line-height:1.55;">' + citationHtml(e.citation) + '</div>'
+    + '<div style="font-size:14px;line-height:1.55;">' + citationHtml(localizedField(e, 'citation')) + '</div>'
     + (meta ? '<div style="margin-top:10px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;">' + meta + '</div>' : '')
     + '</div>';
 }
@@ -597,7 +703,7 @@ function fillResearchPapers(){
   document.querySelectorAll('[data-research]').forEach(function(box){
     var items = pubsFor('research', box.getAttribute('data-research'));
     box.innerHTML = items.length
-      ? '<h3>관련 논문</h3>' + items.map(researchPaperCard).join('')
+      ? '<h3>' + pubEsc(localizedText('dynamic.research.relatedPapers', '관련 논문')) + '</h3>' + items.map(researchPaperCard).join('')
       : '';
   });
 }
@@ -608,7 +714,7 @@ function fillResearchPapers(){
   function rowHtml(e){
     return '<div class="pub-row">'
       + '<div class="pub-year">'+esc(String(e.date||'').slice(0,4))+'</div>'
-      + '<div><div class="pub-title">'+citationHtml(e.citation)+'</div>'
+      + '<div><div class="pub-title">'+citationHtml(localizedField(e, 'citation'))+'</div>'
       + pubDoiHtml(e.doi)+pubAwardHtml(e.award)+'</div>'
       + '<div>'+pubBadgeHtml(e)+'</div>'
       + '</div>';
@@ -637,9 +743,9 @@ function fillResearchPapers(){
     { cat: 'int-conf',      panel: 'pub-int-conf' },
     { cat: 'dom-conf',      panel: 'pub-dom-conf' }
   ];
+  var publicationGroups = [];
   window._pubReady = Promise.all(PUB_SOURCES.map(function(src){
-    return fetch('publications/'+src.cat+'.json')
-      .then(function(r){ return r.json(); })
+    return fetchJson('publications/'+src.cat+'.json')
       .then(function(list){
         if(!Array.isArray(list)) list = [];
         list.forEach(function(e){ e.category = src.cat; });
@@ -649,9 +755,16 @@ function fillResearchPapers(){
       })
       .catch(function(err){ console.error('publications load failed: '+src.cat, err); return []; });
   })).then(function(groups){
+    publicationGroups = groups;
     // 프로필과 연구 페이지가 여기서 논문을 가져간다. 유일한 출처다.
     window.PUBLICATIONS = groups.reduce(function(a,b){ return a.concat(b); }, []).sort(pubByDateDesc);
     return window.PUBLICATIONS;
+  });
+
+  document.addEventListener('languagechange', function () {
+    publicationGroups.forEach(function (list, index) {
+      set(PUB_SOURCES[index].panel, renderFlat(list));
+    });
   });
 })();
 
@@ -662,7 +775,7 @@ function fillResearchPapers(){
   // --- 공통: 프로필/논문 행 ---
   function pubRow(e){
     return '<div class="pub-row"><div class="pub-year">'+esc(String(e.date||e.year||'').slice(0,4))+'</div>'
-      + '<div><div class="pub-title">'+citationHtml(e.citation)+'</div>'
+      + '<div><div class="pub-title">'+citationHtml(localizedField(e, 'citation'))+'</div>'
       + pubDoiHtml(e.doi)+pubAwardHtml(e.award)+'</div>'
       + '<div>'+pubBadgeHtml(e)+'</div></div>';
   }
@@ -673,9 +786,10 @@ function fillResearchPapers(){
   // subtitle을 주면 카드 두 번째 줄을 그것으로 바꾼다. 학위별 보기에서는 역할 대신 연구분야를 보여준다.
   function card(m, subtitle){
     var sub = (subtitle == null) ? m.role : subtitle;
+    var name = localizedField(m, 'name');
     return '<div class="member-card" onclick="showPage(\'member-'+m.slug+'\')">'
-      + '<img class="member-avatar" src="'+esc(m.avatar)+'" alt="'+esc(m.name)+'" onerror="'+AVATAR_FALLBACK+'"/>'
-      + '<div class="name">'+esc(m.name)+'</div><div class="role">'+esc(sub)+'</div>'
+      + '<img class="member-avatar" src="'+esc(m.avatar)+'" alt="'+esc(name)+'" onerror="'+AVATAR_FALLBACK+'"/>'
+      + '<div class="name">'+esc(name)+'</div><div class="role">'+esc(sub)+'</div>'
       + '<div class="arrow-hint">View Profile →</div></div>';
   }
   function cardOnly(m){ return card(m); }   // map()의 index가 subtitle로 새는 것 방지
@@ -686,7 +800,7 @@ function fillResearchPapers(){
       return '<a href="'+esc(l.url)+'" target="_blank" style="font-size:13px;padding:6px 14px;border:1px solid var(--border);border-radius:100px;color:var(--text-mid);text-decoration:none;">'+esc(l.label)+'</a>';
     }).join('');
     var header = '<div class="prof-header" style="display:flex;gap:48px;align-items:flex-start;padding:40px;border:1px solid var(--border);border-radius:12px;margin-bottom:40px;">'
-      + '<img class="prof-photo" src="'+esc(p.avatar)+'" alt="'+esc(p.nameKr)+'" style="width:180px;height:220px;object-fit:cover;border-radius:12px;flex-shrink:0;background:#E0E0E0;">'
+      + '<img class="prof-photo" src="'+esc(p.avatar)+'" alt="'+esc(currentLanguage() === 'en' ? p.name : p.nameKr)+'" style="width:180px;height:220px;object-fit:cover;border-radius:12px;flex-shrink:0;background:#E0E0E0;">'
       + '<div>'
       + '<div style="font-size:14px;font-weight:600;color:var(--text-muted);margin-bottom:8px;">Professor:</div>'
       + '<div style="font-size:32px;font-weight:900;letter-spacing:-0.03em;margin-bottom:4px;">'+esc(p.name)+'</div>'
@@ -697,9 +811,10 @@ function fillResearchPapers(){
     var secs = (p.sections||[]).map(function(s, i){
       var last = (i === p.sections.length - 1);
       var mb = last ? 'margin-bottom:20px;' : 'margin-bottom:40px;';
-      var lines = (s.lines||[]).map(function(x){ return '<div>'+x+'</div>'; }).join('');
+      var sourceLines = currentLanguage() === 'en' && Array.isArray(s.linesEn) ? s.linesEn : (s.lines || []);
+      var lines = sourceLines.map(function(x){ return '<div>'+x+'</div>'; }).join('');
       return '<div style="'+mb+'">'
-        + '<div style="font-size:20px;font-weight:800;letter-spacing:-0.02em;margin-bottom:16px;">'+esc(s.title)+'</div>'
+        + '<div style="font-size:20px;font-weight:800;letter-spacing:-0.02em;margin-bottom:16px;">'+esc(localizedField(s, 'title'))+'</div>'
         + '<div style="font-size:14px;color:var(--text-mid);line-height:2.2;">'+lines+'</div>'
         + '</div>';
     }).join('');
@@ -763,20 +878,20 @@ function fillResearchPapers(){
     var bioStyle = p.bioStyle ? ' style="'+p.bioStyle+'"' : '';
     var top = '<div class="profile-top">'
       + '<img class="profile-avatar" src="'+esc(p.avatar)+'" alt="" onerror="'+AVATAR_FALLBACK+'"/>'
-      + '<div class="profile-info"><h1>'+esc(p.name)+'</h1><div class="role-line">'+esc(p.roleLine)+'</div>'
-      + '<div class="bio"'+bioStyle+'>'+(p.bio||'')+'</div></div>'
+      + '<div class="profile-info"><h1>'+esc(localizedField(p, 'name'))+'</h1><div class="role-line">'+esc(localizedField(p, 'roleLine'))+'</div>'
+      + '<div class="bio"'+bioStyle+'>'+localizedField(p, 'bio')+'</div></div>'
       + '</div>';
     var research = '';
     if(p.research && p.research.length){
       var items = p.research.map(function(r){
-        return '<div class="profile-research-item" onclick="showPage(\''+r.page+'\')"><h4>'+esc(r.title)+'</h4><p>'+esc(r.tags)+'</p></div>';
+        return '<div class="profile-research-item" onclick="showPage(\''+r.page+'\')"><h4>'+esc(localizedField(r, 'title'))+'</h4><p>'+esc(r.tags)+'</p></div>';
       }).join('');
       research = '<div class="profile-research-list"><h3>Research</h3>'+items+'</div>';
     }
     // 논문은 publications/*.json 에서 members 태그로 골라 온다. members.json 에 따로 두지 않는다.
     var mine = firstAuthorPubs(slug);
     var pubs = mine.length
-      ? '<div class="profile-research-list" style="margin-top:48px;"><h3>Publications <span style="font-size:13px;font-weight:400;color:var(--text-muted);">(제1저자)</span></h3>'+mine.map(pubRow).join('')+'</div>'
+      ? '<div class="profile-research-list" style="margin-top:48px;"><h3>Publications <span style="font-size:13px;font-weight:400;color:var(--text-muted);">('+esc(localizedText('dynamic.members.firstAuthor', '제1저자'))+')</span></h3>'+mine.map(pubRow).join('')+'</div>'
       : '';
     return '<div class="profile-page fade-in">'
       + '<div class="back-link" onclick="goBack(\'members-all\')">← People</div>'
@@ -786,23 +901,38 @@ function fillResearchPapers(){
 
   function set(id, html){ var el = document.getElementById(id); if(el) el.innerHTML = html; }
 
+  var memberData = null;
+  function renderMemberData(data) {
+    if (!data) return;
+    set('mem-professor', renderProfessor(data.professor || {}));
+    set('mem-by-area',   renderResearchers(data.researchers || []));
+    set('mem-by-degree', renderByDegree(data.researchers || []));
+    set('mem-alumni', renderAlumni(data.alumni || []));
+    var profs = data.profiles || {};
+    Object.keys(profs).forEach(function(slug){
+      set('page-member-'+slug, renderProfile(slug, profs[slug]));
+    });
+  }
+
   window._memReady = Promise.all([
-      fetch('members.json').then(function(r){ return r.json(); }),
+      fetchJson('members.json'),
       window._pubReady
     ])
     .then(function(res){
-      var data = res[0];
-      set('mem-professor', renderProfessor(data.professor || {}));
-      set('mem-by-area',   renderResearchers(data.researchers || []));
-      set('mem-by-degree', renderByDegree(data.researchers || []));
-      set('mem-alumni', renderAlumni(data.alumni || []));
-      var profs = data.profiles || {};
-      Object.keys(profs).forEach(function(slug){
-        set('page-member-'+slug, renderProfile(slug, profs[slug]));
-      });
+      memberData = res[0];
+      renderMemberData(memberData);
     })
     .catch(function(err){ console.error('members load failed', err); });
+
+  document.addEventListener('languagechange', function () {
+    renderMemberData(memberData);
+  });
 })();
+
+document.addEventListener('languagechange', function () {
+  renderResearchPages(researchData);
+  fillResearchPapers();
+});
 
 // 세 데이터가 모두 로드되면 준비 완료. 후처리로 연결할 것이 더는 없다.
 window._siteReady = Promise.all([window._pubReady, window._memReady, window._researchReady])
