@@ -55,6 +55,17 @@ HANGUL_RE = re.compile(
     r"[가-힣ᄀ-ᇿ㄰-㆏ꥠ-꥿ힰ-퟿]"
 )
 
+# User-facing News/Blog copy must spell the lab name exactly as "BEE Lab".
+# Separators and case are intentionally permissive here so variants such as
+# "BeeLab", "Bee_LAB", and "BEE LAB" can be reported rather than missed.
+BEE_LAB_CANDIDATE_RE = re.compile(r"(?i)\bbee(?:[\s_.-]+)?lab\b")
+BEE_LAB_BAD_SUFFIX_RE = re.compile(
+    r"^(?:\s+\.|\.(?:['’]s|[가-힣]))",
+    re.IGNORECASE,
+)
+EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+URL_RE = re.compile(r"https?://\S+")
+
 # documented Korean-field -> English-companion-field pairs inside members.json
 # (recursed into wherever they appear, at any depth).
 MEMBERS_COMPANION_PAIRS: Tuple[Tuple[str, str], ...] = (
@@ -110,6 +121,35 @@ def normalized_stable_id(value: Any) -> Any:
     if is_valid_uuid(value):
         return value.lower()
     return value
+
+
+def has_noncanonical_bee_lab(
+    text: Any, *, allow_mid_sentence_period: bool = False
+) -> bool:
+    """Return True when a user-facing value contains a BEE Lab variant.
+
+    A period at the end of a value is sentence punctuation and is accepted.
+    Prose fields can additionally allow a period before another sentence.
+    Titles and captions keep the stricter default so ``BEE Lab. Event`` cannot
+    reintroduce the former lab-name spelling. A separated period or a period
+    attached to a Korean particle or English possessive is always rejected.
+    """
+    if not isinstance(text, str):
+        return False
+    searchable_text = EMAIL_RE.sub("", URL_RE.sub("", text))
+    for match in BEE_LAB_CANDIDATE_RE.finditer(searchable_text):
+        if match.group(0) != "BEE Lab":
+            return True
+        suffix = searchable_text[match.end():]
+        if BEE_LAB_BAD_SUFFIX_RE.match(suffix):
+            return True
+        if (
+            not allow_mid_sentence_period
+            and suffix.startswith(".")
+            and suffix[1:].strip()
+        ):
+            return True
+    return False
 
 
 @dataclass(frozen=True)
@@ -254,6 +294,15 @@ def validate_news_blog_records(records: Any, file_label: str) -> List[Issue]:
         _check_pair(issues, file_label, item, rec.get("body"), rec.get("bodyEn"),
                     "body", "bodyEn", trigger="hangul")
 
+        for field_name in ("title", "titleEn", "body", "bodyEn", "alt", "altEn"):
+            if has_noncanonical_bee_lab(
+                rec.get(field_name),
+                allow_mid_sentence_period=field_name in ("body", "bodyEn"),
+            ):
+                issues.append(
+                    Issue(file_label, item, f"{field_name} must spell the lab name as 'BEE Lab'")
+                )
+
         images = rec.get("images")
         if isinstance(images, list):
             for img_idx, img in enumerate(images):
@@ -262,6 +311,15 @@ def validate_news_blog_records(records: Any, file_label: str) -> List[Issue]:
                 img_item = f"{item}.images[{img_idx}]"
                 _check_pair(issues, file_label, img_item, img.get("caption"), img.get("captionEn"),
                             "caption", "captionEn", trigger="hangul")
+                for field_name in ("src", "caption", "captionEn", "alt", "altEn"):
+                    if has_noncanonical_bee_lab(img.get(field_name)):
+                        issues.append(
+                            Issue(
+                                file_label,
+                                img_item,
+                                f"{field_name} must spell the lab name as 'BEE Lab'",
+                            )
+                        )
     return issues
 
 
@@ -498,6 +556,14 @@ class HtmlI18nScanner(HTMLParser):
                             f'{attr}="{value}" contains Hangul but has no {i18n_attr}',
                         )
                     )
+            if has_noncanonical_bee_lab(value):
+                self.issues.append(
+                    Issue(
+                        self.file_label,
+                        f"<{tag}> {attr} (line {line})",
+                        f"{attr} must spell the lab name as 'BEE Lab'",
+                    )
+                )
             key = attrs_dict.get(i18n_attr)
             if key:
                 self.key_usage.setdefault(key, []).append((line, col))
@@ -563,11 +629,22 @@ class HtmlI18nScanner(HTMLParser):
             return
         for frame in self.stack:
             frame["text_parts"].append(data)
+        line, col = self.getpos()
+        if has_noncanonical_bee_lab(data):
+            snippet = data.strip()
+            if len(snippet) > 40:
+                snippet = snippet[:40] + "…"
+            self.issues.append(
+                Issue(
+                    self.file_label,
+                    f'text near line {line}: "{snippet}"',
+                    "must spell the lab name as 'BEE Lab'",
+                )
+            )
         if not data.strip() or not has_hangul(data):
             return
         if any(f["covers"] for f in self.stack):
             return
-        line, col = self.getpos()
         snippet = data.strip()
         if len(snippet) > 40:
             snippet = snippet[:40] + "…"
