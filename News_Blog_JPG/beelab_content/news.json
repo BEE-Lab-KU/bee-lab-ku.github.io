@@ -1037,5 +1037,43 @@
         "src": "News_Blog_JPG/beelab_images/News/제3회 한일국제심포지엄/008.jpg"
       }
     ]
+  },
+  {
+    "id": "a95bb8a8-d12d-4020-af26-ff2e5d645749",
+    "title": "Conference RoomVent 2026",
+    "titleEn": "Conference RoomVent 2026",
+    "date": "2026-09-24",
+    "body": "한지웅, 임현우. (2026). Data Center Waste Heat Recovery with Discharge Water Temperature Restoration using Water-to-Water Heat Pumps \n조정현, 임현우. (2026). Impact of elevator shaft cooling system on the heating load of high-rise office buildings\n이도연, 임현우. (2026). Data-driven derivation of representative building shapes: a case study of office building in Seoul ",
+    "bodyEn": "Jiung, H., Lim, H. (2026). Data Center Waste Heat Recovery with Discharge Water Temperature Restoration using Water-to-Water Heat Pumps \nJunghyun, C., Lim, H. (2026). Impact of elevator shaft cooling system on the heating load of high-rise office buildings\nDoyeon, L., Lim, H. (2026). Data-driven derivation of representative building shapes: a case study of office building in Seoul ",
+    "images": [
+      {
+        "src": "News_Blog_JPG/beelab_images/News/RoomVent 2026/KakaoTalk_20260924_010451292.jpg"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/RoomVent 2026/KakaoTalk_20260924_005455389_01.jpg",
+        "caption": "한지웅, 임현우. (2026). Data Center Waste Heat Recovery with Discharge Water Temperature Restoration using Water-to-Water Heat Pumps ",
+        "captionEn": "Jiung, H., Lim, H. (2026). Data Center Waste Heat Recovery with Discharge Water Temperature Restoration using Water-to-Water Heat Pumps "
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/RoomVent 2026/KakaoTalk_20260924_005455389.jpg",
+        "caption": "조정현, 임현우. (2026). Impact of elevator shaft cooling system on the heating load of high-rise office buildings",
+        "captionEn": "Junghyun, C., Lim, H. (2026). Impact of elevator shaft cooling system on the heating load of high-rise office buildings"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/RoomVent 2026/KakaoTalk_20260924_005455389_02.jpg",
+        "caption": "이도연, 임현우. (2026). Data-driven derivation of representative building shapes: a case study of office building in Seoul ",
+        "captionEn": "Doyeon, L., Lim, H. (2026). Data-driven derivation of representative building shapes: a case study of office building in Seoul "
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/RoomVent 2026/KakaoTalk_20260923_225024515_03.jpg",
+        "caption": "Mohamed EL MANKIBI 교수님을 오랜만에 뵌 임현우 교수님",
+        "captionEn": "Professor Mohamed EL MANKIBI"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/RoomVent 2026/스크린샷 2026-09-24 010844.png",
+        "caption": "수고하셨습니다!",
+        "captionEn": "Thank you"
+      }
+    ]
   }
 ]
