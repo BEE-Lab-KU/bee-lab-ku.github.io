@@ -764,43 +764,53 @@
     "images": [
       {
         "src": "News_Blog_JPG/beelab_images/Blog/RoomVent2026/001.jpg",
-        "caption": "🩵"
+        "caption": "🩵",
+        "captionEn": "🩵"
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/RoomVent2026/002_1.jpg",
-        "caption": "첫 해외 발표인 또각남과 사색남"
+        "caption": "첫 해외 발표인 또각남과 사색남",
+        "captionEn": "Junghyun and Jiung, who were giving their first-ever presentations abroad, "
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/RoomVent2026/008.jpg",
-        "caption": "그리고 교수님과 함께했습니다!"
+        "caption": "그리고 교수님과 함께했습니다!",
+        "captionEn": "along with our professor!"
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/RoomVent2026/003_1.jpg",
-        "caption": "저희 아이들이요~~"
+        "caption": "저희 아이들이요~~",
+        "captionEn": "Here are our lab members~~"
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/RoomVent2026/KakaoTalk_20260923_184307199_01.jpg",
-        "caption": "맛있는 조식을 만들어 주었어요!🍽️"
+        "caption": "맛있는 조식을 만들어 주었어요!🍽️",
+        "captionEn": "They served us a delicious breakfast!🍽"
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/RoomVent2026/KakaoTalk_20260923_184307199.jpg",
-        "caption": "정말 감동이지요🥰"
+        "caption": "정말 감동이지요🥰",
+        "captionEn": "So thoughtful, isn't it?🥰"
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/RoomVent2026/KakaoTalk_20260923_184256743_01.jpg",
-        "caption": "프라하 곳곳을 둘러보면서 행복한 시간을 보냈습니🎶다"
+        "caption": "프라하 곳곳을 둘러보면서 행복한 시간을 보냈습니🎶다",
+        "captionEn": "We had a wonderful time exploring all around Prague🎶"
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/RoomVent2026/006.jpg",
-        "caption": "물론 발표도 아주 잘했습니다~ 멋지지요"
+        "caption": "물론 발표도 아주 잘했습니다~ 멋지지요",
+        "captionEn": "And of course, the presentations went really well~ Impressive, right?"
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/RoomVent2026/KakaoTalk_20260923_184256743_04.jpg",
-        "caption": "이상으로 RoomVent 2026 후기를 마치겠습니다 💚🌱"
+        "caption": "이상으로 RoomVent 2026 후기를 마치겠습니다 💚🌱",
+        "captionEn": "That wraps up our RoomVent 2026 recap 💚🌱"
       },
       {
         "src": "News_Blog_JPG/beelab_images/Blog/RoomVent2026/KakaoTalk_20260923_184256743_05.jpg",
-        "caption": "번외) 짐이 도착하지 않은 이슈로..새로운 가방을 구매하신 교수님이십니다!"
+        "caption": "번외) 짐이 도착하지 않은 이슈로..새로운 가방을 구매하신 교수님이십니다!",
+        "captionEn": "Bonus) Thanks to a luggage-never-arrived situation... here's our professor buying a brand-new bag!"
       }
     ]
   }
