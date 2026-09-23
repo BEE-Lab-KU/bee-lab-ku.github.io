@@ -116,6 +116,8 @@ class HangulAndUuidHelpersTest(unittest.TestCase):
         self.assertFalse(vt.has_noncanonical_bee_lab("BEE Lab의 새 소식"))
         self.assertFalse(vt.has_noncanonical_bee_lab("Welcome to BEE Lab."))
         self.assertFalse(vt.has_noncanonical_bee_lab("BEE Lab's retreat"))
+        self.assertFalse(vt.has_noncanonical_bee_lab("beelab.ku@gmail.com"))
+        self.assertFalse(vt.has_noncanonical_bee_lab("https://beelab.kr/news"))
         self.assertFalse(
             vt.has_noncanonical_bee_lab(
                 "Welcome to BEE Lab. We study buildings.",
@@ -260,8 +262,8 @@ class NewsBlogValidationTest(unittest.TestCase):
         issues = vt.validate_news_blog_records(records, "news.json")
         messages = [i.message for i in issues]
         self.assertIn("title must spell the lab name as 'BEE Lab'", messages)
+        self.assertIn("src must spell the lab name as 'BEE Lab'", messages)
         self.assertIn("caption must spell the lab name as 'BEE Lab'", messages)
-        self.assertFalse(any("src" in message for message in messages), messages)
 
     def test_canonical_bee_lab_name_passes_in_korean_and_english_copy(self):
         records = [{
@@ -458,6 +460,18 @@ class HtmlScannerTest(unittest.TestCase):
         scanner = vt.scan_html(html)
         self.assertEqual(scanner.issues, [])
         self.assertEqual(scanner.key_source.get("photo.alt"), "설명 사진")
+
+    def test_noncanonical_bee_lab_name_is_flagged_in_text_and_attribute(self):
+        html = '<h1>BEE LAB News</h1><img src="x.png" alt="BEE Lab. Logo">'
+        scanner = vt.scan_html(html)
+        messages = [i.message for i in scanner.issues]
+        self.assertIn("must spell the lab name as 'BEE Lab'", messages)
+        self.assertIn("alt must spell the lab name as 'BEE Lab'", messages)
+
+    def test_canonical_bee_lab_name_passes_in_text_and_attribute(self):
+        html = '<h1>BEE Lab News</h1><img src="x.png" alt="BEE Lab Logo">'
+        scanner = vt.scan_html(html)
+        self.assertEqual(scanner.issues, [])
 
     def test_reused_key_with_different_source_is_flagged(self):
         html = '<p data-i18n="dup">가</p><p data-i18n="dup">나</p>'

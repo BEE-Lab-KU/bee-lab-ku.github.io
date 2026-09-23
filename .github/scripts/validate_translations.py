@@ -63,6 +63,8 @@ BEE_LAB_BAD_SUFFIX_RE = re.compile(
     r"^(?:\s+\.|\.(?:['’]s|[가-힣]))",
     re.IGNORECASE,
 )
+EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+URL_RE = re.compile(r"https?://\S+")
 
 # documented Korean-field -> English-companion-field pairs inside members.json
 # (recursed into wherever they appear, at any depth).
@@ -134,10 +136,11 @@ def has_noncanonical_bee_lab(
     """
     if not isinstance(text, str):
         return False
-    for match in BEE_LAB_CANDIDATE_RE.finditer(text):
+    searchable_text = EMAIL_RE.sub("", URL_RE.sub("", text))
+    for match in BEE_LAB_CANDIDATE_RE.finditer(searchable_text):
         if match.group(0) != "BEE Lab":
             return True
-        suffix = text[match.end():]
+        suffix = searchable_text[match.end():]
         if BEE_LAB_BAD_SUFFIX_RE.match(suffix):
             return True
         if (
@@ -308,7 +311,7 @@ def validate_news_blog_records(records: Any, file_label: str) -> List[Issue]:
                 img_item = f"{item}.images[{img_idx}]"
                 _check_pair(issues, file_label, img_item, img.get("caption"), img.get("captionEn"),
                             "caption", "captionEn", trigger="hangul")
-                for field_name in ("caption", "captionEn", "alt", "altEn"):
+                for field_name in ("src", "caption", "captionEn", "alt", "altEn"):
                     if has_noncanonical_bee_lab(img.get(field_name)):
                         issues.append(
                             Issue(
@@ -553,6 +556,14 @@ class HtmlI18nScanner(HTMLParser):
                             f'{attr}="{value}" contains Hangul but has no {i18n_attr}',
                         )
                     )
+            if has_noncanonical_bee_lab(value):
+                self.issues.append(
+                    Issue(
+                        self.file_label,
+                        f"<{tag}> {attr} (line {line})",
+                        f"{attr} must spell the lab name as 'BEE Lab'",
+                    )
+                )
             key = attrs_dict.get(i18n_attr)
             if key:
                 self.key_usage.setdefault(key, []).append((line, col))
@@ -618,11 +629,22 @@ class HtmlI18nScanner(HTMLParser):
             return
         for frame in self.stack:
             frame["text_parts"].append(data)
+        line, col = self.getpos()
+        if has_noncanonical_bee_lab(data):
+            snippet = data.strip()
+            if len(snippet) > 40:
+                snippet = snippet[:40] + "…"
+            self.issues.append(
+                Issue(
+                    self.file_label,
+                    f'text near line {line}: "{snippet}"',
+                    "must spell the lab name as 'BEE Lab'",
+                )
+            )
         if not data.strip() or not has_hangul(data):
             return
         if any(f["covers"] for f in self.stack):
             return
-        line, col = self.getpos()
         snippet = data.strip()
         if len(snippet) > 40:
             snippet = snippet[:40] + "…"
