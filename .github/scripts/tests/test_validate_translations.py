@@ -112,6 +112,32 @@ class HangulAndUuidHelpersTest(unittest.TestCase):
         value = "3F2504E0-4F89-41D3-9A0C-0305E82C3301"
         self.assertEqual(vt.normalized_stable_id(value), value.lower())
 
+    def test_bee_lab_name_accepts_canonical_spelling_and_sentence_period(self):
+        self.assertFalse(vt.has_noncanonical_bee_lab("BEE Lab의 새 소식"))
+        self.assertFalse(vt.has_noncanonical_bee_lab("Welcome to BEE Lab."))
+        self.assertFalse(vt.has_noncanonical_bee_lab("BEE Lab's retreat"))
+        self.assertFalse(
+            vt.has_noncanonical_bee_lab(
+                "Welcome to BEE Lab. We study buildings.",
+                allow_mid_sentence_period=True,
+            )
+        )
+
+    def test_bee_lab_name_rejects_case_separator_and_attached_period_variants(self):
+        for value in (
+            "BEE LAB retreat",
+            "BeeLab retreat",
+            "Bee_LAB retreat",
+            "BEE-Lab retreat",
+            "BEE.Lab retreat",
+            "BEE Lab . retreat",
+            "BEE Lab.의 새 소식",
+            "BEE Lab.'s retreat",
+            "BEE Lab. Retreat",
+        ):
+            with self.subTest(value=value):
+                self.assertTrue(vt.has_noncanonical_bee_lab(value))
+
 
 class NewsBlogValidationTest(unittest.TestCase):
     """Covers: missing translation, empty optional source, Hangul-in-English, duplicate id."""
@@ -219,6 +245,33 @@ class NewsBlogValidationTest(unittest.TestCase):
         }]
         issues = vt.validate_news_blog_records(records, "news.json")
         self.assertTrue(any("titleEn must be a string" in i.message for i in issues), issues)
+
+    def test_noncanonical_bee_lab_name_is_flagged_in_record_and_image_copy(self):
+        records = [{
+            "id": "3f2504e0-4f89-41d3-9a0c-0305e82c3301",
+            "title": "BEE LAB 소식",
+            "titleEn": "BEE Lab News",
+            "images": [{
+                "src": "BEE Lab. legacy folder/photo.jpg",
+                "caption": "BEE Lab.의 행사",
+                "captionEn": "An event at BEE Lab.",
+            }],
+        }]
+        issues = vt.validate_news_blog_records(records, "news.json")
+        messages = [i.message for i in issues]
+        self.assertIn("title must spell the lab name as 'BEE Lab'", messages)
+        self.assertIn("caption must spell the lab name as 'BEE Lab'", messages)
+        self.assertFalse(any("src" in message for message in messages), messages)
+
+    def test_canonical_bee_lab_name_passes_in_korean_and_english_copy(self):
+        records = [{
+            "id": "3f2504e0-4f89-41d3-9a0c-0305e82c3301",
+            "title": "BEE Lab의 새 소식",
+            "titleEn": "News from BEE Lab",
+            "body": "BEE Lab에서 행사를 열었습니다.",
+            "bodyEn": "We held an event at BEE Lab.",
+        }]
+        self.assertEqual(vt.validate_news_blog_records(records, "news.json"), [])
 
 
 class PublicationsValidationTest(unittest.TestCase):
