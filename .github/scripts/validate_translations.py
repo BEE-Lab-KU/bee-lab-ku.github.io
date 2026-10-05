@@ -116,6 +116,16 @@ def is_valid_uuid(value: Any) -> bool:
     return str(parsed) == value.lower()
 
 
+def same_source_text(current: str, base: str) -> bool:
+    """Return True when two Korean source values differ only in whitespace.
+
+    A spacing fix (for example replacing a non-breaking space) does not change
+    the meaning, so it must not demand a new English translation.
+    ``str.split()`` treats NBSP and other Unicode spaces as separators.
+    """
+    return current.split() == base.split()
+
+
 def normalized_stable_id(value: Any) -> Any:
     """Normalize valid UUIDs for case-insensitive identity comparisons."""
     if is_valid_uuid(value):
@@ -862,7 +872,7 @@ def diff_id_collection(
         for ko_field, en_field in field_pairs:
             cur_ko = rec.get(ko_field) or ""
             base_ko = base_rec.get(ko_field) or ""
-            if cur_ko == base_ko:
+            if same_source_text(cur_ko, base_ko):
                 continue
             cur_en = rec.get(en_field)
             base_en = base_rec.get(en_field)
@@ -931,7 +941,7 @@ def diff_images_by_src(
             base_img = base_by_src[src]
             cur_ko = img.get("caption") or ""
             base_ko = base_img.get("caption") or ""
-            if cur_ko == base_ko:
+            if same_source_text(cur_ko, base_ko):
                 continue
             cur_en = img.get("captionEn")
             base_en = base_img.get("captionEn")
@@ -1000,7 +1010,7 @@ def diff_research_researchers(
             base_researcher = base_by_slug[slug]
             cur_ko = researcher.get("name") or ""
             base_ko = base_researcher.get("name") or ""
-            if cur_ko == base_ko:
+            if same_source_text(cur_ko, base_ko):
                 continue
             cur_en = researcher.get("nameEn")
             base_en = base_researcher.get("nameEn")
@@ -1032,7 +1042,7 @@ def diff_members_data(current: Any, base: Any) -> List[Issue]:
         for ko_field, en_field in (("name", "nameEn"), ("bio", "bioEn"), ("roleLine", "roleLineEn")):
             cur_ko = cur_prof.get(ko_field) or ""
             base_ko = base_prof.get(ko_field) or ""
-            if cur_ko == base_ko:
+            if same_source_text(cur_ko, base_ko):
                 continue
             cur_en = cur_prof.get(en_field)
             base_en = base_prof.get(en_field)
@@ -1059,7 +1069,7 @@ def diff_members_data(current: Any, base: Any) -> List[Issue]:
                 base_r_item = base_research_by_page[page]
                 cur_ko = r_item.get("title") or ""
                 base_ko = base_r_item.get("title") or ""
-                if cur_ko == base_ko:
+                if same_source_text(cur_ko, base_ko):
                     continue
                 cur_en = r_item.get("titleEn")
                 base_en = base_r_item.get("titleEn")
@@ -1126,7 +1136,7 @@ def diff_members_data(current: Any, base: Any) -> List[Issue]:
             continue
         cur_ko = cur_m.get("name") or ""
         base_ko = base_m.get("name") or ""
-        if cur_ko == base_ko:
+        if same_source_text(cur_ko, base_ko):
             continue
         cur_en = cur_m.get("nameEn")
         base_en = base_m.get("nameEn")
