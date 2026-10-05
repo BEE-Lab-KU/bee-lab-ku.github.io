@@ -61,6 +61,7 @@ Pages CMS 왼쪽 목록은 여섯 개입니다.
   - `body` 있으면 `bodyEn` 필수. 예외는 `body`와 `bodyEn` 모두 비어있는 이미지 전용 Blog.
   - 한글 `caption`이 있으면 `captionEn` 필수. 기존 영어 `caption`은 그대로 사용할 수 있음.
   - News의 `location`과 `locationEn`은 선택. 한글 `location`이 있으면 `locationEn` 필수, `locationEn`만 있고 `location`이 비면 실패.
+  - 한글 원문의 띄어쓰기만 고친 경우는 원문 변경으로 보지 않으므로 영문을 함께 고치지 않아도 됩니다. 낱말이 바뀌면 영문도 고쳐야 배포됩니다.
   - 모든 필드가 완성되지 않으면 배포 실패(한글 fallback 없음).
   - 사이트는 `date` 내림차순(최신 먼저)으로 자동 정렬합니다.
 - 사진 파일: `beelab_images/News/...`, `beelab_images/Blog/...`

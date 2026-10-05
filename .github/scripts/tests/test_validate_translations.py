@@ -239,6 +239,21 @@ class NewsBlogValidationTest(unittest.TestCase):
         messages = [i.message for i in vt.validate_news_blog_records(records, "news.json")]
         self.assertTrue(any("missing location" in m for m in messages), messages)
 
+    def test_whitespace_only_title_change_is_not_stale(self):
+        rid = "3f2504e0-4f89-41d3-9a0c-0305e82c3301"
+        base = [{"id": rid, "title": "기반기술\u00a0 2차년도", "titleEn": "Year 2"}]
+        current = [{"id": rid, "title": "기반기술 2차년도", "titleEn": "Year 2"}]
+        self.assertEqual(
+            vt.diff_id_collection("news.json", current, base, [("title", "titleEn")]), []
+        )
+
+    def test_wording_change_is_still_stale(self):
+        rid = "3f2504e0-4f89-41d3-9a0c-0305e82c3301"
+        base = [{"id": rid, "title": "기반기술 2차년도", "titleEn": "Year 2"}]
+        current = [{"id": rid, "title": "기반기술 3차년도", "titleEn": "Year 2"}]
+        messages = [i.message for i in vt.diff_id_collection("news.json", current, base, [("title", "titleEn")])]
+        self.assertTrue(any("stale translation" in m for m in messages), messages)
+
     def test_changed_location_with_unchanged_locationen_is_stale(self):
         rid = "3f2504e0-4f89-41d3-9a0c-0305e82c3301"
         base = [{"id": rid, "title": "학회", "titleEn": "Conference",
