@@ -1,5 +1,32 @@
 [
   {
+    "id": "df7a6819-4744-44dd-bf42-07d441185e4b",
+    "citation": "Han, J., & Lim, H. (2026). Data Center Waste Heat Recovery with Discharge Water Temperature Restoration using Water-to-Water Heat Pumps. The 18th International Conference on Air Distribution in Rooms (ROOMVENT 2026).",
+    "date": "2026-09-15",
+    "first": "jiung",
+    "research": [
+      "research-whr-dc"
+    ]
+  },
+  {
+    "id": "d37c86af-12d3-47c6-a84c-20db4fef4c5b",
+    "citation": "Cho, J., & Lim, H. (2026). Impact of the elevator shaft cooling system on the heating load of high-rise office buildings. The 18th International Conference on Air Distribution in Rooms (ROOMVENT 2026).",
+    "date": "2026-09-15",
+    "first": "junghyun",
+    "research": [
+      "research-elevator"
+    ]
+  },
+  {
+    "id": "b7406472-5f66-48df-933d-e8d277127215",
+    "citation": "Lee, D., & Lim, H. (2026). Development of Representative Forms of Office Buildings in Seoul. The 18th International Conference on Air Distribution in Rooms (ROOMVENT 2026).",
+    "date": "2026-09-15",
+    "first": "doyeon",
+    "research": [
+      "research-um-ubem"
+    ]
+  },
+  {
     "id": "937d8dbc-d2cb-444b-a9c8-c25c48754a09",
     "citation": "Hwang, J., & Lim, H. (2026). Shape Calibration Factors for Improving the Accuracy of Representative Building-Based Urban Building Energy Model (UBEM). The 3rd Korea-Japan Symposium on Chemistry with AI for Carbon Neutrality (C-AICN 2026).",
     "date": "2026-06-29",
