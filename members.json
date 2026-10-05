@@ -161,7 +161,7 @@
           "slug": "jiung",
           "avatar": "Photos/members/jiung.png",
           "name": "한지웅",
-          "nameEn": "Jiung Hann",
+          "nameEn": "Jiung Han",
           "role": "Master's Student"
         }
       ]
@@ -284,7 +284,7 @@
     },
     "jiung": {
       "name": "한지웅",
-      "nameEn": "Jiung Hann",
+      "nameEn": "Jiung Han",
       "roleLine": "Master's Student · Building Energy Systems Group",
       "avatar": "Photos/members/jiung.png",
       "bio": "데이터센터 폐열 회수 및 건물 내 히트펌프 시스템을 연구하고 있습니다. 또한 건물 자동 제어를 위한 AI Agent 파이프라인 구축에 집중하고 있습니다.",
