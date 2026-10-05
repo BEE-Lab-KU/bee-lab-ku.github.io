@@ -94,35 +94,34 @@ content:
         label: 제목
         type: string
         required: true
+        description: '연도로 시작하세요. 예. 2025 대한설비공학회 동계학술발표대회, 2025 제13회 HVAC 경진대회 장려상 수상. 따옴표와 대괄호는 쓰지 않습니다. 학회명과 행사명은 공식 표기(대소문자, 띄어쓰기)를 따릅니다. 연구실 이름은 BEE Lab으로 씁니다. BEE LAB, Bee_LAB, BEE Lab.처럼 쓰면 배포가 막힙니다(문장 끝 마침표는 괜찮습니다).'
       - name: titleEn
         label: 영문 제목
         type: string
         required: true
-        options:
-          description: 한글 제목과 함께 검토한 뒤 저장하세요. 영문이 없으면 사이트가 배포되지 않습니다.
+        description: '한글 제목처럼 연도로 시작하세요. 예. 2025 SAREK Winter Annual Conference. 한글 제목과 함께 검토한 뒤 저장하세요. 영문이 없으면 사이트가 배포되지 않습니다.'
       - name: date
         label: 날짜 (최신이 위로 정렬됨)
         type: date
+        description: 실제 행사 날짜를 입력하세요. 목록 순서와 상세 화면 날짜에 그대로 쓰입니다.
         options:
           format: yyyy-MM-dd
       - name: location
         label: 장소 (선택)
         type: string
-        options:
-          description: 학회와 행사 글에 입력하세요. 해외는 "도시, 국가"(예. 프라하, 체코), 국내는 도시(예. 제주). 사이트에는 날짜 옆에 @와 함께 표시됩니다. @는 직접 쓰지 마세요.
+        description: 학회와 행사 글에 입력하세요. 해외는 "도시, 국가"(예. 프라하, 체코), 국내는 도시(예. 제주). 사이트에는 날짜 옆에 @와 함께 표시됩니다. @는 직접 쓰지 마세요.
       - name: locationEn
         label: 영문 장소 (선택)
         type: string
-        options:
-          description: 한글 장소를 입력했으면 영문도 입력해야 합니다. 해외는 "City, Country"(예. Prague, Czech Republic), 국내는 "City, South Korea"(예. Jeju, South Korea).
+        description: 한글 장소를 입력했으면 영문도 입력해야 합니다. 해외는 "City, Country"(예. Prague, Czech Republic), 국내는 "City, South Korea"(예. Jeju, South Korea).
       - name: body
         label: 본문
         type: text
+        description: 연구실 이름은 BEE Lab으로 씁니다. BEE LAB, Bee_LAB, BEE Lab.처럼 쓰면 배포가 막힙니다(문장 끝 마침표는 괜찮습니다).
       - name: bodyEn
         label: 영문 본문
         type: text
-        options:
-          description: 한글 본문이 있으면 영문도 입력해야 합니다. 본문 없는 사진 글은 비워도 됩니다.
+        description: 한글 본문이 있으면 영문도 입력해야 합니다. 본문 없는 사진 글은 비워도 됩니다.
       - name: images
         label: 사진 (여러 장 가능, 첫 장이 대표 이미지)
         type: object
@@ -139,8 +138,7 @@ content:
           - name: captionEn
             label: 영문 설명글 (선택)
             type: string
-            options:
-              description: 한글 설명글이 있으면 영문도 입력해야 합니다.
+            description: 한글 설명글이 있으면 영문도 입력해야 합니다.
   - name: blog
     label: Blog
     type: file
@@ -155,12 +153,12 @@ content:
         label: 제목
         type: string
         required: true
+        description: '연도를 넣을 때는 맨 앞에 씁니다. 예. 2025 송년회. 연구실 이름은 BEE Lab으로 씁니다. BEE LAB, Bee_LAB, BEE Lab.처럼 쓰면 배포가 막힙니다(문장 끝 마침표는 괜찮습니다).'
       - name: titleEn
         label: 영문 제목
         type: string
         required: true
-        options:
-          description: 한글 제목과 함께 검토한 뒤 저장하세요. 영문이 없으면 사이트가 배포되지 않습니다.
+        description: 한글 제목과 함께 검토한 뒤 저장하세요. 영문이 없으면 사이트가 배포되지 않습니다.
       - name: date
         label: 날짜 (최신이 위로 정렬됨)
         type: date
@@ -169,11 +167,11 @@ content:
       - name: body
         label: 본문
         type: text
+        description: 연구실 이름은 BEE Lab으로 씁니다. BEE LAB, Bee_LAB, BEE Lab.처럼 쓰면 배포가 막힙니다(문장 끝 마침표는 괜찮습니다).
       - name: bodyEn
         label: 영문 본문
         type: text
-        options:
-          description: 한글 본문이 있으면 영문도 입력해야 합니다. 본문 없는 사진 글은 비워도 됩니다.
+        description: 한글 본문이 있으면 영문도 입력해야 합니다. 본문 없는 사진 글은 비워도 됩니다.
       - name: images
         label: 사진 (여러 장 가능, 첫 장이 대표 이미지)
         type: object
@@ -190,8 +188,7 @@ content:
           - name: captionEn
             label: 영문 설명글 (선택)
             type: string
-            options:
-              description: 한글 설명글이 있으면 영문도 입력해야 합니다.
+            description: 한글 설명글이 있으면 영문도 입력해야 합니다.
   - name: pub-international
     label: International Publications (국제 저널)
     type: file
@@ -206,8 +203,7 @@ content:
         label: 인용문 (Google Scholar 의 Cite → APA 를 그대로 붙여넣기)
         type: text
         required: true
-        options:
-          description: '예: Lee, S., Lim, H., & Kim, I. (2026). Load separation method for enhancing performance of central heat pump water heater. Energy and Buildings, 348, 116501.'
+        description: '예: Lee, S., Lim, H., & Kim, I. (2026). Load separation method for enhancing performance of central heat pump water heater. Energy and Buildings, 348, 116501.'
       - name: date
         label: 날짜 (연도로 묶이고 같은 해에선 최신순 자동 정렬)
         type: date
@@ -260,14 +256,12 @@ content:
         label: 인용문 (Google Scholar 의 Cite → APA 를 그대로 붙여넣기)
         type: text
         required: true
-        options:
-          description: '예: 황정윤, 김덕우, 임현우. (2026). 건물 에너지 분석을 위한 공공데이터 기반 건축물 분류. 대한건축학회 논문집, 42(6), 283-290.'
+        description: '예: 황정윤, 김덕우, 임현우. (2026). 건물 에너지 분석을 위한 공공데이터 기반 건축물 분류. 대한건축학회 논문집, 42(6), 283-290.'
       - name: citationEn
         label: 영문 인용문
         type: text
         required: true
-        options:
-          description: 저자 순서, 연도, 권호, 페이지를 보존하여 영문 APA 형식으로 입력하고 한글 원문과 함께 검토하세요.
+        description: 저자 순서, 연도, 권호, 페이지를 보존하여 영문 APA 형식으로 입력하고 한글 원문과 함께 검토하세요.
       - name: date
         label: 날짜 (연도로 묶이고 같은 해에선 최신순 자동 정렬)
         type: date
@@ -320,8 +314,7 @@ content:
         label: 인용문 (Google Scholar 의 Cite → APA 를 그대로 붙여넣기)
         type: text
         required: true
-        options:
-          description: '예: Hwang, J., & Lim, H. (2024). Improvement of accuracy in urban building energy modeling. International Symposium on Architectural Interchanges in Asia (ISAIA 2024).'
+        description: '예: Hwang, J., & Lim, H. (2024). Improvement of accuracy in urban building energy modeling. International Symposium on Architectural Interchanges in Asia (ISAIA 2024).'
       - name: date
         label: 날짜 (연도로 묶이고 같은 해에선 최신순 자동 정렬)
         type: date
@@ -365,14 +358,12 @@ content:
         label: 인용문 (Google Scholar 의 Cite → APA 를 그대로 붙여넣기)
         type: text
         required: true
-        options:
-          description: '예: 이도연, 임현우. (2026). 건물 운영진단을 위한 LLM기반 데이터 분석 방법론 설계. 2026년도 대한설비공학회 하계학술발표대회.'
+        description: '예: 이도연, 임현우. (2026). 건물 운영진단을 위한 LLM기반 데이터 분석 방법론 설계. 2026년도 대한설비공학회 하계학술발표대회.'
       - name: citationEn
         label: 영문 인용문
         type: text
         required: true
-        options:
-          description: 저자 순서, 연도, 학회 정보를 보존하여 영문 APA 형식으로 입력하고 한글 원문과 함께 검토하세요.
+        description: 저자 순서, 연도, 학회 정보를 보존하여 영문 APA 형식으로 입력하고 한글 원문과 함께 검토하세요.
       - name: date
         label: 날짜 (연도로 묶이고 같은 해에선 최신순 자동 정렬)
         type: date
