@@ -293,6 +293,18 @@ def validate_news_blog_records(records: Any, file_label: str) -> List[Issue]:
                     required_companion=True)
         _check_pair(issues, file_label, item, rec.get("body"), rec.get("bodyEn"),
                     "body", "bodyEn", trigger="hangul")
+        _check_pair(issues, file_label, item, rec.get("location"), rec.get("locationEn"),
+                    "location", "locationEn", trigger="hangul")
+        location_en = rec.get("locationEn")
+        location_ko = rec.get("location")
+        if (
+            isinstance(location_en, str)
+            and location_en.strip()
+            and not (isinstance(location_ko, str) and location_ko.strip())
+        ):
+            issues.append(
+                Issue(file_label, item, "missing location (locationEn is non-empty)")
+            )
 
         for field_name in ("title", "titleEn", "body", "bodyEn", "alt", "altEn"):
             if has_noncanonical_bee_lab(
@@ -1186,7 +1198,8 @@ def collect_diff_issues(root: Path, base_ref: str, loaded: Dict[str, Any]) -> Li
 
     base_news = load_base_json(root, base_ref, NEWS_PATH)
     issues += diff_id_collection(NEWS_PATH, loaded.get("news") or [], base_news,
-                                  [("title", "titleEn"), ("body", "bodyEn")])
+                                  [("title", "titleEn"), ("body", "bodyEn"),
+                                   ("location", "locationEn")])
     issues += diff_images_by_src(NEWS_PATH, loaded.get("news") or [], base_news)
 
     base_blog = load_base_json(root, base_ref, BLOG_PATH)
