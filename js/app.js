@@ -346,6 +346,15 @@ function escapeHtml(t) {
   return d.innerHTML;
 }
 
+function bnMetaLine(item) {
+  var location = localizedField(item, 'location');
+  var parts = [];
+  if (item.date) parts.push('<span>📅 ' + escapeHtml(item.date) + '</span>');
+  if (location) parts.push('<span>@' + escapeHtml(location) + '</span>');
+  if (!parts.length) return '<div style="margin-bottom:20px;"></div>';
+  return '<div style="font-size:13px;color:#999;margin-bottom:20px;display:flex;flex-wrap:wrap;column-gap:14px;row-gap:2px;">' + parts.join('') + '</div>';
+}
+
 function cleanBody(item) {
   var body = localizedField(item, 'body');
   var title = localizedField(item, 'title');
@@ -358,8 +367,11 @@ function cleanBody(item) {
   if (item.date) {
     body = body.replace(new RegExp(item.date.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'g'), '');
   }
-  if (item.location) {
-    body = body.replace(new RegExp('@?\\s*' + item.location.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'g'), '');
+  // Only strip an explicit "@location" marker; the bare place name may be
+  // part of an ordinary sentence (e.g. a venue line) and must stay.
+  var location = localizedField(item, 'location');
+  if (location) {
+    body = body.replace(new RegExp('@\\s*' + location.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'g'), '');
   }
   // Remove trailing date patterns like "November\n28, 2025 @Seoul,  Korea"
   body = body.replace(/\n?(January|February|March|April|May|June|July|August|September|October|November|December)\s*\n?\s*\d{1,2}(?:-\d{1,2})?\s*,?\s*\d{4}\s*@[^\n]*/gi, '');
@@ -403,8 +415,7 @@ function openBNDetail(type, item) {
     '<div style="max-width:700px;margin:0 auto;background:#fff;border-radius:14px;padding:36px;position:relative;">' +
     '<div onclick="closeBNModal()" style="position:absolute;top:16px;right:20px;font-size:20px;cursor:pointer;color:#999;z-index:1;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#f5f5f5;">✕</div>' +
     '<h2 style="font-size:22px;font-weight:800;margin-bottom:10px;letter-spacing:-0.02em;line-height:1.35;padding-right:40px;">' + escapeHtml(title) + '</h2>' +
-    (item.date ? '<div style="font-size:13px;color:#999;margin-bottom:4px;">📅 ' + escapeHtml(item.date) + '</div>' : '') +
-    (item.location ? '<div style="font-size:13px;color:#999;margin-bottom:20px;">📍 ' + escapeHtml(item.location) + '</div>' : '<div style="margin-bottom:20px;"></div>') +
+    bnMetaLine(item) +
     (body ? '<div style="font-size:14px;color:#444;line-height:1.85;margin-bottom:24px;white-space:pre-line;border-top:1px solid #eee;padding-top:20px;">' + body + '</div>' : '') +
     imgs + '</div></div>';
   if (previousScroll && m.firstElementChild) {

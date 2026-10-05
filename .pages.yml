@@ -105,6 +105,16 @@ content:
         type: date
         options:
           format: yyyy-MM-dd
+      - name: location
+        label: 장소 (선택)
+        type: string
+        options:
+          description: 학회와 행사 글에 입력하세요. 해외는 "도시, 국가"(예. 프라하, 체코), 국내는 도시(예. 제주). 사이트에는 날짜 옆에 @와 함께 표시됩니다. @는 직접 쓰지 마세요.
+      - name: locationEn
+        label: 영문 장소 (선택)
+        type: string
+        options:
+          description: 한글 장소를 입력했으면 영문도 입력해야 합니다. 해외는 "City, Country"(예. Prague, Czech Republic), 국내는 "City, South Korea"(예. Jeju, South Korea).
       - name: body
         label: 본문
         type: text

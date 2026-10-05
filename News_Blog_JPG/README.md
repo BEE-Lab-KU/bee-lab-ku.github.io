@@ -22,6 +22,7 @@ Pages CMS 왼쪽 목록은 여섯 개입니다.
    - **제목** (`title`, 한글) + **제목_영어** (`titleEn`, English): 모두 필수
    - 연구실 이름은 한글과 영어 모두 **BEE Lab**으로 입력합니다. `BEE LAB`, `Bee_LAB`, `BEE Lab.`처럼 이름 자체에 마침표를 붙인 표기는 저장 후 검증에서 실패합니다. 단, 문장이 `BEE Lab.`으로 끝날 때의 마침표는 문장부호이므로 그대로 둡니다.
    - **날짜**: 선택한 날짜 기준으로 **최신이 자동으로 맨 위**에 표시됩니다
+   - **장소** (`location`, 한글) + **영문 장소** (`locationEn`, English): 선택. News 전용이며 학회와 행사 글에 입력합니다. 해외는 `프라하, 체코` / `Prague, Czech Republic`, 국내는 `제주` / `Jeju, South Korea` 형식입니다. 사이트에는 상세 화면의 날짜 옆에 `@프라하, 체코`처럼 표시되므로 `@`는 직접 쓰지 않습니다. 한글 장소를 입력하면 영문 장소도 필수이고, 한글 장소를 고치면 영문 장소도 함께 고쳐야 배포됩니다.
    - **본문** (`body`, 한글) + **본문_영어** (`bodyEn`, English): 한글 본문이 있으면 영어 본문도 필수. 예외는 이미지만 있는 Blog(본문 생략 가능, 이 경우 body/bodyEn 모두 비움)
    - **사진**: "사진 추가"로 여러 장 등록 (첫 장이 카드 대표 이미지)
      - 각 사진마다 한글 설명글(`caption`)과 영어 설명글(`captionEn`): 한글 설명이 있으면 영어 설명도 필수
@@ -59,6 +60,7 @@ Pages CMS 왼쪽 목록은 여섯 개입니다.
   - `titleEn`: 필수
   - `body` 있으면 `bodyEn` 필수. 예외는 `body`와 `bodyEn` 모두 비어있는 이미지 전용 Blog.
   - 한글 `caption`이 있으면 `captionEn` 필수. 기존 영어 `caption`은 그대로 사용할 수 있음.
+  - News의 `location`과 `locationEn`은 선택. 한글 `location`이 있으면 `locationEn` 필수, `locationEn`만 있고 `location`이 비면 실패.
   - 모든 필드가 완성되지 않으면 배포 실패(한글 fallback 없음).
   - 사이트는 `date` 내림차순(최신 먼저)으로 자동 정렬합니다.
 - 사진 파일: `beelab_images/News/...`, `beelab_images/Blog/...`

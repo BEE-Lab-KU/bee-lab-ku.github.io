@@ -198,6 +198,57 @@ class NewsBlogValidationTest(unittest.TestCase):
         }]
         self.assertEqual(vt.validate_news_blog_records(records, "news.json"), [])
 
+    def test_location_pair_passes(self):
+        records = [{
+            "id": "3f2504e0-4f89-41d3-9a0c-0305e82c3301",
+            "title": "학회",
+            "titleEn": "Conference",
+            "location": "프라하, 체코",
+            "locationEn": "Prague, Czech Republic",
+        }]
+        self.assertEqual(vt.validate_news_blog_records(records, "news.json"), [])
+
+    def test_korean_location_requires_locationen(self):
+        records = [{
+            "id": "3f2504e0-4f89-41d3-9a0c-0305e82c3301",
+            "title": "학회",
+            "titleEn": "Conference",
+            "location": "프라하, 체코",
+        }]
+        messages = [i.message for i in vt.validate_news_blog_records(records, "news.json")]
+        self.assertTrue(any("missing locationEn" in m for m in messages), messages)
+
+    def test_locationen_with_hangul_is_flagged(self):
+        records = [{
+            "id": "3f2504e0-4f89-41d3-9a0c-0305e82c3301",
+            "title": "학회",
+            "titleEn": "Conference",
+            "location": "프라하, 체코",
+            "locationEn": "프라하, Czech Republic",
+        }]
+        messages = [i.message for i in vt.validate_news_blog_records(records, "news.json")]
+        self.assertTrue(any("locationEn contains Hangul" in m for m in messages), messages)
+
+    def test_locationen_without_location_is_flagged(self):
+        records = [{
+            "id": "3f2504e0-4f89-41d3-9a0c-0305e82c3301",
+            "title": "학회",
+            "titleEn": "Conference",
+            "locationEn": "Prague, Czech Republic",
+        }]
+        messages = [i.message for i in vt.validate_news_blog_records(records, "news.json")]
+        self.assertTrue(any("missing location" in m for m in messages), messages)
+
+    def test_changed_location_with_unchanged_locationen_is_stale(self):
+        rid = "3f2504e0-4f89-41d3-9a0c-0305e82c3301"
+        base = [{"id": rid, "title": "학회", "titleEn": "Conference",
+                 "location": "프라하, 체코", "locationEn": "Prague, Czech Republic"}]
+        current = [{"id": rid, "title": "학회", "titleEn": "Conference",
+                    "location": "브르노, 체코", "locationEn": "Prague, Czech Republic"}]
+        issues = vt.diff_id_collection("news.json", current, base, [("location", "locationEn")])
+        messages = [i.message for i in issues]
+        self.assertTrue(any("location changed but locationEn unchanged" in m for m in messages), messages)
+
     def test_english_only_body_passes_without_bodyen(self):
         # body/bodyEn use the "hangul" trigger: an already-English source
         # body must not demand a bodyEn companion.
