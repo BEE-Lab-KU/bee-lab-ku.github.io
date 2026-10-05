@@ -30,23 +30,7 @@
       "Bash(python3 -c \"import json;[print\\(t,'keys=',list\\(json.load\\(open\\(f'News_Blog_JPG/beelab_content/{t}.json'\\)\\)[0].keys\\(\\)\\)\\) for t in ['news','blog']]\")",
       "Bash(python3 -c \"import json,os;bad=sum\\(1 for t in ['news','blog'] for it in json.load\\(open\\(f'News_Blog_JPG/beelab_content/{t}.json'\\)\\) for p in it['images'] if not os.path.isfile\\(p\\)\\);print\\('없는 경로:', bad if bad else '0 ✅'\\)\")",
       "Bash(python3 -c \"import json;d=json.load\\(open\\('News_Blog_JPG/beelab_content/news.json'\\)\\);print\\('news[0].images[0]:',json.dumps\\(d[0]['images'][0],ensure_ascii=False\\)\\)\")",
-      "WebFetch(domain:github.com)",
-      "Bash(git fetch *)",
-      "Bash(awk '{print $5, $9}')",
-      "WebFetch(domain:docs.github.com)",
-      "Bash(gh api *)",
-      "Bash(git commit -m ' *)",
-      "Bash(python3 -)",
-      "Bash(node -e ' *)",
-      "Bash(python3 -c \"import yaml;yaml.safe_load\\(open\\('.pages.yml'\\)\\);print\\('.pages.yml OK'\\)\")",
-      "Bash(python3 -c \"import json;json.load\\(open\\('publications.json'\\)\\);print\\('publications.json OK'\\)\")",
-      "Bash(git checkout *)",
-      "Bash(python3 build_citations.py)",
-      "Bash(python3 make_report.py)",
-      "Bash(curl -s -o /dev/null -w \"로컬 %{http_code}\\\\n\" http://localhost:8766/citation_report.html)"
+      "WebFetch(domain:github.com)"
     ]
-  },
-  "enabledMcpjsonServers": [
-    "kordoc"
-  ]
+  }
 }
