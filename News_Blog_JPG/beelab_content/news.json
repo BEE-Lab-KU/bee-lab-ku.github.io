@@ -1164,5 +1164,23 @@
         "captionEn": "Thank you"
       }
     ]
+  },
+  {
+    "id": "3c664d58-2796-4124-bea5-b5213a141f16",
+    "title": "2026 한국건친환경설비학회 추계학술발표대회",
+    "titleEn": "2026 Korean Institute of Architectural Sustainable Environment and Building Systems",
+    "date": "2026-10-02",
+    "location": "서울",
+    "locationEn": "Seoul, South Korea",
+    "body": "발표자 : 황정윤 \n황정윤, 임현우. (2026). UBEE 대리모델 기반 도시 건물 에너지 및 환경 시뮬레이션과 대규모 언어 모델 기반 분석 플랫폼",
+    "bodyEn": "Presenters : Jeongyun Hwang\nHwang,J., Lim, H. (2026). UBEE: A Surrogate Model-Based Urban Building Energy and Environment Simulation Platform with Large Language Model-Driven Analysis",
+    "images": [
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 한국건축친환경설비학회 추계학술발표대회/KakaoTalk_20261007_163022437.jpg"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 한국건축친환경설비학회 추계학술발표대회/KakaoTalk_20261007_163024199.jpg"
+      }
+    ]
   }
 ]
