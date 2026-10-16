@@ -137,13 +137,6 @@
       "group": "Building Energy Systems",
       "members": [
         {
-          "slug": "sangmin",
-          "avatar": "Photos/members/sangmin.jpg",
-          "name": "이상민",
-          "nameEn": "Sangmin Lee",
-          "role": "Master's Student"
-        },
-        {
           "slug": "junghyun",
           "avatar": "Photos/members/junghyun.jpg",
           "name": "조정현",
@@ -219,13 +212,20 @@
       "name": "이경재",
       "nameEn": "Kyungjae Lee",
       "role": "M.S. in Architectural Engineering (2025)"
+    },
+    {
+      "slug": "sangmin",
+      "avatar": "Photos/members/sangmin.jpg",
+      "name": "이상민",
+      "nameEn": "Sangmin Lee",
+      "role": "M.S. in Architectural Engineering (2026)"
     }
   ],
   "profiles": {
     "sangmin": {
       "name": "이상민",
       "nameEn": "Sangmin Lee",
-      "roleLine": "Master's Student · Building Energy Systems Group",
+      "roleLine": "Alumni · Building Energy Systems Group",
       "avatar": "Photos/members/sangmin.jpg",
       "bio": "공동주택에서 히트펌프를 활용한 중앙식 급탕 시스템 (Central Heat Pump Water Heater, CHPWH)에 대해 연구하고 있습니다. CHPWH 시스템 적용 시 발생하는 반환수로 인한 성능 저하 문제 해결과, 시스템 제어 최적화에 집중하고 있습니다.",
       "bioEn": "I am researching a central heat pump water heater (CHPWH) system for multi-family housing. My work focuses on resolving the performance degradation caused by return water in CHPWH systems and on optimizing system control.",
