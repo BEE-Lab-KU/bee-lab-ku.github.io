@@ -8,8 +8,6 @@ _lab_members: &LAB_MEMBERS
     label: "김인섭"
   - value: jiyoung
     label: "김지영"
-  - value: sangmin
-    label: "이상민"
   - value: junghyun
     label: "조정현"
   - value: jaeuk
@@ -28,6 +26,8 @@ _lab_members: &LAB_MEMBERS
     label: "송준호"
   - value: kyungjae
     label: "이경재 (졸업)"
+  - value: sangmin
+    label: "이상민 (졸업)"
 
 _research_pages: &RESEARCH_PAGES
   - value: research-ai
