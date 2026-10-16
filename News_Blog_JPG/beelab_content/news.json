@@ -1207,5 +1207,35 @@
         "src": "News_Blog_JPG/beelab_images/News/2026 스마트 라이프 위크/KakaoTalk_20261008_135326606.jpg"
       }
     ]
+  },
+  {
+    "id": "d534fa3c-7d1a-4180-bab5-24916a2421cf",
+    "title": "2026 한국태양에너지학회 추계학술발표대회",
+    "titleEn": "2026 The Korean Solar Energy Society Autumn Annual Conference",
+    "date": "2026-10-15",
+    "location": "보령",
+    "locationEn": "Boryeong, South Korea",
+    "body": "김인섭, 임현우 (2026). 다중 에너지원 기준 수요 스케줄 산정을 위한 아파트 단지 필요 계측 세대 수 분석\n임지수, 임현우 (2026). District Building Energy Modeling 구축을 위한 입력 자료 요구 수준 \n김지영, 임현우 (2026). 강화학습 기반 다중 에이전트를 활용한 열 부하공유 시스템 구축 ",
+    "bodyEn": "Kim, I., Lim, H. (2026). Analysis of the Required Number of Metered Units in Apartment Complexes for Baseline Demand Schedule Estimation Based on Multiple Energy Sources\nLim, J., Lim, H. (2026). Required Level of Input Data for District Building Energy Modeling Construction\nKim, J.,  Lim, H. (2026). Multi-agent Reinforcement Learning-Based Thermal Load-Sharing System Framework",
+    "images": [
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 한국태양에너지학회 추계학술발표대회/beelab1.jpg"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 한국태양에너지학회 추계학술발표대회/beelab2_2.jpg"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 한국태양에너지학회 추계학술발표대회/인섭발표_2.jpg"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 한국태양에너지학회 추계학술발표대회/지수발표.jpg"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 한국태양에너지학회 추계학술발표대회/지영발표.jpg"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 한국태양에너지학회 추계학술발표대회/바다에서.jpg"
+      }
+    ]
   }
 ]
