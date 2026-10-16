@@ -1237,5 +1237,29 @@
         "src": "News_Blog_JPG/beelab_images/News/2026 한국태양에너지학회 추계학술발표대회/바다에서.jpg"
       }
     ]
+  },
+  {
+    "id": "69ebb36a-ab10-4077-bbe4-cbd736fda638",
+    "title": "2026 제4회 에너지최적화 디자인 공모전 최우수상 수상",
+    "titleEn": "2026 4th Energy Optimization Design Competition — Excellence Award Winner",
+    "date": "2026-10-15",
+    "location": "보령",
+    "locationEn": "Boryeong, South Korea",
+    "body": "수상자 : 이현수, 김지영, 김인애\n제4회 에너지최적화 디자인 공모전에서 \"강화학습 기반 다중에이전트를 활용한 열 부하공유 시스템 구축\"으로 최우수상 수상",
+    "bodyEn": "Awardees : Hyeonsu Lee, Jiyoung Kim, Inae Kim \nReceived the Excellence Award at the 4th Energy Optimization Design Competition for \" Multi-agent Reinforcement Learning-Based Thermal Load-Sharing System Framework\".",
+    "images": [
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 제4회 에너지 최적화 디자인 공모전/공모전 상.jpg"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 제4회 에너지 최적화 디자인 공모전/공모전 포스터 사진.jpg"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 제4회 에너지 최적화 디자인 공모전/현수발표.jpg"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 제4회 에너지 최적화 디자인 공모전/3nergy.jpg"
+      }
+    ]
   }
 ]
