@@ -195,6 +195,10 @@
       "objective": "Researches an integrated workflow that automatically derives essential energy data from building exteriors using AI object recognition and 3D vision technology. The collected data is combined with DBEM to efficiently manage community-wide energy, aiming to develop a city-scale energy optimization system for sustainable Load Sharing Communities.",
       "title": "Building a District Building Energy Model for Load Sharing Community Development"
     },
+    "umSolarSurrogate": {
+      "cardSummary": "Predicts shading effects from adjacent buildings with a solar radiation index surrogate model and reduces the cost of calculating energy use with a city-scale building energy surrogate model that reflects them",
+      "title": "Development of a Solar Radiation-Informed Surrogate Model for City-Scale Building Energy Analysis"
+    },
     "umUbem": {
       "background": "As urbanization concentrates energy demand in cities, the burden on energy systems, including power grids, is increasing. Understanding this urban energy ecosystem is a prerequisite for designing sustainable cities. Urban building energy models (UBEM) are widely used for building energy analysis at the urban scale, but they have limitations in that they are computationally expensive and do not sufficiently reflect the uncertainty of real cities. A methodology is therefore needed that moves from initial analysis based on building characteristics (shape, load, pattern) to detailed analysis through model calibration that accounts for uncertainty.",
       "cardSummary": "Builds a high-precision UBEM through surrogate-model-based computational efficiency, uncertainty quantification, and an automated calibration process, and identifies correlations between building factors and energy use",

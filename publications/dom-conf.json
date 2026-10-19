@@ -36,6 +36,9 @@
     "citation": "이현수, 임현우. (2026). 도시 단위 건물 에너지 분석을 위한 일사 반영 대리모델 개발. 2026년도 대한설비공학회 하계학술발표대회.",
     "citationEn": "Lee, H., & Lim, H. (2026). Development of a solar radiation-informed surrogate model for city-scale building energy analysis. 2026 SAREK Summer Annual Conference.",
     "date": "2026-06-26",
+    "research": [
+      "research-um-solar-surrogate"
+    ],
     "first": "hyunsu"
   },
   {
