@@ -140,6 +140,10 @@
       "objective": "Develops a data-driven framework that derives CPM-based energy signatures and quantitatively evaluates the actual energy savings from green remodeling at both the individual building and large-scale portfolio levels through hierarchical cluster analysis and four-quadrant analysis.",
       "title": "Analysis of Green Remodeling Effectiveness Using Energy Signatures"
     },
+    "daMarl": {
+      "cardSummary": "Shares heating loads between buildings through MARL-based cooperative control, simultaneously flattening community-wide load and reducing the burden on energy infrastructure",
+      "title": "Development of a Thermal Load Sharing System Using Reinforcement Learning-Based Multi-Agents"
+    },
     "daPreprocessing": {
       "cardSummary": "Combines logistic map image encryption with deep learning to protect privacy and improve long-range occupancy detection and recognition of irregular postures",
       "title": "A Deep Learning-Based Occupancy Detection System Using Logistic Map Image Encryption"

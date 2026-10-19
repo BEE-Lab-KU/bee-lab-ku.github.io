@@ -34,6 +34,40 @@
     "figure": "Photos/research-figs/elevator.png"
   },
   {
+    "id": "research-da-marl",
+    "title": "강화학습 기반 다중에이전트를 활용한 열부하 공유 시스템 구축",
+    "titleEn": "Development of a Thermal Load Sharing System Using Reinforcement Learning-Based Multi-Agents",
+    "group": "Building Data Analytics & AI",
+    "back": "data-analysis",
+    "status": "진행 중 · 2026–",
+    "statusEn": "In Progress, 2026–",
+    "researchers": [
+      {
+        "slug": "jiyoung",
+        "name": "김지영",
+        "nameEn": "Jiyoung Kim",
+        "role": "Undergraduate Researcher",
+        "avatar": "Photos/members/jiyoung.jpg"
+      }
+    ],
+    "background": "건물 부문은 전 세계 전력 소비의 약 55%를 차지하며, 기후변화로 인한 냉·난방 수요 증가로 전력망 부담이 갈수록 커지고 있습니다. 이를 완화하고자 개별 건물의 수요반응(DR) 제어나 커뮤니티 단위 협조 제어 방식이 연구되어 왔으나, 계산 복잡도 증가와 확장성 한계 등의 문제가 있었습니다. 기존 연구들은 전력·폐열 분배 등 에너지 자원 운용에 집중했을 뿐, 건물 간 부하 패턴 차이를 직접 활용하는 열부하 공유 방식은 고려되지 않았습니다. 또한 다수 건물이 동시에 운전되는 환경에서 단일 에이전트 기반 강화학습은 상태-행동 공간이 급격히 커져 확장성에 한계를 보입니다. 이에 각 건물을 독립 에이전트로 설정하고 상호 협조하는 다중에이전트 강화학습(MARL)이 유망한 대안으로 주목받고 있습니다.",
+    "backgroundEn": "The building sector accounts for about 55% of global electricity consumption, and rising heating and cooling demand driven by climate change places an ever-growing burden on power grids. Demand response (DR) control of individual buildings and community-level cooperative control have been studied to mitigate this burden, but they suffer from increased computational complexity and limited scalability. Previous studies have focused on operating energy resources, such as distributing electricity and waste heat, and have not considered thermal load sharing that directly exploits differences in load patterns between buildings. In addition, when many buildings operate simultaneously, single-agent reinforcement learning faces a rapidly growing state-action space that limits scalability. Multi-agent reinforcement learning (MARL), in which each building is treated as an independent agent that cooperates with the others, has therefore drawn attention as a promising alternative.",
+    "goal": "건물마다 용도·규모·재실 스케줄에 따라 냉·난방 수요의 시점과 규모가 다르다는 점에 착안하여, MARL 기반 협조 제어를 통해 건물 간 난방 열부하를 상호 분담하고, 커뮤니티 전체의 부하 평탄화와 에너지 인프라 부담 저감을 동시에 달성하는 열부하 공유 시스템을 제안합니다.",
+    "goalEn": "Building on the observation that the timing and magnitude of heating and cooling demand differ between buildings according to their use, size, and occupancy schedule, this study proposes a thermal load sharing system in which buildings share heating loads through MARL-based cooperative control, simultaneously flattening community-wide load and reducing the burden on energy infrastructure.",
+    "keywords": [
+      "Building Thermal Load Sharing",
+      "Multi-agent",
+      "Reinforcement Learning",
+      "Energy Optimization",
+      "Grid Stability"
+    ],
+    "tools": [
+      "Python",
+      "EnergyPlus"
+    ],
+    "figure": "Photos/research-figs/marl-heat-sharing.png"
+  },
+  {
     "id": "research-da-preprocessing",
     "title": "로지스틱 맵 이미지 암호화 기법을 적용한 딥러닝 기반 재실자 감지 시스템 제안",
     "titleEn": "A Deep Learning-Based Occupancy Detection System Using Logistic Map Image Encryption",
