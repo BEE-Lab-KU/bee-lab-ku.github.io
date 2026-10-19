@@ -371,12 +371,12 @@
       "nameEn": "Jiyoung Kim",
       "roleLine": "Undergraduate Researcher · Building Data Analytics & AI Group",
       "avatar": "Photos/members/jiyoung.jpg",
-      "bio": "건물 간 열부하 공유 시스템을 구축하여, 건물별 상이한 냉·난방 부하 패턴 분석과 협조제어를 통한 커뮤니티 단위의 효율적인 에너지 수요 관리 최적화 방안을 연구하고 있습니다.",
+      "bio": "건물 간 열 부하공유 시스템을 구축하여, 건물별 상이한 냉·난방 부하 패턴 분석과 협조제어를 통한 커뮤니티 단위의 효율적인 에너지 수요 관리 최적화 방안을 연구하고 있습니다.",
       "bioEn": "I am building a thermal load sharing system between buildings, researching optimization strategies for efficient community-scale energy demand management through analysis of each building's distinct heating and cooling load patterns and cooperative control.",
       "research": [
         {
           "page": "research-da-marl",
-          "title": "강화학습 기반 다중 에이전트를 활용한 열부하 공유 시스템 구축",
+          "title": "강화학습 기반 다중 에이전트를 활용한 열 부하공유 시스템 구축",
           "titleEn": "Development of a Thermal Load Sharing System Using Reinforcement Learning-Based Multi-Agents",
           "tags": "#thermal_load_sharing #multi_agent #reinforcement_learning #energy_optimization #grid_stability"
         },
@@ -436,7 +436,7 @@
       "research": [
         {
           "page": "research-da-marl",
-          "title": "강화학습 기반 다중 에이전트를 활용한 열부하 공유 시스템 구축 (공동연구)",
+          "title": "강화학습 기반 다중 에이전트를 활용한 열 부하공유 시스템 구축 (공동연구)",
           "titleEn": "Development of a Thermal Load Sharing System Using Reinforcement Learning-Based Multi-Agents (Joint Research)",
           "tags": "#thermal_load_sharing #multi_agent #reinforcement_learning"
         },
