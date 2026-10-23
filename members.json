@@ -170,8 +170,8 @@
           "role": "Ph.D. Student"
         },
         {
-          "slug": "jisu",
-          "avatar": "Photos/members/jisu.jpg",
+          "slug": "jisoo",
+          "avatar": "Photos/members/jisoo.jpg",
           "name": "임지수",
           "nameEn": "Jisoo Lim",
           "role": "Master's Student"
@@ -410,11 +410,11 @@
         }
       ]
     },
-    "jisu": {
+    "jisoo": {
       "name": "임지수",
       "nameEn": "Jisoo Lim",
       "roleLine": "Master's Student · UBEM Group",
-      "avatar": "Photos/members/jisu.jpg",
+      "avatar": "Photos/members/jisoo.jpg",
       "bio": "AI 객체 인식과 3D 비전 기술을 활용한 건물 에너지 데이터 자동 구축 및 District Building Energy Modeling 연구를 수행하고 있습니다.",
       "bioEn": "I conduct research on automated building energy data construction and District Building Energy Modeling using AI object recognition and 3D vision technology.",
       "research": [
