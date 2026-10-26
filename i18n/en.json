@@ -115,8 +115,8 @@
       "heroSub": "Design, simulation, and optimization of mechanical and equipment systems within buildings"
     },
     "cascadeHp": {
-      "summary": "Proposes a cascade integrated heat pump system that reuses heat rejected from cooling as a domestic hot water heat source, and verifies annual energy savings using Modelica",
-      "title": "A Cascade Heat Pump System Through Thermal Coupling of Simultaneous Cooling and Hot Water Demand in Buildings"
+      "summary": "Proposes a Hydro-Cascade System that reuses heat rejected from cooling as a domestic hot water heat source, and verifies annual energy savings using Modelica",
+      "title": "Hydro-Cascade System Research"
     },
     "chpwh": {
       "summary": "Development of a load-separation-based CHPWH simulation model to prevent performance degradation from return water, and optimization of an adaptive load shift strategy",

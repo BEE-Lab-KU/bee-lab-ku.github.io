@@ -33,7 +33,7 @@ _research_pages: &RESEARCH_PAGES
   - value: research-ai
     label: "이미지·벡터 하이브리드 기반 CAD 도면 공간 자동 인식 엔진 및 LLM 기반 자연어 질의응답"
   - value: research-cascade-hp
-    label: "건물 내 동시 냉방·급탕 수요의 열적 결합을 통한 캐스케이드 히트펌프 시스템"
+    label: "Hydro-Cascade System 연구"
   - value: research-chpwh
     label: "공동주택 중앙식 히트펌프 급탕 시스템의 반환수 영향 저감을 위한 부하 분리와 적응형 Load "
   - value: research-da-apt-eui

@@ -289,8 +289,8 @@
   },
   {
     "id": "research-cascade-hp",
-    "title": "건물 내 동시 냉방·급탕 수요의 열적 결합을 통한 캐스케이드 히트펌프 시스템",
-    "titleEn": "A Cascade Heat Pump System Based on Thermal Coupling of Simultaneous Cooling and Domestic Hot Water Demand in Buildings",
+    "title": "Hydro-Cascade System 연구",
+    "titleEn": "Hydro-Cascade System Research",
     "group": "Building Energy Systems",
     "back": "main",
     "status": "진행 중 · 2025–",
@@ -306,10 +306,10 @@
     ],
     "background": "건물에서 사용하는 에너지의 상당 부분은 냉방과 급탕에 쓰입니다. 냉방은 실내의 열을 외부로 버리는 과정이고 급탕은 물을 데우기 위해 열을 필요로 하므로, 같은 건물 안에서 버려지는 열과 필요한 열이 동시에 존재합니다. 그러나 대부분의 건물에서는 냉방과 급탕 설비가 따로 운영되어 냉방 과정의 폐열이 그대로 버려지고, 급탕은 이를 활용하지 못한 채 처음부터 다시 에너지를 들여 물을 데웁니다. 냉방 폐열을 급탕의 열원으로 재사용하면 상당한 에너지를 절감할 수 있으나, 냉방에 알맞은 낮은 온도와 급탕에 필요한 높은 온도의 차이가 커 단일 장비로 한 번에 끌어올리면 효율이 떨어집니다. 따라서 열을 두 단계에 걸쳐 차례로 승온하는 캐스케이드(cascade) 방식이 필요합니다.",
     "backgroundEn": "A substantial portion of the energy used in buildings goes to cooling and domestic hot water (DHW). Cooling rejects heat from indoor spaces to the outside, while DHW requires heat to warm water, so a building simultaneously has heat to reject and heat to supply. In most buildings, however, cooling and DHW systems operate separately: the waste heat from cooling is discarded, and DHW is produced by adding energy from scratch without utilizing that waste heat. Reusing cooling waste heat as a heat source for DHW can save substantial energy, but the large temperature gap between the low temperature suited to cooling and the high temperature required for DHW reduces efficiency if a single unit raises the temperature in one step. A cascade approach that raises the temperature sequentially in two stages is therefore needed.",
-    "goal": "냉방에서 버려지는 열을 급탕의 열원으로 재사용하는 캐스케이드 통합 히트펌프 시스템을 제안하고, Modelica 시뮬레이션으로 연간 운전을 재현하여 에너지 절감 효과를 검증합니다. 냉방·급탕 분리 운영, 단순 통합, 캐스케이드 방식을 동일한 조건에서 비교하여 열 재사용에 따른 절감 효과만을 분리하고, 절감이 발생하는 원리와 냉방·급탕 수요의 중첩 정도·축열 탱크 용량 등 절감 효과를 극대화하는 조건을 규명하는 것을 목표로 합니다.",
-    "goalEn": "This study proposes a cascade integrated heat pump system that reuses heat rejected from cooling as a heat source for DHW and verifies its energy savings by reproducing annual operation through Modelica simulation. Separate cooling and DHW operation, simple integration, and the cascade approach are compared under identical conditions to isolate the savings attributable to heat reuse. The goal is to identify the mechanism behind the savings and the conditions, such as the degree of overlap between cooling and DHW demand and the thermal storage tank capacity, that maximize the savings effect.",
+    "goal": "냉방에서 버려지는 열을 급탕의 열원으로 재사용하는 Hydro-Cascade System을 제안하고, Modelica 시뮬레이션으로 연간 운전을 재현하여 에너지 절감 효과를 검증합니다. 냉방·급탕 분리 운영, 단순 통합, Hydro-Cascade System을 동일한 조건에서 비교하여 열 재사용에 따른 절감 효과만을 분리하고, 절감이 발생하는 원리와 냉방·급탕 수요의 중첩 정도·축열 탱크 용량 등 절감 효과를 극대화하는 조건을 규명하는 것을 목표로 합니다.",
+    "goalEn": "This study proposes a Hydro-Cascade System that reuses heat rejected from cooling as a heat source for DHW and verifies its energy savings by reproducing annual operation through Modelica simulation. Separate cooling and DHW operation, simple integration, and the Hydro-Cascade System are compared under identical conditions to isolate the savings attributable to heat reuse. The goal is to identify the mechanism behind the savings and the conditions, such as the degree of overlap between cooling and DHW demand and the thermal storage tank capacity, that maximize the savings effect.",
     "keywords": [
-      "Cascade Heat Pump",
+      "Hydro-Cascade System",
       "Integrated Heat Pump (IWHP)",
       "Modelica",
       "5GDHC"
