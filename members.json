@@ -298,8 +298,8 @@
         },
         {
           "page": "research-ai",
-          "title": "이미지·벡터 하이브리드 기반 CAD 도면 공간 자동 인식 엔진 및 LLM 기반 자연어 질의응답 시스템 개발",
-          "titleEn": "Development of an Image and Vector Hybrid CAD Drawing Space Recognition Engine and an LLM-Based Natural Language Question Answering System",
+          "title": "LLM 기반 도면 정보 추출 시스템 개발",
+          "titleEn": "Development of an LLM-Based Drawing Information Extraction System",
           "tags": "#AI_agent #LLM #CAD #ontology"
         },
         {

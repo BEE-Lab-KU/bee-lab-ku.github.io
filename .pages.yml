@@ -31,7 +31,7 @@ _lab_members: &LAB_MEMBERS
 
 _research_pages: &RESEARCH_PAGES
   - value: research-ai
-    label: "이미지·벡터 하이브리드 기반 CAD 도면 공간 자동 인식 엔진 및 LLM 기반 자연어 질의응답"
+    label: "LLM 기반 도면 정보 추출 시스템 개발"
   - value: research-cascade-hp
     label: "Hydro-Cascade System 연구"
   - value: research-chpwh

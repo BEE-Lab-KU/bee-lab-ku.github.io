@@ -108,7 +108,7 @@
   "research": {
     "ai": {
       "summary": "Development of a pipeline that automatically converts spatial information from architectural CAD drawings into structured data usable by AI",
-      "title": "CAD Spatial Auto-Recognition Engine and LLM-Based Question-Answering System"
+      "title": "Development of an LLM-Based Drawing Information Extraction System"
     },
     "beSystems": {
       "heroOverview": "The Building Energy Systems group analyzes and optimizes the energy performance of building-level equipment systems, aiming to realize efficient and sustainable buildings. It researches practical energy-saving measures through dynamic simulation using tools such as TRNSYS and EnergyPlus.",
