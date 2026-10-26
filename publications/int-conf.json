@@ -36,6 +36,7 @@
     "id": "2a87d93e-e83e-43ba-ba0d-ad292bd125e9",
     "citation": "Lim, J., & Lim, H. (2026). Comparative Analysis of Street View-and UAV-Based WWR Extraction as Input for District Building Energy Modeling. The 3rd Korea-Japan Symposium on Chemistry with AI for Carbon Neutrality (C-AICN 2026).",
     "date": "2026-06-29",
+    "first": "jisoo",
     "research": [
       "research-um-dbem"
     ]
@@ -121,8 +122,9 @@
   },
   {
     "id": "081be7ac-3f3b-486e-be79-619327a6bbea",
-    "citation": "Lim, J., & Lim, H. (2026). Comparing Façade Acquisition Coverage of UAV and Street-View\u000bImagery for WWR Input in District Building Energy Modeling. AIVC 2026, Incheon, Republic of Korea.",
+    "citation": "Lim, J., & Lim, H. (2026). Comparing Façade Acquisition Coverage of UAV and Street-View Imagery for WWR Input in District Building Energy Modeling. AIVC 2026, Incheon, Republic of Korea.",
     "date": "2026-10-01",
+    "first": "jisoo",
     "research": [
       "research-um-ubem"
     ]
