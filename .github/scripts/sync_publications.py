@@ -35,7 +35,7 @@ ROMAN = {
     'jaeuk':   ('baek', ['jaeuk', 'jaewook']),
     'jiung':   ('han',  ['jiung', 'jiwoong']),
     'jungyun': ('hwang',['jeongyun', 'jungyun']),
-    'jisu':    ('lim',  ['jisoo', 'jisu']),
+    'jisoo':    ('lim',  ['jisoo']),
     'hyunsu':  ('lee',  ['hyunsu']),
     'seyeon':  ('kim',  ['seyeon']),
     'junho':   ('song', ['junho']),
@@ -46,7 +46,7 @@ ROMAN = {
 INITIAL = {
     'doyeon': 'Lee, D.', 'inseob': 'Kim, I.', 'jiyoung': 'Kim, J.', 'sangmin': 'Lee, S.',
     'junghyun': 'Cho, J.', 'jaeuk': 'Baek, J.', 'jiung': 'Han, J.', 'jungyun': 'Hwang, J.',
-    'jisu': 'Lim, J.', 'hyunsu': 'Lee, H.', 'seyeon': 'Kim, S.', 'junho': 'Song, J.',
+    'jisoo': 'Lim, J.', 'hyunsu': 'Lee, H.', 'seyeon': 'Kim, S.', 'junho': 'Song, J.',
     'kyungjae': 'Lee, K.',
 }
 
