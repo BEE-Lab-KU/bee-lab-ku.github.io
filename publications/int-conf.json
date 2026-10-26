@@ -1,5 +1,14 @@
 [
   {
+    "id": "2a87d93e-e83e-43ba-ba0d-ad292bd125e9",
+    "citation": "Lim, J., & Lim, H. (2026). Comparing Façade Acquisition Coverage of UAV and Street-ViewImagery for WWR Input in District Building Energy Modeling. AIVC 2026, Incheon, Republic of Korea .",
+    "date": "2026-10-01",
+    "first": "jisoo",
+    "research": [
+      "research-um-dbem"
+    ]
+  },
+  {
     "id": "df7a6819-4744-44dd-bf42-07d441185e4b",
     "citation": "Han, J., & Lim, H. (2026). Data Center Waste Heat Recovery with Discharge Water Temperature Restoration using Water-to-Water Heat Pumps. RoomVent 2026, Prague, Czech Republic.",
     "date": "2026-09-16",
