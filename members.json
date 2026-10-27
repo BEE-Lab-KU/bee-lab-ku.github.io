@@ -484,8 +484,16 @@
       "nameEn": "Junho Song",
       "roleLine": "Undergraduate Researcher",
       "avatar": "Photos/members/junho.jpg",
-      "bio": "건축 에너지 및 환경 분야를 공부하며 연구실 활동에 참여하고 있는 학부 연구생입니다. (소개 문구는 추후 업데이트 예정)",
-      "bioEn": "I am an undergraduate researcher studying building energy and environment and participating in lab activities. (Bio to be updated.)"
+      "bio": "LLM 기반 도면 정보 추출 시스템을 연구하고 있으며, 데이터 기반 공조·냉동 설비 성능 분석과 진단에 관심이 있습니다.",
+      "bioEn": "I am conducting research on an LLM-based system for extracting information from architectural drawings, and I am interested in data-driven performance analysis and diagnostics of HVAC and refrigeration systems.",
+      "research": [
+        {
+          "page": "research-ai",
+          "title": "LLM 기반 도면 정보 추출 시스템 개발",
+          "titleEn": "Development of an LLM-Based Drawing Information Extraction System",
+          "tags": "#AI_agent #LLM #CAD #ontology"
+        }
+      ]
     }
   }
 }
