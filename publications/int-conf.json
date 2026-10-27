@@ -44,13 +44,15 @@
     "id": "2d4a495c-4990-4e94-a610-ceeea4c62189",
     "citation": "Lee, S., & Lim, H. (2026). Optimal Load Shift Control Strategy for CHPWH system Based on Load Separation Method. E3S Web of Conferences, 716, 02020.",
     "date": "2026-06-09",
-    "doi": "https://doi.org/10.1051/e3sconf/202671602020"
+    "doi": "https://doi.org/10.1051/e3sconf/202671602020",
+    "first": "sangmin"
   },
   {
     "id": "5cc78789-3536-49dc-8139-e987e3311680",
     "citation": "Hwang, J., & Lim, H. (2026). Improving urban building energy modeling (UBEM) accuracy through shape and energy use pattern calibration factors based on representative buildings. E3S Web of Conferences, 716, 04023.",
     "date": "2026-06-09",
-    "doi": "https://doi.org/10.1051/e3sconf/202671604023"
+    "doi": "https://doi.org/10.1051/e3sconf/202671604023",
+    "first": "jungyun"
   },
   {
     "id": "87583b20-0f92-40c9-8e69-1697cfedfc7e",
@@ -78,7 +80,8 @@
     "id": "48c002f7-fc39-4147-80e2-d8d03ccb0a10",
     "citation": "Lee, D., & Lim, H. (2026). Analysis of the Relationship Between Building Shape Indicators and Energy End-Use Using Public Data. Proceedings of the 15th REHVA HVAC World Congress - CLIMA 2025, 1282-1291.",
     "date": "2025-06-04",
-    "doi": "https://doi.org/10.1007/978-3-032-10546-2_121"
+    "doi": "https://doi.org/10.1007/978-3-032-10546-2_121",
+    "first": "doyeon"
   },
   {
     "id": "ec9dbfc5-adf2-4d91-8f13-4d96c0746e61",
