@@ -1264,5 +1264,32 @@
         "src": "News_Blog_JPG/beelab_images/News/2026 제4회 에너지 최적화 디자인 공모전/3nergy.jpg"
       }
     ]
+  },
+  {
+    "id": "88494f6d-2f85-4421-91ae-e0071012bc1d",
+    "title": "2026 AIVC Conference",
+    "titleEn": "2026 AIVC Conference",
+    "date": "2026-09-30",
+    "location": "송도",
+    "locationEn": "Songdo, South Korea",
+    "body": "발표자 : 김인섭, 임지수\n김인섭, 임현우 (2026). Building-Use Mix Optimization for Urban Load Flattening\n임지수, 임현우 (2026). Comparing Façade Acquisition Coverage of UAV and Street-View Imagery for WWR Input in District Building Energy Modeling",
+    "bodyEn": "Presenters : Inseop Kim, Jisoo Lim\nKim, I., Lim, H. (2026). Building-Use Mix Optimization for Urban Load Flattening\nLim, J., Lim, H. (2026). Comparing Façade Acquisition Coverage of UAV and Street-View Imagery for WWR Input in District Building Energy Modeling",
+    "images": [
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 AIVC Conference/KakaoTalk_20261027_114429094_01.jpg"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 AIVC Conference/presentation-room.jpg"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 AIVC Conference/인섭 발표1.jpg"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 AIVC Conference/지수 발표1.jpg"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 AIVC Conference/참여 사진.jpg"
+      }
+    ]
   }
 ]
