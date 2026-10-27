@@ -123,13 +123,6 @@
           "name": "김인섭",
           "nameEn": "Inseop Kim",
           "role": "Master's Student"
-        },
-        {
-          "slug": "jiyoung",
-          "avatar": "Photos/members/jiyoung.jpg",
-          "name": "김지영",
-          "nameEn": "Jiyoung Kim",
-          "role": "Undergraduate Researcher"
         }
       ]
     },
@@ -156,6 +149,13 @@
           "name": "한지웅",
           "nameEn": "Jiung Han",
           "role": "Master's Student"
+        },
+        {
+          "slug": "jiyoung",
+          "avatar": "Photos/members/jiyoung.jpg",
+          "name": "김지영",
+          "nameEn": "Jiyoung Kim",
+          "role": "Undergraduate Researcher"
         }
       ]
     },
@@ -369,7 +369,7 @@
     "jiyoung": {
       "name": "김지영",
       "nameEn": "Jiyoung Kim",
-      "roleLine": "Undergraduate Researcher · Building Data Analytics & AI Group",
+      "roleLine": "Undergraduate Researcher · Building Energy Systems Group",
       "avatar": "Photos/members/jiyoung.jpg",
       "bio": "건물 간 열 부하공유 시스템을 구축하여, 건물별 상이한 냉·난방 부하 패턴 분석과 협조제어를 통한 커뮤니티 단위의 효율적인 에너지 수요 관리 최적화 방안을 연구하고 있습니다.",
       "bioEn": "I am building a thermal load sharing system between buildings, researching optimization strategies for efficient community-scale energy demand management through analysis of each building's distinct heating and cooling load patterns and cooperative control.",
