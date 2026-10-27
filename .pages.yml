@@ -6,14 +6,14 @@ _lab_members: &LAB_MEMBERS
     label: "이도연"
   - value: inseob
     label: "김인섭"
-  - value: jiyoung
-    label: "김지영"
   - value: junghyun
     label: "조정현"
   - value: jaeuk
     label: "백재욱"
   - value: jiung
     label: "한지웅"
+  - value: jiyoung
+    label: "김지영"
   - value: jungyun
     label: "황정윤"
   - value: jisoo
