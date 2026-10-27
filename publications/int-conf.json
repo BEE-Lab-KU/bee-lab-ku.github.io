@@ -3,6 +3,7 @@
     "id": "df7a6819-4744-44dd-bf42-07d441185e4b",
     "citation": "Han, J., & Lim, H. (2026). Data Center Waste Heat Recovery with Discharge Water Temperature Restoration using Water-to-Water Heat Pumps. RoomVent 2026, Prague, Czech Republic.",
     "date": "2026-09-16",
+    "first": "jiung",
     "research": [
       "research-whr-dc"
     ]
@@ -11,6 +12,7 @@
     "id": "d37c86af-12d3-47c6-a84c-20db4fef4c5b",
     "citation": "Cho, J., & Lim, H. (2026). Impact of the elevator shaft cooling system on the heating load of high-rise office buildings. RoomVent 2026, Prague, Czech Republic.",
     "date": "2026-09-17",
+    "first": "junghyun",
     "research": [
       "research-elevator"
     ]
@@ -19,6 +21,7 @@
     "id": "b7406472-5f66-48df-933d-e8d277127215",
     "citation": "Lee, D., & Lim, H. (2026). Development of Representative Forms of Office Buildings in Seoul. RoomVent 2026, Prague, Czech Republic.",
     "date": "2026-09-17",
+    "first": "doyeon",
     "research": [
       "research-um-ubem",
       "research-da-ref-building"
@@ -28,6 +31,7 @@
     "id": "937d8dbc-d2cb-444b-a9c8-c25c48754a09",
     "citation": "Hwang, J., & Lim, H. (2026). Shape Calibration Factors for Improving the Accuracy of Representative Building-Based Urban Building Energy Model (UBEM). The 3rd Korea-Japan Symposium on Chemistry with AI for Carbon Neutrality (C-AICN 2026).",
     "date": "2026-06-29",
+    "first": "jungyun",
     "research": [
       "research-um-ubem"
     ]
@@ -36,6 +40,7 @@
     "id": "2a87d93e-e83e-43ba-ba0d-ad292bd125e9",
     "citation": "Lim, J., & Lim, H. (2026). Comparative Analysis of Street View-and UAV-Based WWR Extraction as Input for District Building Energy Modeling. The 3rd Korea-Japan Symposium on Chemistry with AI for Carbon Neutrality (C-AICN 2026).",
     "date": "2026-06-29",
+    "first": "jisoo",
     "research": [
       "research-um-dbem"
     ]
@@ -59,6 +64,7 @@
     "citation": "Lee, D., Lim, H., & Kim, I. (2025). Disentangling rebound effects and construction errors in building retrofits using integrated energy signature analysis. Proceedings of Building Simulation 2025: 19th Conference of IBPSA, 19.",
     "date": "2025-08-24",
     "doi": "https://doi.org/10.26868/25222708.2025.1590",
+    "first": "doyeon",
     "members": [
       "inseob"
     ]
@@ -68,6 +74,7 @@
     "citation": "Hwang, J., Lim, H., Lee, S., & Lim, J. (2025). Developing building shape indexes at the city-scale for understanding building energy consumption. Proceedings of Building Simulation 2025: 19th Conference of IBPSA, 19.",
     "date": "2025-08-24",
     "doi": "https://doi.org/10.26868/25222708.2025.1603",
+    "first": "jungyun",
     "members": [
       "jisoo",
       "sangmin"
@@ -87,6 +94,7 @@
     "id": "ec9dbfc5-adf2-4d91-8f13-4d96c0746e61",
     "citation": "Hwang, J., & Lim, H. (2024). Improvement of accuracy in urban building energy modeling using representative buildings: through reducing shape information uncertainty. International Symposium on Architectural Interchanges in Asia (ISAIA 2024).",
     "date": "2024-09-10",
+    "first": "jungyun",
     "research": [
       "research-um-ubem"
     ]
@@ -95,6 +103,7 @@
     "id": "1fcecaac-dbba-42db-bf2f-d7aecd3d484a",
     "citation": "Lee, D., & Lim, H. (2024). Comparative analysis of energy usage before and after Green Remodeling through Change Point Model. International Symposium on Architectural Interchanges in Asia (ISAIA 2024).",
     "date": "2024-09-10",
+    "first": "doyeon",
     "research": [
       "research-da-green-retrofit"
     ]
@@ -102,7 +111,8 @@
   {
     "id": "0e8efba7-64c3-406f-9421-0d96b8af2531",
     "citation": "Lee, K., & Lim, H. (2024). Investigate how to handle missing values when developing building energy benchmarking models. International Symposium on Architectural Interchanges in Asia (ISAIA 2024).",
-    "date": "2024-09-10"
+    "date": "2024-09-10",
+    "first": "kyungjae"
   },
   {
     "id": "02d6572e-a73c-4a27-9e56-d12ad02959b6",
@@ -123,6 +133,7 @@
     "id": "081be7ac-3f3b-486e-be79-619327a6bbea",
     "citation": "Lim, J., & Lim, H. (2026). Comparing Façade Acquisition Coverage of UAV and Street-View Imagery for WWR Input in District Building Energy Modeling. AIVC 2026, Incheon, Republic of Korea.",
     "date": "2026-10-01",
+    "first": "jisoo",
     "research": [
       "research-um-dbem"
     ]
@@ -131,6 +142,7 @@
     "id": "3a6dc1f4-186d-4ed2-ac0b-860e495cdbbf",
     "citation": "Kim, I., & Lim, H. (2026). Building-Use Mix Optimization for Urban Load Flattening. AIVC 2026, Incheon, Republic of Korea.",
     "date": "2026-09-30",
+    "first": "inseob",
     "research": [
       "research-da-ubem-pattern"
     ]

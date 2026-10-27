@@ -226,6 +226,12 @@ content:
             - SCIE
             - SCOPUS
             - KCI
+      - name: first
+        label: 제1저자 (연구실 구성원이 제1저자일 때만. 개인 프로필 Publications 에 표시됨. 비워두면 DOI·국문 이름으로 자동 판별)
+        type: select
+        options:
+          multiple: false
+          values: *LAB_MEMBERS
       - name: members
         label: 연구실 공저자 (제1저자는 넣지 않음. 비워두면 자동으로 채워짐)
         type: select
@@ -284,6 +290,12 @@ content:
             - SCIE
             - SCOPUS
             - KCI
+      - name: first
+        label: 제1저자 (연구실 구성원이 제1저자일 때만. 개인 프로필 Publications 에 표시됨. 비워두면 DOI·국문 이름으로 자동 판별)
+        type: select
+        options:
+          multiple: false
+          values: *LAB_MEMBERS
       - name: members
         label: 연구실 공저자 (제1저자는 넣지 않음. 비워두면 자동으로 채워짐)
         type: select
@@ -328,6 +340,12 @@ content:
       - name: doi
         label: 'DOI (선택). 반드시 https://doi.org/10.... 형태로 넣으세요. 저널 사이트 주소는 링크가 안 열립니다'
         type: string
+      - name: first
+        label: 제1저자 (연구실 구성원이 제1저자일 때만. 개인 프로필 Publications 에 표시됨. 비워두면 DOI·국문 이름으로 자동 판별)
+        type: select
+        options:
+          multiple: false
+          values: *LAB_MEMBERS
       - name: members
         label: 연구실 공저자 (제1저자는 넣지 않음. 비워두면 자동으로 채워짐)
         type: select
@@ -377,6 +395,12 @@ content:
       - name: doi
         label: 'DOI (선택). 반드시 https://doi.org/10.... 형태로 넣으세요. 저널 사이트 주소는 링크가 안 열립니다'
         type: string
+      - name: first
+        label: 제1저자 (연구실 구성원이 제1저자일 때만. 개인 프로필 Publications 에 표시됨. 비워두면 DOI·국문 이름으로 자동 판별)
+        type: select
+        options:
+          multiple: false
+          values: *LAB_MEMBERS
       - name: members
         label: 연구실 공저자 (제1저자는 넣지 않음. 비워두면 자동으로 채워짐)
         type: select
