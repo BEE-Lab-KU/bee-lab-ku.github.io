@@ -68,12 +68,12 @@ Photos/
 | 황정윤 | jungyun | `members/jungyun.jpg` |
 | 임지수 | jisu | `members/jisu.jpg` |
 | 이현수 | hyunsu | `members/hyunsu.jpg` |
-| 김세연 | seyeon | `members/seyeon.jpg` (**파일 없음**) |
+| 김세연 | seyeon | `members/seyeon.jpg` |
 | 송준호 | junho | `members/junho.jpg` (**파일 없음**) |
 | 이경재 (졸업) | kyungjae | `members/kyungjae.jpg` |
 | 임현우 (교수) | professor | `members/professor.jpg` |
 
-사진이 없으면 회색 원으로 대체 표시됩니다. 김세연과 송준호 사진을 넣으면 바로 반영됩니다.
+사진이 없으면 회색 원으로 대체 표시됩니다. 송준호 사진을 넣으면 바로 반영됩니다.
 
 `<slug>-sm.jpg` 파일이 남아 있는데 **어디에서도 쓰지 않습니다.** 예전 캐리커처이며 실제 사진으로 교체했습니다.
 
