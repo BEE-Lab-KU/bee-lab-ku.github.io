@@ -486,8 +486,63 @@ document.addEventListener('languagechange', function () {
   if (openBNState) openBNDetail(openBNState.type, openBNState.item);
 });
 
-// ===== 개인연구: research-content/research.json 으로 상세 페이지 자동 생성 =====
+// ===== 개인연구: research-content/research.json 이 유일한 출처 =====
+// 그룹 페이지의 연구 카드, 연구 상세 페이지, 개인 프로필의 Research 목록이 모두 여기서 나온다.
+// 연구자는 slug 로만 적고 이름·사진·직위는 members.json 에서 가져온다.
+var RESEARCH_GROUP_PAGE = {
+  'Building Energy Systems': 'main',
+  'Building Data Analytics & AI': 'data-analysis',
+  'Urban Building Energy Modeling (UBEM)': 'urban-modeling'
+};
+var researchData = [];
+var memberIndex = {};
+// members.json 은 연구 쪽과 Members 쪽이 함께 쓰므로 한 번만 받는다.
+window._membersData = fetchJson('members.json');
+
 function rEsc(t) { return String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+function buildMemberIndex(data) {
+  memberIndex = {};
+  ((data && data.researchers) || []).forEach(function (g) {
+    (g.members || []).forEach(function (m) { if (m && m.slug) memberIndex[m.slug] = m; });
+  });
+  ((data && data.alumni) || []).forEach(function (m) { if (m && m.slug) memberIndex[m.slug] = m; });
+}
+// researchers 는 slug 배열이다. 예전 형식(객체 배열)이 남아 있어도 그대로 읽는다.
+function researchPeople(r) {
+  return (r.researchers || []).map(function (x) {
+    var slug = (typeof x === 'string') ? x : (x && x.slug);
+    return memberIndex[slug] || (typeof x === 'object' && x) || { slug: slug, name: slug, avatar: '' };
+  });
+}
+function researchGroupPage(r) { return RESEARCH_GROUP_PAGE[r.group] || 'main'; }
+function buildResearchCard(r) {
+  var done = !!r.completed;
+  var title = localizedField(r, 'cardTitle') || localizedField(r, 'title');
+  var dot = done ? '<span class="status-dot" style="background:#999999;"></span>' : '<span class="status-dot"></span>';
+  var statusText = done ? localizedText('status.completed', '진행 완료') : localizedText('status.ongoing', '진행 중');
+  var tags = (r.tags || []).map(function (t) { return '<span class="tag">' + rEsc(t) + '</span>'; }).join('');
+  var people = researchPeople(r).map(function (p) {
+    return '<img src="' + rEsc(p.avatar) + '" alt=""/><span class="label">' + rEsc(localizedField(p, 'name')) + '</span>';
+  }).join('');
+  return '<div class="project-card' + (done ? ' completed' : '') + '" onclick="showPage(\'' + rEsc(r.id) + '\')">' +
+    '<span class="card-arrow">→</span>' +
+    '<div class="project-meta"><span class="badge individual">' + rEsc(localizedText('badge.individualResearch', '개인 연구')) + '</span>' + dot + '<span class="status-text">' + rEsc(statusText) + '</span></div>' +
+    '<h4>' + rEsc(title) + '</h4>' +
+    '<p>' + rEsc(localizedField(r, 'summary')) + '</p>' +
+    '<div class="tag-row">' + tags + '</div>' +
+    '<div class="people-row">' + people + '</div>' +
+  '</div>';
+}
+// 그룹 페이지 카드: 진행 중이 앞, 진행 완료가 뒤. 같은 상태 안에서는 research.json 의 순서를 따른다.
+function renderResearchCards() {
+  document.querySelectorAll('[data-research-grid]').forEach(function (box) {
+    var page = box.getAttribute('data-research-grid');
+    var list = researchData.filter(function (r) { return researchGroupPage(r) === page; });
+    var ongoing = list.filter(function (r) { return !r.completed; });
+    var done = list.filter(function (r) { return r.completed; });
+    box.innerHTML = ongoing.concat(done).map(buildResearchCard).join('');
+  });
+}
 function rParas(t) {
   return String(t == null ? '' : t).split(/\n+/)
     .map(function (s) { return s.trim(); })
@@ -501,17 +556,18 @@ function buildResearchPage(r) {
   var background = localizedField(r, 'background');
   var goal = localizedField(r, 'goal');
   var fig = r.figure ? '<img class="research-fig" src="' + rEsc(r.figure) + '" alt="' + rEsc(title) + '" loading="lazy" onerror="this.style.display=\'none\'">' : '';
-  var researchers = (r.researchers || []).map(function (p) {
+  var people = researchPeople(r);
+  var researchers = people.map(function (p) {
     return '<div class="sidebar-person" onclick="showPage(\'member-' + rEsc(p.slug) + '\')"><img src="' + rEsc(p.avatar) + '" alt=""/><div><div class="name">' + rEsc(localizedField(p, 'name')) + '</div><div class="role">' + rEsc(p.role) + '</div></div></div>';
   }).join('');
-  var rLabel = (r.researchers && r.researchers.length > 1) ? 'Researchers' : 'Researcher';
+  var rLabel = (people.length > 1) ? 'Researchers' : 'Researcher';
   var tools = (r.tools || []).map(function (t) { return '<span class="sidebar-tag">' + rEsc(t) + '</span>'; }).join('');
   var kw = (r.keywords || []).map(rEsc).join(' · ');
   var dot = r.completed ? '<span class="status-dot" style="background:#999999;"></span>' : '<span class="status-dot"></span>';
   // 관련 논문은 publications/*.json 의 research 태그에서 자동으로 채워진다.
   var papers = '<div data-research="' + rEsc(r.id) + '" style="margin-top:64px;"></div>';
   return '<div class="detail-page fade-in">' +
-    '<div class="back-link" onclick="goBack(\'' + rEsc(r.back) + '\')">← ' + rEsc(r.group) + '</div>' +
+    '<div class="back-link" onclick="goBack(\'' + rEsc(researchGroupPage(r)) + '\')">← ' + rEsc(r.group) + '</div>' +
     '<div class="detail-grid"><div>' +
       '<h1 style="font-size:32px;">' + rEsc(title) + '</h1>' +
       '<div class="detail-meta">' + dot + '<span class="status-text">' + rEsc(status) + '</span></div>' +
@@ -528,7 +584,6 @@ function buildResearchPage(r) {
     papers +
   '</div>';
 }
-var researchData = [];
 function renderResearchPages(list) {
   (list || []).forEach(function (r) {
     var el = document.getElementById('page-' + r.id);
@@ -537,10 +592,12 @@ function renderResearchPages(list) {
   });
 }
 function loadResearch() {
-  return fetchJson('research-content/research.json')
-    .then(function (list) {
-      researchData = Array.isArray(list) ? list : [];
+  return Promise.all([fetchJson('research-content/research.json'), window._membersData])
+    .then(function (res) {
+      researchData = Array.isArray(res[0]) ? res[0] : [];
+      buildMemberIndex(res[1]);
       renderResearchPages(researchData);
+      renderResearchCards();
       // 딥링크 보정: 현재 해시가 방금 만든 연구 페이지면 다시 표시
       var h = location.hash.replace('#', '');
       if (h && document.getElementById('page-' + h)) { showPage(h); }
@@ -892,10 +949,15 @@ function fillResearchPapers(){
       + '<div class="profile-info"><h1>'+esc(localizedField(p, 'name'))+'</h1><div class="role-line">'+esc(localizedField(p, 'roleLine'))+'</div>'
       + '<div class="bio"'+bioStyle+'>'+localizedField(p, 'bio')+'</div></div>'
       + '</div>';
+    // 연구 목록은 research.json 의 researchers 에 자기 slug 가 있는 항목이다. members.json 에 따로 두지 않는다.
     var research = '';
-    if(p.research && p.research.length){
-      var items = p.research.map(function(r){
-        return '<div class="profile-research-item" onclick="showPage(\''+r.page+'\')"><h4>'+esc(localizedField(r, 'title'))+'</h4><p>'+esc(r.tags)+'</p></div>';
+    var myResearch = (researchData || []).filter(function(r){
+      return researchPeople(r).some(function(x){ return x.slug === slug; });
+    });
+    if(myResearch.length){
+      var items = myResearch.map(function(r){
+        var tags = (r.tags || []).map(function(t){ return '#' + String(t).replace(/\s+/g, '_'); }).join(' ');
+        return '<div class="profile-research-item" onclick="showPage(\''+esc(r.id)+'\')"><h4>'+esc(localizedField(r, 'title'))+'</h4><p>'+esc(tags)+'</p></div>';
       }).join('');
       research = '<div class="profile-research-list"><h3>Research</h3>'+items+'</div>';
     }
@@ -926,8 +988,9 @@ function fillResearchPapers(){
   }
 
   window._memReady = Promise.all([
-      fetchJson('members.json'),
-      window._pubReady
+      window._membersData,
+      window._pubReady,
+      window._researchReady
     ])
     .then(function(res){
       memberData = res[0];
@@ -942,6 +1005,7 @@ function fillResearchPapers(){
 
 document.addEventListener('languagechange', function () {
   renderResearchPages(researchData);
+  renderResearchCards();
   fillResearchPapers();
 });
 

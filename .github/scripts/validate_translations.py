@@ -68,6 +68,15 @@ URL_RE = re.compile(r"https?://\S+")
 
 # documented Korean-field -> English-companion-field pairs inside members.json
 # (recursed into wherever they appear, at any depth).
+RESEARCH_COMPANION_PAIRS: Tuple[Tuple[str, str], ...] = (
+    ("title", "titleEn"),
+    ("cardTitle", "cardTitleEn"),
+    ("status", "statusEn"),
+    ("summary", "summaryEn"),
+    ("background", "backgroundEn"),
+    ("goal", "goalEn"),
+)
+
 MEMBERS_COMPANION_PAIRS: Tuple[Tuple[str, str], ...] = (
     ("name", "nameEn"),
     ("bio", "bioEn"),
@@ -422,12 +431,7 @@ def validate_research_records(records: Any) -> List[Issue]:
         else:
             issues.append(Issue(file_label, item, "missing id"))
 
-        for ko_field, en_field in (
-            ("title", "titleEn"),
-            ("status", "statusEn"),
-            ("background", "backgroundEn"),
-            ("goal", "goalEn"),
-        ):
+        for ko_field, en_field in RESEARCH_COMPANION_PAIRS:
             _check_pair(issues, file_label, item, rec.get(ko_field), rec.get(en_field),
                         ko_field, en_field, trigger="hangul")
 
@@ -1224,8 +1228,7 @@ def collect_diff_issues(root: Path, base_ref: str, loaded: Dict[str, Any]) -> Li
 
     base_research = load_base_json(root, base_ref, RESEARCH_PATH)
     issues += diff_id_collection(
-        RESEARCH_PATH, loaded.get("research") or [], base_research,
-        [("title", "titleEn"), ("status", "statusEn"), ("background", "backgroundEn"), ("goal", "goalEn")],
+        RESEARCH_PATH, loaded.get("research") or [], base_research, RESEARCH_COMPANION_PAIRS,
     )
     issues += diff_research_researchers(RESEARCH_PATH, loaded.get("research") or [], base_research)
 

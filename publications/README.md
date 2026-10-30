@@ -201,7 +201,7 @@ CMS에 한 번만 넣으면 됩니다. 예전에는 프로필과 연구 페이�
 **CMS 드롭다운은 자동으로 따라옵니다.** 따로 손댈 것이 없습니다.
 
 - 학생: `members.json`에 추가하면 됩니다 (People 페이지에 넣는 그 작업)
-- 연구 주제: 연구 상세 페이지를 만들면 됩니다 (`research-content/research.json` 또는 `index.html`)
+- 연구 주제: CMS의 **Research (개인 연구)** 항목에 연구를 추가하면 됩니다 ([개인연구 가이드](../research-content/README.md))
 
 저장소에 올라오면 자동화가 `.pages.yml`의 선택 목록을 다시 만듭니다. 설정 파일을 직접 고칠 필요가 없습니다.
 

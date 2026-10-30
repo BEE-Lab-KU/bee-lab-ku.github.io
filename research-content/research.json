@@ -3,18 +3,21 @@
     "id": "research-elevator",
     "title": "엘리베이터 샤프트 내 균일 냉각을 위한 급배기 위치 최적화",
     "titleEn": "Optimization of Supply and Exhaust Locations for Uniform Cooling in Elevator Shafts",
+    "cardTitle": "엘리베이터 샤프트 냉각 시스템을 통한 연돌효과 저감 연구",
+    "cardTitleEn": "A Study on Stack Effect Mitigation Using an Elevator Shaft Cooling System",
     "group": "Building Energy Systems",
-    "back": "main",
     "status": "진행 중 · 2025–",
     "statusEn": "In Progress, 2025–",
+    "completed": false,
     "researchers": [
-      {
-        "slug": "junghyun",
-        "name": "조정현",
-        "nameEn": "Junghyun Cho",
-        "role": "Master's Student",
-        "avatar": "Photos/members/junghyun.jpg"
-      }
+      "junghyun"
+    ],
+    "summary": "고층 건물에서 발생하는 연돌효과의 영향을 줄이고 재실자의 건물 사용성 및 에너지 효율을 향상",
+    "summaryEn": "Reduces the impact of the stack effect in high-rise buildings and improves occupant usability and energy efficiency",
+    "tags": [
+      "Stack Effect",
+      "EnergyPlus",
+      "Shaft Cooling"
     ],
     "background": "건물의 고층화가 진행됨에 따라 고층 건물에서 발생하는 기류 특성인 연돌효과로 인한 문제점 해소가 필요합니다. 연돌효과는 건물을 사용하는 재실자에게 불편함을 야기하며 건물의 에너지 측면에도 영향을 미칩니다. 이러한 문제점을 해소하기 위해 연돌효과 저감 방안들 중 엘리베이터 샤프트 냉각 시스템에 대해 연구를 수행하였습니다. 이때 샤프트 냉각 시스템의 성능을 극대화하기 위해서는 샤프트 내부를 균일하게 냉각해야 합니다. 따라서 샤프트 온도를 냉각시키는 것과 동시에, 샤프트 내부를 균일하게 냉각할 수 있는 최적의 급기와 배기 위치에 대해 검토가 필요합니다.",
     "backgroundEn": "As buildings grow taller, the stack effect, an airflow phenomenon characteristic of high-rise buildings, creates problems that must be addressed. The stack effect causes discomfort for occupants and affects building energy performance. To address this problem, this study investigates elevator shaft cooling systems as a stack effect mitigation strategy. Maximizing the performance of a shaft cooling system requires uniform cooling throughout the shaft. Therefore, in addition to lowering the shaft temperature, it is necessary to examine optimal supply and exhaust locations that achieve uniform cooling inside the shaft.",
@@ -34,191 +37,37 @@
     "figure": "Photos/research-figs/elevator.png"
   },
   {
-    "id": "research-da-marl",
-    "title": "강화학습 기반 다중 에이전트를 활용한 열 부하공유 시스템 구축",
-    "titleEn": "Development of a Thermal Load Sharing System Using Reinforcement Learning-Based Multi-Agents",
+    "id": "research-zeb-economy",
+    "title": "ZEB 에너지 사용량, 경제성 분석",
+    "titleEn": "ZEB Energy Use and Economic Feasibility Analysis",
     "group": "Building Energy Systems",
-    "back": "main",
-    "status": "진행 중 · 2026–",
-    "statusEn": "In Progress, 2026–",
-    "researchers": [
-      {
-        "slug": "jiyoung",
-        "name": "김지영",
-        "nameEn": "Jiyoung Kim",
-        "role": "Undergraduate Researcher",
-        "avatar": "Photos/members/jiyoung.jpg"
-      },
-      {
-        "slug": "hyunsu",
-        "name": "이현수",
-        "nameEn": "Hyeonsu Lee",
-        "role": "Undergraduate Researcher",
-        "avatar": "Photos/members/hyunsu.jpg"
-      }
-    ],
-    "background": "건물 부문은 전 세계 전력 소비의 약 55%를 차지하며, 기후변화로 인한 냉·난방 수요 증가로 전력망 부담이 갈수록 커지고 있습니다. 이를 완화하고자 개별 건물의 수요반응(DR) 제어나 커뮤니티 단위 협조제어 방식이 연구되어 왔으나, 계산 복잡도 증가와 확장성 한계 등의 문제가 있었습니다. 기존 연구들은 전력·폐열 분배 등 에너지 자원 운용에 집중했을 뿐, 건물 간 부하 패턴 차이를 직접 활용하는 열 부하공유 방식은 고려되지 않았습니다. 또한 다수 건물이 동시에 운전되는 환경에서 단일 에이전트 기반 강화학습은 상태-행동 공간이 급격히 커져 확장성에 한계를 보입니다. 이에 각 건물을 독립 에이전트로 설정하고 상호 협조하는 다중 에이전트 강화학습(MARL)이 유망한 대안으로 주목받고 있습니다.",
-    "backgroundEn": "The building sector accounts for about 55% of global electricity consumption, and rising heating and cooling demand driven by climate change places an ever-growing burden on power grids. Demand response (DR) control of individual buildings and community-level cooperative control have been studied to mitigate this burden, but they suffer from increased computational complexity and limited scalability. Previous studies have focused on operating energy resources, such as distributing electricity and waste heat, and have not considered thermal load sharing that directly exploits differences in load patterns between buildings. In addition, when many buildings operate simultaneously, single-agent reinforcement learning faces a rapidly growing state-action space that limits scalability. Multi-agent reinforcement learning (MARL), in which each building is treated as an independent agent that cooperates with the others, has therefore drawn attention as a promising alternative.",
-    "goal": "건물마다 용도·규모·재실 스케줄에 따라 냉·난방 수요의 시점과 규모가 다르다는 점에 착안하여, MARL 기반 협조제어를 통해 건물 간 난방 열 부하를 상호 분담하고, 커뮤니티 전체의 부하 평탄화와 에너지 인프라 부담 저감을 동시에 달성하는 열 부하공유 시스템을 제안합니다.",
-    "goalEn": "Building on the observation that the timing and magnitude of heating and cooling demand differ between buildings according to their use, size, and occupancy schedule, this study proposes a thermal load sharing system in which buildings share heating loads through MARL-based cooperative control, simultaneously flattening community-wide load and reducing the burden on energy infrastructure.",
-    "keywords": [
-      "Building Thermal Load Sharing",
-      "Multi-agent",
-      "Reinforcement Learning",
-      "Energy Optimization",
-      "Grid Stability"
-    ],
-    "tools": [
-      "Python",
-      "EnergyPlus"
-    ],
-    "figure": "Photos/research-figs/marl-heat-sharing.png"
-  },
-  {
-    "id": "research-da-preprocessing",
-    "title": "로지스틱 맵 이미지 암호화 기법을 적용한 딥러닝 기반 재실자 감지 시스템 제안",
-    "titleEn": "A Deep Learning-Based Occupancy Detection System Using Logistic Map Image Encryption",
-    "group": "Building Data Analytics & AI",
-    "back": "data-analysis",
-    "status": "진행 완료 · 2026",
-    "statusEn": "Completed, 2026",
-    "completed": true,
-    "researchers": [
-      {
-        "slug": "jiyoung",
-        "name": "김지영",
-        "nameEn": "Jiyoung Kim",
-        "role": "Undergraduate Researcher",
-        "avatar": "Photos/members/jiyoung.jpg"
-      }
-    ],
-    "background": "대부분의 건물 에너지 관리 시스템은 실제 거주자의 재실 패턴을 고려하지 않고, 미리 설정된 고정 스케줄에 따라 냉난방 및 조명 설비를 운영하고 있습니다. 이를 해결하기 위해 비전 기반 재실자 감지 기술이 주목받고 있지만, 프라이버시와 원거리 탐지 성능, 비정형 자세 인식 성능을 동시에 개선하는 접근이 필요합니다. 따라서 고도화된 재실자 감지 시스템을 제안하고 스케줄 분석을 통해 건물의 에너지 저감 방안을 제시하고자 합니다.",
-    "backgroundEn": "Most building energy management systems operate HVAC and lighting equipment on preset fixed schedules without accounting for actual occupancy patterns. Vision-based occupancy detection has drawn attention as a solution, but an approach that simultaneously improves privacy protection, long-range detection performance, and recognition of irregular postures is still needed. This study therefore proposes an advanced occupancy detection system and presents energy reduction strategies based on schedule analysis.",
-    "goal": "재실자의 프라이버시를 보호하고 고도화된 재실자 감지 시스템으로 건물의 에너지 저감 효과를 분석합니다.",
-    "goalEn": "This study protects occupant privacy and analyzes the building energy savings achieved by an advanced occupancy detection system.",
-    "keywords": [
-      "Occupancy detection",
-      "Logistic Map",
-      "Encryption",
-      "CNN",
-      "YOLO"
-    ],
-    "tools": [
-      "Python",
-      "CNN",
-      "YOLO"
-    ],
-    "figure": "Photos/research-figs/occupancy.png"
-  },
-  {
-    "id": "research-da-thermal-seat",
-    "title": "열적 특성 기반의 개인 맞춤형 좌석 선택 시스템 제안",
-    "titleEn": "A Personalized Seat Selection System Based on Individual Thermal Characteristics",
-    "group": "Building Data Analytics & AI",
-    "back": "data-analysis",
-    "status": "진행 완료 · 2025",
-    "statusEn": "Completed, 2025",
-    "completed": true,
-    "researchers": [
-      {
-        "slug": "jiyoung",
-        "name": "김지영",
-        "nameEn": "Jiyoung Kim",
-        "role": "Undergraduate Researcher",
-        "avatar": "Photos/members/jiyoung.jpg"
-      },
-      {
-        "slug": "hyunsu",
-        "name": "이현수",
-        "nameEn": "Hyeonsu Lee",
-        "role": "Undergraduate Researcher",
-        "avatar": "Photos/members/hyunsu.jpg"
-      }
-    ],
-    "background": "현재 대부분의 좌석 배치 시스템은 좌석 간 온열환경의 차이를 반영하지 못해 개인의 열적 쾌적성을 고려하지 못하는 한계가 존재합니다. 이를 개선하기 위해 대표적인 열적 쾌적성 지표인 PMV가 활용되고 있으나, 기존 PMV는 대사율 지표인 MET를 표준화하여 사용함으로써 개인별 열적 특성 차이를 충분히 반영하지 못하고 있습니다.",
-    "backgroundEn": "Most current seat allocation systems fail to account for differences in thermal environment between seats, limiting their ability to reflect individual thermal comfort. Predicted Mean Vote (PMV), a widely used thermal comfort index, has been applied to address this issue, but conventional PMV relies on a standardized metabolic rate (MET) value and therefore does not adequately reflect individual differences in thermal characteristics.",
-    "goal": "개인별 MET를 산정하여 PMV를 개인화하고, 이를 기반으로 맞춤형 좌석 선택 시스템을 제안합니다. Virtual Sensing 기술을 활용하여 개인의 열적 특성을 예측하고, 실시간으로 최적 좌석을 추천하는 시스템 개발을 목표로 합니다.",
-    "goalEn": "This study personalizes PMV by estimating individual MET values and proposes a customized seat selection system based on the personalized index. The goal is to develop a system that predicts individual thermal characteristics using virtual sensing technology and recommends the optimal seat in real time.",
-    "keywords": [
-      "Predicted Mean Vote",
-      "Virtual Sensing",
-      "Metabolic Rate",
-      "Thermal Comfort",
-      "Personalized Seat Reservation"
-    ],
-    "tools": [
-      "Python",
-      "Virtual Sensing"
-    ],
-    "figure": "Photos/research-figs/thermal-seat.png"
-  },
-  {
-    "id": "research-um-ubem",
-    "title": "도시 단위 건물 에너지 해석을 위한 건물 특성 지표 및 도시 건물 에너지 모델(UBEM) 개발",
-    "titleEn": "Development of Building Feature Indices and an Urban Building Energy Model (UBEM) for City-Scale Building Energy Analysis",
-    "group": "Urban Building Energy Modeling (UBEM)",
-    "back": "urban-modeling",
     "status": "진행 중 · 2024–",
     "statusEn": "In Progress, 2024–",
+    "completed": false,
     "researchers": [
-      {
-        "slug": "jungyun",
-        "name": "황정윤",
-        "nameEn": "Jeongyun Hwang",
-        "role": "Ph.D. Candidate",
-        "avatar": "Photos/members/jungyun.jpg"
-      }
+      "jaeuk"
     ],
-    "background": "도시화로 에너지 수요가 도시에 집중되면서 전력망을 비롯한 에너지 시스템의 부담이 가중되고 있습니다. 지속가능한 도시를 설계하기 위해서는 이러한 도시 에너지 생태계를 이해하는 것이 선행되어야 합니다. 도시 건물 에너지 모델(UBEM)은 도시 단위 건물 에너지 분석에 널리 활용되고 있으나, 계산 비용이 크고 실제 도시가 가진 불확실성을 충분히 반영하지 못한다는 한계가 있습니다. 따라서 건물 특성(형상, 부하, 패턴)을 기반으로 한 초기 분석과 불확실성을 고려한 모델 보정을 통해 정밀 분석으로 이어지는 방법론이 필요합니다.",
-    "backgroundEn": "As urbanization concentrates energy demand in cities, the burden on energy systems, including power grids, continues to grow. Understanding this urban energy ecosystem is a prerequisite for designing sustainable cities. Urban Building Energy Modeling (UBEM) is widely used for city-scale building energy analysis, but it has limitations in computational cost and in capturing the uncertainty inherent in real cities. A methodology is therefore needed that proceeds from an initial analysis based on building characteristics (shape, load, and pattern) to a detailed analysis through uncertainty-aware model calibration.",
-    "goal": "건물 특성 지표 기반의 초기 분석부터 불확실성 보정을 통한 정밀 분석으로 정확한 도시 건물 에너지 모델(UBEM)을 구축하는 것을 목표로 합니다.",
-    "goalEn": "This study aims to build an accurate Urban Building Energy Model (UBEM) by progressing from an initial analysis based on building feature indices to a detailed analysis through uncertainty calibration.",
+    "summary": "실제 에너지사용량 데이터 기반 편차 분석을 통해 설계요소를 도출하고 ZEB 등급 향상의 경제성을 검증",
+    "summaryEn": "Derives design factors through deviation analysis based on actual energy use data and verifies the economic feasibility of upgrading ZEB ratings",
+    "tags": [
+      "ZEB",
+      "ECO2",
+      "BEMS",
+      "LCC"
+    ],
+    "background": "ZEB 공동주택에서 에너지사용량의 예측값과 실측값의 편차가 존재합니다. 실제 운영데이터 분석을 통한 에너지 절감에 영향을 미치는 설계요소와 경제성에 관한 검증이 필요합니다.",
+    "backgroundEn": "A gap exists between predicted and measured energy use in ZEB apartment complexes. Verification of the design factors affecting energy savings and their economic feasibility is needed through analysis of actual operational data.",
+    "goal": "실제 에너지사용량 데이터 기반의 편차 분석을 통해 민감도를 반영한 설계요소를 도출하고, ZEB 등급 향상 시 추가공사비와 생애주기 에너지 절감액을 비교하여 경제성 및 합리적 의사결정 기준을 제시합니다.",
+    "goalEn": "Derives sensitivity-based design factors through deviation analysis based on actual energy use data, and presents economic feasibility and rational decision-making criteria by comparing the additional construction cost of upgrading ZEB ratings against life-cycle energy savings.",
     "keywords": [
-      "Urban Building Energy Modeling (UBEM)",
-      "Bayesian Calibration",
-      "Uncertainty Quantification",
-      "Reinforcement Learning",
-      "Building Feature Index"
+      "ZEB",
+      "ECO2",
+      "BEMS",
+      "LCC"
     ],
     "tools": [
-      "EnergyPlus",
-      "Grasshopper",
-      "QGIS",
+      "ECO2",
       "Python"
-    ],
-    "figure": "Photos/research-figs/ubem.png"
-  },
-  {
-    "id": "research-um-solar-surrogate",
-    "title": "도시 단위 건물 에너지 분석을 위한 일사 반영 대리모델 개발",
-    "titleEn": "Development of a Solar Radiation-Informed Surrogate Model for City-Scale Building Energy Analysis",
-    "group": "Urban Building Energy Modeling (UBEM)",
-    "back": "urban-modeling",
-    "status": "진행 중 · 2026–",
-    "statusEn": "In Progress, 2026–",
-    "researchers": [
-      {
-        "slug": "hyunsu",
-        "name": "이현수",
-        "nameEn": "Hyeonsu Lee",
-        "role": "Undergraduate Researcher",
-        "avatar": "Photos/members/hyunsu.jpg"
-      }
-    ],
-    "background": "도시 건물이 고층화·고밀화됨에 따라, 인접 건물에 의한 음영은 건물의 일사 획득량과 냉·난방 부하 산정에 중요한 영향을 미칩니다. 이러한 음영효과는 인접 건물과의 공간적 관계에 따라 달라지기에, 도시 단위 에너지 분석 시 건물 간 상호작용을 반영할 수 있는 Urban Building Energy Modeling (UBEM)이 활용됩니다. 그러나 전통적인 물리 기반 UBEM은 계산 비용이 크고, 이를 보완하기 위한 기존 대리모델은 음영 효과를 입력 변수로 반영하지 않거나, 반영하더라도 음영 데이터를 물리 기반 시뮬레이션으로부터 확보해야 한다는 한계가 있습니다.",
-    "backgroundEn": "As urban buildings become taller and denser, shading from adjacent buildings significantly affects each building's solar heat gain and the estimation of its heating and cooling loads. Because this shading effect depends on the spatial relationship with neighboring buildings, Urban Building Energy Modeling (UBEM), which can capture interactions between buildings, is used for city-scale energy analysis. However, conventional physics-based UBEM is computationally expensive, and existing surrogate models developed to address this either do not include shading effects as input variables or, when they do, must obtain the shading data from physics-based simulations.",
-    "goal": "일사지표 대리모델을 통해 건물의 음영 효과를 예측하고, 이를 활용하는 도시 단위 건물 에너지 대리모델을 개발합니다. 이를 통해 건물의 음영 효과 및 에너지 사용량 산출 비용을 절감하며, 다양한 환경 변화 시나리오를 효율적으로 평가할 수 있는 기반을 마련합니다.",
-    "goalEn": "This study predicts building shading effects using a solar radiation index surrogate model and develops a city-scale building energy surrogate model that uses these predictions. This reduces the cost of calculating shading effects and energy use and establishes a foundation for efficiently evaluating a variety of environmental change scenarios.",
-    "keywords": [
-      "Urban Building Energy Modeling (UBEM)",
-      "Surrogate Model",
-      "Shading Effect",
-      "Interaction between Buildings",
-      "Data-driven Simulation"
-    ],
-    "tools": [
-      "Python",
-      "EnergyPlus"
     ],
     "figure": null
   },
@@ -226,18 +75,21 @@
     "id": "research-whr-dc",
     "title": "데이터센터 폐열을 활용한 급탕 및 수열원 온도 유지 방안",
     "titleEn": "Domestic Hot Water Supply and Water Source Temperature Maintenance Using Data Center Waste Heat",
+    "cardTitle": "수열원 히트펌프 기반 데이터센터 폐열의 급탕 활용과 방류온도 제어",
+    "cardTitleEn": "Domestic Hot Water Utilization of Data Center Waste Heat and Discharge Temperature Control Using a Water-Source Heat Pump",
     "group": "Building Energy Systems",
-    "back": "main",
     "status": "진행 중 · 2025–",
     "statusEn": "In Progress, 2025–",
+    "completed": false,
     "researchers": [
-      {
-        "slug": "jiung",
-        "name": "한지웅",
-        "nameEn": "Jiung Han",
-        "role": "Master's Student",
-        "avatar": "Photos/members/jiung.png"
-      }
+      "jiung"
+    ],
+    "summary": "수열원을 통해 데이터센터 폐열 회수 시 방류 수온을 제어하고 에너지 성능을 향상",
+    "summaryEn": "Controls discharge water temperature during data center waste heat recovery via a water-source system and improves energy performance",
+    "tags": [
+      "Data Center",
+      "WWHP",
+      "Waste Heat Recovery"
     ],
     "background": "생성형 인공지능의 급격한 확산에 따라 데이터센터 수요가 폭발적으로 증가하고 있습니다. 데이터센터는 운영 과정에서 대량의 폐열을 지속적으로 발생시키며, 이를 효과적으로 활용하기 위한 연구가 활발히 진행되고 있습니다. 그러나 기존의 수열원 기반 폐열 활용 연구는 폐열 방류로 인한 수온 상승의 환경적 영향을 충분히 고려하지 못했습니다. 따라서 폐열의 에너지 활용 성능을 높이는 동시에, 방류수의 수온 변화까지 종합적으로 검토하는 접근이 필요합니다.",
     "backgroundEn": "The rapid spread of generative artificial intelligence has driven an explosive increase in data center demand. Data centers continuously generate large amounts of waste heat during operation, and research on effectively utilizing this waste heat is actively underway. However, existing studies on water-source-based waste heat utilization have not adequately considered the environmental impact of the water temperature rise caused by waste heat discharge. An approach is therefore needed that both improves the energy utilization performance of the waste heat and comprehensively examines the resulting change in discharge water temperature.",
@@ -259,31 +111,20 @@
     "title": "LLM 기반 도면 정보 추출 시스템 개발",
     "titleEn": "Development of an LLM-Based Drawing Information Extraction System",
     "group": "Building Energy Systems",
-    "back": "main",
     "status": "진행 중 · 2025–",
     "statusEn": "In Progress, 2025–",
+    "completed": false,
     "researchers": [
-      {
-        "slug": "jiung",
-        "name": "한지웅",
-        "nameEn": "Jiung Han",
-        "role": "Master's Student",
-        "avatar": "Photos/members/jiung.png"
-      },
-      {
-        "slug": "seyeon",
-        "name": "김세연",
-        "nameEn": "Seyeon Kim",
-        "role": "Undergraduate Researcher",
-        "avatar": "Photos/members/seyeon.jpg"
-      },
-      {
-        "slug": "junho",
-        "name": "송준호",
-        "nameEn": "Junho Song",
-        "role": "Undergraduate Researcher",
-        "avatar": "Photos/members/junho.jpg"
-      }
+      "jiung",
+      "seyeon",
+      "junho"
+    ],
+    "summary": "건축 CAD 도면의 공간 정보를 AI가 활용 가능하도록 구조화된 데이터로 자동 변환하는 파이프라인 개발",
+    "summaryEn": "Development of a pipeline that automatically converts spatial information from architectural CAD drawings into structured data usable by AI",
+    "tags": [
+      "AI",
+      "LLM",
+      "CAD"
     ],
     "background": "건물·건설 부문은 전 세계 에너지 소비의 약 28%, 이산화탄소 배출의 약 37%를 차지합니다(UNEP·GlobalABC, 2026). 이를 줄이기 위해 AI Agent 기반 건물 에너지 관리 연구가 활발히 진행되고 있습니다. AI Agent가 건물을 자율적으로 운영·제어하려면 대상 건물의 공간 구성(층별 실 배치, 면적, 용도 등)과 설비 간의 관계를 구조적으로 파악해야 합니다.\n\n그러나 도면에서 공간 정보를 뽑아내는 작업은 아직 대부분 사람이 직접 합니다. 따라서 도시 단위로 대상 건물이 늘어나면 이 작업을 감당하기 어렵습니다.\n\n기존 자동 추출 방법에도 한계가 있습니다. 벡터 기반 방법은 벽체 선이 끊기거나 레이어 이름이 도면마다 다르면 공간을 제대로 찾지 못합니다. 이미지 기반 딥러닝은 학습에 쓸 도면을 대량으로 모아 하나하나 표시(라벨링)해야 합니다. 또한 도면 양식이 바뀌면 다시 학습해야 합니다. 더욱이 도면 안의 글자를 해당 공간과 연결해 이해하는 연구도 부족합니다.\n\n이에 본 연구는 GPT 같은 상용 LLM으로 도면 이미지에서 공간 정보를 추출합니다. 상용 LLM은 추가 학습 없이 지시문(프롬프트)만으로 도면을 읽을 수 있습니다. 또한 실 이름과 치수 같은 글자를 함께 읽습니다. 따라서 치수선으로 축척을 계산하면 이미지에서도 실제 면적을 추정할 수 있습니다. 다만 상용 LLM이 도면에서 공간과 면적을 얼마나 정확하게 추출하는지는 아직 충분히 검증되지 않았습니다. 본 연구는 이 정확도를 확인하고, 추출 결과를 에너지 진단의 기초 정보로 쓸 수 있는지 평가합니다.",
     "backgroundEn": "The buildings and construction sector accounts for about 28% of global energy consumption and about 37% of CO2 emissions (UNEP & GlobalABC, 2026). To reduce these shares, research on AI agent-based building energy management is being actively conducted. For an AI agent to operate and control a building autonomously, it must understand in a structured way the building's spatial composition (room layout by floor, area, use, etc.) and the relationships among its building systems.\n\nHowever, extracting spatial information from drawings is still done mostly by hand. As a result, this work becomes difficult to keep up with as the number of target buildings grows to the city scale.\n\nExisting automated extraction methods also have limitations. Vector-based methods fail to identify spaces correctly when wall lines are broken or when layer names differ from drawing to drawing. Image-based deep learning requires collecting a large number of drawings for training and annotating (labeling) each one. It must also be retrained whenever the drawing format changes. Moreover, little research has addressed understanding the text in drawings by linking it to the corresponding spaces.\n\nThis study therefore uses commercial LLMs such as GPT to extract spatial information from drawing images. Commercial LLMs can read drawings with instructions (prompts) alone, without additional training. They also read text such as room names and dimensions. Therefore, by calculating the scale from dimension lines, the actual area can be estimated even from an image. However, how accurately commercial LLMs extract spaces and areas from drawings has not yet been sufficiently verified. This study examines this accuracy and evaluates whether the extraction results can be used as baseline information for energy diagnosis.",
@@ -307,17 +148,18 @@
     "title": "Hydro-Cascade System 연구",
     "titleEn": "Hydro-Cascade System Research",
     "group": "Building Energy Systems",
-    "back": "main",
     "status": "진행 중 · 2025–",
     "statusEn": "In Progress, 2025–",
+    "completed": false,
     "researchers": [
-      {
-        "slug": "jiung",
-        "name": "한지웅",
-        "nameEn": "Jiung Han",
-        "role": "Master's Student",
-        "avatar": "Photos/members/jiung.png"
-      }
+      "jiung"
+    ],
+    "summary": "냉방에서 버려지는 열을 급탕 열원으로 재사용하는 Hydro-Cascade System을 제안하고 Modelica로 연간 에너지 절감 효과 검증",
+    "summaryEn": "Proposes a Hydro-Cascade System that reuses heat rejected from cooling as a domestic hot water heat source, and verifies annual energy savings using Modelica",
+    "tags": [
+      "Hydro-Cascade System",
+      "IWHP",
+      "Modelica"
     ],
     "background": "건물에서 쓰는 에너지의 큰 부분은 냉난방과 급탕에 쓰입니다. 그런데 많은 건물은 냉난방 설비와 급탕 설비를 따로 운영합니다. 이 때문에 냉방 과정에서 실내에서 빼낸 열은 밖으로 버려집니다. 반면 급탕은 처음부터 다시 에너지를 들여 물을 데웁니다.\n\n한편 냉매 규제가 강해지면서, 세대까지 냉매 대신 물로 열을 운반하는 2관식 중앙 냉난방 시스템이 대안으로 떠오르고 있습니다. 이 시스템은 공급관으로 냉난방용 물을 보내고, 환수관으로 냉난방을 마친 물을 돌려받습니다. 환수관은 각 세대를 지나므로, 이 물은 세대 가까이에서 쓸 수 있는 열원이 됩니다.\n\n본 연구가 제안하는 Hydro-Cascade 시스템은 이 환수를 세대별 수열원 히트펌프(WWHP)의 열원으로 써서 급탕을 만듭니다. 냉방기에는 실내에서 빼낸 열이 환수에 담겨 있습니다. 따라서 버려지던 열을 급탕에 다시 쓸 수 있습니다. 난방기에는 중앙 히트펌프가 한 번 데운 물을 WWHP가 한 번 더 데웁니다. 이때 WWHP는 차가운 바깥 공기가 아니라 따뜻한 물에서 열을 가져오므로 높은 효율로 운전할 수 있습니다. 이처럼 냉난방에 쓴 물의 열을 급탕까지 차례로 이어 쓴다는 뜻에서, 이 시스템을 Hydro-Cascade라고 부릅니다.",
     "backgroundEn": "A large share of the energy used in buildings goes to space heating, cooling, and domestic hot water (DHW). However, many buildings operate their heating and cooling systems separately from their DHW systems. As a result, the heat extracted from indoor spaces during cooling is rejected outdoors, while DHW is produced by spending energy to heat water from scratch.\n\nMeanwhile, as refrigerant regulations tighten, two-pipe central heating and cooling systems, which carry heat to each household with water instead of refrigerant, are emerging as an alternative. These systems deliver water for heating and cooling through a supply pipe and receive the water that has finished heating or cooling through a return pipe. Because the return pipe passes through every household, this water becomes a heat source available close to each household.\n\nThe Hydro-Cascade system proposed in this study produces DHW by using this return water as the heat source for a water-to-water heat pump (WWHP) in each household. In the cooling season, the return water carries the heat extracted from indoor spaces, so heat that was previously discarded can be reused for DHW. In the heating season, the WWHP further heats water that the central heat pump has already heated once. Because the WWHP draws heat from warm water rather than cold outdoor air, it can operate at high efficiency. The system is called Hydro-Cascade because it uses the heat in the water used for heating and cooling in sequence, all the way through to DHW.",
@@ -335,22 +177,58 @@
     "figure": "Photos/research-figs/hydro-cascade.png"
   },
   {
+    "id": "research-da-marl",
+    "title": "강화학습 기반 다중 에이전트를 활용한 열 부하공유 시스템 구축",
+    "titleEn": "Development of a Thermal Load Sharing System Using Reinforcement Learning-Based Multi-Agents",
+    "group": "Building Energy Systems",
+    "status": "진행 중 · 2026–",
+    "statusEn": "In Progress, 2026–",
+    "completed": false,
+    "researchers": [
+      "jiyoung",
+      "hyunsu"
+    ],
+    "summary": "MARL 기반 협조제어로 건물 간 난방 열 부하를 상호 분담하여 커뮤니티 전체의 부하 평탄화와 에너지 인프라 부담 저감을 동시에 달성",
+    "summaryEn": "Shares heating loads between buildings through MARL-based cooperative control, simultaneously flattening community-wide load and reducing the burden on energy infrastructure",
+    "tags": [
+      "Thermal Load Sharing",
+      "Multi-agent",
+      "Reinforcement Learning"
+    ],
+    "background": "건물 부문은 전 세계 전력 소비의 약 55%를 차지하며, 기후변화로 인한 냉·난방 수요 증가로 전력망 부담이 갈수록 커지고 있습니다. 이를 완화하고자 개별 건물의 수요반응(DR) 제어나 커뮤니티 단위 협조제어 방식이 연구되어 왔으나, 계산 복잡도 증가와 확장성 한계 등의 문제가 있었습니다. 기존 연구들은 전력·폐열 분배 등 에너지 자원 운용에 집중했을 뿐, 건물 간 부하 패턴 차이를 직접 활용하는 열 부하공유 방식은 고려되지 않았습니다. 또한 다수 건물이 동시에 운전되는 환경에서 단일 에이전트 기반 강화학습은 상태-행동 공간이 급격히 커져 확장성에 한계를 보입니다. 이에 각 건물을 독립 에이전트로 설정하고 상호 협조하는 다중 에이전트 강화학습(MARL)이 유망한 대안으로 주목받고 있습니다.",
+    "backgroundEn": "The building sector accounts for about 55% of global electricity consumption, and rising heating and cooling demand driven by climate change places an ever-growing burden on power grids. Demand response (DR) control of individual buildings and community-level cooperative control have been studied to mitigate this burden, but they suffer from increased computational complexity and limited scalability. Previous studies have focused on operating energy resources, such as distributing electricity and waste heat, and have not considered thermal load sharing that directly exploits differences in load patterns between buildings. In addition, when many buildings operate simultaneously, single-agent reinforcement learning faces a rapidly growing state-action space that limits scalability. Multi-agent reinforcement learning (MARL), in which each building is treated as an independent agent that cooperates with the others, has therefore drawn attention as a promising alternative.",
+    "goal": "건물마다 용도·규모·재실 스케줄에 따라 냉·난방 수요의 시점과 규모가 다르다는 점에 착안하여, MARL 기반 협조제어를 통해 건물 간 난방 열 부하를 상호 분담하고, 커뮤니티 전체의 부하 평탄화와 에너지 인프라 부담 저감을 동시에 달성하는 열 부하공유 시스템을 제안합니다.",
+    "goalEn": "Building on the observation that the timing and magnitude of heating and cooling demand differ between buildings according to their use, size, and occupancy schedule, this study proposes a thermal load sharing system in which buildings share heating loads through MARL-based cooperative control, simultaneously flattening community-wide load and reducing the burden on energy infrastructure.",
+    "keywords": [
+      "Building Thermal Load Sharing",
+      "Multi-agent",
+      "Reinforcement Learning",
+      "Energy Optimization",
+      "Grid Stability"
+    ],
+    "tools": [
+      "Python",
+      "EnergyPlus"
+    ],
+    "figure": "Photos/research-figs/marl-heat-sharing.png"
+  },
+  {
     "id": "research-chpwh",
     "title": "공동주택 중앙식 히트펌프 급탕 시스템의 반환수 영향 저감을 위한 부하 분리와 적응형 Load Shift 최적화",
     "titleEn": "Load Separation and Adaptive Load Shift Optimization to Reduce the Impact of Return Water in a Central Heat Pump Water Heater System for Multi-Family Housing",
     "group": "Building Energy Systems",
-    "back": "main",
     "status": "진행 완료 · 2025–2026",
     "statusEn": "Completed, 2025–2026",
     "completed": true,
     "researchers": [
-      {
-        "slug": "sangmin",
-        "name": "이상민",
-        "nameEn": "Sangmin Lee",
-        "role": "Master's Student",
-        "avatar": "Photos/members/sangmin.jpg"
-      }
+      "sangmin"
+    ],
+    "summary": "반환수로 인한 성능 저하를 방지하기 위한 부하 분리 기반 CHPWH 시뮬레이션 모델 구축 및 적응형 Load Shift 전략 최적화",
+    "summaryEn": "Development of a load-separation-based CHPWH simulation model to prevent performance degradation from return water, and optimization of an adaptive load shift strategy",
+    "tags": [
+      "CHPWH",
+      "Load Shift",
+      "TRNSYS"
     ],
     "background": "중앙식 급탕 시스템에서는 온수 재순환 시스템으로 인한 반환수가 고려되고 있습니다. 하지만 반환수의 유입으로 인한 시스템의 성능 저하를 고려하거나, 이를 모델링 과정에 반영한 연구는 미흡한 실정입니다. 또한, 기존 Load Shift 전략은 운영자의 도메인 지식에 의존하며, 사전에 고정된 채 변화하지 않는 정적인 단계에 머물고 있습니다. 이에 따라, 반환수로 인한 성능 저하를 방지하기 위한 부하 분리 기반 CHPWH 시스템 시뮬레이션 모델의 구축과 급탕 부하 및 외기 조건에 따라 변화하는 적응형 Load Shift 전략의 도입이 필요합니다.",
     "backgroundEn": "Central domestic hot water (DHW) systems account for return water generated by hot water recirculation. However, few studies have considered the resulting performance degradation or reflected it in system modeling. In addition, existing load shift strategies depend on operator domain knowledge and remain static, fixed in advance rather than adapting to changing conditions. This study therefore develops a load-separation-based Central Heat Pump Water Heater (CHPWH) simulation model to prevent performance degradation caused by return water, and introduces an adaptive load shift strategy that responds to changes in DHW load and outdoor air conditions.",
@@ -371,22 +249,56 @@
     "figure": "Photos/research-figs/chpwh.png"
   },
   {
-    "id": "research-pmv-sensor",
-    "title": "도서관 최적 좌석 제시를 위한 PMV 가상센서 시스템 구축",
-    "titleEn": "Development of a PMV Virtual Sensor System for Optimal Seat Recommendation in Libraries",
+    "id": "research-sample-size",
+    "title": "최소 샘플 크기 추정",
+    "titleEn": "Minimum Sample Size Estimation",
     "group": "Building Energy Systems",
-    "back": "main",
     "status": "진행 완료 · 2024",
     "statusEn": "Completed, 2024",
     "completed": true,
     "researchers": [
-      {
-        "slug": "sangmin",
-        "name": "이상민",
-        "nameEn": "Sangmin Lee",
-        "role": "Master's Student",
-        "avatar": "Photos/members/sangmin.jpg"
-      }
+      "sangmin"
+    ],
+    "summary": "서울시 전기사용량 데이터를 활용하여 건물 유형과 지표를 고려한 조합법으로 도시 단위 건물 에너지 사용량의 최소 샘플 크기 추정",
+    "summaryEn": "Estimates the minimum sample size for urban-scale building energy use using a combinatorial method that considers building type and indicators, based on Seoul electricity use data",
+    "tags": [
+      "Sample Size",
+      "Representation",
+      "Urban Energy"
+    ],
+    "background": "도시 단위에서 건물 에너지 사용량을 파악하기 위해선 방대한 양의 에너지 사용량 데이터가 필요합니다. 일반적으로 모든 데이터를 수집할 수 없기에, 대부분의 경우 통계적 이론을 활용한 공식을 통해 샘플 크기를 추정합니다. 하지만 이러한 방식이 실제 에너지 사용량을 대표하는지는 미지수이며, 다양한 지표에 따른 샘플 크기에 관한 연구도 여전히 진행이 필요한 실정입니다. 이에 실제 서울시 건물의 전기 에너지 사용량 데이터를 사용해, 건물 유형과 건물 지표를 고려한 조합법을 통하여 전체를 대표할 수 있는 최소 샘플 크기를 추정하고자 합니다.",
+    "backgroundEn": "Understanding building energy use at the urban scale requires a large volume of energy use data. Since it is generally not possible to collect all such data, sample sizes are usually estimated using formulas based on statistical theory. However, it remains uncertain whether this approach adequately represents actual energy use, and further research is still needed on sample sizes according to various indicators. This study therefore uses actual electricity use data from buildings in Seoul to estimate, through a combinatorial method that considers building type and building indicators, the minimum sample size that can represent the whole population.",
+    "goal": "본 연구는 실제 서울시 전기사용량 데이터를 사용하여 해당 연구에서 정의하는 다양한 건물 유형과 건물 지표를 통해, 도시 단위 건물 에너지 사용량에 대한 최소 샘플 크기를 추정하고, 그 크기를 줄이는 방법에 대해 논하고자 합니다.",
+    "goalEn": "This study uses actual electricity use data from Seoul, together with the various building types and building indicators defined in the study, to estimate the minimum sample size for urban-scale building energy use and to discuss methods for reducing that sample size.",
+    "keywords": [
+      "Sample Size",
+      "Representation",
+      "Building Type",
+      "Urban Scale Energy Simulation",
+      "Building Energy Consumption"
+    ],
+    "tools": [
+      "Python"
+    ],
+    "figure": null
+  },
+  {
+    "id": "research-pmv-sensor",
+    "title": "도서관 최적 좌석 제시를 위한 PMV 가상센서 시스템 구축",
+    "titleEn": "Development of a PMV Virtual Sensor System for Optimal Seat Recommendation in Libraries",
+    "group": "Building Energy Systems",
+    "status": "진행 완료 · 2024",
+    "statusEn": "Completed, 2024",
+    "completed": true,
+    "researchers": [
+      "sangmin"
+    ],
+    "summary": "PMV 가상센서를 구축하여 각 좌석의 열적쾌적성을 예측하고 개인 맞춤형 최적 좌석 선택 시스템 구현",
+    "summaryEn": "Builds a PMV virtual sensor to predict thermal comfort at each seat and implements a personalized optimal seat selection system",
+    "tags": [
+      "Virtual Sensor",
+      "PMV",
+      "Thermal Comfort"
     ],
     "background": "같은 공간 내에서도 좌석 구조에 따라 열적 쾌적성은 달라지며, 같은 좌석을 사용하더라도 개인마다 열적 쾌적성을 다르게 느낄 수 있습니다. 그러나, 현재 도서관 열람실에 도입된 좌석 선택 시스템은 이러한 차이점을 고려하지 않아 재실자의 불만족도가 증가하고 있는 상황입니다. 이에 도서관 이용 시 개인의 열적쾌적성을 고려하는 좌석 선택 시스템이 필요하며, 이를 위해 PMV 가상센서를 구축하여 불만족도를 해결하고자 합니다.",
     "backgroundEn": "Even within the same space, thermal comfort varies with seat configuration, and individuals can perceive thermal comfort differently even at the same seat. However, seat selection systems currently deployed in library reading rooms do not account for these differences, leading to increasing occupant dissatisfaction. A seat selection system that considers individual thermal comfort is therefore needed for library use, and this study builds a PMV virtual sensor to address this dissatisfaction.",
@@ -405,5 +317,417 @@
       "CFD Simulation"
     ],
     "figure": "Photos/research-figs/sm_pmv.png"
+  },
+  {
+    "id": "research-da-apt-eui",
+    "title": "아파트·주상복합 EUI 비교 분석",
+    "titleEn": "Comparative EUI Analysis of Apartments and Mixed-Use Residential-Commercial Buildings",
+    "group": "Building Data Analytics & AI",
+    "status": "진행 중 · 2024–",
+    "statusEn": "In Progress, 2024–",
+    "completed": false,
+    "researchers": [
+      "inseob"
+    ],
+    "summary": "연면적/전용면적 기반 EUI 비교를 통해 아파트와 주상복합의 에너지 사용 특성 차이를 정량적으로 규명",
+    "summaryEn": "Quantitatively identifies differences in energy use characteristics between apartments and mixed-use residential-commercial buildings by comparing EUI based on total floor area and exclusive floor area",
+    "tags": [
+      "EUI",
+      "Apartment",
+      "Mixed-use Residential"
+    ],
+    "background": "국내 건물에너지통계에서 주상복합은 건축법상 아파트로 분류되어 동일 용도로 집계되고 있으나, 주상복합은 상업시설과 대규모 공용부를 포함하여 에너지 사용 구조가 아파트와 근본적으로 다릅니다. 기존 연면적 기반의 단일 EUI 지표는 주상복합의 주거 성능을 실제보다 불리하게 평가할 수 있는 구조적 왜곡을 내포하고 있습니다.",
+    "backgroundEn": "In Korea's building energy statistics, mixed-use residential-commercial buildings are classified as apartments under the Building Act and aggregated under the same use category, but their energy use structure is fundamentally different from apartments because they include commercial facilities and large common areas. The conventional single EUI indicator based on total floor area carries a structural bias that can undervalue the residential performance of mixed-use buildings relative to their actual performance.",
+    "goal": "서울시 2010년 이후 준공 공동주택을 대상으로 연면적 EUI와 전용면적 EUI를 비교 분석하여, 아파트와 주상복합의 에너지 사용 특성 차이와 상업·공용면적 전력 밀도의 영향을 정량적으로 규명하고, 이원화된 EUI 분석 접근의 필요성을 제시합니다.",
+    "goalEn": "Targeting apartment complexes completed in Seoul since 2010, this study compares EUI based on total floor area and exclusive floor area to quantitatively identify differences in energy use characteristics between apartments and mixed-use residential-commercial buildings and the influence of electricity density in commercial and common areas, and proposes the need for a dual EUI analysis approach.",
+    "keywords": [
+      "Energy Use Intensity",
+      "Apartment",
+      "Mixed-use Residential",
+      "Gross Floor Area",
+      "Net Floor Area"
+    ],
+    "tools": [
+      "Python",
+      "Data Analysis",
+      "Seoul Open Data"
+    ],
+    "figure": null
+  },
+  {
+    "id": "research-da-ref-building",
+    "title": "업무시설의 에너지 기여도 기반 대표형상 건물(Reference Building) 도출 프레임워크",
+    "titleEn": "A Framework for Deriving Representative Reference Buildings for Office Facilities Based on Energy Contribution",
+    "group": "Building Data Analytics & AI",
+    "status": "진행 중 · 2024–",
+    "statusEn": "In Progress, 2024–",
+    "completed": false,
+    "researchers": [
+      "doyeon"
+    ],
+    "summary": "EUI 구성요소별 형상지표 기여도 정량 평가를 통해 교통 변수 선별 및 GMM 클러스터링으로 대표형상 도출, 냉난방 에너지 trade-off 규명",
+    "summaryEn": "Quantitatively evaluates the contribution of shape indicators to each EUI component to select key variables, derives representative geometries through GMM clustering, and identifies the heating-cooling energy trade-off",
+    "tags": [
+      "Reference Building",
+      "Building Shape",
+      "Office Building"
+    ],
+    "background": "에너지 정책 평가·설계 대안 비교에 Reference Building이 중추적 역할을 하면서도 DOE 표준건물은 미국 기반으로 및 건물 유형당 단일 형상만 정의하여 실제 건물군의 기하학적 다양성을 반영하지 못합니다. 이를 보완하기 위해 실측 데이터 기반 클러스터링으로 대표형상을 도출하는 연구가 시도되었으나, 클러스터링 변수를 연구자 경험이나 문헌 빈도에 의존할 뿐 해당 변수의 에너지 성능 기여도를 검증하지 않아 에너지적 대표성이 담보되지 못합니다.",
+    "backgroundEn": "While reference buildings play a pivotal role in energy policy evaluation and design alternative comparison, DOE reference buildings are based on US data and define only a single geometry per building type, failing to reflect the geometric diversity of actual building stocks. Studies have attempted to address this by deriving representative geometries through clustering based on measured data, but the clustering variables have relied on researcher experience or literature frequency without verifying their contribution to energy performance, leaving the energy representativeness of the results unconfirmed.",
+    "goal": "EUI 구성요소별 형상지표 기여도를 정량 평가하여 핵심 변수(S/V, RC, Roof area ratio)를 선별하고, GMM 클러스터링으로 서울시 업무시설의 대표형상을 도출하는 재현 가능한 방법론을 제시합니다. 또한 크기 효과와 형태 효과를 분리하여 군집 간 냉·난방 EUI 차이를 형상지표 관점에서 해석하고 Heating-Cooling trade-off를 규명합니다.",
+    "goalEn": "Quantitatively evaluates the contribution of shape indicators to each EUI component to select key variables (S/V ratio, RC, roof area ratio), and presents a reproducible methodology that derives representative geometries for office buildings in Seoul through GMM clustering. It also separates size effects from shape effects to interpret differences in heating and cooling EUI between clusters from a shape-indicator perspective and identifies the heating-cooling trade-off.",
+    "keywords": [
+      "Reference Building",
+      "Building Shape Indicator",
+      "Office Building"
+    ],
+    "tools": [
+      "XGBoost",
+      "SHAP",
+      "Gaussian Mixture Model"
+    ],
+    "figure": null
+  },
+  {
+    "id": "research-da-eui-framework",
+    "title": "업종별 EUI 도출 프레임워크",
+    "titleEn": "A Framework for Deriving Business-Type-Specific EUI",
+    "group": "Building Data Analytics & AI",
+    "status": "진행 중 · 2025–",
+    "statusEn": "In Progress, 2025–",
+    "completed": false,
+    "researchers": [
+      "doyeon"
+    ],
+    "summary": "행정 데이터 연계를 통해 복합용도 건물 내 중분류 수준의 순수 업종별 EUI를 도출하는 데이터 필터링 프레임워크 개발",
+    "summaryEn": "Development of a data-filtering framework that derives pure, business-type-specific EUI at the intermediate classification level within mixed-use buildings by linking administrative data",
+    "tags": [
+      "Mixed-use Building",
+      "Energy Benchmarking",
+      "Data Filtering"
+    ],
+    "background": "복합용도 건물에서 단일 대표용도를 지정하면 내부 업종 구성의 이질성으로 인해 에너지 벤치마킹이 왜곡됩니다. 이를 개선하기 위해 업종별 면적비율 기반 가중평균 EUI 산정이 대안으로 제시되고 있으나, 이의 전제인 세부 업종별 EUI 기준이 국내외 모두 체계적으로 구축되지 못한 상황입니다.",
+    "backgroundEn": "Assigning a single representative use to mixed-use buildings distorts energy benchmarking because of the heterogeneity of the business types within them. A weighted-average EUI calculated from the floor area share of each business type has been proposed as an alternative, but the detailed EUI benchmarks for individual business types that this approach requires have not been systematically established either in Korea or internationally.",
+    "goal": "행정 데이터(상권·인허가)의 연계·가공만으로 복합용도 건물 내 중분류 수준의 순수 업종별 EUI를 도출할 수 있는 재현 가능한 프레임워크를 제시합니다. 이를 통해 복합용도 건물의 정확한 에너지 벤치마킹과 업종별 에너지 정책 수립의 근거를 제공합니다.",
+    "goalEn": "Presents a reproducible framework that derives pure, business-type-specific EUI at the intermediate classification level within mixed-use buildings using only the linkage and processing of administrative data (commercial district and licensing records). This provides a basis for accurate energy benchmarking of mixed-use buildings and for establishing business-type-specific energy policy.",
+    "keywords": [
+      "Mixed-use Building",
+      "Energy Benchmarking",
+      "Data Filtering Framework",
+      "Building Energy Data Analysis"
+    ],
+    "tools": [
+      "XGBoost",
+      "SHAP",
+      "Data Filtering"
+    ],
+    "figure": null
+  },
+  {
+    "id": "research-da-green-retrofit",
+    "title": "에너지 시그니처를 활용한 그린 리모델링 효과 분석",
+    "titleEn": "Analysis of Green Remodeling Effectiveness Using Energy Signatures",
+    "group": "Building Data Analytics & AI",
+    "status": "진행 완료 · 2024",
+    "statusEn": "Completed, 2024",
+    "completed": true,
+    "researchers": [
+      "doyeon"
+    ],
+    "summary": "CPM 기반 에너지 시그니처 도출 및 계층적 군집분석을 통해 그린 리모델링의 실질적 에너지 절감 효과를 정량적으로 평가",
+    "summaryEn": "Quantitatively evaluates the actual energy savings from green remodeling by deriving CPM-based energy signatures and applying hierarchical cluster analysis",
+    "tags": [
+      "Energy Signature",
+      "Building Retrofit",
+      "Data Analysis"
+    ],
+    "background": "기존의 건물 에너지 효율 평가는 주로 시뮬레이션 기반의 가정 방식에 의존하고 있습니다. 그린 리모델링을 실측 데이터 기반 평가로 전환하면 건물 단위 예측을 넘어 대규모 포트폴리오 차원에서도 더 깊이 있는 데이터 기반 평가가 가능할 것으로 기대됩니다.",
+    "backgroundEn": "Existing building energy efficiency evaluations rely mainly on simulation-based assumptions. Shifting green remodeling evaluation to a measured-data-based approach is expected to enable deeper data-driven evaluation not only at the individual building level but also across large-scale portfolios.",
+    "goal": "CPM 기반 에너지 시그니처를 도출하고, 계층적 군집 분석 및 4사분면 분석을 통해 그린리모델링의 실질적 에너지 절감 효과를 건물 단위 및 대규모 포트폴리오 차원에서 정량적으로 평가하는 데이터 기반 프레임워크를 개발합니다.",
+    "goalEn": "Develops a data-driven framework that derives CPM-based energy signatures and quantitatively evaluates the actual energy savings from green remodeling at both the individual building and large-scale portfolio levels through hierarchical cluster analysis and four-quadrant analysis.",
+    "keywords": [
+      "Building Retrofit",
+      "Building Energy Performance",
+      "Energy Signature",
+      "Public Building Data",
+      "Building Energy Data Analysis"
+    ],
+    "tools": [
+      "Change Point Model",
+      "PCA",
+      "Hierarchical Clustering",
+      "Spearman Correlation"
+    ],
+    "figure": null
+  },
+  {
+    "id": "research-da-urban-load",
+    "title": "도시 에너지 부하 평탄화",
+    "titleEn": "Urban Energy Load Flattening",
+    "group": "Building Data Analytics & AI",
+    "status": "진행 완료 · 2024–2025",
+    "statusEn": "Completed, 2024–2025",
+    "completed": true,
+    "researchers": [
+      "inseob"
+    ],
+    "summary": "건물 용도 비율 최적화를 통해 월별·시간별 전력 부하곡선의 평탄화 효과를 검증하고 피크 부하 저감 가능성을 실증",
+    "summaryEn": "Verifies the flattening effect on monthly and hourly electricity load curves through optimization of building use ratios, and demonstrates the potential for peak load reduction",
+    "tags": [
+      "Load Flattening",
+      "Optimization",
+      "Peak Demand"
+    ],
+    "background": "도시에서 건물 용도별 에너지 사용 패턴의 차이로 인해 시간대별·계절별 전력 수요 변동성이 커지고, 피크 부하가 전력망 안정성을 위협하고 있습니다. 기존 연구는 개별 건물 수준의 에너지 효율 향상이나 수요 반응(DR) 전략에 집중되었으나, 도시 규모에서 건물 용도 구성 비율 조정을 통한 에너지 수요 평탄화 접근은 거의 없었습니다.",
+    "backgroundEn": "Differences in energy use patterns among building uses in cities increase the volatility of electricity demand by time of day and season, and peak loads threaten power grid stability. Existing research has focused mainly on improving energy efficiency at the individual building level or on demand response (DR) strategies, but few studies have approached demand flattening at the urban scale by adjusting the composition ratio of building uses.",
+    "goal": "특정 지구를 대상으로 건물 용도별 에너지 사용 패턴을 분석하고, 최적화 알고리즘을 적용하여 용도별 비율을 조정함으로써 월별·시간별 전력 부하곡선의 평탄화 효과를 검증합니다. 최소한의 도시 용도 비율 변경에서도 유의미한 피크 부하 저감이 가능함을 실증합니다.",
+    "goalEn": "Analyzes energy use patterns by building use for a specific district and applies an optimization algorithm to adjust the use-type ratios, verifying the flattening effect on monthly and hourly electricity load curves. Demonstrates that significant peak load reduction is achievable even with minimal changes to the urban use ratio.",
+    "keywords": [
+      "Load Flattening",
+      "Building Use Optimization",
+      "Optimization Algorithm",
+      "Peak Load Shaving",
+      "Grid Stability"
+    ],
+    "tools": [
+      "Python",
+      "Harmony Search",
+      "K-means Clustering",
+      "PCA"
+    ],
+    "figure": null
+  },
+  {
+    "id": "research-da-ubem-pattern",
+    "title": "UBEM 에너지 사용 패턴 보정",
+    "titleEn": "UBEM Energy Use Pattern Calibration",
+    "group": "Building Data Analytics & AI",
+    "status": "진행 완료 · 2024",
+    "statusEn": "Completed, 2024",
+    "completed": true,
+    "researchers": [
+      "inseob"
+    ],
+    "summary": "베이지안 보정의 정확도 향상을 위해 실제 측정 패턴과 모수적 분포 기반 패턴을 비교하여 대규모 UBEM에서의 샘플링 데이터 활용 가능성 검증",
+    "summaryEn": "Compares actual measured patterns with patterns based on parametric distributions to improve the accuracy of Bayesian calibration, verifying the feasibility of using sampled data in large-scale UBEM",
+    "tags": [
+      "UBEM",
+      "Bayesian Calibration",
+      "Energy Pattern"
+    ],
+    "background": "도시 건물 에너지 모델(UBEM)에서 대표 건물을 활용하여 확률론적으로 에너지 사용량을 도출할 때, 대표 건물의 형상과 스케줄이 고정값으로 사용되어 같은 유형 건물 간의 월별 에너지 사용 패턴 차이를 반영하지 못하는 불확실성이 존재합니다. 이러한 고정된 패턴 기반의 베이지안 보정은 오차가 누적되어 UBEM의 분포 예측 정확도를 저하시킬 수 있습니다.",
+    "backgroundEn": "When an urban building energy model (UBEM) uses representative buildings to probabilistically derive energy use, the shape and schedule of the representative building are fixed, creating uncertainty because they fail to reflect differences in monthly energy use patterns among buildings of the same type. Bayesian calibration based on such fixed patterns can accumulate error and reduce the accuracy of UBEM's distributional predictions.",
+    "goal": "대표 건물의 에너지 사용 패턴이 UBEM 베이지안 보정의 정확도에 미치는 영향을 파악하고, 실제 측정 패턴과 모수적 분포에서 재추출한 규칙적 패턴의 보정 성능을 비교하여 대규모 UBEM에서의 샘플링 데이터 활용 가능성을 검증합니다.",
+    "goalEn": "Identifies the effect of representative buildings' energy use patterns on the accuracy of UBEM Bayesian calibration, and compares the calibration performance of actual measured patterns against regular patterns resampled from parametric distributions to verify the feasibility of using sampled data in large-scale UBEM.",
+    "keywords": [
+      "Urban Building Energy Model",
+      "Building Energy Pattern",
+      "Bayesian Calibration",
+      "Sampling Data",
+      "Energy Consumption Prediction"
+    ],
+    "tools": [
+      "R",
+      "JAGS",
+      "Bayesian Inference",
+      "DOE Reference Building"
+    ],
+    "figure": null
+  },
+  {
+    "id": "research-da-thermal-seat",
+    "title": "열적 특성 기반의 개인 맞춤형 좌석 선택 시스템 제안",
+    "titleEn": "A Personalized Seat Selection System Based on Individual Thermal Characteristics",
+    "cardTitle": "열적 특성 기반의 개인 맞춤형 좌석 선택 시스템",
+    "cardTitleEn": "A Personalized Seat Selection System Based on Thermal Characteristics",
+    "group": "Building Data Analytics & AI",
+    "status": "진행 완료 · 2025",
+    "statusEn": "Completed, 2025",
+    "completed": true,
+    "researchers": [
+      "jiyoung",
+      "hyunsu"
+    ],
+    "summary": "개인별 MET를 산정하여 PMV를 개인화하고, Virtual Sensing 기술을 활용한 실시간 최적 좌석 추천 시스템 개발",
+    "summaryEn": "Personalizes PMV by estimating individual MET values, and develops a real-time optimal seat recommendation system using virtual sensing technology",
+    "tags": [
+      "PMV",
+      "Virtual Sensing",
+      "Thermal Comfort"
+    ],
+    "background": "현재 대부분의 좌석 배치 시스템은 좌석 간 온열환경의 차이를 반영하지 못해 개인의 열적 쾌적성을 고려하지 못하는 한계가 존재합니다. 이를 개선하기 위해 대표적인 열적 쾌적성 지표인 PMV가 활용되고 있으나, 기존 PMV는 대사율 지표인 MET를 표준화하여 사용함으로써 개인별 열적 특성 차이를 충분히 반영하지 못하고 있습니다.",
+    "backgroundEn": "Most current seat allocation systems fail to account for differences in thermal environment between seats, limiting their ability to reflect individual thermal comfort. Predicted Mean Vote (PMV), a widely used thermal comfort index, has been applied to address this issue, but conventional PMV relies on a standardized metabolic rate (MET) value and therefore does not adequately reflect individual differences in thermal characteristics.",
+    "goal": "개인별 MET를 산정하여 PMV를 개인화하고, 이를 기반으로 맞춤형 좌석 선택 시스템을 제안합니다. Virtual Sensing 기술을 활용하여 개인의 열적 특성을 예측하고, 실시간으로 최적 좌석을 추천하는 시스템 개발을 목표로 합니다.",
+    "goalEn": "This study personalizes PMV by estimating individual MET values and proposes a customized seat selection system based on the personalized index. The goal is to develop a system that predicts individual thermal characteristics using virtual sensing technology and recommends the optimal seat in real time.",
+    "keywords": [
+      "Predicted Mean Vote",
+      "Virtual Sensing",
+      "Metabolic Rate",
+      "Thermal Comfort",
+      "Personalized Seat Reservation"
+    ],
+    "tools": [
+      "Python",
+      "Virtual Sensing"
+    ],
+    "figure": "Photos/research-figs/thermal-seat.png"
+  },
+  {
+    "id": "research-da-preprocessing",
+    "title": "로지스틱 맵 이미지 암호화 기법을 적용한 딥러닝 기반 재실자 감지 시스템 제안",
+    "titleEn": "A Deep Learning-Based Occupancy Detection System Using Logistic Map Image Encryption",
+    "group": "Building Data Analytics & AI",
+    "status": "진행 완료 · 2026",
+    "statusEn": "Completed, 2026",
+    "completed": true,
+    "researchers": [
+      "jiyoung"
+    ],
+    "summary": "프라이버시를 보호하는 로지스틱 맵 이미지 암호화와 딥러닝을 결합해 원거리 및 비정형 자세 재실자 감지 성능을 개선",
+    "summaryEn": "Combines logistic map image encryption with deep learning to protect privacy and improve long-range occupancy detection and recognition of irregular postures",
+    "tags": [
+      "Occupancy Detection",
+      "Logistic Map",
+      "Encryption"
+    ],
+    "background": "대부분의 건물 에너지 관리 시스템은 실제 거주자의 재실 패턴을 고려하지 않고, 미리 설정된 고정 스케줄에 따라 냉난방 및 조명 설비를 운영하고 있습니다. 이를 해결하기 위해 비전 기반 재실자 감지 기술이 주목받고 있지만, 프라이버시와 원거리 탐지 성능, 비정형 자세 인식 성능을 동시에 개선하는 접근이 필요합니다. 따라서 고도화된 재실자 감지 시스템을 제안하고 스케줄 분석을 통해 건물의 에너지 저감 방안을 제시하고자 합니다.",
+    "backgroundEn": "Most building energy management systems operate HVAC and lighting equipment on preset fixed schedules without accounting for actual occupancy patterns. Vision-based occupancy detection has drawn attention as a solution, but an approach that simultaneously improves privacy protection, long-range detection performance, and recognition of irregular postures is still needed. This study therefore proposes an advanced occupancy detection system and presents energy reduction strategies based on schedule analysis.",
+    "goal": "재실자의 프라이버시를 보호하고 고도화된 재실자 감지 시스템으로 건물의 에너지 저감 효과를 분석합니다.",
+    "goalEn": "This study protects occupant privacy and analyzes the building energy savings achieved by an advanced occupancy detection system.",
+    "keywords": [
+      "Occupancy detection",
+      "Logistic Map",
+      "Encryption",
+      "CNN",
+      "YOLO"
+    ],
+    "tools": [
+      "Python",
+      "CNN",
+      "YOLO"
+    ],
+    "figure": "Photos/research-figs/occupancy.png"
+  },
+  {
+    "id": "research-um-ubem",
+    "title": "도시 단위 건물 에너지 해석을 위한 건물 특성 지표 및 도시 건물 에너지 모델(UBEM) 개발",
+    "titleEn": "Development of Building Feature Indices and an Urban Building Energy Model (UBEM) for City-Scale Building Energy Analysis",
+    "cardTitle": "UBEM 기반 도시 단위 에너지 사용량 해석",
+    "cardTitleEn": "UBEM-Based Interpretation of Urban-Scale Energy Use",
+    "group": "Urban Building Energy Modeling (UBEM)",
+    "status": "진행 중 · 2024–",
+    "statusEn": "In Progress, 2024–",
+    "completed": false,
+    "researchers": [
+      "jungyun"
+    ],
+    "summary": "대리모델 기반 연산 효율화와 불확실성 정량화, 자동 보정 프로세스를 통해 고정밀 UBEM 모델을 구축하고 건물 요소와 에너지 사용량 간 상관관계 규명",
+    "summaryEn": "Builds a high-precision UBEM through surrogate-model-based computational efficiency, uncertainty quantification, and an automated calibration process, and identifies correlations between building factors and energy use",
+    "tags": [
+      "UBEM",
+      "Surrogate Model",
+      "Auto-Calibration"
+    ],
+    "background": "도시화로 에너지 수요가 도시에 집중되면서 전력망을 비롯한 에너지 시스템의 부담이 가중되고 있습니다. 지속가능한 도시를 설계하기 위해서는 이러한 도시 에너지 생태계를 이해하는 것이 선행되어야 합니다. 도시 건물 에너지 모델(UBEM)은 도시 단위 건물 에너지 분석에 널리 활용되고 있으나, 계산 비용이 크고 실제 도시가 가진 불확실성을 충분히 반영하지 못한다는 한계가 있습니다. 따라서 건물 특성(형상, 부하, 패턴)을 기반으로 한 초기 분석과 불확실성을 고려한 모델 보정을 통해 정밀 분석으로 이어지는 방법론이 필요합니다.",
+    "backgroundEn": "As urbanization concentrates energy demand in cities, the burden on energy systems, including power grids, continues to grow. Understanding this urban energy ecosystem is a prerequisite for designing sustainable cities. Urban Building Energy Modeling (UBEM) is widely used for city-scale building energy analysis, but it has limitations in computational cost and in capturing the uncertainty inherent in real cities. A methodology is therefore needed that proceeds from an initial analysis based on building characteristics (shape, load, and pattern) to a detailed analysis through uncertainty-aware model calibration.",
+    "goal": "건물 특성 지표 기반의 초기 분석부터 불확실성 보정을 통한 정밀 분석으로 정확한 도시 건물 에너지 모델(UBEM)을 구축하는 것을 목표로 합니다.",
+    "goalEn": "This study aims to build an accurate Urban Building Energy Model (UBEM) by progressing from an initial analysis based on building feature indices to a detailed analysis through uncertainty calibration.",
+    "keywords": [
+      "Urban Building Energy Modeling (UBEM)",
+      "Bayesian Calibration",
+      "Uncertainty Quantification",
+      "Reinforcement Learning",
+      "Building Feature Index"
+    ],
+    "tools": [
+      "EnergyPlus",
+      "Grasshopper",
+      "QGIS",
+      "Python"
+    ],
+    "figure": "Photos/research-figs/ubem.png"
+  },
+  {
+    "id": "research-um-dbem",
+    "title": "Load Sharing Community 조성을 위한 District Building Energy Modeling 구축",
+    "titleEn": "Building a District Building Energy Model for Load Sharing Community Development",
+    "cardTitle": "Load Sharing Community 조성을 위한 DBEM 구축",
+    "cardTitleEn": "Building a DBEM for Load Sharing Community Development",
+    "group": "Urban Building Energy Modeling (UBEM)",
+    "status": "진행 중 · 2024–",
+    "statusEn": "In Progress, 2024–",
+    "completed": false,
+    "researchers": [
+      "jisoo"
+    ],
+    "summary": "AI 객체 인식과 3D 비전 기술로 건물 에너지 데이터를 자동 산출하고 DBEM과 결합하여 도시 규모 에너지 최적화 시스템 개발",
+    "summaryEn": "Automatically derives building energy data using AI object recognition and 3D vision technology, and combines it with DBEM to develop a city-scale energy optimization system",
+    "tags": [
+      "DBEM",
+      "Load Sharing",
+      "Computer Vision",
+      "3D Photogrammetry"
+    ],
+    "background": "DBEM 및 Load Sharing Community 구축을 위해서는 신뢰도 높은 건축물 형상 데이터가 필수적이나, 기존 수집 방식으로는 누락된 도심 건축물의 데이터를 확보하기 어렵습니다. 따라서 이러한 한계를 넘어 대규모 시뮬레이션 데이터를 자동으로 구축하는 새로운 방법론이 필요합니다.",
+    "backgroundEn": "Reliable building geometry data is essential for constructing DBEM and Load Sharing Communities, but existing collection methods make it difficult to obtain data for urban buildings that were missed. A new methodology is therefore needed to overcome this limitation and automatically build large-scale simulation data.",
+    "goal": "AI 객체 인식과 3D 비전 기술을 통해 건물 외관에서 필수 에너지 데이터를 자동으로 산출하는 통합 워크플로우를 연구합니다. 수집된 데이터를 DBEM과 결합하여 커뮤니티 전체의 에너지를 효율적으로 관리하고, 지속 가능한 Load Sharing Community를 위한 도시 규모의 에너지 최적화 시스템을 개발하고자 합니다.",
+    "goalEn": "Researches an integrated workflow that automatically derives essential energy data from building exteriors using AI object recognition and 3D vision technology. The collected data is combined with DBEM to efficiently manage community-wide energy, aiming to develop a city-scale energy optimization system for sustainable Load Sharing Communities.",
+    "keywords": [
+      "UBEM",
+      "DBEM",
+      "BEM",
+      "Load Sharing Community",
+      "WWR",
+      "Computer Vision",
+      "3D Photogrammetry",
+      "UAV & 360-degree Cameras"
+    ],
+    "tools": [
+      "Python",
+      "OpenCV",
+      "YOLOv8",
+      "Roboflow",
+      "Agisoft Metashape",
+      "Blender",
+      "Rhino 3D",
+      "Grasshopper",
+      "EnergyPlus"
+    ],
+    "figure": null
+  },
+  {
+    "id": "research-um-solar-surrogate",
+    "title": "도시 단위 건물 에너지 분석을 위한 일사 반영 대리모델 개발",
+    "titleEn": "Development of a Solar Radiation-Informed Surrogate Model for City-Scale Building Energy Analysis",
+    "group": "Urban Building Energy Modeling (UBEM)",
+    "status": "진행 중 · 2026–",
+    "statusEn": "In Progress, 2026–",
+    "completed": false,
+    "researchers": [
+      "hyunsu"
+    ],
+    "summary": "일사지표 대리모델로 인접 건물에 의한 음영 효과를 예측하고, 이를 반영한 도시 단위 건물 에너지 대리모델로 에너지 사용량 산출 비용 절감",
+    "summaryEn": "Predicts shading effects from adjacent buildings with a solar radiation index surrogate model and reduces the cost of calculating energy use with a city-scale building energy surrogate model that reflects them",
+    "tags": [
+      "UBEM",
+      "Surrogate Model",
+      "Shading Effect"
+    ],
+    "background": "도시 건물이 고층화·고밀화됨에 따라, 인접 건물에 의한 음영은 건물의 일사 획득량과 냉·난방 부하 산정에 중요한 영향을 미칩니다. 이러한 음영효과는 인접 건물과의 공간적 관계에 따라 달라지기에, 도시 단위 에너지 분석 시 건물 간 상호작용을 반영할 수 있는 Urban Building Energy Modeling (UBEM)이 활용됩니다. 그러나 전통적인 물리 기반 UBEM은 계산 비용이 크고, 이를 보완하기 위한 기존 대리모델은 음영 효과를 입력 변수로 반영하지 않거나, 반영하더라도 음영 데이터를 물리 기반 시뮬레이션으로부터 확보해야 한다는 한계가 있습니다.",
+    "backgroundEn": "As urban buildings become taller and denser, shading from adjacent buildings significantly affects each building's solar heat gain and the estimation of its heating and cooling loads. Because this shading effect depends on the spatial relationship with neighboring buildings, Urban Building Energy Modeling (UBEM), which can capture interactions between buildings, is used for city-scale energy analysis. However, conventional physics-based UBEM is computationally expensive, and existing surrogate models developed to address this either do not include shading effects as input variables or, when they do, must obtain the shading data from physics-based simulations.",
+    "goal": "일사지표 대리모델을 통해 건물의 음영 효과를 예측하고, 이를 활용하는 도시 단위 건물 에너지 대리모델을 개발합니다. 이를 통해 건물의 음영 효과 및 에너지 사용량 산출 비용을 절감하며, 다양한 환경 변화 시나리오를 효율적으로 평가할 수 있는 기반을 마련합니다.",
+    "goalEn": "This study predicts building shading effects using a solar radiation index surrogate model and develops a city-scale building energy surrogate model that uses these predictions. This reduces the cost of calculating shading effects and energy use and establishes a foundation for efficiently evaluating a variety of environmental change scenarios.",
+    "keywords": [
+      "Urban Building Energy Modeling (UBEM)",
+      "Surrogate Model",
+      "Shading Effect",
+      "Interaction between Buildings",
+      "Data-driven Simulation"
+    ],
+    "tools": [
+      "Python",
+      "EnergyPlus"
+    ],
+    "figure": null
   }
 ]

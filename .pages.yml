@@ -82,6 +82,11 @@ media:
     input: News_Blog_JPG/beelab_images/Blog
     output: News_Blog_JPG/beelab_images/Blog
     extensions: [jpg, jpeg, png, webp]
+  - name: research_figs
+    label: 연구 대표 그림
+    input: Photos/research-figs
+    output: Photos/research-figs
+    extensions: [jpg, jpeg, png, webp]
 
 content:
   - name: news
@@ -421,3 +426,98 @@ content:
           values:
             - 우수논문상
             - 우수논문발표상
+  - name: research
+    label: Research (개인 연구)
+    type: file
+    path: research-content/research.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        label: 페이지 주소 (research-로 시작, 영문 소문자·숫자·하이픈만. 한 번 정하면 바꾸지 마세요. 논문의 관련 연구 연결이 끊어집니다)
+        type: string
+        required: true
+        pattern: '^research-[a-z0-9-]+$'
+        description: '예: research-cascade-hp. 새 연구를 만들면 저장 뒤 자동화가 논문 입력의 관련 연구 주제 목록에 이 연구를 추가합니다.'
+      - name: title
+        label: 제목
+        type: string
+        required: true
+        description: 상세 페이지와 개인 프로필에 표시됩니다.
+      - name: titleEn
+        label: 영문 제목
+        type: string
+        required: true
+        description: 한글 제목을 고치면 영문도 함께 고쳐야 합니다. 그렇지 않으면 배포가 막힙니다.
+      - name: cardTitle
+        label: 카드용 짧은 제목 (선택)
+        type: string
+        description: 그룹 페이지의 연구 카드에만 쓰입니다. 비워 두면 제목이 그대로 쓰입니다.
+      - name: cardTitleEn
+        label: 카드용 짧은 영문 제목 (선택)
+        type: string
+        description: 카드용 짧은 제목을 넣었으면 영문도 넣어야 합니다.
+      - name: group
+        label: 연구 그룹 (이 그룹의 Research 페이지에 카드가 생깁니다)
+        type: select
+        required: true
+        options:
+          multiple: false
+          values:
+            - Building Energy Systems
+            - Building Data Analytics & AI
+            - Urban Building Energy Modeling (UBEM)
+      - name: completed
+        label: 진행 완료 (체크하면 카드가 회색으로 바뀌고 목록 뒤로 갑니다)
+        type: boolean
+      - name: status
+        label: 기간 표시
+        type: string
+        description: '예: 진행 중 · 2025– / 진행 완료 · 2024–2025. 상세 페이지 제목 아래에 표시됩니다.'
+      - name: statusEn
+        label: 영문 기간 표시
+        type: string
+        description: '예: In Progress, 2025– / Completed, 2024–2025'
+      - name: researchers
+        label: 연구자 (고른 사람의 개인 프로필 Research 목록에 자동으로 올라갑니다)
+        type: select
+        options:
+          multiple: true
+          values: *LAB_MEMBERS
+      - name: summary
+        label: 카드 요약 (한두 문장)
+        type: text
+        description: 그룹 페이지의 연구 카드에 표시됩니다.
+      - name: summaryEn
+        label: 영문 카드 요약
+        type: text
+      - name: tags
+        label: 카드 태그 (3개 안팎. 개인 프로필에는 #태그 형태로 표시됩니다)
+        type: string
+        list: true
+      - name: background
+        label: 연구배경
+        type: text
+        description: 문단을 나누려면 빈 줄을 한 줄 넣으세요.
+      - name: backgroundEn
+        label: 영문 연구배경
+        type: text
+      - name: goal
+        label: 연구목표
+        type: text
+      - name: goalEn
+        label: 영문 연구목표
+        type: text
+      - name: keywords
+        label: Keywords
+        type: string
+        list: true
+      - name: tools
+        label: Tools (사용 프로그램)
+        type: string
+        list: true
+      - name: figure
+        label: 대표 그림 (선택)
+        type: image
+        options:
+          media: research_figs

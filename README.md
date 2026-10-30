@@ -32,12 +32,10 @@
   - 국제 저널/학회: 영어 `citation` 그대로 유지
   - 국내 저널/학회: 한글 `citation` + 영어 `citationEn` 모두 필수
 
-- **연구 페이지** (`research.json` 직접 입력):
-  - 기존 한글 `title`이 있으면 `titleEn` 필수
-  - 기존 한글 `status`가 있으면 `statusEn` 필수
-  - 기존 한글 `background`가 있으면 `backgroundEn` 필수
-  - 기존 한글 `goal`이 있으면 `goalEn` 필수
-  - 한글 이름 `name`이 있으면 영어 이름 `nameEn` 필수
+- **개인 연구** (CMS의 Research 항목, `research-content/research.json`):
+  - 한글 `title`·`cardTitle`·`status`·`summary`·`background`·`goal`이 있으면 짝이 되는 `…En` 필수
+  - 연구자는 slug 배열. 이름·사진·직위는 `members.json`에서 가져옴
+  - 한 번 입력하면 그룹 페이지 카드, 상세 페이지, 개인 프로필 Research 목록에 함께 나옴
 
 **배포**: CMS 저장 또는 JSON 커밋 후 검증이 자동 실행됩니다. 모든 필수 영어 필드가 있어야만 배포됩니다. 한글 원문을 바꾼 뒤 영어를 갱신하지 않아도 검증 실패입니다.
 
@@ -52,8 +50,8 @@ js/app.js                         JSON 로딩과 렌더링
 
 publications/                     논문. 종류별 4개 파일
   international.json  domestic.json  int-conf.json  dom-conf.json
-members.json                      구성원과 프로필
-research-content/research.json    연구 상세 페이지
+members.json                      구성원과 프로필 (연구 목록은 research.json 에서 자동)
+research-content/research.json    개인 연구: 그룹 페이지 카드 + 상세 페이지 + 프로필 연구 목록
 News_Blog_JPG/beelab_content/     news.json, blog.json
 Photos/                           고정 이미지
 .pages.yml                        Pages CMS 설정
