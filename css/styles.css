@@ -281,9 +281,7 @@ html[data-lang="en"]:not([data-i18n-ready="true"]) body { visibility: hidden; }
 #page-tools .ubee-showcase { background: linear-gradient(155deg, #faf8ef 0, #fff 48%); color: #222521; border: 1px solid #e4e3db; border-radius: 12px; padding: 36px; overflow: hidden; }
 #page-tools .ubee-intro { display: grid; grid-template-columns: 0.9fr 1.3fr; align-items: start; gap: 40px; margin-bottom: 32px; }
 #page-tools .ubee-copy { max-width: 600px; }
-#page-tools .ubee-eyebrow { display: flex; align-items: center; gap: 9px; color: #796020; font-size: 12px; font-weight: 500; letter-spacing: 0.04em; }
-#page-tools .ubee-eyebrow > span:first-child { width: 8px; height: 8px; background: #bd9230; clip-path: polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%); flex: 0 0 auto; }
-#page-tools #ubee-title { font-size: 88px; line-height: 1.12; font-weight: 800; letter-spacing: -0.065em; margin: 14px 0 0; }
+#page-tools #ubee-title { font-size: 88px; line-height: 1.12; font-weight: 800; letter-spacing: -0.065em; margin: 0; }
 #page-tools .ubee-title-dot { color: #c99f3e; }
 #page-tools .ubee-headline { font-size: 28px; font-weight: 600; letter-spacing: -0.035em; line-height: 1.5; max-width: 450px; word-break: keep-all; text-wrap: balance; }
 #page-tools .ubee-description { color: #62665e; font-size: 14px; line-height: 1.85; margin-top: 12px; max-width: 560px; word-break: keep-all; }
