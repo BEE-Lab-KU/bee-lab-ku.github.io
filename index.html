@@ -35,7 +35,7 @@
   } catch (e) {}
 })();
 </script>
-<link rel="stylesheet" href="css/styles.css?v=20260921">
+<link rel="stylesheet" href="css/styles.css?v=20261104b">
 </head>
 <body>
 
@@ -1111,11 +1111,40 @@
 <!-- TOOLS PAGE -->
 <!-- ============================================ -->
 <div id="page-tools" class="page-view">
-<div style="max-width:1200px;margin:0 auto;padding:72px 40px 80px;">
-  <div style="text-align:center;margin-bottom:48px;">
-    <div style="font-size:13px;letter-spacing:0.15em;color:var(--text-muted);text-transform:uppercase;margin-bottom:8px;">BEE Lab Tools</div>
-    <h1 style="font-size:56px;font-weight:900;letter-spacing:-0.05em;">TOOLS</h1>
-  </div>
+<div class="tools-shell">
+  <header class="tools-heading">
+    <h1>BEE Lab Tools</h1>
+    <span data-i18n="tool.pageCaption">연구를 실제로 만나는 곳</span>
+  </header>
+  <section class="ubee-showcase" aria-labelledby="ubee-title">
+    <div class="ubee-intro">
+      <div class="ubee-brand">
+        <p class="ubee-eyebrow"><span aria-hidden="true"></span><span data-i18n="tool.ubeePlatform.eyebrow">BEE Lab 대표 연구 플랫폼</span></p>
+        <h2 id="ubee-title">UBEE<span class="ubee-title-dot">.</span></h2>
+      </div>
+      <div class="ubee-copy">
+        <p class="ubee-headline" data-i18n="tool.ubeePlatform.headline">도시에서 개별 건물까지, 에너지와 환경을 분석하다</p>
+        <p class="ubee-description" data-i18n="tool.ubeePlatform.description">도시·건물 규모의 시뮬레이션부터 AI 기반 결과 해석과 보고서 생성까지. BEE Lab의 연구를 하나의 플랫폼에서 경험하세요.</p>
+        <a class="ubee-launch" href="http://ubee.kro.kr/" target="_blank" rel="noopener"><span data-i18n="tool.ubeePlatform.launch">플랫폼 바로가기</span><span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="ubee-demo">
+      <div class="ubee-demo-bar"><span><span class="ubee-live-dot" aria-hidden="true"></span>UBEE IN ACTION</span><span data-i18n="tool.ubeePlatform.videoMeta">플랫폼 시연 · 2분 21초</span></div>
+      <div class="ubee-video-frame">
+        <video id="ubee-demo" controls playsinline preload="none" width="1920" height="1080" poster="Photos/tools/ubee-poster.webp" aria-label="UBEE 플랫폼 시연 영상 (영어 자막 포함)" data-i18n-aria-label="tool.ubeePlatform.videoLabel">
+          <source src="Photos/tools/ubee-demo.mp4" type="video/mp4">
+          <a href="Photos/tools/ubee-demo.mp4" data-i18n="tool.ubeePlatform.videoFallback">시연 영상 파일 열기</a>
+        </video>
+        <button class="ubee-play" type="button" aria-controls="ubee-demo" hidden><span class="ubee-play-icon" aria-hidden="true">▶</span><span data-i18n="tool.ubeePlatform.play">시연 영상 보기</span></button>
+      </div>
+    </div>
+    <div class="ubee-capabilities">
+      <div><span class="ubee-step" aria-hidden="true">01 / SCALE</span><h3 data-i18n="tool.ubeePlatform.scaleTitle">도시에서 건물까지</h3><p data-i18n="tool.ubeePlatform.scaleText">도시·구 단위 현황부터 개별 건물까지 살펴봅니다.</p></div>
+      <div><span class="ubee-step" aria-hidden="true">02 / SIMULATE</span><h3 data-i18n="tool.ubeePlatform.simulateTitle">에너지와 일사 분석</h3><p data-i18n="tool.ubeePlatform.simulateText">건물의 에너지 사용량과 일사 환경을 시각적으로 확인합니다.</p></div>
+      <div><span class="ubee-step" aria-hidden="true">03 / INSIGHT</span><h3 data-i18n="tool.ubeePlatform.insightTitle">AI 해석과 보고서</h3><p data-i18n="tool.ubeePlatform.insightText">AI와 분석 결과를 탐색하고 건물 분석 보고서를 생성합니다.</p></div>
+    </div>
+  </section>
+  <div class="tools-secondary-heading"><h2 data-i18n="tool.otherTools">연구와 협업을 위한 도구</h2><span>MORE FROM BEE Lab</span></div>
   <div class="project-grid">
     <a class="project-card" href="https://beelab-journal-index.ecosoop.workers.dev" target="_blank" rel="noopener">
       <span class="card-arrow">↗</span>
@@ -1137,13 +1166,6 @@
       <h4 data-i18n="tool.pickATime.title">회의 시간 조율</h4>
       <p data-i18n="tool.pickATime.summary">여러 사람의 가능한 시간을 한 화면에 모아 회의 시간을 정합니다. 드래그로 칠한 시간이 히트맵으로 겹쳐 보이고, 슬롯을 미리 열어 예약을 받는 방식도 됩니다. 확정한 시간은 캘린더로 내보냅니다.</p>
       <div class="tag-row"><span class="tag" data-i18n="tag.scheduleCoordination">일정 조율</span><span class="tag" data-i18n="tag.slotBooking">슬롯 예약</span><span class="tag" data-i18n="tag.timezone">타임존</span><span class="tag" data-i18n="tag.calendar">캘린더</span></div>
-    </a>
-    <a class="project-card" href="http://ubee.kro.kr/" target="_blank" rel="noopener">
-      <span class="card-arrow">↗</span>
-      <div class="project-meta"><span class="badge individual">UBEE platform</span></div>
-      <h4 data-i18n="tool.ubeePlatform.title">UBEE 플랫폼</h4>
-      <p data-i18n="tool.ubeePlatform.summary">도시 건물 정보와 주변 환경 정보를 바탕으로 일사 환경과 에너지 사용량을 빠르게 예측합니다. 주요 영향요인 분석과 LLM을 활용한 결과 해석 및 에너지 분석 보고서 자동 생성 기능을 제공합니다.</p>
-      <div class="tag-row"><span class="tag" data-i18n="tag.urbanBuildingEnergySimulation">도시 건물 에너지 시뮬레이션</span><span class="tag" data-i18n="tag.energyUsageAnalysis">에너지 사용량 분석</span><span class="tag" data-i18n="tag.solarRadiationAnalysis">일사 분석</span><span class="tag" data-i18n="tag.influencingFactorAnalysis">영향요인 분석</span><span class="tag" data-i18n="tag.aiReport">AI 보고서</span></div>
     </a>
     <div class="project-card completed" style="cursor:default;">
       <div class="project-meta"><span class="badge sub">PaperHive</span><span class="status-text" data-i18n="status.inPreparation">준비 중</span></div>
@@ -1256,6 +1278,6 @@
 <div class="proj-lightbox" id="proj-lightbox" onclick="this.classList.remove('open')"><img src="" alt=""></div>
 
 <script src="js/i18n.js?v=20260921" defer></script>
-<script src="js/app.js?v=20261030" defer></script>
+<script src="js/app.js?v=20261104" defer></script>
 </body>
 </html>

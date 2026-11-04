@@ -91,6 +91,21 @@ var tabState = {};
 var navStack = [];
 var currentPage = 'intro';
 
+// Keep the native player available if enhanced playback cannot start.
+var ubeeVideo = document.getElementById('ubee-demo');
+var ubeePlay = document.querySelector('#page-tools .ubee-play');
+if (ubeeVideo && ubeePlay) {
+  ubeePlay.hidden = false;
+  ubeePlay.addEventListener('click', function () {
+    ubeePlay.hidden = true;
+    ubeeVideo.focus();
+    ubeeVideo.play().catch(function () { ubeePlay.hidden = false; });
+  });
+  ubeeVideo.addEventListener('play', function () { ubeePlay.hidden = true; });
+  ubeeVideo.addEventListener('ended', function () { ubeePlay.hidden = false; });
+  ubeeVideo.addEventListener('error', function () { ubeePlay.hidden = true; });
+}
+
 function currentLanguage() {
   return window.BeeI18n ? window.BeeI18n.language : 'ko';
 }
@@ -145,6 +160,7 @@ function restoreTabs(pageId) {
 
 function showPage(id, opts) {
   opts = opts || {};
+  if (currentPage === 'tools' && id !== 'tools' && ubeeVideo) ubeeVideo.pause();
   // 떠나기 전 현재 페이지 상태 저장
   captureState(currentPage);
 

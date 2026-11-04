@@ -149,6 +149,8 @@
     "urbanBuildingEnergySimulation": "Urban Building Energy Simulation"
   },
   "tool": {
+    "pageCaption": "Research, put into practice",
+    "otherTools": "Tools for research and collaboration",
     "buzzPlan": {
       "summary": "Select the talks you want to attend from a conference program to build your own schedule. It shows travel distance and buffer time between venues and lets you export the schedule to your calendar.",
       "title": "Conference Presentation Session Scheduler"
@@ -166,6 +168,20 @@
       "title": "Meeting Time Coordination"
     },
     "ubeePlatform": {
+      "eyebrow": "BEE Lab's flagship research platform",
+      "headline": "From cities to buildings. Explore energy and environment.",
+      "description": "From urban and building-scale simulation to AI-powered interpretation and reporting. Experience BEE Lab's research in one platform.",
+      "launch": "Explore the platform",
+      "videoMeta": "Platform demo · 2 min 21 sec",
+      "videoLabel": "UBEE platform demonstration (with English on-screen captions)",
+      "videoFallback": "Open the demo video file",
+      "play": "Watch the demo",
+      "scaleTitle": "From cities to buildings",
+      "scaleText": "Explore city- and district-level patterns, then take a closer look at individual buildings.",
+      "simulateTitle": "Energy and solar analysis",
+      "simulateText": "Visualize building energy use and solar radiation conditions.",
+      "insightTitle": "AI insights and reports",
+      "insightText": "Explore analysis results with AI and generate building analysis reports.",
       "summary": "Quickly predicts solar radiation conditions and energy use based on urban building information and surrounding environmental data. Provides key influencing factor analysis, LLM-based result interpretation, and automatic generation of energy analysis reports.",
       "title": "UBEE Platform"
     }
