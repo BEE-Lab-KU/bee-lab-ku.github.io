@@ -102,7 +102,7 @@ if (ubeeVideo && ubeePlay) {
     ubeeVideo.play().catch(function () { ubeePlay.hidden = false; });
   });
   ubeeVideo.addEventListener('play', function () { ubeePlay.hidden = true; });
-  ubeeVideo.addEventListener('ended', function () { ubeePlay.hidden = false; });
+  ubeeVideo.addEventListener('pause', function () { ubeePlay.hidden = false; });
   ubeeVideo.addEventListener('error', function () { ubeePlay.hidden = true; });
 }
 
@@ -186,6 +186,11 @@ function showPage(id, opts) {
     var y = (opts.isBack && scrollPositions[id] !== undefined) ? scrollPositions[id] : 0;
     window.scrollTo({ top: y, behavior: 'instant' });
     requestAnimationFrame(function () { window.scrollTo({ top: y, behavior: 'instant' }); });
+  }
+  // All pages share this DOM: start only on entry, preserving a manual pause.
+  if (id === 'tools' && currentPage !== 'tools' && ubeeVideo &&
+      !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    ubeeVideo.play().catch(function () { if (ubeePlay) ubeePlay.hidden = false; });
   }
   currentPage = id;
   updateNav();

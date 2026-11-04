@@ -35,7 +35,7 @@
   } catch (e) {}
 })();
 </script>
-<link rel="stylesheet" href="css/styles.css?v=20261104b">
+<link rel="stylesheet" href="css/styles.css?v=20261104c">
 </head>
 <body>
 
@@ -1129,13 +1129,13 @@
       </div>
     </div>
     <div class="ubee-demo">
-      <div class="ubee-demo-bar"><span><span class="ubee-live-dot" aria-hidden="true"></span>UBEE IN ACTION</span><span data-i18n="tool.ubeePlatform.videoMeta">플랫폼 시연 · 2분 21초</span></div>
+      <div class="ubee-demo-bar"><span><span class="ubee-live-dot" aria-hidden="true"></span>UBEE IN ACTION</span></div>
       <div class="ubee-video-frame">
-        <video id="ubee-demo" controls playsinline preload="none" width="1920" height="1080" poster="Photos/tools/ubee-poster.webp" aria-label="UBEE 플랫폼 시연 영상 (영어 자막 포함)" data-i18n-aria-label="tool.ubeePlatform.videoLabel">
+        <video id="ubee-demo" controls playsinline muted loop preload="none" width="1920" height="1080" poster="Photos/tools/ubee-poster.webp" aria-label="UBEE 플랫폼 시연 영상 (영어 자막 포함)" data-i18n-aria-label="tool.ubeePlatform.videoLabel">
           <source src="Photos/tools/ubee-demo.mp4" type="video/mp4">
           <a href="Photos/tools/ubee-demo.mp4" data-i18n="tool.ubeePlatform.videoFallback">시연 영상 파일 열기</a>
         </video>
-        <button class="ubee-play" type="button" aria-controls="ubee-demo" hidden><span class="ubee-play-icon" aria-hidden="true">▶</span><span data-i18n="tool.ubeePlatform.play">시연 영상 보기</span></button>
+        <button class="ubee-play" type="button" aria-controls="ubee-demo" aria-label="시연 영상 재생" data-i18n-aria-label="tool.ubeePlatform.play" hidden><span class="ubee-play-icon" aria-hidden="true">▶</span></button>
       </div>
     </div>
     <div class="ubee-capabilities">
@@ -1278,6 +1278,6 @@
 <div class="proj-lightbox" id="proj-lightbox" onclick="this.classList.remove('open')"><img src="" alt=""></div>
 
 <script src="js/i18n.js?v=20260921" defer></script>
-<script src="js/app.js?v=20261104" defer></script>
+<script src="js/app.js?v=20261104c" defer></script>
 </body>
 </html>
