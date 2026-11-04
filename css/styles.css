@@ -293,7 +293,7 @@ html[data-lang="en"]:not([data-i18n-ready="true"]) body { visibility: hidden; }
 #page-tools .ubee-demo { border: 1px solid #ddded6; border-radius: 8px; overflow: hidden; background: #f4f4ef; box-shadow: 0 8px 24px #22251808; }
 #page-tools .ubee-demo-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px; font-size: 10px; color: #606459; letter-spacing: 0.07em; }
 #page-tools .ubee-demo-bar > span:first-child { display: flex; align-items: center; gap: 8px; font-weight: 600; }
-#page-tools .ubee-live-dot { width: 5px; height: 5px; border-radius: 50%; background: #a47e24; }
+#page-tools .ubee-live-dot { width: 5px; height: 5px; flex-shrink: 0; border-radius: 50%; background: #a47e24; }
 #page-tools .ubee-video-frame { position: relative; }
 #page-tools .ubee-video-frame video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #101410; }
 #page-tools .ubee-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: grid; place-items: center; width: 64px; height: 64px; border: 1px solid #ffffff50; border-radius: 50%; background: #1d211fe6; color: #edcc77; padding: 0; font: inherit; cursor: pointer; box-shadow: 0 8px 30px #0005; }
