@@ -54,6 +54,7 @@
     "date": "2025-10-15",
     "doi": "https://doi.org/10.1016/j.jobe.2025.113768",
     "badge": "SCIE",
+    "first": "kyungjae",
     "members": [
       "inseob",
       "sangmin"
@@ -65,6 +66,7 @@
     "date": "2025-02-01",
     "doi": "https://doi.org/10.1016/j.enbuild.2024.115103",
     "badge": "SCIE",
+    "first": "kyungjae",
     "members": [
       "doyeon",
       "jungyun"
@@ -76,10 +78,10 @@
     "date": "2024-12-01",
     "doi": "https://doi.org/10.1016/j.scs.2024.105895",
     "badge": "SCIE",
+    "first": "jungyun",
     "research": [
       "research-um-ubem"
-    ],
-    "first": "jungyun"
+    ]
   },
   {
     "id": "3a158b69-a185-4732-9079-349789398f70",
@@ -232,10 +234,10 @@
     "date": "2026-10-15",
     "doi": "https://doi.org/10.1016/j.scs.2026.107808",
     "badge": "SCIE",
+    "first": "inseob",
     "research": [
       "research-da-urban-load"
-    ],
-    "first": "inseob"
+    ]
   },
   {
     "id": "c10cfcb0-e459-4f5e-b7bc-851468a42170",
