@@ -208,7 +208,7 @@
   "alumni": [
     {
       "slug": "kyungjae",
-      "avatar": "Photos/members/kyungjae.jpg",
+      "avatar": "Photos/members/kyungjae_2.jpg",
       "name": "이경재",
       "nameEn": "Kyungjae Lee",
       "role": "M.S. in Architectural Engineering (2025)"
@@ -306,7 +306,7 @@
       "name": "이경재",
       "nameEn": "Kyungjae Lee",
       "roleLine": "Alumni · Kyungjae Lee",
-      "avatar": "Photos/members/kyungjae.jpg",
+      "avatar": "Photos/members/kyungjae_2.jpg",
       "bio": "<div style=\"font-weight:600;margin-bottom:8px;\">Academic degrees :</div>\n        <ul style=\"margin:0 0 16px 20px;line-height:1.8;color:var(--text-mid);\">\n          <li>M.S. in Architectural Engineering (2025)</li>\n          <li>B.E. in Architecture Engineering (2023) with a Minor in Real Estate</li>\n        </ul>\n        <ul style=\"margin:0 0 0 20px;line-height:1.8;color:var(--text-mid);\">\n          <li>전) 건국대학교 건축환경 및 에너지 연구실 석사연구생</li>\n          <li>한국친환경설비학회 2022 Building Technology 공모전 특별상 수상</li>\n          <li>한국태양에너지학회 2023 추계학술발표대회 우수논문상 수상</li>\n        </ul>",
       "bioEn": "<div style=\"font-weight:600;margin-bottom:8px;\">Academic degrees :</div>\n        <ul style=\"margin:0 0 16px 20px;line-height:1.8;color:var(--text-mid);\">\n          <li>M.S. in Architectural Engineering (2025)</li>\n          <li>B.E. in Architecture Engineering (2023) with a Minor in Real Estate</li>\n        </ul>\n        <ul style=\"margin:0 0 0 20px;line-height:1.8;color:var(--text-mid);\">\n          <li>Former Master's Researcher, Building Environment and Energy Laboratory, Konkuk University</li>\n          <li>Special Award, 2022 Building Technology Competition, Korean Institute of Architectural Sustainable Environment and Building Systems</li>\n          <li>Excellent Paper Award, 2023 Fall Annual Conference, Korean Solar Energy Society</li>\n        </ul>",
       "bioStyle": "margin-top:16px;"

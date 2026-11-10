@@ -70,7 +70,7 @@ Photos/
 | 이현수 | hyunsu | `members/hyunsu.jpg` |
 | 김세연 | seyeon | `members/seyeon.jpg` |
 | 송준호 | junho | `members/junho.jpg` (**파일 없음**) |
-| 이경재 (졸업) | kyungjae | `members/kyungjae.jpg` |
+| 이경재 (졸업) | kyungjae | `members/kyungjae_2.jpg` |
 | 임현우 (교수) | professor | `members/professor.jpg` |
 
 사진이 없으면 회색 원으로 대체 표시됩니다. 송준호 사진을 넣으면 바로 반영됩니다.
