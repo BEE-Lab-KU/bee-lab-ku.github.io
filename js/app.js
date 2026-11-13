@@ -187,11 +187,6 @@ function showPage(id, opts) {
     window.scrollTo({ top: y, behavior: 'instant' });
     requestAnimationFrame(function () { window.scrollTo({ top: y, behavior: 'instant' }); });
   }
-  // All pages share this DOM: start only on entry, preserving a manual pause.
-  if (id === 'tools' && currentPage !== 'tools' && ubeeVideo &&
-      !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    ubeeVideo.play().catch(function () { if (ubeePlay) ubeePlay.hidden = false; });
-  }
   currentPage = id;
   updateNav();
   closeMenu();
