@@ -603,7 +603,12 @@ function buildResearchPage(r) {
 function renderResearchPages(list) {
   (list || []).forEach(function (r) {
     var el = document.getElementById('page-' + r.id);
-    if (!el) { el = document.createElement('div'); el.id = 'page-' + r.id; el.className = 'page-view'; document.body.appendChild(el); }
+    if (!el) {
+      el = document.createElement('div'); el.id = 'page-' + r.id; el.className = 'page-view';
+      // CMS로 새로 추가된 연구는 index.html에 자리가 없으므로 푸터 앞에 삽입 (body 끝에 붙이면 푸터 아래로 감)
+      var footer = document.querySelector('.page-footer');
+      if (footer) footer.parentNode.insertBefore(el, footer); else document.body.appendChild(el);
+    }
     el.innerHTML = buildResearchPage(r);
   });
 }
