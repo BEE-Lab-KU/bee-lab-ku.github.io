@@ -180,7 +180,7 @@
     "title": "강화학습 기반 다중 에이전트를 활용한 열 부하공유 시스템 구축",
     "titleEn": "Development of a Thermal Load Sharing System Using Reinforcement Learning-Based Multi-Agents",
     "group": "Building Energy Systems",
-    "completed": false,
+    "completed": true,
     "status": "진행완료 · 2026",
     "statusEn": "Completed, 2026",
     "researchers": [
