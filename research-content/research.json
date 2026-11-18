@@ -724,6 +724,8 @@
     "id": "research-thermal-load-sharing",
     "title": "건물 간 열 부하공유 시스템 구축 및 협조적 참여 기준 기반 실시간 제어",
     "titleEn": "Construction of an Inter-Building Thermal Load Sharing System and Real-Time Control Based on Cooperative Participation Criteria",
+    "cardTitle": "건물 간 열 부하공유를 실시간으로 제어하고 건물 간의 협조 운영 체계 실현",
+    "cardTitleEn": "Real-Time Thermal Load Sharing Between Buildings: Cooperative Operation Systems",
     "group": "Building Energy Systems",
     "completed": false,
     "status": "진행 중 · 2026-",
