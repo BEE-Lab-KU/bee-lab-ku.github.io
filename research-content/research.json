@@ -176,6 +176,40 @@
     "figure": "Photos/research-figs/hydro-cascade.png"
   },
   {
+    "id": "research-thermal-load-sharing",
+    "title": "건물 간 열 부하공유 시스템 구축 및 협조적 참여 기준 기반 실시간 제어",
+    "titleEn": "Construction of an Inter-Building Thermal Load Sharing System and Real-Time Control Based on Cooperative Participation Criteria",
+    "cardTitle": "건물 간 열 부하공유를 실시간으로 제어하고 건물 간의 협조 운영 체계 실현",
+    "cardTitleEn": "Real-Time Thermal Load Sharing Between Buildings: Cooperative Operation Systems",
+    "group": "Building Energy Systems",
+    "completed": false,
+    "status": "진행 중 · 2026-",
+    "statusEn": "In Progress, 2026-",
+    "researchers": [
+      "jiyoung"
+    ],
+    "summary": "MARL 기반 협조제어를 실제 운용 가능한 시스템으로 확장하고, 공정한 협조 참여 기준을 수립하여 건물 간 열 부하공유의 실시간 제어 체계를 구축",
+    "summaryEn": "Extends MARL-based cooperative control into a deployable real-time thermal load sharing system with fair participation criteria for community buildings",
+    "tags": [
+      "Building Thermal Load Sharing",
+      "Agent"
+    ],
+    "background": "선행연구에서 다중 에이전트 강화학습(MARL)을 통해 건물 간 난방 열 부하를 상호 분담하는 협조제어의 가능성을 알고리즘 수준에서 검증하였습니다. 그러나 이를 실제 커뮤니티 환경에 적용하기 위해서는 단순한 제어 알고리즘을 넘어, 건물마다 다른 부하 특성을 활용하면서 실시간 데이터를 기반으로 작동하는 구체적인 제어 체계가 함께 갖춰져야 합니다. 특히 다수의 건물이 열 부하 공유에 자발적으로 참여하기 위해서는 각 건물의 기여도, 비용 분담, 인센티브 등을 공정하게 정의하는 협조 참여 기준이 필수적으로 요구됩니다.",
+    "backgroundEn": "Previous studies verified the feasibility of cooperative control for sharing heating loads among buildings through Multi-Agent Reinforcement Learning (MARL) at the algorithm level. However, applying this to a real community environment requires more than a simple control algorithm — it demands a concrete control framework that leverages the distinct load characteristics of each building while operating on real-time data. In particular, for multiple buildings to voluntarily participate in heat load sharing, cooperative participation criteria that fairly define each building’s contribution, cost allocation, and incentives are essential.",
+    "goal": "본 연구는 커뮤니티 건물 간 협조적 열 부하 공유를 알고리즘 수준에서 실용적 구현 단계로 발전시키는 것을 목표로 합니다. 구체적인 연구 목표는 다음과 같습니다.\n첫째, 건물별 상이한 부하 특성을 활용한 실시간 데이터 기반의 협조 제어 체계를 설계합니다.\n둘째, 기여도 평가, 비용 분담, 인센티브 구조를 포함한 공정한 협조 참여 기준을 수립합니다.\n셋째, 1년 단위 성능 분석을 통해 제안된 제어 체계와 참여 기준의 장기적 유효성을 검증합니다.",
+    "goalEn": "This study aims to advance cooperative heat load sharing among community buildings from the algorithm level to practical implementation. The specific objectives are as follows:\nFirst, a real-time data-driven cooperative control framework is designed by leveraging the distinct load characteristics of each building.\nSecond, fair cooperative participation criteria are established, including contribution assessment, cost allocation, and incentive structures.\nThird, the long-term validity of the proposed control framework and participation criteria is verified through annual performance analysis.",
+    "keywords": [
+      "Building Thermal Load Sharing",
+      "Real-time Control",
+      "Agent",
+      "Energy stability"
+    ],
+    "tools": [
+      "Python",
+      "EnergyPlus"
+    ]
+  },
+  {
     "id": "research-da-marl",
     "title": "강화학습 기반 다중 에이전트를 활용한 열 부하공유 시스템 구축",
     "titleEn": "Development of a Thermal Load Sharing System Using Reinforcement Learning-Based Multi-Agents",
@@ -527,6 +561,42 @@
     ]
   },
   {
+    "id": "research-da-preprocessing",
+    "title": "로지스틱 맵 이미지 암호화 기법을 적용한 딥러닝 기반 재실자 감지 시스템 제안",
+    "titleEn": "A Deep Learning-Based Occupancy Detection System Using Logistic Map Image Encryption",
+    "group": "Building Data Analytics & AI",
+    "completed": true,
+    "status": "진행 완료 · 2026",
+    "statusEn": "Completed, 2026",
+    "researchers": [
+      "jiyoung"
+    ],
+    "summary": "프라이버시를 보호하는 로지스틱 맵 이미지 암호화와 딥러닝을 결합해 원거리 및 비정형 자세 재실자 감지 성능을 개선",
+    "summaryEn": "Combines logistic map image encryption with deep learning to protect privacy and improve long-range occupancy detection and recognition of irregular postures",
+    "tags": [
+      "Occupancy Detection",
+      "Logistic Map",
+      "Encryption"
+    ],
+    "background": "대부분의 건물 에너지 관리 시스템은 실제 거주자의 재실 패턴을 고려하지 않고, 미리 설정된 고정 스케줄에 따라 냉난방 및 조명 설비를 운영하고 있습니다. 이를 해결하기 위해 비전 기반 재실자 감지 기술이 주목받고 있지만, 프라이버시와 원거리 탐지 성능, 비정형 자세 인식 성능을 동시에 개선하는 접근이 필요합니다. 따라서 고도화된 재실자 감지 시스템을 제안하고 스케줄 분석을 통해 건물의 에너지 저감 방안을 제시하고자 합니다.",
+    "backgroundEn": "Most building energy management systems operate HVAC and lighting equipment on preset fixed schedules without accounting for actual occupancy patterns. Vision-based occupancy detection has drawn attention as a solution, but an approach that simultaneously improves privacy protection, long-range detection performance, and recognition of irregular postures is still needed. This study therefore proposes an advanced occupancy detection system and presents energy reduction strategies based on schedule analysis.",
+    "goal": "재실자의 프라이버시를 보호하고 고도화된 재실자 감지 시스템으로 건물의 에너지 저감 효과를 분석합니다.",
+    "goalEn": "This study protects occupant privacy and analyzes the building energy savings achieved by an advanced occupancy detection system.",
+    "keywords": [
+      "Occupancy detection",
+      "Logistic Map",
+      "Encryption",
+      "CNN",
+      "YOLO"
+    ],
+    "tools": [
+      "Python",
+      "CNN",
+      "YOLO"
+    ],
+    "figure": "Photos/research-figs/occupancy.png"
+  },
+  {
     "id": "research-da-thermal-seat",
     "title": "열적 특성 기반의 개인 맞춤형 좌석 선택 시스템 제안",
     "titleEn": "A Personalized Seat Selection System Based on Individual Thermal Characteristics",
@@ -563,42 +633,6 @@
       "Virtual Sensing"
     ],
     "figure": "Photos/research-figs/thermal-seat.png"
-  },
-  {
-    "id": "research-da-preprocessing",
-    "title": "로지스틱 맵 이미지 암호화 기법을 적용한 딥러닝 기반 재실자 감지 시스템 제안",
-    "titleEn": "A Deep Learning-Based Occupancy Detection System Using Logistic Map Image Encryption",
-    "group": "Building Data Analytics & AI",
-    "completed": true,
-    "status": "진행 완료 · 2026",
-    "statusEn": "Completed, 2026",
-    "researchers": [
-      "jiyoung"
-    ],
-    "summary": "프라이버시를 보호하는 로지스틱 맵 이미지 암호화와 딥러닝을 결합해 원거리 및 비정형 자세 재실자 감지 성능을 개선",
-    "summaryEn": "Combines logistic map image encryption with deep learning to protect privacy and improve long-range occupancy detection and recognition of irregular postures",
-    "tags": [
-      "Occupancy Detection",
-      "Logistic Map",
-      "Encryption"
-    ],
-    "background": "대부분의 건물 에너지 관리 시스템은 실제 거주자의 재실 패턴을 고려하지 않고, 미리 설정된 고정 스케줄에 따라 냉난방 및 조명 설비를 운영하고 있습니다. 이를 해결하기 위해 비전 기반 재실자 감지 기술이 주목받고 있지만, 프라이버시와 원거리 탐지 성능, 비정형 자세 인식 성능을 동시에 개선하는 접근이 필요합니다. 따라서 고도화된 재실자 감지 시스템을 제안하고 스케줄 분석을 통해 건물의 에너지 저감 방안을 제시하고자 합니다.",
-    "backgroundEn": "Most building energy management systems operate HVAC and lighting equipment on preset fixed schedules without accounting for actual occupancy patterns. Vision-based occupancy detection has drawn attention as a solution, but an approach that simultaneously improves privacy protection, long-range detection performance, and recognition of irregular postures is still needed. This study therefore proposes an advanced occupancy detection system and presents energy reduction strategies based on schedule analysis.",
-    "goal": "재실자의 프라이버시를 보호하고 고도화된 재실자 감지 시스템으로 건물의 에너지 저감 효과를 분석합니다.",
-    "goalEn": "This study protects occupant privacy and analyzes the building energy savings achieved by an advanced occupancy detection system.",
-    "keywords": [
-      "Occupancy detection",
-      "Logistic Map",
-      "Encryption",
-      "CNN",
-      "YOLO"
-    ],
-    "tools": [
-      "Python",
-      "CNN",
-      "YOLO"
-    ],
-    "figure": "Photos/research-figs/occupancy.png"
   },
   {
     "id": "research-um-ubem",
@@ -714,40 +748,6 @@
       "Shading Effect",
       "Interaction between Buildings",
       "Data-driven Simulation"
-    ],
-    "tools": [
-      "Python",
-      "EnergyPlus"
-    ]
-  },
-  {
-    "id": "research-thermal-load-sharing",
-    "title": "건물 간 열 부하공유 시스템 구축 및 협조적 참여 기준 기반 실시간 제어",
-    "titleEn": "Construction of an Inter-Building Thermal Load Sharing System and Real-Time Control Based on Cooperative Participation Criteria",
-    "cardTitle": "건물 간 열 부하공유를 실시간으로 제어하고 건물 간의 협조 운영 체계 실현",
-    "cardTitleEn": "Real-Time Thermal Load Sharing Between Buildings: Cooperative Operation Systems",
-    "group": "Building Energy Systems",
-    "completed": false,
-    "status": "진행 중 · 2026-",
-    "statusEn": "In Progress, 2026-",
-    "researchers": [
-      "jiyoung"
-    ],
-    "summary": "MARL 기반 협조제어를 실제 운용 가능한 시스템으로 확장하고, 공정한 협조 참여 기준을 수립하여 건물 간 열 부하공유의 실시간 제어 체계를 구축",
-    "summaryEn": "Extends MARL-based cooperative control into a deployable real-time thermal load sharing system with fair participation criteria for community buildings",
-    "tags": [
-      "Building Thermal Load Sharing",
-      "Agent"
-    ],
-    "background": "선행연구에서 다중 에이전트 강화학습(MARL)을 통해 건물 간 난방 열 부하를 상호 분담하는 협조제어의 가능성을 알고리즘 수준에서 검증하였습니다. 그러나 이를 실제 커뮤니티 환경에 적용하기 위해서는 단순한 제어 알고리즘을 넘어, 건물마다 다른 부하 특성을 활용하면서 실시간 데이터를 기반으로 작동하는 구체적인 제어 체계가 함께 갖춰져야 합니다. 특히 다수의 건물이 열 부하 공유에 자발적으로 참여하기 위해서는 각 건물의 기여도, 비용 분담, 인센티브 등을 공정하게 정의하는 협조 참여 기준이 필수적으로 요구됩니다.",
-    "backgroundEn": "Previous studies verified the feasibility of cooperative control for sharing heating loads among buildings through Multi-Agent Reinforcement Learning (MARL) at the algorithm level. However, applying this to a real community environment requires more than a simple control algorithm — it demands a concrete control framework that leverages the distinct load characteristics of each building while operating on real-time data. In particular, for multiple buildings to voluntarily participate in heat load sharing, cooperative participation criteria that fairly define each building’s contribution, cost allocation, and incentives are essential.",
-    "goal": "본 연구는 커뮤니티 건물 간 협조적 열 부하 공유를 알고리즘 수준에서 실용적 구현 단계로 발전시키는 것을 목표로 합니다. 구체적인 연구 목표는 다음과 같습니다.\n첫째, 건물별 상이한 부하 특성을 활용한 실시간 데이터 기반의 협조 제어 체계를 설계합니다.\n둘째, 기여도 평가, 비용 분담, 인센티브 구조를 포함한 공정한 협조 참여 기준을 수립합니다.\n셋째, 1년 단위 성능 분석을 통해 제안된 제어 체계와 참여 기준의 장기적 유효성을 검증합니다.",
-    "goalEn": "This study aims to advance cooperative heat load sharing among community buildings from the algorithm level to practical implementation. The specific objectives are as follows:\nFirst, a real-time data-driven cooperative control framework is designed by leveraging the distinct load characteristics of each building.\nSecond, fair cooperative participation criteria are established, including contribution assessment, cost allocation, and incentive structures.\nThird, the long-term validity of the proposed control framework and participation criteria is verified through annual performance analysis.",
-    "keywords": [
-      "Building Thermal Load Sharing",
-      "Real-time Control",
-      "Agent",
-      "Energy stability"
     ],
     "tools": [
       "Python",
