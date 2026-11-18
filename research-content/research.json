@@ -733,8 +733,8 @@
     "researchers": [
       "jiyoung"
     ],
-    "summary": "본 연구는 선행연구에서 검증된 MARL 기반 협조제어 알고리즘을 실제 운용 가능한 시스템으로 확장하여, 건물 간 열 부하공유를 위한 실시간 제어 체계를 구축합니다. 각 건물의 열 수요 특성과 기여 이력을 반영한 공정한 협조 참여 기준을 함께 수립함으로써, 커뮤니티 내 다수 건물이 자발적으로 참여하는 에너지 협조 운영 체계를 실현하는 것을 목표로 합니다.",
-    "summaryEn": "This study extends the MARL-based cooperative control algorithm validated in prior research into a practically deployable system, establishing a real-time control framework for inter-building thermal load sharing. By developing fair cooperative participation criteria that reflect each building’s thermal demand characteristics and contribution history, this study aims to realize an energy cooperative operation framework in which multiple buildings within a community can participate voluntarily and equitably.",
+    "summary": "MARL 기반 협조제어를 실제 운용 가능한 시스템으로 확장하고, 공정한 협조 참여 기준을 수립하여 건물 간 열 부하공유의 실시간 제어 체계를 구축",
+    "summaryEn": "Extends MARL-based cooperative control into a deployable real-time thermal load sharing system with fair participation criteria for community buildings",
     "tags": [
       "Building Thermal Load Sharing",
       "Agent"
