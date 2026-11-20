@@ -1315,5 +1315,23 @@
         "src": "News_Blog_JPG/beelab_images/News/2026 대한설비공학회 동계학술발표대회/KakaoTalk_20261120_151202853_02.jpg"
       }
     ]
+  },
+  {
+    "id": "84fe018f-a915-4f0c-886f-9c7231a760bf",
+    "title": "2026 ASIM Conference",
+    "titleEn": "2026 ASIM Conference",
+    "date": "2026-11-16",
+    "location": "싱가포르",
+    "locationEn": "Singapore",
+    "body": "발표자 : 황정윤 \n황정윤, 임현우. (2026). UBEE : An Urban Building Energy & Environment Simulation and Analysis Platform Based on Surrogate Models and Large Language Model",
+    "bodyEn": "Presenters : Jeongyun Hwang\nHwang,J., Lim, H. (2026). UBEE : An Urban Building Energy & Environment Simulation and Analysis Platform Based on Surrogate Models and Large Language Model",
+    "images": [
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 ASIM Conference/정윤2.jpg"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 ASIM Conference/정윤1.jpg"
+      }
+    ]
   }
 ]
