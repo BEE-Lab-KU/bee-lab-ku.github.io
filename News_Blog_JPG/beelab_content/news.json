@@ -1291,5 +1291,29 @@
         "src": "News_Blog_JPG/beelab_images/News/2026 AIVC Conference/참여 사진.jpg"
       }
     ]
+  },
+  {
+    "id": "ecd97484-0dcd-464e-907f-743228541891",
+    "title": "2026 대한설비공학회 동계학술발표대회",
+    "titleEn": "2026 SAREK Winter Annual Conference",
+    "date": "2026-11-20",
+    "location": "서울",
+    "locationEn": "Seoul, South Korea",
+    "body": "발표자 : 이도연, 조정현, 한지웅\n이도연, 임현우 (2026). 월별 에너지 사용량 기반 현장 에너지진단 범위 도출 : 건물 용도별 CPM 파라미터에 근거한 LLM 프레임워크 (우수발표논문상)\n조정현, 임현우 (2026). 변풍량 엘리베이터 샤프트 냉각 시스템의 제어 성능 평가 (우수발표논문상)\n한지웅, 임현우 (2026). 냉난방 환수 활용 급탕 연계 시스템(Hydro-Cascade)의 에너지 성능 분석",
+    "bodyEn": "Presenters : Doyeon Lee, Jeonghyun Cho, Jiung Han\nLee, D., Lim, H. (2026). Deriving the Scope of On-Site Energy Audits from Monthly Energy Consumption Data: An LLM Framework Based on Building-Type-Specific CPM Parameters (Outstanding Presentation Award)\nCho, J., Lim, H. (2026). Control performance evaluation of an elevator shaft cooling system with a variable-speed fan (Outstanding Presentation Award)\nHan, J.,  Lim, H. (2026). Energy Performance Analysis of Return-Water-Integrated WWHP DHW System Using Space-Conditioning Return Water for Domestic Hot Water Production",
+    "images": [
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 대한설비공학회 동계학술발표대회/스크린샷 2026-11-20 161210.jpg"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 대한설비공학회 동계학술발표대회/KakaoTalk_20261120_151202853.jpg"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 대한설비공학회 동계학술발표대회/스크린샷 2026-11-20 161131.jpg"
+      },
+      {
+        "src": "News_Blog_JPG/beelab_images/News/2026 대한설비공학회 동계학술발표대회/KakaoTalk_20261120_151202853_02.jpg"
+      }
+    ]
   }
 ]
